@@ -7,58 +7,51 @@
 <meta name="description" content="Alles über Timer, Pomodoro, Deep Work, Atemtechniken und Zeitmanagement. Fundiertes Wissen für mehr Fokus und Produktivität.">
 <link rel="canonical" href="https://timer-24.com/wissen.html">
 <style>
-:root {
-  --bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;
-  --blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;
-  --border:#E5E7EB;--grid-line:rgba(27,166,255,0.06);
-  --shadow:0 1px 3px rgba(0,0,0,0.07);--shadow-md:0 4px 16px rgba(0,0,0,0.08);
-  --radius:14px;--radius-sm:8px;--transition:0.18s ease;
-}
+:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;--grid-line:rgba(27,166,255,0.06);--shadow:0 1px 3px rgba(0,0,0,0.07);--shadow-md:0 4px 16px rgba(0,0,0,0.08);--radius:14px;--radius-sm:8px;--transition:0.18s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);color:var(--text);min-height:100vh;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:40px 40px;}
 header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;font-size:20px;}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;font-size:20px;flex-shrink:0;}
 .logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:9px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;}
 .logo span{color:var(--blue-bright);}
-.nav-links{display:flex;gap:8px;}
-.nav-links a{padding:7px 14px;border-radius:var(--radius-sm);text-decoration:none;font-size:13.5px;font-weight:500;color:var(--muted);transition:all var(--transition);}
+.nav-links{display:flex;gap:6px;align-items:center;}
+.nav-links a{padding:7px 12px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);transition:all 0.18s ease;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.active{color:var(--blue-bright);background:var(--blue-soft);}
-.btn-nav{background:var(--blue-bright);color:white!important;font-weight:600!important;}
-.btn-nav:hover{background:#0095ee!important;}
+.btn-nav{background:var(--blue-bright)!important;color:white!important;font-weight:600!important;}
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
 main{max-width:1100px;margin:0 auto;padding:40px 24px 80px;}
-.page-header{margin-bottom:40px;}
-.page-header h1{font-size:clamp(24px,5vw,40px);font-weight:800;margin-bottom:10px;letter-spacing:-0.5px;}
-.page-header p{font-size:16px;color:var(--muted);max-width:560px;line-height:1.6;}
-.search-bar{position:relative;max-width:480px;margin-bottom:32px;}
-.search-bar input{width:100%;padding:12px 16px 12px 44px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);font-family:system-ui,sans-serif;font-size:15px;color:var(--text);outline:none;transition:border-color var(--transition);box-shadow:var(--shadow);}
+.page-header{margin-bottom:36px;}
+.page-header h1{font-size:clamp(22px,5vw,38px);font-weight:800;margin-bottom:10px;}
+.page-header p{font-size:15px;color:var(--muted);line-height:1.6;max-width:540px;}
+.search-bar{position:relative;max-width:440px;margin-bottom:24px;}
+.search-bar input{width:100%;padding:11px 16px 11px 42px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);font-family:system-ui,sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color var(--transition);box-shadow:var(--shadow);}
 .search-bar input:focus{border-color:var(--blue-bright);}
-.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:16px;}
-.filter-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:32px;}
-.filter-tab{padding:6px 14px;border:1px solid var(--border);border-radius:20px;background:var(--surface);cursor:pointer;font-size:12px;font-weight:600;color:var(--muted);transition:all var(--transition);}
+.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px;pointer-events:none;}
+.filter-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:28px;}
+.filter-tab{padding:6px 14px;border:1px solid var(--border);border-radius:20px;background:var(--surface);cursor:pointer;font-size:12px;font-weight:600;color:var(--muted);transition:all var(--transition);font-family:system-ui,sans-serif;}
 .filter-tab:hover,.filter-tab.active{background:var(--blue-bright);border-color:var(--blue-bright);color:white;}
-.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;}
 .article-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:all var(--transition);display:flex;flex-direction:column;gap:8px;}
 .article-card:hover{border-color:var(--blue-bright);box-shadow:var(--shadow-md);transform:translateY(-2px);}
-.article-cat{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px;}
+.article-cat{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;}
 .cat-timer{background:var(--blue-soft);color:var(--blue-bright);}
 .cat-produktivitaet{background:var(--copper-soft);color:var(--copper);}
 .cat-lernen{background:#F0FDF4;color:#16A34A;}
 .cat-gesundheit{background:#FFF7ED;color:#EA580C;}
 .cat-atemtechniken{background:#F5F3FF;color:#7C3AED;}
-.article-title{font-size:16px;font-weight:700;line-height:1.3;}
+.article-title{font-size:15px;font-weight:700;line-height:1.3;}
 .article-desc{font-size:13px;color:var(--muted);line-height:1.5;flex:1;}
 .article-meta{display:flex;align-items:center;justify-content:space-between;margin-top:4px;}
 .article-read{font-size:11px;color:var(--muted);}
 .article-arrow{font-size:14px;color:var(--blue-bright);}
 .no-results{text-align:center;padding:60px 20px;color:var(--muted);}
-.no-results-icon{font-size:48px;margin-bottom:12px;}
-footer{border-top:1px solid var(--border);background:var(--surface);padding:32px 24px;text-align:center;}
-.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
+footer{border-top:1px solid var(--border);background:var(--surface);padding:28px 24px;text-align:center;}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;}
 .footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color var(--transition);}
 .footer-links a:hover{color:var(--blue-bright);}
 .footer-copy{font-size:12px;color:var(--muted);}
-@media(max-width:640px){.nav-links{display:none;}main{padding:24px 16px 60px;}}
+@media(max-width:640px){.nav-links{display:none;}.header-inner{padding:0 16px;}main{padding:24px 16px 60px;}}
 </style>
 </head>
 <body>
@@ -66,19 +59,20 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:32px
   <div class="header-inner">
     <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<span>-24</span></a>
     <nav class="nav-links">
-      <a href="timer.html">Timer</a>
-      <a href="wissen.html" class="active">Wissen</a>
-      <a href="faq.html">FAQ</a>
-      <a href="hilfe.html">Hilfe</a>
-      <a href="timer.html" class="btn-nav">▶ Jetzt starten</a>
+      <a href="timer.html" data-i18n="nav_timer">Timer</a>
+      <a href="wissen.html" class="active" data-i18n="nav_wissen">Wissen</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <a href="hilfe.html" data-i18n="nav_hilfe">Hilfe</a>
+      <a href="timer.html" class="btn-nav" data-i18n="nav_start">▶ Jetzt starten</a>
     </nav>
+    <div class="header-right" id="langDropdownMount"></div>
   </div>
 </header>
 
 <main>
   <div class="page-header">
-    <h1>📚 Wissenswertes</h1>
-    <p>Fundiertes Wissen über Timer, Produktivitätsmethoden, Atemtechniken und Zeitmanagement.</p>
+    <h1>📚 <span id="pageTitle">Wissenswertes</span></h1>
+    <p id="pageDesc">Fundiertes Wissen über Timer, Produktivitätsmethoden, Atemtechniken und Zeitmanagement.</p>
   </div>
 
   <div class="search-bar">
@@ -86,74 +80,133 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:32px
     <input type="text" id="searchInput" placeholder="Artikel suchen..." oninput="filterArticles()">
   </div>
 
-  <div class="filter-tabs">
-    <button class="filter-tab active" data-cat="alle" onclick="setFilter('alle',this)">Alle</button>
-    <button class="filter-tab" data-cat="timer" onclick="setFilter('timer',this)">⏲ Timer</button>
-    <button class="filter-tab" data-cat="produktivitaet" onclick="setFilter('produktivitaet',this)">🎯 Produktivität</button>
-    <button class="filter-tab" data-cat="lernen" onclick="setFilter('lernen',this)">📚 Lernen</button>
-    <button class="filter-tab" data-cat="gesundheit" onclick="setFilter('gesundheit',this)">❤️ Gesundheit</button>
-    <button class="filter-tab" data-cat="atemtechniken" onclick="setFilter('atemtechniken',this)">🧘 Atemtechniken</button>
-  </div>
-
+  <div class="filter-tabs" id="filterTabs"></div>
   <div class="articles-grid" id="articlesGrid"></div>
   <div class="no-results" id="noResults" style="display:none">
-    <div class="no-results-icon">🔍</div>
-    <p>Keine Artikel gefunden. Versuche einen anderen Suchbegriff.</p>
+    <div style="font-size:48px;margin-bottom:12px">🔍</div>
+    <p id="noResultsText">Keine Artikel gefunden.</p>
   </div>
 </main>
 
 <footer>
   <div class="footer-links">
-    <a href="timer.html">Timer</a>
-    <a href="wissen.html">Wissenswertes</a>
-    <a href="faq.html">FAQ</a>
-    <a href="hilfe.html">Hilfe</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="ueber-uns.html">Über uns</a>
+    <a href="timer.html" data-i18n="footer_timer">Timer</a>
+    <a href="wissen.html" data-i18n="footer_wissen">Wissenswertes</a>
+    <a href="faq.html" data-i18n="footer_faq">FAQ</a>
+    <a href="hilfe.html" data-i18n="footer_hilfe">Hilfe</a>
+    <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
+    <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
+    <a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a>
+    <a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a>
   </div>
-  <div class="footer-copy">© 2025 Timer-24.com · Alle Inhalte dienen der allgemeinen Information</div>
+  <div class="footer-copy" data-i18n="footer_copy">© 2025 Timer-24.com · Alle Inhalte dienen der allgemeinen Information</div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
-const ARTICLES = [
-  { cat:'timer', icon:'⏲', title:'Was ist ein Online-Timer?', desc:'Ein Online-Timer ist ein digitales Werkzeug, das direkt im Browser läuft – ohne Download oder App. Erfahre, wie er funktioniert und wofür er sich eignet.', read:'4 Min', href:'wissen-timer.html' },
-  { cat:'timer', icon:'⏱', title:'Stoppuhr online nutzen', desc:'Die digitale Stoppuhr misst Zeit millisekundengenau. Wir erklären Anwendungsfälle, Rundenzeiten und warum die Browser-Stoppuhr oft besser ist als das Smartphone.', read:'3 Min', href:'wissen-stoppuhr.html' },
-  { cat:'timer', icon:'⏰', title:'Online-Wecker: Vorteile & Funktionen', desc:'Warum ein Browser-Wecker manchmal praktischer ist als das Smartphone. Mehrere Wecker, eigene Töne, Snooze – alles erklärt.', read:'4 Min', href:'wissen-wecker.html' },
-  { cat:'timer', icon:'🔢', title:'Countdown-Timer erklärt', desc:'Countdown-Timer zählen von einer eingestellten Zeit auf null. Perfekt für Kochen, Sport, Präsentationen und Lernsessions.', read:'3 Min', href:'wissen-countdown.html' },
-  { cat:'produktivitaet', icon:'🍅', title:'Was ist die Pomodoro-Technik?', desc:'Francesco Cirillos Methode aus den 1980ern: 25 Minuten fokussierte Arbeit, 5 Minuten Pause. Warum es funktioniert und für wen es geeignet ist.', read:'6 Min', href:'wissen-pomodoro.html' },
-  { cat:'produktivitaet', icon:'🔥', title:'Deep Work – Tiefes Arbeiten erklärt', desc:'Cal Newport definiert Deep Work als kognitive Spitzenleistung ohne Ablenkung. Wie du es in deinen Alltag integrierst und welche Timer-Längen optimal sind.', read:'7 Min', href:'wissen-deepwork.html' },
-  { cat:'produktivitaet', icon:'🌊', title:'Flowtime-Methode: Flexibler als Pomodoro', desc:'Die Flowtime-Methode hat kein festes Zeitlimit. Du arbeitest bis du eine Pause brauchst. Ideal für kreative Arbeit und Flow-Zustände.', read:'5 Min', href:'wissen-flowtime.html' },
-  { cat:'produktivitaet', icon:'📦', title:'Timeboxing: Aufgaben in Zeitboxen', desc:'Timeboxing bedeutet, jeder Aufgabe eine feste Zeitspanne zuzuweisen. Verhindert Perfektionismus und schafft klare Tagesstruktur.', read:'5 Min', href:'wissen-timeboxing.html' },
-  { cat:'produktivitaet', icon:'⚡', title:'Die 52/17-Methode', desc:'Eine Studie von Draugiem Group zeigte: Die produktivsten Menschen arbeiten 52 Minuten und erholen sich 17 Minuten. Was steckt dahinter?', read:'4 Min', href:'wissen-5217.html' },
-  { cat:'produktivitaet', icon:'🧬', title:'Ultradian-Rhythmus & Fokus', desc:'Unser Gehirn arbeitet in 90-Minuten-Zyklen – dem Ultradian-Rhythmus. Wie du ihn für maximale Konzentration nutzt.', read:'5 Min', href:'wissen-ultradian.html' },
-  { cat:'produktivitaet', icon:'🎯', title:'Die besten Zeitmanagement-Methoden', desc:'Pomodoro, GTD, Time Blocking, Eat the Frog – ein Vergleich der effektivsten Methoden und für wen welche am besten geeignet ist.', read:'8 Min', href:'wissen-zeitmanagement.html' },
-  { cat:'lernen', icon:'📖', title:'Effektiv lernen: Die besten Methoden', desc:'Aktives Erinnern, Spaced Repetition, Interleaving – die Lernwissenschaft kennt viele Techniken. Diese funktionieren wirklich.', read:'7 Min', href:'wissen-lernen.html' },
-  { cat:'lernen', icon:'🧠', title:'Konzentration steigern', desc:'Praktische Tipps, wie du deine Konzentrationsspanne verlängerst: vom richtigen Umfeld bis zu digitaler Diät und Atemübungen.', read:'6 Min', href:'wissen-konzentration.html' },
-  { cat:'lernen', icon:'📝', title:'Prüfungen vorbereiten', desc:'Wie du Prüfungsangst reduzierst, Lernpläne erstellst und mit Timer-Techniken optimal für Klausuren und Prüfungen lernst.', read:'6 Min', href:'wissen-pruefungen.html' },
-  { cat:'lernen', icon:'🗣', title:'Sprachen lernen mit dem Timer', desc:'20 Minuten aktives Lernen + 5 Minuten Wiederholung. Wie Timer-Techniken das Sprachlernen messbar beschleunigen.', read:'5 Min', href:'wissen-sprachen.html' },
-  { cat:'gesundheit', icon:'☕', title:'Warum Pausen so wichtig sind', desc:'Das Gehirn braucht Erholung, um Gelerntes zu konsolidieren. Die Wissenschaft hinter Pausen, Mikroschlaf und echter Erholung.', read:'5 Min', href:'wissen-pausen.html' },
-  { cat:'gesundheit', icon:'😴', title:'Schlaf und Konzentration', desc:'Schlechter Schlaf sabotiert Fokus, Gedächtnis und Kreativität. Was du tun kannst – und wie ein Schlaf-Timer helfen kann.', read:'6 Min', href:'wissen-schlaf.html' },
-  { cat:'gesundheit', icon:'😰', title:'Stress und seine Auswirkungen', desc:'Chronischer Stress beeinträchtigt das Arbeitsgedächtnis und die Entscheidungsfähigkeit. Timer helfen, Stress zu strukturieren.', read:'5 Min', href:'wissen-stress.html' },
-  { cat:'atemtechniken', icon:'🫁', title:'Box Breathing erklärt', desc:'Die 4-4-4-4 Atemtechnik wird von Navy SEALs genutzt. Sie aktiviert den Parasympathikus und beruhigt das Nervensystem in Minuten.', read:'4 Min', href:'wissen-boxbreathing.html' },
-  { cat:'atemtechniken', icon:'💤', title:'4-7-8 Atemtechnik', desc:'Dr. Andrew Weils Methode: 4 Sekunden einatmen, 7 halten, 8 ausatmen. Gilt als natürliches Beruhigungsmittel. Wie es funktioniert.', read:'3 Min', href:'wissen-478.html' },
-  { cat:'atemtechniken', icon:'🫶', title:'Kohärente Atmung', desc:'5 Sekunden ein, 5 Sekunden aus. Diese Technik synchronisiert Herzfrequenz und Atemrhythmus für maximale Ruhe und Fokus.', read:'4 Min', href:'wissen-kohaerenz.html' },
-  { cat:'gesundheit', icon:'🏃', title:'Bewegungspausen für mehr Fokus', desc:'Kurze Bewegungseinheiten zwischen Arbeitsblöcken verbessern Durchblutung, Stimmung und kognitive Leistung messbar.', read:'4 Min', href:'wissen-bewegung.html' },
-];
+// Article database with translations
+const ARTICLES_DATA = {
+  de: [
+    {cat:'timer',icon:'⏲',title:'Was ist ein Online-Timer?',desc:'Ein Online-Timer läuft direkt im Browser – ohne App. Erfahre, wie er funktioniert und wofür er sich eignet.',read:'4 Min',href:'wissen-timer.html'},
+    {cat:'timer',icon:'⏱',title:'Stoppuhr online nutzen',desc:'Die digitale Stoppuhr misst Zeit millisekundengenau. Anwendungsfälle, Rundenzeiten und Vergleich mit Smartphone.',read:'3 Min',href:'wissen-stoppuhr.html'},
+    {cat:'timer',icon:'⏰',title:'Online-Wecker: Vorteile & Funktionen',desc:'Mehrere Wecker, eigene Töne, Snooze – warum der Browser-Wecker oft praktischer ist.',read:'4 Min',href:'wissen-wecker.html'},
+    {cat:'timer',icon:'🔢',title:'Countdown-Timer erklärt',desc:'Countdown-Timer zählen auf null. Perfekt für Kochen, Sport, Präsentationen und Lernsessions.',read:'3 Min',href:'wissen-countdown.html'},
+    {cat:'produktivitaet',icon:'🍅',title:'Was ist die Pomodoro-Technik?',desc:'25 Minuten Fokus, 5 Minuten Pause. Warum Cirillos Methode aus den 1980ern noch heute funktioniert.',read:'6 Min',href:'wissen-pomodoro.html'},
+    {cat:'produktivitaet',icon:'🔥',title:'Deep Work – Tiefes Arbeiten erklärt',desc:'Cal Newports Konzept: kognitive Spitzenleistung ohne Ablenkung. Welche Timer-Längen optimal sind.',read:'7 Min',href:'wissen-deepwork.html'},
+    {cat:'produktivitaet',icon:'🌊',title:'Flowtime-Methode: Flexibler als Pomodoro',desc:'Kein festes Zeitlimit – du arbeitest bis du eine Pause brauchst. Ideal für kreative Arbeit.',read:'5 Min',href:'wissen-flowtime.html'},
+    {cat:'produktivitaet',icon:'📦',title:'Timeboxing: Aufgaben in Zeitboxen',desc:'Jeder Aufgabe eine feste Zeitspanne zuweisen. Verhindert Perfektionismus und schafft Struktur.',read:'5 Min',href:'wissen-timeboxing.html'},
+    {cat:'produktivitaet',icon:'⚡',title:'Die 52/17-Methode',desc:'Studie von Draugiem Group: 52 Minuten arbeiten, 17 Minuten erholen. Was dahintersteckt.',read:'4 Min',href:'wissen-5217.html'},
+    {cat:'produktivitaet',icon:'🧬',title:'Ultradian-Rhythmus & Fokus',desc:'Das Gehirn arbeitet in 90-Minuten-Zyklen. Wie du den Ultradian-Rhythmus für Konzentration nutzt.',read:'5 Min',href:'wissen-ultradian.html'},
+    {cat:'produktivitaet',icon:'🎯',title:'Die besten Zeitmanagement-Methoden',desc:'Pomodoro, GTD, Time Blocking – ein Vergleich der effektivsten Methoden.',read:'8 Min',href:'wissen-zeitmanagement.html'},
+    {cat:'lernen',icon:'📖',title:'Effektiv lernen: Die besten Methoden',desc:'Aktives Erinnern, Spaced Repetition, Interleaving – diese Techniken funktionieren wirklich.',read:'7 Min',href:'wissen-lernen.html'},
+    {cat:'lernen',icon:'🧠',title:'Konzentration steigern',desc:'Konzentrationsspanne verlängern: richtiges Umfeld, digitale Diät und Atemübungen.',read:'6 Min',href:'wissen-konzentration.html'},
+    {cat:'lernen',icon:'📝',title:'Prüfungen vorbereiten',desc:'Lernpläne erstellen, Angst reduzieren und mit Timer-Techniken optimal vorbereiten.',read:'6 Min',href:'wissen-pruefungen.html'},
+    {cat:'lernen',icon:'🗣',title:'Sprachen lernen mit dem Timer',desc:'20 Minuten aktives Lernen + 5 Minuten Wiederholung. Timer-Techniken beschleunigen das Sprachlernen.',read:'5 Min',href:'wissen-sprachen.html'},
+    {cat:'gesundheit',icon:'☕',title:'Warum Pausen so wichtig sind',desc:'Das Gehirn braucht Erholung für Konsolidierung. Die Wissenschaft hinter Pausen und Mikroschlaf.',read:'5 Min',href:'wissen-pausen.html'},
+    {cat:'gesundheit',icon:'😴',title:'Schlaf und Konzentration',desc:'Schlechter Schlaf sabotiert Fokus und Gedächtnis. Was du tun kannst – und wie ein Schlaf-Timer hilft.',read:'6 Min',href:'wissen-schlaf.html'},
+    {cat:'gesundheit',icon:'😰',title:'Stress und seine Auswirkungen',desc:'Chronischer Stress beeinträchtigt das Arbeitsgedächtnis. Timer helfen, Stress zu strukturieren.',read:'5 Min',href:'wissen-stress.html'},
+    {cat:'atemtechniken',icon:'🫁',title:'Box Breathing erklärt',desc:'4-4-4-4 Atemtechnik von Navy SEALs genutzt. Aktiviert den Parasympathikus in Minuten.',read:'4 Min',href:'wissen-boxbreathing.html'},
+    {cat:'atemtechniken',icon:'💤',title:'4-7-8 Atemtechnik',desc:'Dr. Andrew Weils Methode: natürliches Beruhigungsmittel. Wie 4-7-8 funktioniert.',read:'3 Min',href:'wissen-478.html'},
+    {cat:'atemtechniken',icon:'🫶',title:'Kohärente Atmung',desc:'5 Sekunden ein, 5 Sekunden aus. Synchronisiert Herzfrequenz und Atemrhythmus.',read:'4 Min',href:'wissen-kohaerenz.html'},
+    {cat:'gesundheit',icon:'🏃',title:'Bewegungspausen für mehr Fokus',desc:'Kurze Bewegung zwischen Arbeitsblöcken verbessert Durchblutung und kognitive Leistung.',read:'4 Min',href:'wissen-bewegung.html'},
+  ],
+  en: [
+    {cat:'timer',icon:'⏲',title:'What is an online timer?',desc:'An online timer runs directly in your browser – no app needed. Learn how it works and when to use it.',read:'4 min',href:'wissen-timer.html'},
+    {cat:'timer',icon:'⏱',title:'Using a stopwatch online',desc:'Digital stopwatches measure time with millisecond precision. Use cases, lap times and comparison with smartphones.',read:'3 min',href:'wissen-stoppuhr.html'},
+    {cat:'timer',icon:'⏰',title:'Online alarm clock: benefits & features',desc:'Multiple alarms, custom sounds, snooze – why a browser alarm can be more practical than your phone.',read:'4 min',href:'wissen-wecker.html'},
+    {cat:'timer',icon:'🔢',title:'Countdown timer explained',desc:'Countdown timers count down to zero. Perfect for cooking, sports, presentations and study sessions.',read:'3 min',href:'wissen-countdown.html'},
+    {cat:'produktivitaet',icon:'🍅',title:'What is the Pomodoro Technique?',desc:'25 minutes of focus, 5 minutes of break. Why Cirillo\'s 1980s method still works today.',read:'6 min',href:'wissen-pomodoro.html'},
+    {cat:'produktivitaet',icon:'🔥',title:'Deep Work explained',desc:'Cal Newport\'s concept: peak cognitive performance without distraction. Optimal timer lengths.',read:'7 min',href:'wissen-deepwork.html'},
+    {cat:'produktivitaet',icon:'🌊',title:'Flowtime Method: more flexible than Pomodoro',desc:'No fixed time limit – work until you need a break. Perfect for creative work and flow states.',read:'5 min',href:'wissen-flowtime.html'},
+    {cat:'produktivitaet',icon:'📦',title:'Timeboxing: tasks in time boxes',desc:'Assign fixed time blocks to each task. Prevents perfectionism and creates structure.',read:'5 min',href:'wissen-timeboxing.html'},
+    {cat:'produktivitaet',icon:'⚡',title:'The 52/17 Method',desc:'Draugiem Group study: work 52 minutes, rest 17 minutes. What\'s behind it.',read:'4 min',href:'wissen-5217.html'},
+    {cat:'produktivitaet',icon:'🧬',title:'Ultradian Rhythm & Focus',desc:'The brain works in 90-minute cycles. How to use the ultradian rhythm for maximum concentration.',read:'5 min',href:'wissen-ultradian.html'},
+    {cat:'produktivitaet',icon:'🎯',title:'Best time management methods',desc:'Pomodoro, GTD, Time Blocking – a comparison of the most effective methods.',read:'8 min',href:'wissen-zeitmanagement.html'},
+    {cat:'lernen',icon:'📖',title:'Study effectively: best methods',desc:'Active recall, spaced repetition, interleaving – techniques that actually work.',read:'7 min',href:'wissen-lernen.html'},
+    {cat:'lernen',icon:'🧠',title:'Improve concentration',desc:'Extend your attention span: right environment, digital detox and breathing exercises.',read:'6 min',href:'wissen-konzentration.html'},
+    {cat:'lernen',icon:'📝',title:'Prepare for exams',desc:'Create study plans, reduce anxiety and prepare optimally with timer techniques.',read:'6 min',href:'wissen-pruefungen.html'},
+    {cat:'lernen',icon:'🗣',title:'Learn languages with a timer',desc:'20 minutes active learning + 5 minutes review. Timer techniques measurably speed up language learning.',read:'5 min',href:'wissen-sprachen.html'},
+    {cat:'gesundheit',icon:'☕',title:'Why breaks are so important',desc:'The brain needs recovery to consolidate learning. The science behind breaks and micro-sleep.',read:'5 min',href:'wissen-pausen.html'},
+    {cat:'gesundheit',icon:'😴',title:'Sleep and concentration',desc:'Poor sleep sabotages focus and memory. What you can do – and how a sleep timer helps.',read:'6 min',href:'wissen-schlaf.html'},
+    {cat:'gesundheit',icon:'😰',title:'Stress and its effects',desc:'Chronic stress impairs working memory. Timers help structure and reduce stress.',read:'5 min',href:'wissen-stress.html'},
+    {cat:'atemtechniken',icon:'🫁',title:'Box Breathing explained',desc:'4-4-4-4 breathing technique used by Navy SEALs. Activates the parasympathetic nervous system.',read:'4 min',href:'wissen-boxbreathing.html'},
+    {cat:'atemtechniken',icon:'💤',title:'4-7-8 Breathing Technique',desc:"Dr. Andrew Weil's method: natural tranquilizer. How 4-7-8 works.",read:'3 min',href:'wissen-478.html'},
+    {cat:'atemtechniken',icon:'🫶',title:'Coherent Breathing',desc:'5 seconds in, 5 seconds out. Synchronizes heart rate and breathing rhythm.',read:'4 min',href:'wissen-kohaerenz.html'},
+    {cat:'gesundheit',icon:'🏃',title:'Movement breaks for more focus',desc:'Short movement between work blocks measurably improves blood flow and cognitive performance.',read:'4 min',href:'wissen-bewegung.html'},
+  ],
+};
+
+// Category labels per language
+const CAT_LABELS = {
+  de: {alle:'Alle', timer:'⏲ Timer', produktivitaet:'🎯 Produktivität', lernen:'📚 Lernen', gesundheit:'❤️ Gesundheit', atemtechniken:'🧘 Atemtechniken'},
+  en: {alle:'All', timer:'⏲ Timer', produktivitaet:'🎯 Productivity', lernen:'📚 Learning', gesundheit:'❤️ Health', atemtechniken:'🧘 Breathing'},
+  fr: {alle:'Tout', timer:'⏲ Minuteries', produktivitaet:'🎯 Productivité', lernen:'📚 Apprentissage', gesundheit:'❤️ Santé', atemtechniken:'🧘 Respiration'},
+  es: {alle:'Todo', timer:'⏲ Temporizadores', produktivitaet:'🎯 Productividad', lernen:'📚 Aprendizaje', gesundheit:'❤️ Salud', atemtechniken:'🧘 Respiración'},
+  it: {alle:'Tutto', timer:'⏲ Timer', produktivitaet:'🎯 Produttività', lernen:'📚 Apprendimento', gesundheit:'❤️ Salute', atemtechniken:'🧘 Respirazione'},
+  pt: {alle:'Tudo', timer:'⏲ Temporizadores', produktivitaet:'🎯 Produtividade', lernen:'📚 Aprendizagem', gesundheit:'❤️ Saúde', atemtechniken:'🧘 Respiração'},
+  nl: {alle:'Alles', timer:'⏲ Timers', produktivitaet:'🎯 Productiviteit', lernen:'📚 Leren', gesundheit:'❤️ Gezondheid', atemtechniken:'🧘 Ademhaling'},
+  pl: {alle:'Wszystko', timer:'⏲ Timery', produktivitaet:'🎯 Produktywność', lernen:'📚 Nauka', gesundheit:'❤️ Zdrowie', atemtechniken:'🧘 Oddychanie'},
+  tr: {alle:'Tümü', timer:'⏲ Zamanlayıcılar', produktivitaet:'🎯 Verimlilik', lernen:'📚 Öğrenme', gesundheit:'❤️ Sağlık', atemtechniken:'🧘 Nefes'},
+  ar: {alle:'الكل', timer:'⏲ مؤقتات', produktivitaet:'🎯 الإنتاجية', lernen:'📚 التعلم', gesundheit:'❤️ الصحة', atemtechniken:'🧘 تنفس'},
+  zh: {alle:'全部', timer:'⏲ 计时器', produktivitaet:'🎯 效率', lernen:'📚 学习', gesundheit:'❤️ 健康', atemtechniken:'🧘 呼吸'},
+};
+
+const PAGE_TITLES = {
+  de:'📚 Wissenswertes', en:'📚 Knowledge Base', fr:'📚 Base de connaissances',
+  es:'📚 Base de conocimiento', it:'📚 Base di conoscenza', pt:'📚 Base de conhecimento',
+  nl:'📚 Kennisbank', pl:'📚 Baza wiedzy', tr:'📚 Bilgi Tabanı', ar:'📚 قاعدة المعرفة', zh:'📚 知识库'
+};
 
 let currentFilter = 'alle';
+let currentLang = 'de';
+
+function getArticles(lang) {
+  return ARTICLES_DATA[lang] || ARTICLES_DATA['de'];
+}
+
+function getCatLabels(lang) {
+  return CAT_LABELS[lang] || CAT_LABELS['de'];
+}
+
+function buildFilterTabs(lang) {
+  const labels = getCatLabels(lang);
+  const tabs = document.getElementById('filterTabs');
+  tabs.innerHTML = Object.entries(labels).map(([key, label]) =>
+    `<button class="filter-tab ${key === currentFilter ? 'active' : ''}" data-cat="${key}" onclick="setFilter('${key}',this)">${label}</button>`
+  ).join('');
+}
 
 function setFilter(cat, btn) {
   currentFilter = cat;
   document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
+  if (btn) btn.classList.add('active');
   filterArticles();
 }
 
 function filterArticles() {
   const q = document.getElementById('searchInput').value.toLowerCase();
-  const filtered = ARTICLES.filter(a => {
+  const articles = getArticles(currentLang);
+  const filtered = articles.filter(a => {
     const matchCat = currentFilter === 'alle' || a.cat === currentFilter;
     const matchQ = !q || a.title.toLowerCase().includes(q) || a.desc.toLowerCase().includes(q);
     return matchCat && matchQ;
@@ -168,20 +221,37 @@ function filterArticles() {
     return;
   }
   noRes.style.display = 'none';
-  grid.innerHTML = filtered.map(a => `
-    <a href="${a.href}" class="article-card">
-      <span class="article-cat cat-${a.cat}">${a.cat.charAt(0).toUpperCase() + a.cat.slice(1)}</span>
+  const labels = getCatLabels(currentLang);
+  grid.innerHTML = filtered.map(a => {
+    const catLabel = labels[a.cat] || a.cat;
+    return `<a href="${a.href}?lang=${currentLang}" class="article-card">
+      <span class="article-cat cat-${a.cat}">${catLabel.replace(/^[^\s]+ /,'')}</span>
       <div class="article-title">${a.icon} ${a.title}</div>
       <div class="article-desc">${a.desc}</div>
       <div class="article-meta">
-        <span class="article-read">⏱ ${a.read} Lesezeit</span>
+        <span class="article-read">⏱ ${a.read}</span>
         <span class="article-arrow">→</span>
       </div>
-    </a>
-  `).join('');
+    </a>`;
+  }).join('');
 }
 
-filterArticles();
+function renderForLang(lang) {
+  currentLang = lang;
+  const titleEl = document.getElementById('pageTitle');
+  if (titleEl) titleEl.textContent = (PAGE_TITLES[lang] || PAGE_TITLES['de']).replace('📚 ','');
+  buildFilterTabs(lang);
+  filterArticles();
+}
+
+i18n.injectStyles();
+document.getElementById('langDropdownMount').innerHTML = i18n.buildDropdown();
+i18n.init();
+renderForLang(i18n.lang);
+
+document.addEventListener('i18n:changed', e => {
+  renderForLang(e.detail.lang);
+});
 </script>
 </body>
 </html>

@@ -3,522 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Timer-24.com – Kostenlose Online-Timer, Uhr, Stoppuhr & Fokus-Timer</title>
-<meta name="description" content="Timer-24.com: Dein kostenloser Online-Timer, Wecker, Stoppuhr, Countdown und Fokus-Timer. Pomodoro, Deep Work und mehr – die beste deutschsprachige Timer-Plattform.">
-<meta property="og:title" content="Timer-24.com – Online Timer, Uhr & Fokus-Assistent">
-<meta property="og:description" content="Kostenlose Timer-Plattform: Uhr, Wecker, Stoppuhr, Countdown, Pomodoro & Fokus-Timer. Keine Registrierung, keine App – direkt im Browser.">
+<title>Timer-24.com – Online Timer, Uhr, Stoppuhr & Fokus-Timer</title>
+<meta name="description" content="Kostenloser Online-Timer: Uhr, Wecker, Stoppuhr, Countdown und Fokus-Timer. Pomodoro, Deep Work – die beste deutschsprachige Timer-Plattform.">
+<meta property="og:title" content="Timer-24.com – Online Timer & Fokus-Assistent">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://timer-24.com/">
 <link rel="canonical" href="https://timer-24.com/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Timer-24",
-  "url": "https://timer-24.com",
-  "description": "Kostenlose Timer-Plattform für Uhr, Wecker, Countdown, Stoppuhr und Fokus-Timer",
-  "inLanguage": "de",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://timer-24.com/wissen.html?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
 <style>
-:root {
-  --bg-deep: #F6F8FC;
-  --surface: #FFFFFF;
-  --text: #1F2937;
-  --muted: #6B7280;
-  --blue-bright: #1BA6FF;
-  --blue-soft: #E8F4FF;
-  --copper: #C77A4A;
-  --copper-soft: #F3E3DA;
-  --border: #E5E7EB;
-  --green: #22C55E;
-  --grid-line: rgba(27,166,255,0.06);
-  --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-  --radius: 14px;
-  --radius-sm: 8px;
-  --transition: 0.18s ease;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background: var(--bg-deep);
-  color: var(--text);
-  min-height: 100vh;
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-/* HEADER */
-header {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.header-inner {
-  max-width: 1100px; margin: 0 auto;
-  padding: 0 24px; height: 60px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.logo {
-  display: flex; align-items: center; gap: 10px;
-  text-decoration: none; color: var(--text);
-  font-weight: 800; font-size: 20px;
-}
-.logo-icon {
-  width: 34px; height: 34px;
-  background: linear-gradient(135deg, var(--blue-bright), #0088dd);
-  border-radius: 9px; display: flex; align-items: center;
-  justify-content: center; color: white; font-size: 18px;
-}
-.logo span { color: var(--blue-bright); }
-.nav-links { display: flex; gap: 8px; }
-.nav-links a {
-  padding: 7px 14px; border-radius: var(--radius-sm);
-  text-decoration: none; font-size: 13.5px; font-weight: 500;
-  color: var(--muted); transition: all var(--transition);
-}
-.nav-links a:hover { color: var(--blue-bright); background: var(--blue-soft); }
-.btn-nav {
-  padding: 7px 16px; border-radius: var(--radius-sm);
-  background: var(--blue-bright); color: white !important;
-  font-weight: 600 !important;
-}
-.btn-nav:hover { background: #0095ee !important; }
-
-/* HERO */
-.hero {
-  max-width: 1100px; margin: 0 auto;
-  padding: 80px 24px 60px;
-  text-align: center;
-}
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--blue-soft); border: 1px solid rgba(27,166,255,0.2);
-  color: var(--blue-bright); padding: 5px 14px;
-  border-radius: 20px; font-size: 12px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.08em;
-  margin-bottom: 20px;
-}
-.hero h1 {
-  font-size: clamp(32px, 6vw, 58px);
-  font-weight: 800; line-height: 1.1;
-  margin-bottom: 20px; letter-spacing: -1px;
-}
-.hero h1 em { color: var(--blue-bright); font-style: normal; }
-.hero p {
-  font-size: 18px; color: var(--muted);
-  max-width: 560px; margin: 0 auto 36px;
-  line-height: 1.6;
-}
-.hero-actions {
-  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
-}
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px; border-radius: var(--radius);
-  background: var(--blue-bright); color: white;
-  font-size: 16px; font-weight: 700;
-  text-decoration: none; border: none; cursor: pointer;
-  transition: all var(--transition);
-  box-shadow: 0 4px 16px rgba(27,166,255,0.35);
-}
-.btn-primary:hover { background: #0095ee; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(27,166,255,0.4); }
-.btn-secondary {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px; border-radius: var(--radius);
-  background: var(--surface); color: var(--text);
-  font-size: 16px; font-weight: 600;
-  text-decoration: none; border: 1px solid var(--border);
-  cursor: pointer; transition: all var(--transition);
-  box-shadow: var(--shadow);
-}
-.btn-secondary:hover { border-color: var(--blue-bright); color: var(--blue-bright); }
-
-/* FEATURES */
-.section {
-  max-width: 1100px; margin: 0 auto;
-  padding: 0 24px 80px;
-}
-.section-label {
-  font-size: 11px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.12em;
-  color: var(--blue-bright); margin-bottom: 8px;
-}
-.section-title {
-  font-size: clamp(22px, 4vw, 32px);
-  font-weight: 800; margin-bottom: 12px;
-  letter-spacing: -0.5px;
-}
-.section-sub {
-  font-size: 16px; color: var(--muted);
-  max-width: 500px; line-height: 1.6; margin-bottom: 40px;
-}
-
-/* QUICK TIMER CARDS */
-.quick-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px; margin-bottom: 16px;
-}
-.quick-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 24px 20px;
-  text-decoration: none; color: var(--text);
-  box-shadow: var(--shadow); transition: all var(--transition);
-  display: flex; flex-direction: column; gap: 10px;
-}
-.quick-card:hover {
-  border-color: var(--blue-bright);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-}
-.quick-card.copper { border-top: 3px solid var(--copper); }
-.quick-card.blue { border-top: 3px solid var(--blue-bright); }
-.quick-card.green { border-top: 3px solid var(--green); }
-.quick-card-icon { font-size: 32px; }
-.quick-card-name { font-size: 16px; font-weight: 700; }
-.quick-card-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
-.quick-card-action {
-  display: inline-flex; align-items: center; gap: 4px;
-  font-size: 12px; font-weight: 700; color: var(--blue-bright);
-  margin-top: 4px;
-}
-
-/* FOCUS METHODS */
-.methods-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
-}
-.method-pill {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); padding: 16px;
-  text-decoration: none; color: var(--text);
-  display: flex; align-items: center; gap: 12px;
-  transition: all var(--transition); box-shadow: var(--shadow);
-}
-.method-pill:hover { border-color: var(--blue-bright); background: var(--blue-soft); }
-.method-pill-icon { font-size: 24px; flex-shrink: 0; }
-.method-pill-info { flex: 1; }
-.method-pill-name { font-size: 13px; font-weight: 700; }
-.method-pill-time { font-size: 11px; color: var(--muted); margin-top: 2px; }
-
-/* STATS BAR */
-.stats-bar {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 32px;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 24px; margin-bottom: 60px;
-  box-shadow: var(--shadow);
-}
-.stat-item { text-align: center; }
-.stat-val {
-  font-size: 32px; font-weight: 800;
-  color: var(--blue-bright); font-family: ui-monospace, monospace;
-  line-height: 1;
-}
-.stat-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; font-weight: 500; }
-
-/* FEATURES LIST */
-.features-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-}
-.feature-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 20px;
-  box-shadow: var(--shadow);
-}
-.feature-icon {
-  width: 40px; height: 40px; border-radius: 10px;
-  background: var(--blue-soft); display: flex;
-  align-items: center; justify-content: center;
-  font-size: 20px; margin-bottom: 12px;
-}
-.feature-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
-.feature-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
-
-/* CTA BANNER */
-.cta-banner {
-  background: linear-gradient(135deg, var(--blue-bright) 0%, #0077cc 100%);
-  border-radius: var(--radius); padding: 48px 40px;
-  text-align: center; color: white;
-  box-shadow: 0 8px 32px rgba(27,166,255,0.3);
-  margin-bottom: 60px;
-}
-.cta-banner h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
-.cta-banner p { font-size: 16px; opacity: 0.85; margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto; }
-.btn-white {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px; border-radius: var(--radius);
-  background: white; color: var(--blue-bright);
-  font-size: 16px; font-weight: 700;
-  text-decoration: none; transition: all var(--transition);
-}
-.btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-
-/* FOOTER */
-footer {
-  border-top: 1px solid var(--border);
-  background: var(--surface); padding: 32px 24px;
-  text-align: center;
-}
-.footer-links {
-  display: flex; gap: 24px; justify-content: center;
-  flex-wrap: wrap; margin-bottom: 12px;
-}
-.footer-links a {
-  font-size: 13px; color: var(--muted);
-  text-decoration: none; transition: color var(--transition);
-}
-.footer-links a:hover { color: var(--blue-bright); }
-.footer-copy { font-size: 12px; color: var(--muted); }
-
-/* RESPONSIVE */
-@media (max-width: 640px) {
-  .nav-links { display: none; }
-  .hero { padding: 48px 16px 40px; }
-  .section { padding: 0 16px 48px; }
-  .stats-bar { padding: 20px; gap: 16px; }
-  .cta-banner { padding: 32px 20px; }
-}
+:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;--green:#22C55E;--grid-line:rgba(27,166,255,0.06);--shadow:0 1px 3px rgba(0,0,0,0.07);--shadow-md:0 4px 16px rgba(0,0,0,0.08);--radius:14px;--radius-sm:8px;--transition:0.18s ease;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);color:var(--text);min-height:100vh;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:40px 40px;}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;font-size:20px;flex-shrink:0;}
+.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:9px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;}
+.logo span{color:var(--blue-bright);}
+.nav-links{display:flex;gap:6px;align-items:center;}
+.nav-links a{padding:7px 12px;border-radius:var(--radius-sm);text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);transition:all var(--transition);white-space:nowrap;}
+.nav-links a:hover{color:var(--blue-bright);background:var(--blue-soft);}
+.btn-nav{background:var(--blue-bright)!important;color:white!important;font-weight:600!important;}
+.btn-nav:hover{background:#0095ee!important;}
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+/* Hero */
+.hero{max-width:1100px;margin:0 auto;padding:72px 24px 56px;text-align:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue-soft);border:1px solid rgba(27,166,255,0.2);color:var(--blue-bright);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:20px;}
+.hero h1{font-size:clamp(30px,6vw,56px);font-weight:800;line-height:1.1;margin-bottom:20px;letter-spacing:-1px;}
+.hero h1 em{color:var(--blue-bright);font-style:normal;}
+.hero p{font-size:18px;color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.6;}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--radius);background:var(--blue-bright);color:white;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:all var(--transition);box-shadow:0 4px 16px rgba(27,166,255,0.35);}
+.btn-primary:hover{background:#0095ee;transform:translateY(-1px);}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:15px;font-weight:600;text-decoration:none;border:1px solid var(--border);cursor:pointer;transition:all var(--transition);box-shadow:var(--shadow);}
+.btn-secondary:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
+/* Sections */
+.section{max-width:1100px;margin:0 auto;padding:0 24px 72px;}
+.section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--blue-bright);margin-bottom:8px;}
+.section-title{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:10px;letter-spacing:-0.5px;}
+.section-sub{font-size:15px;color:var(--muted);max-width:480px;line-height:1.6;margin-bottom:36px;}
+/* Quick cards */
+.quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
+.quick-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:all var(--transition);display:flex;flex-direction:column;gap:8px;}
+.quick-card:hover{border-color:var(--blue-bright);box-shadow:var(--shadow-md);transform:translateY(-2px);}
+.quick-card.c-blue{border-top:3px solid var(--blue-bright);}
+.quick-card.c-copper{border-top:3px solid var(--copper);}
+.quick-card.c-green{border-top:3px solid var(--green);}
+.qc-icon{font-size:28px;}
+.qc-name{font-size:15px;font-weight:700;}
+.qc-desc{font-size:12px;color:var(--muted);line-height:1.5;flex:1;}
+.qc-arrow{font-size:12px;font-weight:700;color:var(--blue-bright);}
+/* Stats bar */
+.stats-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;margin-bottom:64px;box-shadow:var(--shadow);}
+.stat-item{text-align:center;}
+.stat-val{font-size:30px;font-weight:800;color:var(--blue-bright);font-family:ui-monospace,monospace;line-height:1;margin-bottom:4px;}
+.stat-lbl{font-size:11px;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;}
+/* Methods grid */
+.methods-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;}
+.method-pill{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;transition:all var(--transition);box-shadow:var(--shadow);}
+.method-pill:hover{border-color:var(--blue-bright);background:var(--blue-soft);}
+.mp-icon{font-size:22px;flex-shrink:0;}
+.mp-name{font-size:13px;font-weight:700;}
+.mp-time{font-size:11px;color:var(--muted);margin-top:2px;}
+/* Features */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.fc-icon{width:38px;height:38px;border-radius:10px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px;}
+.fc-title{font-size:14px;font-weight:700;margin-bottom:6px;}
+.fc-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+/* CTA banner */
+.cta-banner{background:linear-gradient(135deg,var(--blue-bright) 0%,#0077cc 100%);border-radius:var(--radius);padding:44px 36px;text-align:center;color:white;box-shadow:0 8px 32px rgba(27,166,255,0.3);margin-bottom:60px;}
+.cta-banner h2{font-size:26px;font-weight:800;margin-bottom:10px;}
+.cta-banner p{font-size:15px;opacity:.85;margin-bottom:24px;max-width:380px;margin-left:auto;margin-right:auto;}
+.btn-white{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--radius);background:white;color:var(--blue-bright);font-size:15px;font-weight:700;text-decoration:none;transition:all var(--transition);}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.2);}
+/* Footer */
+footer{border-top:1px solid var(--border);background:var(--surface);padding:28px 24px;text-align:center;}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color var(--transition);}
+.footer-links a:hover{color:var(--blue-bright);}
+.footer-copy{font-size:12px;color:var(--muted);}
+@media(max-width:768px){.nav-links{display:none;}.header-inner{padding:0 16px;}.hero{padding:44px 16px 36px;}.section{padding:0 16px 48px;}.stats-bar{padding:18px;}.cta-banner{padding:28px 18px;}}
 </style>
 </head>
 <body>
-
 <header>
   <div class="header-inner">
-    <a href="/" class="logo">
-      <div class="logo-icon">⏱</div>
-      Timer<span>-24</span>
-    </a>
+    <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<span>-24</span></a>
     <nav class="nav-links">
-      <a href="timer.html">Timer</a>
-      <a href="wissen.html">Wissen</a>
-      <a href="faq.html">FAQ</a>
-      <a href="hilfe.html">Hilfe</a>
-      <a href="timer.html" class="btn-nav">▶ Jetzt starten</a>
+      <a href="timer.html" data-i18n="nav_timer">Timer</a>
+      <a href="wissen.html" data-i18n="nav_wissen">Wissen</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <a href="hilfe.html" data-i18n="nav_hilfe">Hilfe</a>
+      <a href="timer.html" class="btn-nav" data-i18n="nav_start">▶ Jetzt starten</a>
     </nav>
+    <div class="header-right" id="langDropdownMount"></div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">✨ Kostenlos · Kein Login · Direkt im Browser</div>
-  <h1>Zeit smart nutzen –<br><em>Timer für jeden Zweck</em></h1>
-  <p>Uhr, Wecker, Stoppuhr, Countdown und intelligente Fokus-Timer. Alles an einem Ort – ohne Registrierung, ohne App.</p>
+  <div class="hero-badge" data-i18n="idx_badge">✨ Kostenlos · Kein Login · Direkt im Browser</div>
+  <h1><span data-i18n="idx_h1a">Zeit smart nutzen –</span><br><em data-i18n="idx_h1b">Timer für jeden Zweck</em></h1>
+  <p data-i18n="idx_sub">Uhr, Wecker, Stoppuhr, Countdown und intelligente Fokus-Timer. Alles an einem Ort.</p>
   <div class="hero-actions">
-    <a href="timer.html" class="btn-primary">▶ Timer starten</a>
-    <a href="timer.html#assistant" class="btn-secondary">🤖 Fokus-Assistent</a>
+    <a href="timer.html" class="btn-primary" data-i18n="idx_cta1">▶ Timer starten</a>
+    <a href="timer.html" class="btn-secondary" onclick="localStorage.setItem('t24_lastPanel','assistant')" data-i18n="idx_cta2">🤖 Fokus-Assistent</a>
   </div>
 </section>
 
-<!-- POPULAR TIMERS -->
 <section class="section">
-  <div class="section-label">Beliebt</div>
-  <div class="section-title">Die meistgenutzten Timer</div>
-  <div class="section-sub">Direkt loslegen – kein Einrichten, kein Warten.</div>
-
+  <div class="section-label" data-i18n="idx_popular">Beliebt</div>
+  <div class="section-title" data-i18n="idx_popular_title">Die meistgenutzten Timer</div>
+  <div class="section-sub" data-i18n="idx_popular_sub">Direkt loslegen – kein Einrichten, kein Warten.</div>
   <div class="quick-grid">
-    <a href="timer.html" data-panel="countdown" class="quick-card blue" onclick="localStorage.setItem('t24_lastPanel','countdown')">
-      <div class="quick-card-icon">⏲</div>
-      <div class="quick-card-name">Countdown-Timer</div>
-      <div class="quick-card-desc">Stunden, Minuten, Sekunden einstellen. Mit Schnellwahl für 1–120 Minuten.</div>
-      <div class="quick-card-action">Jetzt starten →</div>
+    <a href="timer.html" class="quick-card c-blue" onclick="localStorage.setItem('t24_lastPanel','countdown')">
+      <div class="qc-icon">⏲</div>
+      <div class="qc-name" data-i18n="nav_countdown">Timer</div>
+      <div class="qc-desc">Stunden, Minuten, Sekunden. 12 Schnellwahl-Buttons.</div>
+      <div class="qc-arrow">→</div>
     </a>
     <a href="timer.html" class="quick-card" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="quick-card-icon">🍅</div>
-      <div class="quick-card-name">Pomodoro-Timer</div>
-      <div class="quick-card-desc">25 Min Fokus, 5 Min Pause. Die bewährteste Produktivitätsmethode der Welt.</div>
-      <div class="quick-card-action">Jetzt starten →</div>
+      <div class="qc-icon">🍅</div>
+      <div class="qc-name">Pomodoro</div>
+      <div class="qc-desc">25 Min Fokus, 5 Min Pause. Die beliebteste Produktivitätsmethode.</div>
+      <div class="qc-arrow">→</div>
     </a>
-    <a href="timer.html" class="quick-card copper" onclick="localStorage.setItem('t24_lastPanel','stopwatch')">
-      <div class="quick-card-icon">⏱</div>
-      <div class="quick-card-name">Stoppuhr</div>
-      <div class="quick-card-desc">Mit Millisekunden, Rundenzeiten und CSV-Export für deine Messungen.</div>
-      <div class="quick-card-action">Jetzt starten →</div>
+    <a href="timer.html" class="quick-card c-copper" onclick="localStorage.setItem('t24_lastPanel','stopwatch')">
+      <div class="qc-icon">⏱</div>
+      <div class="qc-name" data-i18n="nav_stoppuhr">Stoppuhr</div>
+      <div class="qc-desc">Millisekunden, Rundenzeiten, CSV-Export.</div>
+      <div class="qc-arrow">→</div>
     </a>
-    <a href="timer.html" class="quick-card green" onclick="localStorage.setItem('t24_lastPanel','alarm')">
-      <div class="quick-card-icon">⏰</div>
-      <div class="quick-card-name">Online Wecker</div>
-      <div class="quick-card-desc">Mehrere Wecker mit Wiederholung, eigenen Tönen und Snooze-Funktion.</div>
-      <div class="quick-card-action">Jetzt starten →</div>
+    <a href="timer.html" class="quick-card c-green" onclick="localStorage.setItem('t24_lastPanel','alarm')">
+      <div class="qc-icon">⏰</div>
+      <div class="qc-name" data-i18n="nav_wecker">Wecker</div>
+      <div class="qc-desc">Mehrere Wecker, Wiederholung, eigene Töne, Snooze.</div>
+      <div class="qc-arrow">→</div>
     </a>
     <a href="timer.html" class="quick-card" onclick="localStorage.setItem('t24_lastPanel','clock')">
-      <div class="quick-card-icon">🕒</div>
-      <div class="quick-card-name">Digitale Uhr</div>
-      <div class="quick-card-desc">Großes Display, 12h/24h, Zeitzonen und Weltuhren auf einen Blick.</div>
-      <div class="quick-card-action">Jetzt starten →</div>
+      <div class="qc-icon">🕒</div>
+      <div class="qc-name" data-i18n="nav_uhr">Uhr</div>
+      <div class="qc-desc">12h/24h, Zeitzonen, Weltuhren.</div>
+      <div class="qc-arrow">→</div>
     </a>
     <a href="timer.html" class="quick-card" onclick="localStorage.setItem('t24_lastPanel','breath')">
-      <div class="quick-card-icon">🧘</div>
-      <div class="quick-card-name">Atem-Timer</div>
-      <div class="quick-card-desc">Box Breathing, 4-7-8 und kohärente Atmung für sofortige Entspannung.</div>
-      <div class="quick-card-action">Jetzt starten →</div>
+      <div class="qc-icon">🧘</div>
+      <div class="qc-name" data-i18n="nav_atmung">Atmung</div>
+      <div class="qc-desc">Box Breathing, 4-7-8, Kohärente Atmung.</div>
+      <div class="qc-arrow">→</div>
     </a>
   </div>
 </section>
 
-<!-- STATS -->
 <section class="section">
   <div class="stats-bar">
-    <div class="stat-item">
-      <div class="stat-val">9</div>
-      <div class="stat-lbl">Timer-Bereiche</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-val">7</div>
-      <div class="stat-lbl">Fokus-Methoden</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-val">0</div>
-      <div class="stat-lbl">Registrierungen nötig</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-val">100%</div>
-      <div class="stat-lbl">Kostenlos</div>
-    </div>
+    <div class="stat-item"><div class="stat-val">9</div><div class="stat-lbl" data-i18n="idx_stat_areas">Timer-Bereiche</div></div>
+    <div class="stat-item"><div class="stat-val">7</div><div class="stat-lbl" data-i18n="idx_stat_methods">Fokus-Methoden</div></div>
+    <div class="stat-item"><div class="stat-val">0</div><div class="stat-lbl" data-i18n="idx_stat_reg">Registrierungen nötig</div></div>
+    <div class="stat-item"><div class="stat-val">100%</div><div class="stat-lbl" data-i18n="idx_stat_free">Kostenlos</div></div>
   </div>
 </section>
 
-<!-- FOCUS METHODS -->
 <section class="section">
-  <div class="section-label">Fokus & Produktivität</div>
-  <div class="section-title">Alle Fokus-Methoden</div>
-  <div class="section-sub">Von Pomodoro bis Deep Work – wähle die Methode, die zu deinem Arbeitsstil passt.</div>
-
+  <div class="section-label" data-i18n="idx_focus_label">Fokus & Produktivität</div>
+  <div class="section-title" data-i18n="idx_focus_title">Alle Fokus-Methoden</div>
+  <div class="section-sub" data-i18n="idx_focus_sub">Von Pomodoro bis Deep Work – wähle die Methode, die zu deinem Arbeitsstil passt.</div>
   <div class="methods-grid">
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="method-pill-icon">🍅</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">Pomodoro</div>
-        <div class="method-pill-time">25 Min · 5 Min Pause</div>
-      </div>
-    </a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="method-pill-icon">⚡</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">52/17 Methode</div>
-        <div class="method-pill-time">52 Min · 17 Min Pause</div>
-      </div>
-    </a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="method-pill-icon">🔥</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">Deep Work</div>
-        <div class="method-pill-time">60–120 Min · 20 Min Pause</div>
-      </div>
-    </a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="method-pill-icon">🧬</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">Ultradian-Rhythmus</div>
-        <div class="method-pill-time">90 Min · 20 Min Pause</div>
-      </div>
-    </a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="method-pill-icon">🌊</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">Flowtime</div>
-        <div class="method-pill-time">Offen · Nach Bedarf</div>
-      </div>
-    </a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="method-pill-icon">📦</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">Timeboxing</div>
-        <div class="method-pill-time">15–60 Min Blöcke</div>
-      </div>
-    </a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="method-pill-icon">📚</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">Lern-Timer</div>
-        <div class="method-pill-time">45 Min · 10 Min Pause</div>
-      </div>
-    </a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','assistant')">
-      <div class="method-pill-icon">🤖</div>
-      <div class="method-pill-info">
-        <div class="method-pill-name">Fokus-Assistent</div>
-        <div class="method-pill-time">Empfehlung auf Maß</div>
-      </div>
-    </a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🍅</div><div><div class="mp-name">Pomodoro</div><div class="mp-time">25 · 5 Min</div></div></a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">⚡</div><div><div class="mp-name">52/17</div><div class="mp-time">52 · 17 Min</div></div></a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🔥</div><div><div class="mp-name">Deep Work</div><div class="mp-time">60–120 Min</div></div></a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🧬</div><div><div class="mp-name">Ultradian</div><div class="mp-time">90 · 20 Min</div></div></a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🌊</div><div><div class="mp-name">Flowtime</div><div class="mp-time">Offen</div></div></a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">📦</div><div><div class="mp-name">Timeboxing</div><div class="mp-time">15–60 Min</div></div></a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">📚</div><div><div class="mp-name">Lern-Timer</div><div class="mp-time">45 · 10 Min</div></div></a>
+    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','assistant')"><div class="mp-icon">🤖</div><div><div class="mp-name" data-i18n="nav_assistent">Assistent</div><div class="mp-time">Empfehlung</div></div></a>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="section">
-  <div class="section-label">Warum Timer-24</div>
-  <div class="section-title">Alles was du brauchst</div>
-  <div class="section-sub">Designed für Konzentration, Geschwindigkeit und maximale Benutzerfreundlichkeit.</div>
-
+  <div class="section-label" data-i18n="idx_why_label">Warum Timer-24</div>
+  <div class="section-title" data-i18n="idx_why_title">Alles was du brauchst</div>
+  <div class="section-sub" data-i18n="idx_why_sub">Designed für Konzentration, Geschwindigkeit und maximale Benutzerfreundlichkeit.</div>
   <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <div class="feature-title">Blitzschnell</div>
-      <div class="feature-desc">Kein Framework, kein Build-Tool. Reine HTML/CSS/JS – lädt in unter 1 Sekunde auf jedem Gerät.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔒</div>
-      <div class="feature-title">100% Datenschutz</div>
-      <div class="feature-desc">Alle Daten bleiben lokal in deinem Browser. Keine Registrierung, keine Cloud, keine Tracking-Cookies.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📱</div>
-      <div class="feature-title">Mobile First</div>
-      <div class="feature-desc">Perfekt auf Smartphone, Tablet und Desktop. Tastaturkürzel für Desktop-Power-User.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🌙</div>
-      <div class="feature-title">3 Themes</div>
-      <div class="feature-desc">Hell, Dunkel oder Zen – dein Timer passt sich deiner Stimmung und Umgebung an.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📊</div>
-      <div class="feature-title">Statistik & Streak</div>
-      <div class="feature-desc">Verfolge deine Fokuszeit, Sessionsanzahl und Streak – alles lokal gespeichert.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⌨️</div>
-      <div class="feature-title">Tastatursteuerung</div>
-      <div class="feature-desc">Leertaste = Start/Pause · R = Reset · F = Vollbild · L = Runde (Stoppuhr)</div>
-    </div>
+    <div class="feature-card"><div class="fc-icon">⚡</div><div class="fc-title">Blitzschnell</div><div class="fc-desc">Reines HTML/CSS/JS – lädt in unter 1 Sekunde auf jedem Gerät.</div></div>
+    <div class="feature-card"><div class="fc-icon">🔒</div><div class="fc-title">100% Datenschutz</div><div class="fc-desc">Alle Daten bleiben lokal im Browser. Keine Cloud, kein Tracking.</div></div>
+    <div class="feature-card"><div class="fc-icon">📱</div><div class="fc-title">Mobile First</div><div class="fc-desc">Perfekt auf Smartphone, Tablet und Desktop.</div></div>
+    <div class="feature-card"><div class="fc-icon">🌙</div><div class="fc-title">3 Themes</div><div class="fc-desc">Hell, Dunkel oder Zen – dein Timer passt sich an.</div></div>
+    <div class="feature-card"><div class="fc-icon">📊</div><div class="fc-title">Statistik & Streak</div><div class="fc-desc">Fokuszeit, Sessions und Streak – alles lokal gespeichert.</div></div>
+    <div class="feature-card"><div class="fc-icon">⌨️</div><div class="fc-title">Tastatursteuerung</div><div class="fc-desc">Leertaste · R · F · L – volle Kontrolle ohne Maus.</div></div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="section">
   <div class="cta-banner">
-    <h2>Bereit, fokussierter zu arbeiten?</h2>
-    <p>Starte jetzt – kostenlos, ohne Registrierung, direkt im Browser.</p>
-    <a href="timer.html" class="btn-white">▶ Timer starten</a>
+    <h2 data-i18n="idx_cta_title">Bereit, fokussierter zu arbeiten?</h2>
+    <p data-i18n="idx_cta_sub">Starte jetzt – kostenlos, ohne Registrierung, direkt im Browser.</p>
+    <a href="timer.html" class="btn-white" data-i18n="idx_cta_btn">▶ Timer starten</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-links">
-    <a href="timer.html">Timer</a>
-    <a href="wissen.html">Wissenswertes</a>
-    <a href="faq.html">FAQ</a>
-    <a href="hilfe.html">Hilfe</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="ueber-uns.html">Über uns</a>
+    <a href="timer.html" data-i18n="footer_timer">Timer</a>
+    <a href="wissen.html" data-i18n="footer_wissen">Wissenswertes</a>
+    <a href="faq.html" data-i18n="footer_faq">FAQ</a>
+    <a href="hilfe.html" data-i18n="footer_hilfe">Hilfe</a>
+    <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
+    <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
+    <a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a>
+    <a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a>
   </div>
-  <div class="footer-copy">© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser · Keine Garantie auf Richtigkeit</div>
+  <div class="footer-copy" data-i18n="footer_copy">© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser · Keine Garantie auf Richtigkeit</div>
 </footer>
 
+<script src="i18n.js"></script>
+<script>
+  i18n.injectStyles();
+  document.getElementById('langDropdownMount').innerHTML = i18n.buildDropdown();
+  i18n.init();
+</script>
 </body>
 </html>

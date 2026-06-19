@@ -19,6 +19,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backd
 .nav-links{display:flex;gap:8px;}
 .nav-links a{padding:7px 14px;border-radius:var(--radius-sm);text-decoration:none;font-size:13.5px;font-weight:500;color:var(--muted);transition:all var(--transition);}
 .nav-links a:hover{color:var(--blue-bright);background:var(--blue-soft);}
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
 .btn-nav{background:var(--blue-bright);color:white!important;font-weight:600!important;}
 main{max-width:720px;margin:0 auto;padding:40px 24px 80px;}
 h1{font-size:clamp(24px,5vw,36px);font-weight:800;margin-bottom:8px;}
@@ -42,18 +43,20 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:32px
 .footer-copy{font-size:12px;color:var(--muted);}
 @media(max-width:640px){.nav-links{display:none;}main{padding:24px 16px 60px;}.legal-card{padding:20px;}}
 </style>
+<script src="i18n.js"></script>
 </head>
 <body>
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<span>-24</span></a>
     <nav class="nav-links">
-      <a href="timer.html">Timer</a>
-      <a href="wissen.html">Wissen</a>
-      <a href="faq.html">FAQ</a>
-      <a href="hilfe.html">Hilfe</a>
-      <a href="timer.html" class="btn-nav">▶ Jetzt starten</a>
+      <a href="timer.html" data-i18n="nav_timer" data-i18n="footer_timer">Timer</a>
+      <a href="wissen.html" data-i18n="nav_wissen">Wissen</a>
+      <a href="faq.html" data-i18n="nav_faq" data-i18n="footer_faq">FAQ</a>
+      <a href="hilfe.html" data-i18n="nav_hilfe" data-i18n="footer_hilfe">Hilfe</a>
+      <a href="timer.html" class="btn-nav" data-i18n="nav_start">▶ Jetzt starten</a>
     </nav>
+    <div class="header-right" id="langDropdownMount"></div>
   </div>
 </header>
 
@@ -152,16 +155,21 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:32px
 
 <footer>
   <div class="footer-links">
-    <a href="timer.html">Timer</a>
-    <a href="wissen.html">Wissenswertes</a>
-    <a href="faq.html">FAQ</a>
-    <a href="hilfe.html">Hilfe</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="ueber-uns.html">Über uns</a>
+    <a href="timer.html" data-i18n="nav_timer">Timer</a>
+    <a href="wissen.html" data-i18n="footer_wissen">Wissenswertes</a>
+    <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+    <a href="hilfe.html" data-i18n="nav_hilfe">Hilfe</a>
+    <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
+    <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
+    <a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a>
+    <a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a>
   </div>
   <div class="footer-copy">© 2025 Timer-24.com</div>
 </footer>
+<script>
+  i18n.injectStyles();
+  document.getElementById('langDropdownMount').innerHTML = i18n.buildDropdown();
+  i18n.init();
+</script>
 </body>
 </html>

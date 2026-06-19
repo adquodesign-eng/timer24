@@ -1252,20 +1252,21 @@ body[data-theme="zen"] {
 
     <nav class="main-nav" aria-label="Hauptnavigation">
       <ul class="nav-list" role="list">
-        <li><a href="#" data-panel="clock" class="nav-link active">🕒 Uhr</a></li>
-        <li><a href="#" data-panel="alarm" class="nav-link">⏰ Wecker</a></li>
-        <li><a href="#" data-panel="countdown" class="nav-link">⏲ Timer</a></li>
-        <li><a href="#" data-panel="stopwatch" class="nav-link">⏱ Stoppuhr</a></li>
-        <li><a href="#" data-panel="focus" class="nav-link">🍅 Fokus-Timer</a></li>
-        <li><a href="#" data-panel="sleep" class="nav-link">😴 Schlaf-Timer</a></li>
-        <li><a href="#" data-panel="breath" class="nav-link">🧘 Atmung</a></li>
-        <li><a href="#" data-panel="stats" class="nav-link">📊 Statistik</a></li>
+        <li><a href="#" data-panel="clock" class="nav-link active" data-i18n="nav_uhr">🕒 Uhr</a></li>
+        <li><a href="#" data-panel="alarm" class="nav-link" data-i18n="nav_wecker">⏰ Wecker</a></li>
+        <li><a href="#" data-panel="countdown" class="nav-link" data-i18n="nav_countdown">⏲ Timer</a></li>
+        <li><a href="#" data-panel="stopwatch" class="nav-link" data-i18n="nav_stoppuhr">⏱ Stoppuhr</a></li>
+        <li><a href="#" data-panel="focus" class="nav-link" data-i18n="nav_fokus">🍅 Fokus-Timer</a></li>
+        <li><a href="#" data-panel="sleep" class="nav-link" data-i18n="nav_schlaf">😴 Schlaf-Timer</a></li>
+        <li><a href="#" data-panel="breath" class="nav-link" data-i18n="nav_atmung">🧘 Atmung</a></li>
+        <li><a href="#" data-panel="stats" class="nav-link" data-i18n="nav_statistik">📊 Statistik</a></li>
         <li><a href="wissen.html" class="nav-link">📚 Wissen</a></li>
         <li><a href="faq.html" class="nav-link">❓ FAQ</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
+      <div id="langDropdownMount" style="flex-shrink:0"></div>
       <button class="btn-icon" id="themeToggle" aria-label="Design wechseln" title="Design wechseln">🌙</button>
       <button class="btn-icon" id="fullscreenToggle" aria-label="Vollbild" title="Vollbild">⛶</button>
       <button class="hamburger" id="hamburgerBtn" aria-label="Menü öffnen" aria-expanded="false">
@@ -1282,14 +1283,14 @@ body[data-theme="zen"] {
       <button class="btn-icon" id="closeMobileMenu" aria-label="Menü schließen">✕</button>
     </div>
     <ul class="mobile-nav-list" role="list">
-      <li><a href="#" data-panel="clock" class="nav-link active">🕒 Uhr</a></li>
-      <li><a href="#" data-panel="alarm" class="nav-link">⏰ Wecker</a></li>
-      <li><a href="#" data-panel="countdown" class="nav-link">⏲ Timer</a></li>
-      <li><a href="#" data-panel="stopwatch" class="nav-link">⏱ Stoppuhr</a></li>
-      <li><a href="#" data-panel="focus" class="nav-link">🍅 Fokus-Timer</a></li>
-      <li><a href="#" data-panel="sleep" class="nav-link">😴 Schlaf-Timer</a></li>
-      <li><a href="#" data-panel="breath" class="nav-link">🧘 Atmung</a></li>
-      <li><a href="#" data-panel="stats" class="nav-link">📊 Statistik</a></li>
+      <li><a href="#" data-panel="clock" class="nav-link active" data-i18n="nav_uhr">🕒 Uhr</a></li>
+      <li><a href="#" data-panel="alarm" class="nav-link" data-i18n="nav_wecker">⏰ Wecker</a></li>
+      <li><a href="#" data-panel="countdown" class="nav-link" data-i18n="nav_countdown">⏲ Timer</a></li>
+      <li><a href="#" data-panel="stopwatch" class="nav-link" data-i18n="nav_stoppuhr">⏱ Stoppuhr</a></li>
+      <li><a href="#" data-panel="focus" class="nav-link" data-i18n="nav_fokus">🍅 Fokus-Timer</a></li>
+      <li><a href="#" data-panel="sleep" class="nav-link" data-i18n="nav_schlaf">😴 Schlaf-Timer</a></li>
+      <li><a href="#" data-panel="breath" class="nav-link" data-i18n="nav_atmung">🧘 Atmung</a></li>
+      <li><a href="#" data-panel="stats" class="nav-link" data-i18n="nav_statistik">📊 Statistik</a></li>
       <li><a href="#" data-panel="assistant" class="nav-link">🤖 Fokus-Assistent</a></li>
       <li><a href="wissen.html">📚 Wissenswertes</a></li>
       <li><a href="faq.html">❓ FAQ</a></li>
@@ -1297,25 +1298,25 @@ body[data-theme="zen"] {
     </ul>
     <div class="divider" style="margin:16px 0"></div>
     <ul class="mobile-nav-list" role="list">
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="impressum.html" data-i18n="footer_impressum">Impressum</a></li>
+      <li><a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a></li>
+      <li><a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a></li>
+      <li><a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a></li>
     </ul>
   </nav>
 </div>
 
 <!-- TAB NAVIGATION -->
 <nav class="tab-nav" aria-label="Bereich wählen">
-  <button class="tab-btn active" data-panel="clock">🕒 Uhr</button>
-  <button class="tab-btn" data-panel="alarm">⏰ Wecker</button>
-  <button class="tab-btn" data-panel="countdown">⏲ Timer</button>
-  <button class="tab-btn" data-panel="stopwatch">⏱ Stoppuhr</button>
-  <button class="tab-btn" data-panel="focus">🍅 Fokus</button>
-  <button class="tab-btn" data-panel="sleep">😴 Schlaf</button>
-  <button class="tab-btn" data-panel="breath">🧘 Atmung</button>
-  <button class="tab-btn" data-panel="assistant">🤖 Assistent</button>
-  <button class="tab-btn" data-panel="stats">📊 Statistik</button>
+  <button class="tab-btn active" data-panel="clock" data-i18n="t_uhr_tab">🕒 Uhr</button>
+  <button class="tab-btn" data-panel="alarm" data-i18n="t_wecker_tab">⏰ Wecker</button>
+  <button class="tab-btn" data-panel="countdown" data-i18n="t_countdown_tab">⏲ Timer</button>
+  <button class="tab-btn" data-panel="stopwatch" data-i18n="t_sw_tab">⏱ Stoppuhr</button>
+  <button class="tab-btn" data-panel="focus" data-i18n="t_focus_tab">🍅 Fokus</button>
+  <button class="tab-btn" data-panel="sleep" data-i18n="t_sleep_tab">😴 Schlaf</button>
+  <button class="tab-btn" data-panel="breath" data-i18n="t_breath_tab">🧘 Atmung</button>
+  <button class="tab-btn" data-panel="assistant" data-i18n="t_assistant_tab">🤖 Assistent</button>
+  <button class="tab-btn" data-panel="stats" data-i18n="t_stats_tab">📊 Statistik</button>
 </nav>
 
 <!-- MAIN -->
@@ -1977,15 +1978,15 @@ body[data-theme="zen"] {
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="ueber-uns.html">Über uns</a>
-    <a href="wissen.html">Wissenswertes</a>
-    <a href="faq.html">FAQ</a>
-    <a href="hilfe.html">Hilfe</a>
+    <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
+    <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
+    <a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a>
+    <a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a>
+    <a href="wissen.html" data-i18n="footer_wissen">Wissenswertes</a>
+    <a href="faq.html" data-i18n="footer_faq">FAQ</a>
+    <a href="hilfe.html" data-i18n="footer_hilfe">Hilfe</a>
   </div>
-  <div class="footer-copy">© 2025 Timer-24.com · Kostenlose Timer-Plattform</div>
+  <div class="footer-copy" data-i18n="footer_copy">© 2025 Timer-24.com · Kostenlose Timer-Plattform</div>
 </footer>
 
 <script>
@@ -3257,12 +3258,63 @@ document.querySelectorAll('[data-ambient]').forEach(chip => {
 });
 
 // Keyboard shortcut hint
+// i18n handled at end of body
+
+// Listen for language changes and update dynamic strings
+document.addEventListener('i18n:changed', function(e) {
+  const t = e.detail.t;
+  // Update tab buttons
+  const tabMap = {clock:'t_uhr_tab',alarm:'t_wecker_tab',countdown:'t_countdown_tab',
+    stopwatch:'t_sw_tab',focus:'t_focus_tab',sleep:'t_sleep_tab',
+    breath:'t_breath_tab',assistant:'t_assistant_tab',stats:'t_stats_tab'};
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    const key = tabMap[btn.dataset.panel];
+    if (key && t[key]) btn.textContent = t[key];
+  });
+  // Update nav links
+  document.querySelectorAll('.nav-link[data-panel]').forEach(a => {
+    const key = tabMap[a.dataset.panel];
+    if (key && t[key]) a.textContent = t[key];
+  });
+  // KB hint if not shown
+  if (!localStorage.getItem('t24_kbHint')) {
+    showToast(t.t_kb_hint || '💡 Leertaste = Start/Pause · R = Reset · F = Vollbild');
+    localStorage.setItem('t24_kbHint', '1');
+  }
+});
+
 setTimeout(() => {
   if (!localStorage.getItem('t24_kbHint')) {
-    showToast('💡 Tipp: Leertaste = Start/Pause · R = Reset · F = Vollbild');
+    showToast(i18n.t('t_kb_hint'));
     localStorage.setItem('t24_kbHint', '1');
   }
 }, 2000);
+</script>
+
+<script src="i18n.js"></script>
+<script>
+(function() {
+  // Init language system
+  i18n.injectStyles();
+  document.getElementById('langDropdownMount').innerHTML = i18n.buildDropdown();
+  i18n.init();
+
+  // On language change: update all dynamic timer strings
+  document.addEventListener('i18n:changed', function(e) {
+    const t = e.detail.t;
+    // Days in alarm chips
+    if (t.t_days) {
+      const chips = document.querySelectorAll('.day-chip');
+      const dayNums = [1,2,3,4,5,6,0];
+      chips.forEach((chip, i) => { if (t.t_days[dayNums[i]]) chip.textContent = t.t_days[dayNums[i]]; });
+    }
+    // Stats week days
+    if (t.t_week_days) {
+      const wdEls = document.querySelectorAll('#weekChart + div span');
+      wdEls.forEach((el, i) => { if (t.t_week_days[i]) el.textContent = t.t_week_days[i]; });
+    }
+  });
+})();
 </script>
 </body>
 </html>
