@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hilfe – So nutzt du Timer-24.com | Timer-24.com</title>
+<meta name="description" content="Schritt-für-Schritt-Anleitungen für alle Funktionen von Timer-24.com: Timer, Wecker, Stoppuhr, Fokus-Timer und mehr.">
+<link rel="canonical" href="https://timer-24.com/hilfe.html">
+<style>
+:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;--grid-line:rgba(27,166,255,0.06);--shadow:0 1px 3px rgba(0,0,0,0.07);--radius:14px;--radius-sm:8px;--transition:0.18s ease;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);color:var(--text);min-height:100vh;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:40px 40px;}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;font-size:20px;}
+.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:9px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;}
+.logo span{color:var(--blue-bright);}
+.nav-links{display:flex;gap:8px;}
+.nav-links a{padding:7px 14px;border-radius:var(--radius-sm);text-decoration:none;font-size:13.5px;font-weight:500;color:var(--muted);transition:all var(--transition);}
+.nav-links a:hover,.nav-links a.active{color:var(--blue-bright);background:var(--blue-soft);}
+.btn-nav{background:var(--blue-bright);color:white!important;font-weight:600!important;}
+main{max-width:900px;margin:0 auto;padding:40px 24px 80px;}
+.page-header{margin-bottom:48px;}
+.page-header h1{font-size:clamp(24px,5vw,40px);font-weight:800;margin-bottom:10px;}
+.page-header p{font-size:16px;color:var(--muted);line-height:1.6;}
+.help-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:56px;}
+.help-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);cursor:pointer;transition:all var(--transition);text-decoration:none;color:var(--text);display:block;}
+.help-card:hover{border-color:var(--blue-bright);transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.help-card-icon{font-size:32px;margin-bottom:12px;}
+.help-card-title{font-size:15px;font-weight:700;margin-bottom:6px;}
+.help-card-desc{font-size:13px;color:var(--muted);line-height:1.5;}
+.help-section{margin-bottom:48px;}
+.help-section-title{font-size:22px;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.help-section-sub{font-size:14px;color:var(--muted);margin-bottom:24px;}
+.steps{display:flex;flex-direction:column;gap:12px;}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 20px;box-shadow:var(--shadow);}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--blue-bright);color:white;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.step-content{flex:1;}
+.step-title{font-size:14px;font-weight:700;margin-bottom:4px;}
+.step-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+.step-tip{margin-top:6px;padding:6px 10px;background:var(--blue-soft);border-radius:var(--radius-sm);font-size:12px;color:var(--blue-bright);font-weight:500;}
+.kbd-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.kbd-table th{padding:12px 16px;text-align:left;background:var(--bg-deep);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);}
+.kbd-table td{padding:12px 16px;border-top:1px solid var(--border);font-size:14px;}
+.kbd{display:inline-block;padding:3px 8px;background:var(--bg-deep);border:1px solid var(--border);border-radius:4px;font-family:ui-monospace,monospace;font-size:12px;font-weight:700;}
+.tip-box{background:var(--blue-soft);border:1px solid rgba(27,166,255,0.2);border-radius:var(--radius-sm);padding:16px 20px;margin-top:16px;font-size:14px;color:var(--text);line-height:1.6;}
+.tip-box strong{color:var(--blue-bright);}
+footer{border-top:1px solid var(--border);background:var(--surface);padding:32px 24px;text-align:center;}
+.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color var(--transition);}
+.footer-links a:hover{color:var(--blue-bright);}
+.footer-copy{font-size:12px;color:var(--muted);}
+@media(max-width:640px){.nav-links{display:none;}main{padding:24px 16px 60px;}.help-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<span>-24</span></a>
+    <nav class="nav-links">
+      <a href="timer.html">Timer</a>
+      <a href="wissen.html">Wissen</a>
+      <a href="faq.html">FAQ</a>
+      <a href="hilfe.html" class="active">Hilfe</a>
+      <a href="timer.html" class="btn-nav">▶ Jetzt starten</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-header">
+    <h1>🛟 Hilfe & Anleitungen</h1>
+    <p>Alles was du wissen musst, um Timer-24.com optimal zu nutzen – Schritt für Schritt erklärt.</p>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="help-grid">
+    <a href="#countdown" class="help-card">
+      <div class="help-card-icon">⏲</div>
+      <div class="help-card-title">Countdown-Timer</div>
+      <div class="help-card-desc">Zeit einstellen, starten, pausieren und zurücksetzen.</div>
+    </a>
+    <a href="#wecker" class="help-card">
+      <div class="help-card-icon">⏰</div>
+      <div class="help-card-title">Wecker einrichten</div>
+      <div class="help-card-desc">Mehrere Wecker mit Wiederholung und eigenem Ton.</div>
+    </a>
+    <a href="#stoppuhr" class="help-card">
+      <div class="help-card-icon">⏱</div>
+      <div class="help-card-title">Stoppuhr & Rundenzeiten</div>
+      <div class="help-card-desc">Messen, Runden erfassen und Ergebnisse exportieren.</div>
+    </a>
+    <a href="#fokus" class="help-card">
+      <div class="help-card-icon">🍅</div>
+      <div class="help-card-title">Fokus-Timer starten</div>
+      <div class="help-card-desc">Pomodoro, Deep Work und andere Methoden nutzen.</div>
+    </a>
+    <a href="#assistent" class="help-card">
+      <div class="help-card-icon">🤖</div>
+      <div class="help-card-title">Fokus-Assistent</div>
+      <div class="help-card-desc">Lass dir die beste Methode für deine Aufgabe empfehlen.</div>
+    </a>
+    <a href="#shortcuts" class="help-card">
+      <div class="help-card-icon">⌨️</div>
+      <div class="help-card-title">Tastaturkürzel</div>
+      <div class="help-card-desc">Alle Shortcuts für Desktop-Nutzer auf einen Blick.</div>
+    </a>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="help-section" id="countdown">
+    <div class="help-section-title">⏲ Countdown-Timer</div>
+    <div class="help-section-sub">So stellst du einen Countdown ein und steuerst ihn.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Timer-Bereich öffnen</div>
+          <div class="step-desc">Klicke oben in der Tab-Navigation auf <strong>⏲ Timer</strong>.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Zeit eingeben oder Schnellwahl nutzen</div>
+          <div class="step-desc">Gib Stunden, Minuten und Sekunden in die Felder ein – oder klicke auf einen Schnellwahl-Button (z. B. „25 Minuten" für Pomodoro).</div>
+          <div class="step-tip">💡 Tipp: Schnellwahl-Buttons reichen von 1 Minute bis 120 Minuten.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Starten, Pausieren, Fortsetzen</div>
+          <div class="step-desc">Klicke auf <strong>▶ Starten</strong>. Während der Timer läuft, erscheint <strong>⏸ Pause</strong>. Mit <strong>▶ Weiter</strong> geht es nach der Pause weiter.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Alarmton einstellen</div>
+          <div class="step-desc">Wähle unten den gewünschten Ton (Standard, Glocke, Digital, Sanft oder Kein Ton) und stelle die Lautstärke mit dem Regler ein.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Vollbild-Modus</div>
+          <div class="step-desc">Klicke auf <strong>⛶ Vollbild</strong> für eine große, ablenkungsfreie Zeitanzeige. Mit <strong>ESC</strong> oder dem Button verlässt du den Vollbild-Modus.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WECKER -->
+  <div class="help-section" id="wecker">
+    <div class="help-section-title">⏰ Wecker einrichten</div>
+    <div class="help-section-sub">Mehrere Wecker mit individuellen Einstellungen.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Wecker-Bereich öffnen</div>
+          <div class="step-desc">Klicke in der Tab-Navigation auf <strong>⏰ Wecker</strong>.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Neuen Wecker erstellen</div>
+          <div class="step-desc">Klicke auf <strong>+ Neuer Wecker</strong>. Das Formular öffnet sich darunter.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Uhrzeit und Name eintragen</div>
+          <div class="step-desc">Stelle die Uhrzeit im Zeitfeld ein und gib optional einen Namen ein (z. B. „Morgenroutine").</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Wiederholung wählen</div>
+          <div class="step-desc">Wähle die Wochentage per Chip-Auswahl (Mo–So). Kein Tag = einmaliger Wecker. Alle Tage = täglich.</div>
+          <div class="step-tip">💡 Tipp: Für Werktags-Wecker nur Mo–Fr auswählen.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Wecker speichern</div>
+          <div class="step-desc">Klicke auf <strong>Wecker speichern</strong>. Der Wecker erscheint in der Liste und ist sofort aktiv. Mit dem Schalter kannst du ihn jederzeit deaktivieren.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <div class="step-title">Wenn der Wecker klingelt</div>
+          <div class="step-desc">Eine Karte erscheint mit dem Weckername und der Uhrzeit. Klicke auf <strong>😴 Snooze</strong> für 5 Minuten mehr Schlaf, oder auf <strong>✕ Stoppen</strong> um den Wecker zu beenden.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STOPPUHR -->
+  <div class="help-section" id="stoppuhr">
+    <div class="help-section-title">⏱ Stoppuhr & Rundenzeiten</div>
+    <div class="help-section-sub">Zeit messen, Runden erfassen und Ergebnisse exportieren.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Stoppuhr starten</div>
+          <div class="step-desc">Klicke auf <strong>⏱ Stoppuhr</strong> in der Navigation und dann auf <strong>▶ Starten</strong>. Die Zeit läuft mit Millisekunden-Genauigkeit.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Rundenzeit erfassen</div>
+          <div class="step-desc">Klicke auf <strong>⊙ Runde</strong> um eine Zwischenzeit zu erfassen. Die schnellste Runde wird grün, die langsamste orange markiert.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Ergebnisse exportieren</div>
+          <div class="step-desc">Klicke auf <strong>⬇ Exportieren</strong> um alle Rundenzeiten als CSV-Datei herunterzuladen. Diese lässt sich in Excel oder Google Sheets öffnen.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOKUS -->
+  <div class="help-section" id="fokus">
+    <div class="help-section-title">🍅 Fokus-Timer</div>
+    <div class="help-section-sub">Wähle eine Methode und starte deine Fokus-Session.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Fokus-Bereich öffnen</div>
+          <div class="step-desc">Klicke auf <strong>🍅 Fokus</strong> in der Tab-Navigation. Du siehst alle verfügbaren Methoden.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Methode auswählen</div>
+          <div class="step-desc">Klicke auf eine Methode (z. B. Pomodoro, Deep Work, Flowtime). Jede Karte zeigt die Fokus- und Pausenzeiten.</div>
+          <div class="step-tip">💡 Tipp: Neu hier? Starte mit Pomodoro – 25 Minuten Fokus, 5 Minuten Pause.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Ziel eintragen (optional)</div>
+          <div class="step-desc">Schreibe ins Journal-Feld, was du in dieser Session erreichen möchtest. Das hilft dir fokussiert zu bleiben.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Session starten</div>
+          <div class="step-desc">Klicke auf <strong>▶ Starten</strong>. Der Timer läuft, Runden-Dots zeigen deinen Fortschritt. Nach der Fokusphase folgt automatisch die Pausenphase.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tip-box">
+      <strong>Wichtig:</strong> Schließe während einer Fokus-Session alle ablenkenden Tabs. Aktiviere „Nicht stören" auf deinem Smartphone. Der Timer läuft weiter, auch wenn du in andere Tabs wechselst.
+    </div>
+  </div>
+
+  <!-- ASSISTENT -->
+  <div class="help-section" id="assistent">
+    <div class="help-section-title">🤖 Fokus-Assistent</div>
+    <div class="help-section-sub">Lass dir in 30 Sekunden die optimale Methode empfehlen.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Assistent öffnen</div>
+          <div class="step-desc">Klicke in der Tab-Navigation auf <strong>🤖 Assistent</strong>.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Aufgabe wählen</div>
+          <div class="step-desc">Wähle aus 8 Aufgabentypen: Lernen, Arbeiten, Programmieren, Schreiben, Lesen, Kreativ, Meditation oder Sport.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Konzentrationsdauer angeben</div>
+          <div class="step-desc">Wähle wie lange du dich typischerweise konzentrieren kannst: unter 25 Minuten, 25–60 Minuten oder 60–120 Minuten.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Empfehlung erhalten und starten</div>
+          <div class="step-desc">Der Assistent empfiehlt die optimale Methode mit Erklärung. Klicke auf <strong>▶ Timer starten</strong> um direkt loszulegen.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHORTCUTS -->
+  <div class="help-section" id="shortcuts">
+    <div class="help-section-title">⌨️ Tastaturkürzel</div>
+    <div class="help-section-sub">Steuere alle Timer ohne Maus – für maximale Effizienz.</div>
+    <table class="kbd-table">
+      <thead>
+        <tr>
+          <th>Taste</th>
+          <th>Funktion</th>
+          <th>Bereich</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="kbd">Leertaste</span></td><td>Start / Pause / Weiter</td><td>Timer, Stoppuhr, Fokus</td></tr>
+        <tr><td><span class="kbd">R</span></td><td>Zurücksetzen</td><td>Timer, Stoppuhr</td></tr>
+        <tr><td><span class="kbd">F</span></td><td>Vollbild-Modus</td><td>Timer, Stoppuhr</td></tr>
+        <tr><td><span class="kbd">L</span></td><td>Runde erfassen</td><td>Stoppuhr</td></tr>
+        <tr><td><span class="kbd">ESC</span></td><td>Vollbild verlassen</td><td>Alle</td></tr>
+      </tbody>
+    </table>
+    <div class="tip-box">
+      <strong>Hinweis:</strong> Tastaturkürzel funktionieren nicht, wenn du in einem Eingabefeld (Textfeld, Zeitfeld) tippst. Klicke zuerst auf eine freie Stelle der Seite.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="timer.html">Timer</a>
+    <a href="wissen.html">Wissenswertes</a>
+    <a href="faq.html">FAQ</a>
+    <a href="hilfe.html">Hilfe</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-uns.html">Über uns</a>
+  </div>
+  <div class="footer-copy">© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser</div>
+</footer>
+</body>
+</html>
