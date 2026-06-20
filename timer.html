@@ -1088,6 +1088,22 @@ const FC={
   '24':{de:'2s einatmen → 4s ausatmen',en:'2s inhale → 4s exhale',default:'2-4'}
 };
 
+// ═══════════════ STATE ═══════════════
+const st={
+  use24h:localStorage.getItem('t24_24h')!=='false',
+  tz:localStorage.getItem('t24_tz')||'Europe/Berlin',
+  wcs:JSON.parse(localStorage.getItem('t24_wc')||'[]'),
+  alarms:JSON.parse(localStorage.getItem('t24_alarms')||'[]'),
+  stats:JSON.parse(localStorage.getItem('t24_stats')||'{"sessions":[],"streak":0,"lastDate":null}'),
+  tTotal:0,tRem:0,tInt:null,tRun:false,tSnd:'beep',
+  swSt:0,swEl:0,swInt:null,swRun:false,swLaps:[],
+  fMethod:null,fPhase:'focus',fRound:1,fTotal:4,
+  fInt:null,fRem:0,fDur:0,fPDur:0,fRun:false,
+  slInt:null,slRem:1800,slRun:false,slMin:30,
+  ctx:null,fsMode:null,
+  aTask:null,aFocus:null,ringingIdx:null,aRingInt:null
+};
+
 // ═══════════════ HELPERS ═══════════════
 const pad=n=>String(n).padStart(2,'0');
 const ls=(k,v)=>localStorage.setItem(k,v);
