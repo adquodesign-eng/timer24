@@ -3,234 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Timer-24.com – Online Timer, Uhr, Stoppuhr & Fokus-Timer</title>
-<meta name="description" content="Kostenloser Online-Timer: Uhr, Wecker, Stoppuhr, Countdown und Fokus-Timer. Pomodoro, Deep Work – die beste deutschsprachige Timer-Plattform.">
-<meta property="og:title" content="Timer-24.com – Online Timer & Fokus-Assistent">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://timer-24.com/">
-<link rel="canonical" href="https://timer-24.com/">
+<title>Timer-24.com – Online Timer, Uhr & Fokus-Assistent – Timer-24.com</title>
 <style>
-:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;--green:#22C55E;--grid-line:rgba(27,166,255,0.06);--shadow:0 1px 3px rgba(0,0,0,0.07);--shadow-md:0 4px 16px rgba(0,0,0,0.08);--radius:14px;--radius-sm:8px;--transition:0.18s ease;}
+:root{--bg:#F6F8FC;--sur:#FFFFFF;--txt:#1F2937;--mut:#6B7280;--bl:#1BA6FF;--bls:#E8F4FF;--cu:#C77A4A;--cus:#F3E3DA;--brd:#E5E7EB;--gl:rgba(27,166,255,.06);--sh:0 1px 3px rgba(0,0,0,.07);--shm:0 4px 16px rgba(0,0,0,.08);--r:12px;--rs:8px;--t:.18s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);color:var(--text);min-height:100vh;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:40px 40px;}
-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;font-size:20px;flex-shrink:0;}
-.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:9px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;}
-.logo span{color:var(--blue-bright);}
-.nav-links{display:flex;gap:6px;align-items:center;}
-.nav-links a{padding:7px 12px;border-radius:var(--radius-sm);text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);transition:all var(--transition);white-space:nowrap;}
-.nav-links a:hover{color:var(--blue-bright);background:var(--blue-soft);}
-.btn-nav{background:var(--blue-bright)!important;color:white!important;font-weight:600!important;}
-.btn-nav:hover{background:#0095ee!important;}
-.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
-/* Hero */
-.hero{max-width:1100px;margin:0 auto;padding:72px 24px 56px;text-align:center;}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue-soft);border:1px solid rgba(27,166,255,0.2);color:var(--blue-bright);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:20px;}
-.hero h1{font-size:clamp(30px,6vw,56px);font-weight:800;line-height:1.1;margin-bottom:20px;letter-spacing:-1px;}
-.hero h1 em{color:var(--blue-bright);font-style:normal;}
-.hero p{font-size:18px;color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.6;}
-.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--radius);background:var(--blue-bright);color:white;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:all var(--transition);box-shadow:0 4px 16px rgba(27,166,255,0.35);}
-.btn-primary:hover{background:#0095ee;transform:translateY(-1px);}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:15px;font-weight:600;text-decoration:none;border:1px solid var(--border);cursor:pointer;transition:all var(--transition);box-shadow:var(--shadow);}
-.btn-secondary:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
-/* Sections */
-.section{max-width:1100px;margin:0 auto;padding:0 24px 72px;}
-.section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--blue-bright);margin-bottom:8px;}
-.section-title{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:10px;letter-spacing:-0.5px;}
-.section-sub{font-size:15px;color:var(--muted);max-width:480px;line-height:1.6;margin-bottom:36px;}
-/* Quick cards */
-.quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
-.quick-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:all var(--transition);display:flex;flex-direction:column;gap:8px;}
-.quick-card:hover{border-color:var(--blue-bright);box-shadow:var(--shadow-md);transform:translateY(-2px);}
-.quick-card.c-blue{border-top:3px solid var(--blue-bright);}
-.quick-card.c-copper{border-top:3px solid var(--copper);}
-.quick-card.c-green{border-top:3px solid var(--green);}
-.qc-icon{font-size:28px;}
-.qc-name{font-size:15px;font-weight:700;}
-.qc-desc{font-size:12px;color:var(--muted);line-height:1.5;flex:1;}
-.qc-arrow{font-size:12px;font-weight:700;color:var(--blue-bright);}
-/* Stats bar */
-.stats-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;margin-bottom:64px;box-shadow:var(--shadow);}
-.stat-item{text-align:center;}
-.stat-val{font-size:30px;font-weight:800;color:var(--blue-bright);font-family:ui-monospace,monospace;line-height:1;margin-bottom:4px;}
-.stat-lbl{font-size:11px;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;}
-/* Methods grid */
-.methods-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;}
-.method-pill{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;transition:all var(--transition);box-shadow:var(--shadow);}
-.method-pill:hover{border-color:var(--blue-bright);background:var(--blue-soft);}
-.mp-icon{font-size:22px;flex-shrink:0;}
-.mp-name{font-size:13px;font-weight:700;}
-.mp-time{font-size:11px;color:var(--muted);margin-top:2px;}
-/* Features */
-.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;}
-.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-.fc-icon{width:38px;height:38px;border-radius:10px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px;}
-.fc-title{font-size:14px;font-weight:700;margin-bottom:6px;}
-.fc-desc{font-size:13px;color:var(--muted);line-height:1.6;}
-/* CTA banner */
-.cta-banner{background:linear-gradient(135deg,var(--blue-bright) 0%,#0077cc 100%);border-radius:var(--radius);padding:44px 36px;text-align:center;color:white;box-shadow:0 8px 32px rgba(27,166,255,0.3);margin-bottom:60px;}
-.cta-banner h2{font-size:26px;font-weight:800;margin-bottom:10px;}
-.cta-banner p{font-size:15px;opacity:.85;margin-bottom:24px;max-width:380px;margin-left:auto;margin-right:auto;}
-.btn-white{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--radius);background:white;color:var(--blue-bright);font-size:15px;font-weight:700;text-decoration:none;transition:all var(--transition);}
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.2);}
-/* Footer */
-footer{border-top:1px solid var(--border);background:var(--surface);padding:28px 24px;text-align:center;}
-.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;}
-.footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color var(--transition);}
-.footer-links a:hover{color:var(--blue-bright);}
-.footer-copy{font-size:12px;color:var(--muted);}
-@media(max-width:768px){.nav-links{display:none;}.header-inner{padding:0 16px;}.hero{padding:44px 16px 36px;}.section{padding:0 16px 48px;}.stats-bar{padding:18px;}.cta-banner{padding:28px 18px;}}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:40px 40px;padding-bottom:80px;}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--brd);}
+.hi{max-width:900px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:14px;}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);font-weight:800;font-size:18px;flex-shrink:0;}
+.logo-i{width:32px;height:32px;background:linear-gradient(135deg,var(--bl),#0088dd);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
+.logo em{color:var(--bl);font-style:normal;}
+.navl{display:flex;gap:5px;align-items:center;flex:1;}
+.navl a{padding:6px 11px;border-radius:var(--rs);text-decoration:none;font-size:13px;font-weight:500;color:var(--mut);transition:all var(--t);white-space:nowrap;}
+.navl a:hover,.navl a.act{color:var(--bl);background:var(--bls);}
+.navl .nb{background:var(--bl);color:#fff!important;font-weight:700!important;}
+.lw{position:relative;margin-left:auto;flex-shrink:0;}
+.lb{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--txt);transition:all var(--t);}
+.lb:hover{border-color:var(--bl);color:var(--bl);}
+.lm{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--brd);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.13);list-style:none;padding:6px;min-width:158px;z-index:9999;max-height:340px;overflow-y:auto;}
+[dir=rtl] .lm{right:auto;left:0;}
+.lm.open{display:block;}
+.lm li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background var(--t);}
+.lm li:hover{background:var(--bg);}
+.lm li.sel{color:var(--bl);background:var(--bls);font-weight:700;}
+main{max-width:900px;margin:0 auto;padding:32px 20px 60px;}
+.ph{margin-bottom:32px;}
+.ph h1{font-size:clamp(22px,5vw,36px);font-weight:800;margin-bottom:8px;letter-spacing:-.5px;}
+.ph p{font-size:15px;color:var(--mut);line-height:1.6;max-width:540px;}
+.card{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);box-shadow:var(--sh);}
+.card-body{padding:22px;}
+h2{font-size:16px;font-weight:700;color:var(--bl);margin:18px 0 8px;}
+p{font-size:14px;color:var(--mut);line-height:1.7;margin-bottom:9px;}
+p:last-child{margin-bottom:0;}
+p strong{color:var(--txt);}
+a{color:var(--bl);text-decoration:none;}
+a:hover{text-decoration:underline;}
+ul{padding-left:18px;margin-bottom:9px;}
+li{font-size:14px;color:var(--mut);line-height:1.7;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--txt);transition:all var(--t);}
+.btn:hover{border-color:var(--bl);color:var(--bl);}
+.btn-p{background:var(--bl);border-color:var(--bl);color:#fff!important;}
+.btn-p:hover{background:#0095ee;}
+footer{position:fixed;bottom:0;left:0;right:0;background:var(--sur);border-top:1px solid var(--brd);padding:8px 16px;text-align:center;font-size:12px;color:var(--mut);z-index:90;}
+footer a{color:var(--mut);text-decoration:none;margin:0 5px;}
+footer a:hover{color:var(--bl);}
+@media(max-width:640px){.navl{display:none;}.hi{padding:0 14px;}main{padding:20px 14px 60px;}}
 
-/* ── LANGUAGE DROPDOWN ── */
-.lang-dropdown-wrap{position:relative;flex-shrink:0;}
-.lang-btn{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;transition:all 0.18s ease;}
-.lang-btn:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
-.lang-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;padding:6px;min-width:160px;z-index:9999;max-height:320px;overflow-y:auto;}
-[dir="rtl"] .lang-menu{right:auto;left:0;}
-.lang-menu.open{display:block;}
-.lang-menu li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background 0.15s ease;user-select:none;}
-.lang-menu li:hover{background:var(--bg-deep);}
-.lang-menu li[aria-selected="true"]{color:var(--blue-bright);background:var(--blue-soft);}
+.hero{text-align:center;padding:56px 0 44px;}
+.hbadge{display:inline-flex;align-items:center;background:var(--bls);border:1px solid rgba(27,166,255,.2);color:var(--bl);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;}
+.hero h1{font-size:clamp(28px,6vw,52px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-1px;}
+.hero h1 em{color:var(--bl);font-style:normal;}
+.hero > p{font-size:16px;color:var(--mut);max-width:500px;margin:0 auto 28px;line-height:1.6;}
+.hact{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.bxl{padding:12px 24px;font-size:15px;border-radius:var(--r);}
+.slbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--bl);margin-bottom:6px;}
+.stit3{font-size:clamp(18px,4vw,28px);font-weight:800;margin-bottom:8px;letter-spacing:-.5px;}
+.ssub{font-size:14px;color:var(--mut);max-width:460px;line-height:1.6;margin-bottom:28px;}
+.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:12px;margin-bottom:44px;}
+.ic{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);padding:20px 16px;text-decoration:none;color:var(--txt);box-shadow:var(--sh);transition:all var(--t);display:flex;flex-direction:column;gap:7px;}
+.ic:hover{border-color:var(--bl);box-shadow:var(--shm);transform:translateY(-2px);}
+.ic.c-bl{border-top:3px solid var(--bl);}
+.ic.c-cu{border-top:3px solid var(--cu);}
+.ic.c-gr{border-top:3px solid #22C55E;}
+.ii{font-size:26px;}.in{font-size:14px;font-weight:700;}.id2{font-size:12px;color:var(--mut);line-height:1.4;flex:1;}
+.ia{font-size:12px;font-weight:700;color:var(--bl);}
+.sbar{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:16px;margin-bottom:44px;box-shadow:var(--sh);}
+.si2{text-align:center;}.sv3{font-size:26px;font-weight:800;color:var(--bl);font-family:ui-monospace,monospace;line-height:1;margin-bottom:3px;}
+.sl2{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.06em;}
+.mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:9px;margin-bottom:44px;}
+.mp{background:var(--sur);border:1px solid var(--brd);border-radius:var(--rs);padding:12px;text-decoration:none;color:var(--txt);display:flex;align-items:center;gap:10px;transition:all var(--t);box-shadow:var(--sh);}
+.mp:hover{border-color:var(--bl);background:var(--bls);}
+.mpi{font-size:20px;flex-shrink:0;}.mpn{font-size:12px;font-weight:700;}.mpt{font-size:11px;color:var(--mut);margin-top:1px;}
+.fg3b{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:44px;}
+.fc2{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);padding:18px;box-shadow:var(--sh);}
+.fci{font-size:22px;margin-bottom:8px;}.fct{font-size:13px;font-weight:700;margin-bottom:4px;}.fcd{font-size:12px;color:var(--mut);line-height:1.5;}
+.cta{background:linear-gradient(135deg,var(--bl) 0%,#0077cc 100%);border-radius:var(--r);padding:40px 32px;text-align:center;color:#fff;box-shadow:0 8px 32px rgba(27,166,255,.3);margin-bottom:20px;}
+.cta h2{font-size:24px;font-weight:800;margin-bottom:10px;}
+.cta > p{font-size:14px;opacity:.85;margin-bottom:22px;max-width:380px;margin-left:auto;margin-right:auto;}
 </style>
 </head>
 <body>
 <header>
-  <div class="header-inner">
-    <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<span>-24</span></a>
-    <nav class="nav-links">
-      <a href="timer.html" data-i18n="nav_timer">Timer</a>
-      <a href="wissen.html" data-i18n="nav_wissen">Wissen</a>
-      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
-      <a href="hilfe.html" data-i18n="nav_hilfe">Hilfe</a>
-      <a href="timer.html" class="btn-nav" data-i18n="nav_start">▶ Jetzt starten</a>
+  <div class="hi">
+    <a href="index.html" class="logo"><div class="logo-i">⏱</div>Timer<em>-24</em></a>
+    <nav class="navl">
+      <a href="timer.html" id="nl-timer">Timer</a>
+      <a href="wissen.html" id="nl-wissen">Wissen</a>
+      <a href="faq.html" id="nl-faq">FAQ</a>
+      <a href="hilfe.html" id="nl-hilfe">Hilfe</a>
+      <a href="kontakt.html" id="nl-kontakt">Kontakt</a>
+      <a href="timer.html" class="nb" id="nl-start">▶ Jetzt starten</a>
     </nav>
-    <div class="header-right" id="langDropdownMount"></div>
+    <div class="lw" id="lw">
+      <button class="lb" id="lb" onclick="toggleL()">🇩🇪 DE ▼</button>
+      <ul class="lm" id="lm"></ul>
+    </div>
   </div>
 </header>
-
-<section class="hero">
-  <div class="hero-badge" data-i18n="idx_badge">✨ Kostenlos · Kein Login · Direkt im Browser</div>
-  <h1><span data-i18n="idx_h1a">Zeit smart nutzen –</span><br><em data-i18n="idx_h1b">Timer für jeden Zweck</em></h1>
-  <p data-i18n="idx_sub">Uhr, Wecker, Stoppuhr, Countdown und intelligente Fokus-Timer. Alles an einem Ort.</p>
-  <div class="hero-actions">
-    <a href="timer.html" class="btn-primary" data-i18n="idx_cta1">▶ Timer starten</a>
-    <a href="timer.html" class="btn-secondary" onclick="localStorage.setItem('t24_lastPanel','assistant')" data-i18n="idx_cta2">🤖 Fokus-Assistent</a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-label" data-i18n="idx_popular">Beliebt</div>
-  <div class="section-title" data-i18n="idx_popular_title">Die meistgenutzten Timer</div>
-  <div class="section-sub" data-i18n="idx_popular_sub">Direkt loslegen – kein Einrichten, kein Warten.</div>
-  <div class="quick-grid">
-    <a href="timer.html" class="quick-card c-blue" onclick="localStorage.setItem('t24_lastPanel','countdown')">
-      <div class="qc-icon">⏲</div>
-      <div class="qc-name" data-i18n="nav_countdown">Timer</div>
-      <div class="qc-desc">Stunden, Minuten, Sekunden. 12 Schnellwahl-Buttons.</div>
-      <div class="qc-arrow">→</div>
-    </a>
-    <a href="timer.html" class="quick-card" onclick="localStorage.setItem('t24_lastPanel','focus')">
-      <div class="qc-icon">🍅</div>
-      <div class="qc-name">Pomodoro</div>
-      <div class="qc-desc">25 Min Fokus, 5 Min Pause. Die beliebteste Produktivitätsmethode.</div>
-      <div class="qc-arrow">→</div>
-    </a>
-    <a href="timer.html" class="quick-card c-copper" onclick="localStorage.setItem('t24_lastPanel','stopwatch')">
-      <div class="qc-icon">⏱</div>
-      <div class="qc-name" data-i18n="nav_stoppuhr">Stoppuhr</div>
-      <div class="qc-desc">Millisekunden, Rundenzeiten, CSV-Export.</div>
-      <div class="qc-arrow">→</div>
-    </a>
-    <a href="timer.html" class="quick-card c-green" onclick="localStorage.setItem('t24_lastPanel','alarm')">
-      <div class="qc-icon">⏰</div>
-      <div class="qc-name" data-i18n="nav_wecker">Wecker</div>
-      <div class="qc-desc">Mehrere Wecker, Wiederholung, eigene Töne, Snooze.</div>
-      <div class="qc-arrow">→</div>
-    </a>
-    <a href="timer.html" class="quick-card" onclick="localStorage.setItem('t24_lastPanel','clock')">
-      <div class="qc-icon">🕒</div>
-      <div class="qc-name" data-i18n="nav_uhr">Uhr</div>
-      <div class="qc-desc">12h/24h, Zeitzonen, Weltuhren.</div>
-      <div class="qc-arrow">→</div>
-    </a>
-    <a href="timer.html" class="quick-card" onclick="localStorage.setItem('t24_lastPanel','breath')">
-      <div class="qc-icon">🧘</div>
-      <div class="qc-name" data-i18n="nav_atmung">Atmung</div>
-      <div class="qc-desc">Box Breathing, 4-7-8, Kohärente Atmung.</div>
-      <div class="qc-arrow">→</div>
-    </a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="stats-bar">
-    <div class="stat-item"><div class="stat-val">9</div><div class="stat-lbl" data-i18n="idx_stat_areas">Timer-Bereiche</div></div>
-    <div class="stat-item"><div class="stat-val">7</div><div class="stat-lbl" data-i18n="idx_stat_methods">Fokus-Methoden</div></div>
-    <div class="stat-item"><div class="stat-val">0</div><div class="stat-lbl" data-i18n="idx_stat_reg">Registrierungen nötig</div></div>
-    <div class="stat-item"><div class="stat-val">100%</div><div class="stat-lbl" data-i18n="idx_stat_free">Kostenlos</div></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-label" data-i18n="idx_focus_label">Fokus & Produktivität</div>
-  <div class="section-title" data-i18n="idx_focus_title">Alle Fokus-Methoden</div>
-  <div class="section-sub" data-i18n="idx_focus_sub">Von Pomodoro bis Deep Work – wähle die Methode, die zu deinem Arbeitsstil passt.</div>
-  <div class="methods-grid">
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🍅</div><div><div class="mp-name">Pomodoro</div><div class="mp-time">25 · 5 Min</div></div></a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">⚡</div><div><div class="mp-name">52/17</div><div class="mp-time">52 · 17 Min</div></div></a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🔥</div><div><div class="mp-name">Deep Work</div><div class="mp-time">60–120 Min</div></div></a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🧬</div><div><div class="mp-name">Ultradian</div><div class="mp-time">90 · 20 Min</div></div></a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">🌊</div><div><div class="mp-name">Flowtime</div><div class="mp-time">Offen</div></div></a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">📦</div><div><div class="mp-name">Timeboxing</div><div class="mp-time">15–60 Min</div></div></a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','focus')"><div class="mp-icon">📚</div><div><div class="mp-name">Lern-Timer</div><div class="mp-time">45 · 10 Min</div></div></a>
-    <a href="timer.html" class="method-pill" onclick="localStorage.setItem('t24_lastPanel','assistant')"><div class="mp-icon">🤖</div><div><div class="mp-name" data-i18n="nav_assistent">Assistent</div><div class="mp-time">Empfehlung</div></div></a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-label" data-i18n="idx_why_label">Warum Timer-24</div>
-  <div class="section-title" data-i18n="idx_why_title">Alles was du brauchst</div>
-  <div class="section-sub" data-i18n="idx_why_sub">Designed für Konzentration, Geschwindigkeit und maximale Benutzerfreundlichkeit.</div>
-  <div class="features-grid">
-    <div class="feature-card"><div class="fc-icon">⚡</div><div class="fc-title">Blitzschnell</div><div class="fc-desc">Reines HTML/CSS/JS – lädt in unter 1 Sekunde auf jedem Gerät.</div></div>
-    <div class="feature-card"><div class="fc-icon">🔒</div><div class="fc-title">100% Datenschutz</div><div class="fc-desc">Alle Daten bleiben lokal im Browser. Keine Cloud, kein Tracking.</div></div>
-    <div class="feature-card"><div class="fc-icon">📱</div><div class="fc-title">Mobile First</div><div class="fc-desc">Perfekt auf Smartphone, Tablet und Desktop.</div></div>
-    <div class="feature-card"><div class="fc-icon">🌙</div><div class="fc-title">3 Themes</div><div class="fc-desc">Hell, Dunkel oder Zen – dein Timer passt sich an.</div></div>
-    <div class="feature-card"><div class="fc-icon">📊</div><div class="fc-title">Statistik & Streak</div><div class="fc-desc">Fokuszeit, Sessions und Streak – alles lokal gespeichert.</div></div>
-    <div class="feature-card"><div class="fc-icon">⌨️</div><div class="fc-title">Tastatursteuerung</div><div class="fc-desc">Leertaste · R · F · L – volle Kontrolle ohne Maus.</div></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="cta-banner">
-    <h2 data-i18n="idx_cta_title">Bereit, fokussierter zu arbeiten?</h2>
-    <p data-i18n="idx_cta_sub">Starte jetzt – kostenlos, ohne Registrierung, direkt im Browser.</p>
-    <a href="timer.html" class="btn-white" data-i18n="idx_cta_btn">▶ Timer starten</a>
-  </div>
-</section>
-
+<main id="pm"></main>
 <footer>
-  <div class="footer-links">
-    <a href="timer.html" data-i18n="footer_timer">Timer</a>
-    <a href="wissen.html" data-i18n="footer_wissen">Wissenswertes</a>
-    <a href="faq.html" data-i18n="footer_faq">FAQ</a>
-    <a href="hilfe.html" data-i18n="footer_hilfe">Hilfe</a>
-    <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
-    <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
-    <a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a>
-    <a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a>
+  <div>
+    <a href="timer.html" id="fl-timer">Timer</a> |
+    <a href="wissen.html" id="fl-wissen">Wissenswertes</a> |
+    <a href="faq.html" id="fl-faq">FAQ</a> |
+    <a href="hilfe.html" id="fl-hilfe">Hilfe</a> |
+    <a href="kontakt.html" id="fl-kontakt">Kontakt</a> |
+    <a href="ueber-uns.html" id="fl-ueber">Über uns</a> |
+    <a href="impressum.html" id="fl-imp">Impressum</a> |
+    <a href="datenschutz.html" id="fl-ds">Datenschutz</a>
   </div>
-  <div class="footer-copy" data-i18n="footer_copy">© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser · Keine Garantie auf Richtigkeit</div>
+  <div id="fl-copy">© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit</div>
 </footer>
-
-<script src="i18n.js"></script>
 <script>
-  i18n.injectStyles();
-  document.getElementById('langDropdownMount').innerHTML = i18n.buildDropdown();
-  i18n.init();
+
+const LANGS={de:{f:'🇩🇪',n:'Deutsch'},en:{f:'🇬🇧',n:'English'},fr:{f:'🇫🇷',n:'Français'},es:{f:'🇪🇸',n:'Español'},it:{f:'🇮🇹',n:'Italiano'},pt:{f:'🇵🇹',n:'Português'},nl:{f:'🇳🇱',n:'Nederlands'},pl:{f:'🇵🇱',n:'Polski'},tr:{f:'🇹🇷',n:'Türkçe'},ar:{f:'🇸🇦',n:'العربية'},zh:{f:'🇨🇳',n:'中文'}};
+
+const NAV_T={
+  de:{timer:'Timer',wissen:'Wissen',faq:'FAQ',hilfe:'Hilfe',kontakt:'Kontakt',ueber:'Über uns',start:'▶ Jetzt starten',imp:'Impressum',ds:'Datenschutz',copy:'© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit'},
+  en:{timer:'Timer',wissen:'Knowledge',faq:'FAQ',hilfe:'Help',kontakt:'Contact',ueber:'About',start:'▶ Start now',imp:'Imprint',ds:'Privacy',copy:'© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy'},
+  fr:{timer:'Minuterie',wissen:'Savoir',faq:'FAQ',hilfe:'Aide',kontakt:'Contact',ueber:'À propos',start:'▶ Démarrer',imp:'Mentions légales',ds:'Confidentialité',copy:"© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude"},
+  es:{timer:'Temporizador',wissen:'Conocimiento',faq:'FAQ',hilfe:'Ayuda',kontakt:'Contacto',ueber:'Acerca de',start:'▶ Comenzar',imp:'Aviso legal',ds:'Privacidad',copy:'© 2025 Timer-24.com · Cálculos locales · Sin garantía de exactitud'},
+  it:{timer:'Contatore',wissen:'Conoscenza',faq:'FAQ',hilfe:'Aiuto',kontakt:'Contatto',ueber:'Chi siamo',start:'▶ Inizia',imp:'Note legali',ds:'Privacy',copy:'© 2025 Timer-24.com · Calcoli locali · Nessuna garanzia'},
+  pt:{timer:'Temporizador',wissen:'Conhecimento',faq:'FAQ',hilfe:'Ajuda',kontakt:'Contacto',ueber:'Sobre nós',start:'▶ Começar',imp:'Aviso legal',ds:'Privacidade',copy:'© 2025 Timer-24.com · Cálculos locais · Sem garantia'},
+  nl:{timer:'Timer',wissen:'Kennis',faq:'FAQ',hilfe:'Hulp',kontakt:'Contact',ueber:'Over ons',start:'▶ Nu starten',imp:'Impressum',ds:'Privacy',copy:'© 2025 Timer-24.com · Berekeningen lokaal · Geen garantie'},
+  pl:{timer:'Timer',wissen:'Wiedza',faq:'FAQ',hilfe:'Pomoc',kontakt:'Kontakt',ueber:'O nas',start:'▶ Zacznij',imp:'Informacje prawne',ds:'Prywatność',copy:'© 2025 Timer-24.com · Obliczenia lokalne · Bez gwarancji'},
+  tr:{timer:'Zamanlayıcı',wissen:'Bilgi',faq:'SSS',hilfe:'Yardım',kontakt:'İletişim',ueber:'Hakkımızda',start:'▶ Başla',imp:'Künye',ds:'Gizlilik',copy:'© 2025 Timer-24.com · Hesaplamalar tarayıcıda · Garanti yoktur'},
+  ar:{timer:'المؤقت',wissen:'المعرفة',faq:'الأسئلة الشائعة',hilfe:'المساعدة',kontakt:'اتصل بنا',ueber:'من نحن',start:'▶ ابدأ',imp:'بيانات المشغّل',ds:'الخصوصية',copy:'© 2025 Timer-24.com · العمليات محلية · لا ضمان على الدقة'},
+  zh:{timer:'计时器',wissen:'知识',faq:'常见问题',hilfe:'帮助',kontakt:'联系',ueber:'关于我们',start:'▶ 开始',imp:'版权信息',ds:'隐私政策',copy:'© 2025 Timer-24.com · 本地计算 · 不保证准确性'}
+};
+
+let cl='de';
+function gL(){return NAV_T[cl]||NAV_T.de;}
+function getLang(){const u=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('t24_lang');const b=(navigator.language||'de').slice(0,2).toLowerCase();return[u,s,b].find(x=>x&&LANGS[x])||'de';}
+function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);applyAll();buildLM();}
+function buildLM(){document.getElementById('lm').innerHTML=Object.entries(LANGS).map(([k,v])=>`<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`).join('');}
+function toggleL(){document.getElementById('lm').classList.toggle('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('#lw'))document.getElementById('lm').classList.remove('open');});
+function applyNav(){
+  const t=gL();
+  document.documentElement.lang=cl;document.documentElement.dir=cl==='ar'?'rtl':'ltr';
+  document.getElementById('lb').textContent=LANGS[cl].f+' '+cl.toUpperCase()+' ▼';
+  ['timer','wissen','faq','hilfe','kontakt','ueber','start'].forEach(k=>{const el=document.getElementById('nl-'+k);if(el)el.textContent=t[k];});
+  ['timer','wissen','faq','hilfe','kontakt','ueber','imp','ds'].forEach(k=>{const el=document.getElementById('fl-'+k);if(el)el.textContent=t[k]||t[k.replace('-','')];});
+  const fc=document.getElementById('fl-copy');if(fc)fc.textContent=t.copy;
+}
+
+
+const ID={
+de:{badge:'✨ Kostenlos · Kein Login · Direkt im Browser',h1a:'Zeit smart nutzen –',h1b:'Timer für jeden Zweck',sub:'Uhr, Wecker, Stoppuhr, Countdown und intelligente Fokus-Timer. Alles an einem Ort – ohne Registrierung, ohne App.',cta1:'▶ Timer starten',cta2:'🤖 Fokus-Assistent',popular:'Beliebt',popular_t:'Die meistgenutzten Timer',popular_s:'Direkt loslegen – kein Einrichten, kein Warten.',s0:'9',s0l:'Timer-Bereiche',s1:'7',s1l:'Fokus-Methoden',s2:'0',s2l:'Registrierungen nötig',s3:'100%',s3l:'Kostenlos',fl:'Fokus & Produktivität',fl_t:'Alle Fokus-Methoden',fl_s:'Von Pomodoro bis Deep Work – wähle die Methode, die zu deinem Arbeitsstil passt.',why:'Warum Timer-24',why_t:'Alles was du brauchst',why_s:'Designed für Konzentration, Geschwindigkeit und maximale Benutzerfreundlichkeit.',cta_t:'Bereit, fokussierter zu arbeiten?',cta_s:'Starte jetzt – kostenlos, ohne Registrierung, direkt im Browser.',cta_btn:'▶ Timer starten',
+cards:[{icon:'⏲',t:'Countdown-Timer',d:'Schnellwahl 1–120 Min, Alarmton, Vollbild.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 Min Fokus, 5 Min Pause.',p:'focus'},{icon:'⏱',t:'Stoppuhr',d:'Millisekunden, Rundenzeiten, CSV-Export.',p:'stopwatch'},{icon:'⏰',t:'Wecker',d:'Mehrere Wecker, Wiederholung, Snooze.',p:'alarm'},{icon:'🕒',t:'Digitale Uhr',d:'12h/24h, Zeitzonen, Weltuhren.',p:'clock'},{icon:'🧘',t:'Atem-Timer',d:'Box Breathing, 4-7-8, Kohärente Atmung.',p:'breath'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 Min',p:'pomodoro'},{i:'⚡',n:'52/17',t:'52 · 17 Min',p:'5217'},{i:'🔥',n:'Deep Work',t:'60–120 Min',p:'deepwork'},{i:'🧬',n:'Ultradian',t:'90 · 20 Min',p:'ultradian'},{i:'🌊',n:'Flowtime',t:'Offen',p:'flowtime'},{i:'📚',n:'Lern-Timer',t:'45 · 10 Min',p:'lernen'},{i:'📦',n:'Timeboxing',t:'15–60 Min',p:'timeboxing'},{i:'🤖',n:'Assistent',t:'Empfehlung',p:'assistant'}],
+features:[{i:'⚡',t:'Blitzschnell',d:'Reines HTML/CSS/JS – lädt in unter 1 Sekunde auf jedem Gerät.'},{i:'🔒',t:'100% Datenschutz',d:'Alle Daten lokal. Keine Registrierung, keine Cloud.'},{i:'📱',t:'Mobile First',d:'Perfekt auf Smartphone, Tablet und Desktop.'},{i:'🌙',t:'3 Themes',d:'Hell, Dunkel oder Zen.'},{i:'📊',t:'Statistik & Streak',d:'Fokuszeit, Sessions und Streak lokal gespeichert.'},{i:'⌨️',t:'Tastatursteuerung',d:'Leertaste · R · F · L'}]},
+en:{badge:'✨ Free · No login · Directly in your browser',h1a:'Use time smarter –',h1b:'Timers for every purpose',sub:'Clock, alarm, stopwatch, countdown and smart focus timers. All in one place – no signup, no app.',cta1:'▶ Start timer',cta2:'🤖 Focus assistant',popular:'Popular',popular_t:'Most used timers',popular_s:'Jump right in – no setup, no waiting.',s0:'9',s0l:'Timer sections',s1:'7',s1l:'Focus methods',s2:'0',s2l:'Registrations needed',s3:'100%',s3l:'Free',fl:'Focus & Productivity',fl_t:'All focus methods',fl_s:'From Pomodoro to Deep Work – find the method that fits your work style.',why:'Why Timer-24',why_t:'Everything you need',why_s:'Designed for concentration, speed and maximum usability.',cta_t:'Ready to work more focused?',cta_s:'Start now – free, no registration, right in your browser.',cta_btn:'▶ Start timer',
+cards:[{icon:'⏲',t:'Countdown Timer',d:'Quick select 1–120 min, alarm sound, fullscreen.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 min focus, 5 min break.',p:'focus'},{icon:'⏱',t:'Stopwatch',d:'Milliseconds, lap times, CSV export.',p:'stopwatch'},{icon:'⏰',t:'Alarm Clock',d:'Multiple alarms, repeat, snooze.',p:'alarm'},{icon:'🕒',t:'Digital Clock',d:'12h/24h, timezones, world clocks.',p:'clock'},{icon:'🧘',t:'Breathing Timer',d:'Box Breathing, 4-7-8, Coherent Breathing.',p:'breath'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 min',p:'pomodoro'},{i:'⚡',n:'52/17',t:'52 · 17 min',p:'5217'},{i:'🔥',n:'Deep Work',t:'60–120 min',p:'deepwork'},{i:'🧬',n:'Ultradian',t:'90 · 20 min',p:'ultradian'},{i:'🌊',n:'Flowtime',t:'Open',p:'flowtime'},{i:'📚',n:'Study Timer',t:'45 · 10 min',p:'lernen'},{i:'📦',n:'Timeboxing',t:'15–60 min',p:'timeboxing'},{i:'🤖',n:'Assistant',t:'Recommendation',p:'assistant'}],
+features:[{i:'⚡',t:'Lightning fast',d:'Pure HTML/CSS/JS – loads in under 1 second on any device.'},{i:'🔒',t:'100% Privacy',d:'All data local. No registration, no cloud.'},{i:'📱',t:'Mobile First',d:'Perfect on smartphone, tablet and desktop.'},{i:'🌙',t:'3 Themes',d:'Light, Dark or Zen.'},{i:'📊',t:'Stats & Streak',d:'Focus time, sessions and streak saved locally.'},{i:'⌨️',t:'Keyboard control',d:'Space · R · F · L'}]},
+fr:{badge:'✨ Gratuit · Sans connexion · Dans le navigateur',h1a:'Gérez votre temps –',h1b:'Des minuteries pour chaque usage',sub:'Horloge, réveil, chronomètre, compte à rebours et minuteries de focus. Tout en un lieu.',cta1:'▶ Démarrer',cta2:'🤖 Assistant focus',popular:'Populaires',popular_t:'Les minuteries les plus utilisées',popular_s:'Lancez-vous directement.',s0:'9',s0l:'Sections',s1:'7',s1l:'Méthodes focus',s2:'0',s2l:'Inscriptions requises',s3:'100%',s3l:'Gratuit',fl:'Focus & Productivité',fl_t:'Toutes les méthodes',fl_s:'De Pomodoro à Deep Work.',why:'Pourquoi Timer-24',why_t:'Tout ce dont vous avez besoin',why_s:'Conçu pour la concentration et la rapidité.',cta_t:'Prêt à travailler avec plus de concentration ?',cta_s:'Commencez maintenant – gratuit, sans inscription.',cta_btn:'▶ Démarrer la minuterie',
+cards:[{icon:'⏲',t:'Minuterie',d:'Sélection rapide 1–120 min.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 min focus, 5 min pause.',p:'focus'},{icon:'⏱',t:'Chronomètre',d:'Millisecondes, tours, export CSV.',p:'stopwatch'},{icon:'⏰',t:'Réveil',d:'Plusieurs réveils, répétition, snooze.',p:'alarm'},{icon:'🕒',t:'Horloge',d:'12h/24h, fuseaux, horloges mondiales.',p:'clock'},{icon:'🧘',t:'Respiration',d:'Respiration en boîte, 4-7-8.',p:'breath'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 min',p:'pomodoro'},{i:'⚡',n:'52/17',t:'52 · 17 min',p:'5217'},{i:'🔥',n:'Deep Work',t:'60–120 min',p:'deepwork'},{i:'🌊',n:'Flowtime',t:'Ouvert',p:'flowtime'},{i:'🤖',n:'Assistant',t:'Recommandation',p:'assistant'}],
+features:[{i:'⚡',t:'Ultra rapide',d:'HTML/CSS/JS pur – charge en moins d\'1 seconde.'},{i:'🔒',t:'Confidentialité',d:'Données locales. Pas de cloud.'},{i:'🆓',t:'Gratuit',d:'Toutes les fonctions gratuites.'}]},
+es:{badge:'✨ Gratis · Sin registro · En el navegador',h1a:'Usa el tiempo con inteligencia –',h1b:'Temporizadores para cada propósito',sub:'Reloj, alarma, cronómetro, cuenta atrás y temporizadores de enfoque. Todo en un lugar.',cta1:'▶ Iniciar temporizador',cta2:'🤖 Asistente de enfoque',popular:'Populares',popular_t:'Los temporizadores más usados',popular_s:'Comienza de inmediato.',s0:'9',s0l:'Secciones',s1:'7',s1l:'Métodos de enfoque',s2:'0',s2l:'Registros necesarios',s3:'100%',s3l:'Gratis',fl:'Enfoque y Productividad',fl_t:'Todos los métodos',fl_s:'De Pomodoro a Deep Work.',why:'Por qué Timer-24',why_t:'Todo lo que necesitas',why_s:'Diseñado para concentración y velocidad.',cta_t:'¿Listo para trabajar con más enfoque?',cta_s:'Comienza ahora – gratis, sin registro.',cta_btn:'▶ Iniciar temporizador',
+cards:[{icon:'⏲',t:'Temporizador',d:'Selección rápida 1–120 min.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 min enfoque, 5 min pausa.',p:'focus'},{icon:'⏱',t:'Cronómetro',d:'Milisegundos, vueltas, CSV.',p:'stopwatch'},{icon:'⏰',t:'Alarma',d:'Varias alarmas, repetición, snooze.',p:'alarm'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 min',p:'pomodoro'},{i:'🔥',n:'Deep Work',t:'60–120 min',p:'deepwork'},{i:'🤖',n:'Asistente',t:'Recomendación',p:'assistant'}],
+features:[{i:'⚡',t:'Ultra rápido',d:'HTML/CSS/JS puro.'},{i:'🔒',t:'Privacidad',d:'Datos locales.'},{i:'🆓',t:'Gratuito',d:'Todo gratis.'}]},
+it:{badge:'✨ Gratuito · Senza login · Nel browser',h1a:'Usa il tempo in modo intelligente –',h1b:'Timer per ogni scopo',sub:'Orologio, sveglia, cronometro, conto alla rovescia e timer focus. Tutto in un posto.',cta1:'▶ Avvia timer',cta2:'🤖 Assistente focus',popular:'Popolari',popular_t:'I timer più usati',popular_s:'Inizia subito.',s0:'9',s0l:'Sezioni',s1:'7',s1l:'Metodi focus',s2:'0',s2l:'Registrazioni necessarie',s3:'100%',s3l:'Gratuito',fl:'Focus e Produttività',fl_t:'Tutti i metodi',fl_s:'Da Pomodoro a Deep Work.',why:'Perché Timer-24',why_t:'Tutto ciò di cui hai bisogno',why_s:'Progettato per concentrazione e velocità.',cta_t:'Pronto a lavorare con più concentrazione?',cta_s:'Inizia ora – gratuito, senza registrazione.',cta_btn:'▶ Avvia timer',
+cards:[{icon:'⏲',t:'Contatore',d:'Selezione rapida 1–120 min.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 min focus, 5 min pausa.',p:'focus'},{icon:'⏱',t:'Cronometro',d:'Millisecondi, giri, CSV.',p:'stopwatch'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 min',p:'pomodoro'},{i:'🔥',n:'Deep Work',t:'60–120 min',p:'deepwork'},{i:'🤖',n:'Assistente',t:'Raccomandazione',p:'assistant'}],
+features:[{i:'⚡',t:'Velocissimo',d:'HTML/CSS/JS puro.'},{i:'🔒',t:'Privacy',d:'Dati locali.'},{i:'🆓',t:'Gratuito',d:'Tutto gratis.'}]},
+pt:{badge:'✨ Grátis · Sem login · No navegador',h1a:'Use o tempo de forma inteligente –',h1b:'Temporizadores para cada propósito',sub:'Relógio, alarme, cronómetro, contagem regressiva e temporizadores de foco. Tudo num só lugar.',cta1:'▶ Iniciar temporizador',cta2:'🤖 Assistente de foco',popular:'Populares',popular_t:'Os temporizadores mais usados',popular_s:'Comece imediatamente.',s0:'9',s0l:'Secções',s1:'7',s1l:'Métodos de foco',s2:'0',s2l:'Registos necessários',s3:'100%',s3l:'Grátis',fl:'Foco e Produtividade',fl_t:'Todos os métodos',fl_s:'De Pomodoro a Deep Work.',why:'Porquê Timer-24',why_t:'Tudo o que precisa',why_s:'Concebido para concentração e velocidade.',cta_t:'Pronto para trabalhar com mais foco?',cta_s:'Comece agora – grátis, sem registo.',cta_btn:'▶ Iniciar temporizador',
+cards:[{icon:'⏲',t:'Temporizador',d:'Seleção rápida 1–120 min.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 min foco, 5 min pausa.',p:'focus'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 min',p:'pomodoro'},{i:'🔥',n:'Deep Work',t:'60–120 min',p:'deepwork'}],
+features:[{i:'⚡',t:'Ultrarrápido',d:'HTML/CSS/JS puro.'},{i:'🔒',t:'Privacidade',d:'Dados locais.'},{i:'🆓',t:'Grátis',d:'Tudo grátis.'}]},
+nl:{badge:'✨ Gratis · Geen login · In de browser',h1a:'Gebruik tijd slim –',h1b:'Timers voor elk doel',sub:'Klok, wekker, stopwatch, aftimer en slimme focustimers. Alles op één plek.',cta1:'▶ Timer starten',cta2:'🤖 Focus-assistent',popular:'Populair',popular_t:'De meestgebruikte timers',popular_s:'Ga direct aan de slag.',s0:'9',s0l:'Secties',s1:'7',s1l:'Focusmethoden',s2:'0',s2l:'Registraties nodig',s3:'100%',s3l:'Gratis',fl:'Focus & Productiviteit',fl_t:'Alle focusmethoden',fl_s:'Van Pomodoro tot Deep Work.',why:'Waarom Timer-24',why_t:'Alles wat je nodig hebt',why_s:'Ontworpen voor concentratie en snelheid.',cta_t:'Klaar om gerichter te werken?',cta_s:'Start nu – gratis, zonder registratie.',cta_btn:'▶ Timer starten',
+cards:[{icon:'⏲',t:'Aftimer',d:'Snelle keuze 1–120 min.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 min focus, 5 min pauze.',p:'focus'},{icon:'⏱',t:'Stopwatch',d:'Milliseconden, rondes, CSV.',p:'stopwatch'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 min',p:'pomodoro'},{i:'🔥',n:'Deep Work',t:'60–120 min',p:'deepwork'},{i:'🤖',n:'Assistent',t:'Aanbeveling',p:'assistant'}],
+features:[{i:'⚡',t:'Bliksemsnel',d:'Puur HTML/CSS/JS.'},{i:'🔒',t:'Privacy',d:'Lokale gegevens.'},{i:'🆓',t:'Gratis',d:'Alles gratis.'}]},
+pl:{badge:'✨ Bezpłatny · Bez logowania · W przeglądarce',h1a:'Korzystaj z czasu mądrze –',h1b:'Timery do każdego celu',sub:'Zegar, budzik, stoper, odliczanie i inteligentne timery skupienia. Wszystko w jednym miejscu.',cta1:'▶ Uruchom timer',cta2:'🤖 Asystent skupienia',popular:'Popularne',popular_t:'Najczęściej używane timery',popular_s:'Zacznij od razu.',s0:'9',s0l:'Sekcje',s1:'7',s1l:'Metody skupienia',s2:'0',s2l:'Wymagane rejestracje',s3:'100%',s3l:'Bezpłatny',fl:'Skupienie i Produktywność',fl_t:'Wszystkie metody skupienia',fl_s:'Od Pomodoro do Deep Work.',why:'Dlaczego Timer-24',why_t:'Wszystko czego potrzebujesz',why_s:'Zaprojektowany dla koncentracji i szybkości.',cta_t:'Gotowy aby pracować z większym skupieniem?',cta_s:'Zacznij teraz – bezpłatnie, bez rejestracji.',cta_btn:'▶ Uruchom timer',
+cards:[{icon:'⏲',t:'Timer odliczający',d:'Szybki wybór 1–120 min.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 min skupienia, 5 min przerwy.',p:'focus'},{icon:'⏱',t:'Stoper',d:'Milisekundy, okrążenia, CSV.',p:'stopwatch'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 min',p:'pomodoro'},{i:'🔥',n:'Deep Work',t:'60–120 min',p:'deepwork'},{i:'🤖',n:'Asystent',t:'Rekomendacja',p:'assistant'}],
+features:[{i:'⚡',t:'Błyskawiczny',d:'Czysty HTML/CSS/JS.'},{i:'🔒',t:'Prywatność',d:'Dane lokalne.'},{i:'🆓',t:'Bezpłatny',d:'Wszystko bezpłatnie.'}]},
+tr:{badge:'✨ Ücretsiz · Giriş yok · Tarayıcıda',h1a:'Zamanı akıllıca kullan –',h1b:'Her amaç için zamanlayıcı',sub:'Saat, alarm, kronometre, geri sayım ve akıllı odak zamanlayıcıları. Hepsi bir arada.',cta1:'▶ Zamanlayıcıyı başlat',cta2:'🤖 Odak asistanı',popular:'Popüler',popular_t:'En çok kullanılan zamanlayıcılar',popular_s:'Hemen başla.',s0:'9',s0l:'Bölümler',s1:'7',s1l:'Odak yöntemleri',s2:'0',s2l:'Gerekli kayıtlar',s3:'100%',s3l:'Ücretsiz',fl:'Odak ve Verimlilik',fl_t:'Tüm odak yöntemleri',fl_s:"Pomodoro'dan Deep Work'e.",why:'Neden Timer-24',why_t:'İhtiyacın olan her şey',why_s:'Konsantrasyon ve hız için tasarlandı.',cta_t:'Daha odaklı çalışmaya hazır mısın?',cta_s:'Şimdi başla – ücretsiz, kayıt olmadan.',cta_btn:'▶ Zamanlayıcıyı başlat',
+cards:[{icon:'⏲',t:'Zamanlayıcı',d:'Hızlı seçim 1–120 dak.',p:'countdown'},{icon:'🍅',t:'Pomodoro',d:'25 dak odak, 5 dak mola.',p:'focus'},{icon:'⏱',t:'Kronometre',d:'Milisaniye, tur, CSV.',p:'stopwatch'}],
+methods:[{i:'🍅',n:'Pomodoro',t:'25 · 5 dak',p:'pomodoro'},{i:'🔥',n:'Deep Work',t:'60–120 dak',p:'deepwork'},{i:'🤖',n:'Asistan',t:'Öneri',p:'assistant'}],
+features:[{i:'⚡',t:'Çok hızlı',d:'Saf HTML/CSS/JS.'},{i:'🔒',t:'Gizlilik',d:'Yerel veriler.'},{i:'🆓',t:'Ücretsiz',d:'Her şey ücretsiz.'}]},
+ar:{badge:'✨ مجاني · بدون تسجيل · في المتصفح',h1a:'استخدم وقتك بذكاء –',h1b:'مؤقتات لكل غرض',sub:'ساعة، منبه، ساعة إيقاف، عد تنازلي ومؤقتات تركيز ذكية. كل شيء في مكان واحد.',cta1:'▶ ابدأ المؤقت',cta2:'🤖 مساعد التركيز',popular:'الأكثر شيوعاً',popular_t:'المؤقتات الأكثر استخداماً',popular_s:'ابدأ فوراً.',s0:'9',s0l:'الأقسام',s1:'7',s1l:'طرق التركيز',s2:'0',s2l:'تسجيلات مطلوبة',s3:'100%',s3l:'مجاني',fl:'التركيز والإنتاجية',fl_t:'جميع طرق التركيز',fl_s:'من بومودورو إلى العمل العميق.',why:'لماذا Timer-24',why_t:'كل ما تحتاجه',why_s:'مصمم للتركيز والسرعة.',cta_t:'هل أنت مستعد للعمل بتركيز أكبر؟',cta_s:'ابدأ الآن – مجاناً، بدون تسجيل.',cta_btn:'▶ ابدأ المؤقت',
+cards:[{icon:'⏲',t:'المؤقت',d:'اختيار سريع 1–120 دقيقة.',p:'countdown'},{icon:'🍅',t:'بومودورو',d:'25 دقيقة تركيز، 5 دقائق استراحة.',p:'focus'},{icon:'⏱',t:'الكرونومتر',d:'ميلي ثانية، دورات، CSV.',p:'stopwatch'}],
+methods:[{i:'🍅',n:'بومودورو',t:'25 · 5 دقائق',p:'pomodoro'},{i:'🔥',n:'عمل عميق',t:'60–120 دقيقة',p:'deepwork'},{i:'🤖',n:'المساعد',t:'توصية',p:'assistant'}],
+features:[{i:'⚡',t:'سريع جداً',d:'HTML/CSS/JS نقي.'},{i:'🔒',t:'الخصوصية',d:'بيانات محلية.'},{i:'🆓',t:'مجاني',d:'كل شيء مجاني.'}]},
+zh:{badge:'✨ 免费 · 无需登录 · 直接在浏览器中',h1a:'智慧利用时间 –',h1b:'适合各种用途的计时器',sub:'时钟、闹钟、秒表、倒计时和智能专注计时器。一切尽在一处。',cta1:'▶ 开始计时',cta2:'🤖 专注助手',popular:'热门',popular_t:'最常用的计时器',popular_s:'立即开始。',s0:'9',s0l:'计时器模块',s1:'7',s1l:'专注方法',s2:'0',s2l:'所需注册',s3:'100%',s3l:'免费',fl:'专注与效率',fl_t:'所有专注方法',fl_s:'从番茄工作法到深度工作。',why:'为什么选择 Timer-24',why_t:'您所需的一切',why_s:'专为专注、速度和最大可用性而设计。',cta_t:'准备好更专注地工作了吗？',cta_s:'立即开始 – 免费，无需注册。',cta_btn:'▶ 开始计时',
+cards:[{icon:'⏲',t:'倒计时器',d:'快速选择1–120分钟。',p:'countdown'},{icon:'🍅',t:'番茄钟',d:'25分钟专注，5分钟休息。',p:'focus'},{icon:'⏱',t:'秒表',d:'毫秒、圈数、CSV导出。',p:'stopwatch'},{icon:'⏰',t:'闹钟',d:'多个闹钟、重复、贪睡。',p:'alarm'}],
+methods:[{i:'🍅',n:'番茄钟',t:'25 · 5分钟',p:'pomodoro'},{i:'🔥',n:'深度工作',t:'60–120分钟',p:'deepwork'},{i:'🤖',n:'助手',t:'推荐',p:'assistant'}],
+features:[{i:'⚡',t:'极速',d:'纯HTML/CSS/JS。'},{i:'🔒',t:'隐私',d:'本地数据。'},{i:'🆓',t:'免费',d:'全部免费。'}]}
+};
+
+function renderPage(){
+  const d=ID[cl]||ID.en;
+  document.title='Timer-24.com – Online Timer, Uhr & Fokus-Assistent';
+  const cards=d.cards.map(c=>`<a href="timer.html?lang=${cl}" onclick="localStorage.setItem('t24_lp','${c.p}')" class="ic ${c.p==='countdown'?'c-bl':c.p==='stopwatch'?'c-cu':c.p==='alarm'?'c-gr':''}">
+    <div class="ii">${c.icon}</div><div class="in">${c.t}</div><div class="id2">${c.d}</div><div class="ia">→</div></a>`).join('');
+  const methods=d.methods.map(m=>`<a href="timer.html?lang=${cl}" onclick="localStorage.setItem('t24_lp','focus');localStorage.setItem('t24_fm','${m.p}')" class="mp">
+    <span class="mpi">${m.i}</span><div><div class="mpn">${m.n}</div><div class="mpt">${m.t}</div></div></a>`).join('');
+  const feats=d.features.map(f=>`<div class="fc2"><div class="fci">${f.i}</div><div class="fct">${f.t}</div><div class="fcd">${f.d}</div></div>`).join('');
+  document.getElementById('pm').innerHTML=`
+    <div class="hero">
+      <div class="hbadge">${d.badge}</div>
+      <h1><span>${d.h1}</span><br><em>${d.h1b}</em></h1>
+      <p>${d.sub}</p>
+      <div class="hact">
+        <a href="timer.html?lang=${cl}" class="btn btn-p bxl">${d.cta1}</a>
+        <a href="timer.html?lang=${cl}" class="btn bxl" onclick="localStorage.setItem('t24_lp','assistant')">${d.cta2}</a>
+      </div>
+    </div>
+    <div class="slbl">${d.popular}</div>
+    <div class="stit3">${d.popular_t}</div>
+    <div class="ssub">${d.popular_s}</div>
+    <div class="ig">${cards}</div>
+    <div class="sbar">
+      <div class="si2"><div class="sv3">${d.s0}</div><div class="sl2">${d.s0l}</div></div>
+      <div class="si2"><div class="sv3">${d.s1}</div><div class="sl2">${d.s1l}</div></div>
+      <div class="si2"><div class="sv3">${d.s2}</div><div class="sl2">${d.s2l}</div></div>
+      <div class="si2"><div class="sv3">${d.s3}</div><div class="sl2">${d.s3l}</div></div>
+    </div>
+    <div class="slbl">${d.fl}</div>
+    <div class="stit3">${d.fl_t}</div>
+    <div class="ssub">${d.fl_s}</div>
+    <div class="mg">${methods}</div>
+    <div class="slbl" style="margin-top:40px">${d.why}</div>
+    <div class="stit3">${d.why_t}</div>
+    <div class="ssub">${d.why_s}</div>
+    <div class="fg3b">${feats}</div>
+    <div class="cta">
+      <h2>${d.cta_t}</h2>
+      <p>${d.cta_s}</p>
+      <a href="timer.html?lang=${cl}" class="btn" style="background:#fff;color:var(--bl);font-weight:700;font-size:15px;padding:13px 26px;border-radius:var(--r)">${d.cta_btn}</a>
+    </div>`;
+}
+
+
+cl=getLang();buildLM();applyNav();renderPage();
+
 </script>
 </body>
 </html>

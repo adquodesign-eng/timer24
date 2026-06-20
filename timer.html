@@ -234,7 +234,6 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <li><a href="#" data-p="stopwatch">⏱ Stoppuhr</a></li>
       <li><a href="#" data-p="focus">🍅 Fokus</a></li>
       <li><a href="#" data-p="sleep">😴 Schlaf</a></li>
-      <li><a href="#" data-p="breath">🧘 Atmung</a></li>
       <li><a href="#" data-p="assistant">🤖 Assistent</a></li>
       <li><a href="#" data-p="stats">📊 Statistik</a></li>
       <li><a href="wissen.html">📚 Wissen</a></li>
@@ -260,7 +259,6 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <li><a href="#" data-p="stopwatch">⏱ Stoppuhr</a></li>
       <li><a href="#" data-p="focus">🍅 Fokus</a></li>
       <li><a href="#" data-p="sleep">😴 Schlaf</a></li>
-      <li><a href="#" data-p="breath">🧘 Atmung</a></li>
       <li><a href="#" data-p="assistant">🤖 Assistent</a></li>
       <li><a href="#" data-p="stats">📊 Statistik</a></li>
       <li><a href="wissen.html">📚 Wissen</a></li>
@@ -276,7 +274,6 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
   <button class="tb" data-p="stopwatch">⏱ Stoppuhr</button>
   <button class="tb" data-p="focus">🍅 Fokus</button>
   <button class="tb" data-p="sleep">😴 Schlaf</button>
-  <button class="tb" data-p="breath">🧘 Atmung</button>
   <button class="tb" data-p="assistant">🤖 Assistent</button>
   <button class="tb" data-p="stats">📊 Statistik</button>
 </nav>
@@ -289,7 +286,7 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <div class="cdt" id="cDate"></div>
       <div class="cc">
         <button class="btn" id="b24" onclick="tog24()">24h</button>
-        <button class="btn" onclick="clockFS()">⛶ Vollbild</button>
+        <button class="btn" onclick="clockFS()" data-i18n="fs">⛶ Vollbild</button>
         <select class="fi" id="tzs" onchange="st.tz=this.value;ls('t24_tz',this.value)">
           <option value="Europe/Berlin">Berlin</option>
           <option value="Europe/London">London</option>
@@ -304,37 +301,37 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
         </select>
       </div>
     </div>
-    <div class="ch"><span class="ct">🌍 Weltuhren</span><button class="btn bsm" onclick="addWC()">+ Hinzufügen</button></div>
+    <div class="ch"><span class="ct">🌍 Weltuhren</span><button class="btn bsm" onclick="addWC()" data-i18n="addwc">+ Hinzufügen</button></div>
     <div class="wcs" id="wcs"></div>
   </div>
 </div>
 <!-- ALARM -->
 <div class="panel" id="p-alarm">
   <div class="card" style="margin-bottom:13px">
-    <div class="ch"><span class="ct">⏰ Wecker</span><button class="btn bp bsm" onclick="togAF()">+ Neuer Wecker</button></div>
+    <div class="ch"><span class="ct" data-i18n="alarm_h">⏰ Wecker</span><button class="btn bp bsm" onclick="togAF()" data-i18n="alarm_new">+ Neuer Wecker</button></div>
     <div class="cb">
       <div class="ag" id="al"></div>
       <div class="af" id="aform" style="display:none">
         <div class="fr">
-          <div class="fg"><label>Uhrzeit</label><input type="time" id="atime" class="fi" value="07:00"></div>
-          <div class="fg" style="flex:1"><label>Name</label><input type="text" id="aname" class="fi" placeholder="Mein Wecker" style="width:100%"></div>
+          <div class="fg"><label data-i18n="alarm_time">Uhrzeit</label><input type="time" id="atime" class="fi" value="07:00"></div>
+          <div class="fg" style="flex:1"><label data-i18n="alarm_name">Name</label><input type="text" id="aname" class="fi" placeholder="Mein Wecker" style="width:100%"></div>
         </div>
         <div class="fg" style="margin-bottom:9px">
-          <label>Wiederholung</label>
+          <label data-i18n="alarm_rep">Wiederholung</label>
           <div class="dc" id="dchips">
             <span class="d" data-d="1">Mo</span><span class="d" data-d="2">Di</span><span class="d" data-d="3">Mi</span>
             <span class="d" data-d="4">Do</span><span class="d" data-d="5">Fr</span><span class="d" data-d="6">Sa</span><span class="d" data-d="0">So</span>
           </div>
         </div>
         <div class="fr">
-          <div class="fg"><label>Ton</label>
+          <div class="fg"><label data-i18n="alarm_snd">Ton</label>
             <select id="asnd" class="fi">
               <option value="beep">Standard</option><option value="bell">Glocke</option>
               <option value="digital">Digital</option><option value="gentle">Sanft</option>
             </select>
           </div>
-          <button class="btn bp" onclick="saveAlm()">Speichern</button>
-          <button class="btn" onclick="document.getElementById('aform').style.display='none'">Abbrechen</button>
+          <button class="btn bp" onclick="saveAlm()" data-i18n="save">Speichern</button>
+          <button class="btn" onclick="document.getElementById('aform').style.display='none'" data-i18n="cancel">Abbrechen</button>
         </div>
       </div>
     </div>
@@ -345,8 +342,8 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <div style="font-size:21px;font-weight:700;margin-bottom:4px" id="rn">Wecker</div>
       <div style="font-size:13px;color:var(--mut);margin-bottom:18px" id="rt2"></div>
       <div style="display:flex;gap:9px;justify-content:center">
-        <button class="btn bxl bc" onclick="snooze()">😴 Snooze (5 Min)</button>
-        <button class="btn bxl bd" onclick="stopAlm()">✕ Stoppen</button>
+        <button class="btn bxl bc" onclick="snooze()" data-i18n="snooze">😴 Snooze (5 Min)</button>
+        <button class="btn bxl bd" onclick="stopAlm()" data-i18n="stopbtn">✕ Stoppen</button>
       </div>
     </div>
   </div>
@@ -360,21 +357,21 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
         <div class="ri"><div class="dg" id="tdisp">00:00:00</div><div class="dl" id="tlbl">Bereit</div></div>
       </div>
       <div class="tin">
-        <div class="tg"><label>Std</label><input type="number" id="th" class="ti" min="0" max="23" value="0"></div>
+        <div class="tg"><label data-i18n="hours">Std</label><input type="number" id="th" class="ti" min="0" max="23" value="0"></div>
         <div class="ts">:</div>
-        <div class="tg"><label>Min</label><input type="number" id="tm" class="ti" min="0" max="59" value="5"></div>
+        <div class="tg"><label data-i18n="mins">Min</label><input type="number" id="tm" class="ti" min="0" max="59" value="5"></div>
         <div class="ts">:</div>
-        <div class="tg"><label>Sek</label><input type="number" id="ts2" class="ti" min="0" max="59" value="0"></div>
+        <div class="tg"><label data-i18n="secs">Sek</label><input type="number" id="ts2" class="ti" min="0" max="59" value="0"></div>
       </div>
       <div class="tc">
-        <button class="btn bxl bp" id="tst" onclick="tStart()">▶ Starten</button>
-        <button class="btn bxl" id="tpa" onclick="tPause()" style="display:none">⏸ Pause</button>
-        <button class="btn bxl" id="tre" onclick="tResume()" style="display:none">▶ Weiter</button>
-        <button class="btn bxl" onclick="tReset()">↺ Reset</button>
+        <button class="btn bxl bp" id="tst" onclick="tStart()" data-i18n="start">▶ Starten</button>
+        <button class="btn bxl" id="tpa" onclick="tPause()" style="display:none" data-i18n="pause">⏸ Pause</button>
+        <button class="btn bxl" id="tre" onclick="tResume()" style="display:none" data-i18n="resume">▶ Weiter</button>
+        <button class="btn bxl" onclick="tReset()" data-i18n="reset">↺ Reset</button>
         <button class="btn" onclick="tFS()">⛶</button>
       </div>
     </div>
-    <div class="ch" style="margin-bottom:9px"><span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mut)">Schnellwahl</span></div>
+    <div class="ch" style="margin-bottom:9px"><span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mut)" data-i18n="quicksel">Schnellwahl</span></div>
     <div class="qb">
       <button class="qbn" onclick="setT(0,1,0)">1 Min</button><button class="qbn" onclick="setT(0,5,0)">5 Min</button>
       <button class="qbn" onclick="setT(0,10,0)">10 Min</button><button class="qbn" onclick="setT(0,15,0)">15 Min</button>
@@ -382,11 +379,11 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <button class="qbn" onclick="setT(0,45,0)">45 Min</button><button class="qbn" onclick="setT(1,0,0)">60 Min</button>
       <button class="qbn" onclick="setT(1,30,0)">90 Min</button><button class="qbn" onclick="setT(2,0,0)">120 Min</button>
     </div>
-    <div class="ch" style="margin-bottom:7px"><span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mut)">Alarmton</span></div>
+    <div class="ch" style="margin-bottom:7px"><span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mut)" data-i18n="almsnd">Alarmton</span></div>
     <div class="sr" id="tsounds">
-      <button class="sc on" data-snd="beep">🔔 Standard</button><button class="sc" data-snd="bell">🛎 Glocke</button>
-      <button class="sc" data-snd="digital">📱 Digital</button><button class="sc" data-snd="gentle">✨ Sanft</button>
-      <button class="sc" data-snd="none">🔇 Kein Ton</button>
+      <button class="sc on" data-snd="beep" data-i18n="snd_std">🔔 Standard</button><button class="sc" data-snd="bell" data-i18n="snd_bell">🛎 Glocke</button>
+      <button class="sc" data-snd="digital" data-i18n="snd_dig">📱 Digital</button><button class="sc" data-snd="gentle" data-i18n="snd_soft">✨ Sanft</button>
+      <button class="sc" data-snd="none" data-i18n="snd_none" data-i18n="amb_none">🔇 Kein Ton</button>
     </div>
     <div class="vr"><span>🔈</span><input type="range" id="tvol" min="0" max="100" value="80"><span>🔊</span></div>
   </div>
@@ -409,28 +406,28 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       </div>
     </div>
     <div class="lw2" id="lapw" style="display:none">
-      <table class="lt"><thead><tr><th>Runde</th><th>Rundenzeit</th><th>Gesamt</th></tr></thead><tbody id="lapb"></tbody></table>
+      <table class="lt"><thead><tr><th data-i18n="lap_n">Runde</th><th data-i18n="lap_t">Rundenzeit</th><th data-i18n="lap_tot">Gesamt</th></tr></thead><tbody id="lapb"></tbody></table>
     </div>
   </div>
 </div>
 <!-- FOCUS -->
 <div class="panel" id="p-focus">
   <div id="fms">
-    <h2 class="stit">🎯 Fokus-Methode wählen</h2>
+    <h2 class="stit" data-i18n="focus_choose">🎯 Fokus-Methode wählen</h2>
     <div class="fg2">
-      <div class="mc" onclick="startF('pomodoro')"><div class="mi">🍅</div><div class="mn2">Pomodoro-Technik</div><div class="md">25 Min Fokus, 5 Min Pause.</div><div class="mb"><span class="badge bf">25 Min</span><span class="badge bb">5 Min Pause</span></div></div>
-      <div class="mc" onclick="startF('5217')"><div class="mi">⚡</div><div class="mn2">52/17 Methode</div><div class="md">52 Min Arbeit, 17 Min echte Erholung.</div><div class="mb"><span class="badge bf">52 Min</span><span class="badge bb">17 Min Pause</span></div></div>
-      <div class="mc" onclick="startF('deepwork')"><div class="mi">🔥</div><div class="mn2">Deep Work</div><div class="md">90 Min ablenkungsfreie Tiefarbeit.</div><div class="mb"><span class="badge bf">90 Min</span><span class="badge bb">20 Min Pause</span></div></div>
-      <div class="mc" onclick="startF('ultradian')"><div class="mi">🧬</div><div class="mn2">Ultradian-Rhythmus</div><div class="md">Natürlicher 90-Min-Zyklus des Gehirns.</div><div class="mb"><span class="badge bf">90 Min</span><span class="badge bb">20 Min Pause</span></div></div>
-      <div class="mc" onclick="startF('flowtime')"><div class="mi">🌊</div><div class="mn2">Flowtime</div><div class="md">Kein festes Limit – du entscheidest.</div><div class="mb"><span class="badge bf">Offen</span></div></div>
-      <div class="mc" onclick="startF('lernen')"><div class="mi">📚</div><div class="mn2">Lern-Timer</div><div class="md">45 Min Lernen, 10 Min Pause.</div><div class="mb"><span class="badge bf">45 Min</span><span class="badge bb">10 Min Pause</span></div></div>
-      <div class="mc" onclick="showCustom()"><div class="mi">⚙️</div><div class="mn2">Eigener Timer</div><div class="md">Eigene Fokus- und Pausenzeiten.</div><div class="mb"><span class="badge bf">Individuell</span></div></div>
+      <div class="mc" onclick="startF('pomodoro')"><div class="mi">🍅</div><div class="mn2" data-i18n="m_pom_n">Pomodoro-Technik</div><div class="md" data-i18n="m_pom_d">25 Min Fokus, 5 Min Pause.</div><div class="mb"><span class="badge bf">25 Min</span><span class="badge bb">5 Min Pause</span></div></div>
+      <div class="mc" onclick="startF('5217')"><div class="mi">⚡</div><div class="mn2" data-i18n="m_5217_n">52/17 Methode</div><div class="md" data-i18n="m_5217_d">52 Min Arbeit, 17 Min echte Erholung.</div><div class="mb"><span class="badge bf">52 Min</span><span class="badge bb">17 Min Pause</span></div></div>
+      <div class="mc" onclick="startF('deepwork')"><div class="mi">🔥</div><div class="mn2" data-i18n="m_dw_n">Deep Work</div><div class="md" data-i18n="m_dw_d">90 Min ablenkungsfreie Tiefarbeit.</div><div class="mb"><span class="badge bf">90 Min</span><span class="badge bb">20 Min Pause</span></div></div>
+      <div class="mc" onclick="startF('ultradian')"><div class="mi">🧬</div><div class="mn2" data-i18n="m_uld_n">Ultradian-Rhythmus</div><div class="md" data-i18n="m_uld_d">Natürlicher 90-Min-Zyklus des Gehirns.</div><div class="mb"><span class="badge bf">90 Min</span><span class="badge bb">20 Min Pause</span></div></div>
+      <div class="mc" onclick="startF('flowtime')"><div class="mi">🌊</div><div class="mn2" data-i18n="m_ft_n">Flowtime</div><div class="md" data-i18n="m_ft_d">Kein festes Limit – du entscheidest.</div><div class="mb"><span class="badge bf">Offen</span></div></div>
+      <div class="mc" onclick="startF('lernen')"><div class="mi">📚</div><div class="mn2" data-i18n="m_lrn_n">Lern-Timer</div><div class="md" data-i18n="m_lrn_d">45 Min Lernen, 10 Min Pause.</div><div class="mb"><span class="badge bf">45 Min</span><span class="badge bb">10 Min Pause</span></div></div>
+      <div class="mc" onclick="showCustom()"><div class="mi">⚙️</div><div class="mn2" data-i18n="m_cust_n">Eigener Timer</div><div class="md" data-i18n="m_cust_d">Eigene Fokus- und Pausenzeiten.</div><div class="mb"><span class="badge bf">Individuell</span></div></div>
     </div>
     <div id="custP" style="display:none;margin-top:14px" class="card">
       <div class="cb"><div class="fr">
-        <div class="fg"><label>Fokus (Min)</label><input type="number" id="cf" class="fi" value="25" min="1" max="180"></div>
-        <div class="fg"><label>Pause (Min)</label><input type="number" id="cb2" class="fi" value="5" min="1" max="60"></div>
-        <div class="fg"><label>Runden</label><input type="number" id="cr" class="fi" value="4" min="1" max="20"></div>
+        <div class="fg"><label data-i18n="cust_focus">Fokus (Min)</label><input type="number" id="cf" class="fi" value="25" min="1" max="180"></div>
+        <div class="fg"><label data-i18n="cust_pause">Pause (Min)</label><input type="number" id="cb2" class="fi" value="5" min="1" max="60"></div>
+        <div class="fg"><label data-i18n="cust_rounds">Runden</label><input type="number" id="cr" class="fi" value="4" min="1" max="20"></div>
         <button class="btn bp" onclick="startCust()">▶ Starten</button>
       </div></div>
     </div>
@@ -438,7 +435,7 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
   <div id="fsp" style="display:none">
     <div class="card">
       <div class="fs2">
-        <div class="pl pf" id="phl">🎯 Fokus-Phase</div>
+        <div class="pl pf" id="phl" data-i18n="focus_phase">🎯 Fokus-Phase</div>
         <div style="font-size:12px;color:var(--mut);margin-bottom:7px" id="rinfo">Runde 1 von 4</div>
         <div class="rd2" id="rdots"></div>
         <div class="rw">
@@ -449,12 +446,12 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
           <button class="btn bxl bp" id="fst" onclick="fStart()">▶ Starten</button>
           <button class="btn bxl" id="fpa" onclick="fPause()" style="display:none">⏸ Pause</button>
           <button class="btn bxl" id="fre" onclick="fResume()" style="display:none">▶ Weiter</button>
-          <button class="btn bxl bc" onclick="fSkip()">⏭ Überspringen</button>
-          <button class="btn" onclick="exitF()">← Zurück</button>
+          <button class="btn bxl bc" onclick="fSkip()" data-i18n="skip">⏭ Überspringen</button>
+          <button class="btn" onclick="exitF()" data-i18n="back" data-i18n="back">← Zurück</button>
         </div>
         <div class="jn">
-          <h3>📝 Was möchtest du heute erreichen?</h3>
-          <textarea id="jgoal" placeholder="Mein Ziel für diese Session..."></textarea>
+          <h3 data-i18n="journal_h">📝 Was möchtest du heute erreichen?</h3>
+          <textarea id="jgoal" data-i18n-ph="journal_ph" placeholder="Mein Ziel für diese Session..."></textarea>
         </div>
       </div>
     </div>
@@ -463,7 +460,7 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
 <!-- SLEEP -->
 <div class="panel" id="p-sleep">
   <div class="card">
-    <div class="ch"><span class="ct">😴 Schlaf-Timer</span></div>
+    <div class="ch"><span class="ct" data-i18n="sleep_h">😴 Schlaf-Timer</span></div>
     <p style="padding:12px 20px 0;font-size:13px;color:var(--mut)">Starte den Timer – er stoppt Entspannungsgeräusche automatisch.</p>
     <div class="so">
       <button class="sb" onclick="setSl(15,this)"><span class="sv">15</span><span class="su">Min</span></button>
@@ -475,60 +472,17 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
     <div style="text-align:center;padding:0 20px 14px">
       <div class="dg" id="sldisp" style="font-size:50px">30:00</div>
       <div style="display:flex;gap:7px;justify-content:center;margin-top:13px">
-        <button class="btn bxl bp" id="slst" onclick="slStart()">▶ Einschlaf-Timer starten</button>
+        <button class="btn bxl bp" id="slst" onclick="slStart()" data-i18n="sleep_start">▶ Einschlaf-Timer starten</button>
         <button class="btn bxl bd" id="slsp" onclick="slStop()" style="display:none">⏹ Stoppen</button>
       </div>
     </div>
     <div class="div" style="margin:0 20px"></div>
     <div style="padding:13px 20px">
-      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);margin-bottom:9px">Entspannungsgeräusche</div>
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);margin-bottom:9px" data-i18n="amb_h">Entspannungsgeräusche</div>
       <div class="sr" style="padding:0">
-        <button class="sc" data-amb="rain">🌧 Regen</button><button class="sc" data-amb="forest">🌲 Wald</button>
-        <button class="sc" data-amb="cafe">☕ Café</button><button class="sc" data-amb="white">〰 White Noise</button>
-        <button class="sc" data-amb="fire">🔥 Kamin</button><button class="sc" data-amb="none">🔇 Kein Ton</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- BREATH -->
-<div class="panel" id="p-breath">
-  <div class="two" style="align-items:start">
-    <div class="card">
-      <div class="ch"><span class="ct">🧘 Atem-Timer</span></div>
-      <div style="padding:13px 20px">
-        <div class="fg"><label>Atem-Methode</label>
-          <select id="bms" class="fi" onchange="selBM()">
-            <option value="box">Box Breathing (4-4-4-4)</option>
-            <option value="478">4-7-8 Methode</option>
-            <option value="coherent">Kohärente Atmung (5-5)</option>
-            <option value="24">2-4 Methode (beruhigend)</option>
-          </select>
-        </div>
-      </div>
-      <div class="bw"><div class="bc2" id="bcirc"><div class="bp2" id="bph">Bereit</div><div class="bco" id="bcnt">–</div></div></div>
-      <div style="text-align:center;padding:0 20px 20px">
-        <div style="font-size:12px;color:var(--mut);margin-bottom:13px" id="bdesc">4s einatmen → 4s halten → 4s ausatmen → 4s halten</div>
-        <div style="display:flex;gap:7px;justify-content:center">
-          <button class="btn bxl bp" id="bst" onclick="bStart()">▶ Starten</button>
-          <button class="btn bxl bd" id="bsp" onclick="bStop()" style="display:none">⏹ Stoppen</button>
-        </div>
-        <div style="font-size:12px;color:var(--mut);margin-top:9px">Runde <span id="brd">0</span> · <span id="btot">0:00</span> gesamt</div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="ch"><span class="ct">🧘 Meditationstimer</span></div>
-      <div class="so" style="padding:16px">
-        <button class="sb" onclick="setMed(5,this)"><span class="sv">5</span><span class="su">Min</span></button>
-        <button class="sb" onclick="setMed(10,this)"><span class="sv">10</span><span class="su">Min</span></button>
-        <button class="sb" onclick="setMed(20,this)"><span class="sv">20</span><span class="su">Min</span></button>
-        <button class="sb" onclick="setMed(30,this)"><span class="sv">30</span><span class="su">Min</span></button>
-      </div>
-      <div style="text-align:center;padding:0 20px 20px">
-        <div class="dg" id="mdisp" style="font-size:50px">10:00</div>
-        <div style="display:flex;gap:7px;justify-content:center;margin-top:13px">
-          <button class="btn bxl bp" id="mst" onclick="mStart()">▶ Starten</button>
-          <button class="btn bxl bd" id="msp" onclick="mStop()" style="display:none">⏹ Stopp</button>
-        </div>
+        <button class="sc" data-amb="rain" data-i18n="amb_rain">🌧 Regen</button><button class="sc" data-amb="forest" data-i18n="amb_forest">🌲 Wald</button>
+        <button class="sc" data-amb="cafe" data-i18n="amb_cafe">☕ Café</button><button class="sc" data-amb="white" data-i18n="amb_white">〰 White Noise</button>
+        <button class="sc" data-amb="fire" data-i18n="amb_fire">🔥 Kamin</button><button class="sc" data-amb="none">🔇 Kein Ton</button>
       </div>
     </div>
   </div>
@@ -536,20 +490,20 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
 <!-- ASSISTANT -->
 <div class="panel" id="p-assistant">
   <div class="card" style="max-width:560px;margin:0 auto">
-    <div class="ch"><span class="ct">🤖 Fokus-Assistent</span></div>
+    <div class="ch"><span class="ct" data-i18n="ass_h">🤖 Fokus-Assistent</span></div>
     <div class="cb">
-      <p style="color:var(--mut);font-size:13px;margin-bottom:18px">Beantworte zwei kurze Fragen – wir empfehlen die optimale Methode.</p>
+      <p style="color:var(--mut);font-size:13px;margin-bottom:18px" data-i18n="ass_sub">Beantworte zwei kurze Fragen – wir empfehlen die optimale Methode.</p>
       <div id="as1">
-        <div class="aq">Was möchtest du tun?</div>
+        <div class="aq" data-i18n="ass_q1">Was möchtest du tun?</div>
         <div class="og" id="tgrid"></div>
-        <div style="text-align:center"><button class="btn bp" id="as1btn" onclick="as2()" disabled>Weiter →</button></div>
+        <div style="text-align:center"><button class="btn bp" id="as1btn" onclick="as2()" disabled data-i18n="next">Weiter →</button></div>
       </div>
       <div id="as2" style="display:none">
-        <div class="aq">Wie lange kannst du dich konzentrieren?</div>
+        <div class="aq" data-i18n="ass_q2">Wie lange kannst du dich konzentrieren?</div>
         <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:18px">
-          <button class="ob" data-f="short" onclick="selF(this)" style="flex-direction:row;text-align:left"><span class="oi" style="font-size:20px">⚡</span><div><div class="ol">Unter 25 Minuten</div><div style="font-size:11px;color:var(--mut)">Ich brauche häufig kurze Impulse</div></div></button>
-          <button class="ob" data-f="medium" onclick="selF(this)" style="flex-direction:row;text-align:left"><span class="oi" style="font-size:20px">⏰</span><div><div class="ol">25 bis 60 Minuten</div><div style="font-size:11px;color:var(--mut)">Ich kann gut eine Stunde durcharbeiten</div></div></button>
-          <button class="ob" data-f="long" onclick="selF(this)" style="flex-direction:row;text-align:left"><span class="oi" style="font-size:20px">🔥</span><div><div class="ol">60 bis 120 Minuten</div><div style="font-size:11px;color:var(--mut)">Ich komme in den Flow</div></div></button>
+          <button class="ob" data-f="short" onclick="selF(this)" style="flex-direction:row;text-align:left"><span class="oi" style="font-size:20px">⚡</span><div><div class="ol" data-i18n="f_short">Unter 25 Minuten</div><div style="font-size:11px;color:var(--mut)" data-i18n="f_short_s">Ich brauche häufig kurze Impulse</div></div></button>
+          <button class="ob" data-f="medium" onclick="selF(this)" style="flex-direction:row;text-align:left"><span class="oi" style="font-size:20px">⏰</span><div><div class="ol" data-i18n="f_med">25 bis 60 Minuten</div><div style="font-size:11px;color:var(--mut)" data-i18n="f_med_s">Ich kann gut eine Stunde durcharbeiten</div></div></button>
+          <button class="ob" data-f="long" onclick="selF(this)" style="flex-direction:row;text-align:left"><span class="oi" style="font-size:20px">🔥</span><div><div class="ol" data-i18n="f_long">60 bis 120 Minuten</div><div style="font-size:11px;color:var(--mut)" data-i18n="f_long_s">Ich komme in den Flow</div></div></button>
         </div>
         <div style="display:flex;gap:7px;justify-content:center">
           <button class="btn" onclick="as1()">← Zurück</button>
@@ -570,7 +524,7 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
 </div>
 <!-- STATS -->
 <div class="panel" id="p-stats">
-  <h2 class="stit">📊 Deine Fokus-Statistik</h2>
+  <h2 class="stit" data-i18n="stats_h">📊 Deine Fokus-Statistik</h2>
   <div class="sg">
     <div class="sk"><div class="sv2 b" id="stod">0</div><div class="sl" id="stod-l">Minuten heute</div></div>
     <div class="sk"><div class="sv2" id="swk">0</div><div class="sl" id="swk-l">Minuten Woche</div></div>
@@ -578,12 +532,12 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
     <div class="sk"><div class="sv2 g" id="sst">0</div><div class="sl" id="sst-l">Tage Streak</div></div>
   </div>
   <div class="card" style="margin-bottom:13px">
-    <div class="ch"><span class="ct">📅 Diese Woche</span></div>
+    <div class="ch"><span class="ct" data-i18n="week_h">📅 Diese Woche</span></div>
     <div class="wb" id="wbar"></div>
     <div class="wl" id="wlbl"><span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span></div>
   </div>
   <div class="card">
-    <div class="ch"><span class="ct">📋 Letzte Sessions</span><button class="btn bsm bd" onclick="clrStats()">Löschen</button></div>
+    <div class="ch"><span class="ct" data-i18n="log_h">📋 Letzte Sessions</span><button class="btn bsm bd" onclick="clrStats()" data-i18n="del">Löschen</button></div>
     <div class="cb" id="slog" style="font-size:13px;color:var(--mut)">Noch keine Sessions. Starte deinen ersten Fokus-Timer!</div>
   </div>
 </div>
@@ -592,12 +546,12 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
 <div class="fso" id="fso">
   <div class="fst" id="fst2">00:00:00</div>
   <div class="fsl" id="fsl">Timer</div>
-  <button class="btn fsx" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff" onclick="exitFS2()">✕ Verlassen</button>
+  <button class="btn fsx" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff" onclick="exitFS2()" data-i18n="fs_exit">✕ Verlassen</button>
 </div>
 <div class="toast-c" id="tc"></div>
 <footer>
   <div class="fl">
-    <a href="index.html">Home</a><a href="timer.html">Timer</a><a href="wissen.html">Wissen</a>
+    <a href="index.html" data-i18n-href="home">Home</a><a href="timer.html">Timer</a><a href="wissen.html">Wissen</a>
     <a href="faq.html">FAQ</a><a href="hilfe.html">Hilfe</a><a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a><a href="kontakt.html">Kontakt</a>
   </div>
@@ -607,98 +561,519 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
 'use strict';
 // ═══════════════ TRANSLATIONS ═══════════════
 const L={
-  de:{f:'🇩🇪',n:'Deutsch',nav:['🕒 Uhr','⏰ Wecker','⏲ Timer','⏱ Stoppuhr','🍅 Fokus','😴 Schlaf','🧘 Atmung','🤖 Assistent','📊 Statistik','📚 Wissen'],tabs:['🕒 Uhr','⏰ Wecker','⏲ Timer','⏱ Stoppuhr','🍅 Fokus','😴 Schlaf','🧘 Atmung','🤖 Assistent','📊 Statistik'],tasks:['📚 Lernen','💼 Arbeiten','💻 Programmieren','✍️ Schreiben','📖 Lesen','🎨 Kreativ','🧘 Meditation','🏃 Sport'],days:['So','Mo','Di','Mi','Do','Fr','Sa'],wdays:['Mo','Di','Mi','Do','Fr','Sa','So'],notime:'Bitte eine Zeit eingeben.',alarmSaved:'✅ Wecker gespeichert!',kbhint:'💡 Leertaste = Start/Pause · R = Reset · F = Vollbild',inhale:'Einatmen',hold:'Halten',exhale:'Ausatmen',stlbls:['Minuten heute','Minuten Woche','Sessions','Tage Streak'],footer:'© 2025 Timer-24.com · Alle Berechnungen lokal im Browser'},
-  en:{f:'🇬🇧',n:'English',nav:['🕒 Clock','⏰ Alarm','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Sleep','🧘 Breathing','🤖 Assistant','📊 Stats','📚 Knowledge'],tabs:['🕒 Clock','⏰ Alarm','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Sleep','🧘 Breathing','🤖 Assistant','📊 Stats'],tasks:['📚 Study','💼 Work','💻 Code','✍️ Write','📖 Read','🎨 Creative','🧘 Meditate','🏃 Sport'],days:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],wdays:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],notime:'Please enter a time.',alarmSaved:'✅ Alarm saved!',kbhint:'💡 Space = Start/Pause · R = Reset · F = Fullscreen',inhale:'Inhale',hold:'Hold',exhale:'Exhale',stlbls:['Minutes today','Minutes week','Sessions','Day streak'],footer:'© 2025 Timer-24.com · All calculations run locally'},
-  fr:{f:'🇫🇷',n:'Français',nav:['🕒 Horloge','⏰ Réveil','⏲ Minuterie','⏱ Chrono','🍅 Focus','😴 Sommeil','🧘 Respiration','🤖 Assistant','📊 Stats','📚 Savoir'],tabs:['🕒 Horloge','⏰ Réveil','⏲ Minuterie','⏱ Chrono','🍅 Focus','😴 Sommeil','🧘 Respiration','🤖 Assistant','📊 Stats'],tasks:['📚 Étudier','💼 Travailler','💻 Coder','✍️ Écrire','📖 Lire','🎨 Créer','🧘 Méditer','🏃 Sport'],days:['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],wdays:['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'],notime:'Veuillez entrer une durée.',alarmSaved:'✅ Réveil enregistré!',kbhint:'💡 Espace = Démarrer/Pause · R = Réinit. · F = Plein écran',inhale:'Inspirer',hold:'Retenir',exhale:'Expirer',stlbls:["Minutes aujourd'hui",'Minutes semaine','Sessions','Jours consécutifs'],footer:'© 2025 Timer-24.com · Calculs locaux'},
-  es:{f:'🇪🇸',n:'Español',nav:['🕒 Reloj','⏰ Alarma','⏲ Temporizador','⏱ Cronómetro','🍅 Foco','😴 Sueño','🧘 Respiración','🤖 Asistente','📊 Stats','📚 Conocimiento'],tabs:['🕒 Reloj','⏰ Alarma','⏲ Temporizador','⏱ Cronómetro','🍅 Foco','😴 Sueño','🧘 Respiración','🤖 Asistente','📊 Stats'],tasks:['📚 Estudiar','💼 Trabajar','💻 Programar','✍️ Escribir','📖 Leer','🎨 Crear','🧘 Meditar','🏃 Deporte'],days:['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],wdays:['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'],notime:'Por favor introduce una duración.',alarmSaved:'✅ ¡Alarma guardada!',kbhint:'💡 Espacio = Iniciar/Pausa · R = Reiniciar · F = Pantalla completa',inhale:'Inhalar',hold:'Mantener',exhale:'Exhalar',stlbls:['Minutos hoy','Minutos semana','Sesiones','Racha días'],footer:'© 2025 Timer-24.com · Sin garantía de exactitud'},
-  it:{f:'🇮🇹',n:'Italiano',nav:['🕒 Orologio','⏰ Sveglia','⏲ Contatore','⏱ Cronometro','🍅 Focus','😴 Sonno','🧘 Respirazione','🤖 Assistente','📊 Stats','📚 Conoscenza'],tabs:['🕒 Orologio','⏰ Sveglia','⏲ Contatore','⏱ Cronometro','🍅 Focus','😴 Sonno','🧘 Respirazione','🤖 Assistente','📊 Stats'],tasks:['📚 Studiare','💼 Lavorare','💻 Programmare','✍️ Scrivere','📖 Leggere','🎨 Creare','🧘 Meditare','🏃 Sport'],days:['Dom','Lun','Mar','Mer','Gio','Ven','Sab'],wdays:['Lun','Mar','Mer','Gio','Ven','Sab','Dom'],notime:'Inserisci una durata.',alarmSaved:'✅ Sveglia salvata!',kbhint:'💡 Spazio = Avvia/Pausa · R = Reimposta · F = Schermo intero',inhale:'Inspira',hold:'Trattieni',exhale:'Espira',stlbls:['Minuti oggi','Minuti settimana','Sessioni','Giorni'],footer:'© 2025 Timer-24.com · Nessuna garanzia di precisione'},
-  pt:{f:'🇵🇹',n:'Português',nav:['🕒 Relógio','⏰ Alarme','⏲ Contagem','⏱ Cronómetro','🍅 Foco','😴 Sono','🧘 Respiração','🤖 Assistente','📊 Stats','📚 Conhecimento'],tabs:['🕒 Relógio','⏰ Alarme','⏲ Contagem','⏱ Cronómetro','🍅 Foco','😴 Sono','🧘 Respiração','🤖 Assistente','📊 Stats'],tasks:['📚 Estudar','💼 Trabalhar','💻 Programar','✍️ Escrever','📖 Ler','🎨 Criar','🧘 Meditar','🏃 Desporto'],days:['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],wdays:['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],notime:'Introduza uma duração.',alarmSaved:'✅ Alarme guardado!',kbhint:'💡 Espaço = Iniciar/Pausa · R = Repor · F = Ecrã inteiro',inhale:'Inspirar',hold:'Reter',exhale:'Expirar',stlbls:['Minutos hoje','Minutos semana','Sessões','Dias'],footer:'© 2025 Timer-24.com · Sem garantia de precisão'},
-  nl:{f:'🇳🇱',n:'Nederlands',nav:['🕒 Klok','⏰ Wekker','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Slaap','🧘 Ademhaling','🤖 Assistent','📊 Stats','📚 Kennis'],tabs:['🕒 Klok','⏰ Wekker','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Slaap','🧘 Ademhaling','🤖 Assistent','📊 Stats'],tasks:['📚 Studeren','💼 Werken','💻 Programmeren','✍️ Schrijven','📖 Lezen','🎨 Creatief','🧘 Mediteren','🏃 Sport'],days:['Zo','Ma','Di','Wo','Do','Vr','Za'],wdays:['Ma','Di','Wo','Do','Vr','Za','Zo'],notime:'Voer een duur in.',alarmSaved:'✅ Wekker opgeslagen!',kbhint:'💡 Spatie = Starten/Pauze · R = Reset · F = Volledig scherm',inhale:'Inademen',hold:'Vasthouden',exhale:'Uitademen',stlbls:['Minuten vandaag','Minuten week','Sessies','Dagen streak'],footer:'© 2025 Timer-24.com · Geen garantie op nauwkeurigheid'},
-  pl:{f:'🇵🇱',n:'Polski',nav:['🕒 Zegar','⏰ Budzik','⏲ Timer','⏱ Stoper','🍅 Fokus','😴 Sen','🧘 Oddychanie','🤖 Asystent','📊 Stats','📚 Wiedza'],tabs:['🕒 Zegar','⏰ Budzik','⏲ Timer','⏱ Stoper','🍅 Fokus','😴 Sen','🧘 Oddychanie','🤖 Asystent','📊 Stats'],tasks:['📚 Uczyć się','💼 Pracować','💻 Programować','✍️ Pisać','📖 Czytać','🎨 Tworzyć','🧘 Medytować','🏃 Sport'],days:['Nd','Pn','Wt','Śr','Cz','Pt','Sb'],wdays:['Pn','Wt','Śr','Cz','Pt','Sb','Nd'],notime:'Wprowadź czas.',alarmSaved:'✅ Budzik zapisany!',kbhint:'💡 Spacja = Start/Pauza · R = Reset · F = Pełny ekran',inhale:'Wdech',hold:'Zatrzymaj',exhale:'Wydech',stlbls:['Minuty dziś','Minuty tydzień','Sesje','Dni z rzędu'],footer:'© 2025 Timer-24.com · Bez gwarancji dokładności'},
-  tr:{f:'🇹🇷',n:'Türkçe',nav:['🕒 Saat','⏰ Alarm','⏲ Zamanlayıcı','⏱ Kronometre','🍅 Odak','😴 Uyku','🧘 Nefes','🤖 Asistan','📊 Stats','📚 Bilgi'],tabs:['🕒 Saat','⏰ Alarm','⏲ Zamanlayıcı','⏱ Kronometre','🍅 Odak','😴 Uyku','🧘 Nefes','🤖 Asistan','📊 Stats'],tasks:['📚 Öğrenmek','💼 Çalışmak','💻 Programlamak','✍️ Yazmak','📖 Okumak','🎨 Yaratmak','🧘 Meditasyon','🏃 Spor'],days:['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'],wdays:['Pzt','Sal','Çar','Per','Cum','Cmt','Paz'],notime:'Lütfen bir süre girin.',alarmSaved:'✅ Alarm kaydedildi!',kbhint:'💡 Boşluk = Başlat/Duraklat · R = Sıfırla · F = Tam ekran',inhale:'Nefes al',hold:'Tut',exhale:'Nefes ver',stlbls:['Bugün dakika','Bu hafta dakika','Oturumlar','Gün serisi'],footer:'© 2025 Timer-24.com · Doğruluk garantisi verilmez'},
-  ar:{f:'🇸🇦',n:'العربية',dir:'rtl',nav:['🕒 الساعة','⏰ المنبه','⏲ المؤقت','⏱ الكرونومتر','🍅 التركيز','😴 النوم','🧘 التنفس','🤖 المساعد','📊 إحصاء','📚 معرفة'],tabs:['🕒 الساعة','⏰ المنبه','⏲ المؤقت','⏱ الكرونومتر','🍅 التركيز','😴 النوم','🧘 التنفس','🤖 المساعد','📊 إحصاء'],tasks:['📚 الدراسة','💼 العمل','💻 البرمجة','✍️ الكتابة','📖 القراءة','🎨 الإبداع','🧘 التأمل','🏃 الرياضة'],days:['أح','إث','ثل','أر','خم','جم','سب'],wdays:['إث','ثل','أر','خم','جم','سب','أح'],notime:'الرجاء إدخال مدة.',alarmSaved:'✅ تم حفظ المنبه!',kbhint:'💡 مسافة = ابدأ/توقف · R = إعادة · F = ملء الشاشة',inhale:'استنشق',hold:'احبس',exhale:'ازفر',stlbls:['دقائق اليوم','دقائق الأسبوع','جلسات','أيام متتالية'],footer:'© 2025 Timer-24.com · دون ضمان الدقة'},
-  zh:{f:'🇨🇳',n:'中文',nav:['🕒 时钟','⏰ 闹钟','⏲ 倒计时','⏱ 秒表','🍅 专注','😴 睡眠','🧘 呼吸','🤖 助手','📊 统计','📚 知识'],tabs:['🕒 时钟','⏰ 闹钟','⏲ 倒计时','⏱ 秒表','🍅 专注','😴 睡眠','🧘 呼吸','🤖 助手','📊 统计'],tasks:['📚 学习','💼 工作','💻 编程','✍️ 写作','📖 阅读','🎨 创作','🧘 冥想','🏃 运动'],days:['日','一','二','三','四','五','六'],wdays:['周一','周二','周三','周四','周五','周六','周日'],notime:'请输入时长。',alarmSaved:'✅ 闹钟已保存！',kbhint:'💡 空格 = 开始/暂停 · R = 重置 · F = 全屏',inhale:'吸气',hold:'屏息',exhale:'呼气',stlbls:['今日分钟数','本周分钟数','总会话数','连续天数'],footer:'© 2025 Timer-24.com · 不保证准确性'}
+  de:{f:'🇩🇪',n:'Deutsch',
+    nav:['🕒 Uhr','⏰ Wecker','⏲ Timer','⏱ Stoppuhr','🍅 Fokus','😴 Schlaf','🤖 Assistent','📊 Statistik','📚 Wissen'],
+    tabs:['🕒 Uhr','⏰ Wecker','⏲ Timer','⏱ Stoppuhr','🍅 Fokus','😴 Schlaf','🤖 Assistent','📊 Statistik'],
+    tasks:['📚 Lernen','💼 Arbeiten','💻 Programmieren','✍️ Schreiben','📖 Lesen','🎨 Kreativ','🧘 Meditation','🏃 Sport'],
+    days:['So','Mo','Di','Mi','Do','Fr','Sa'],wdays:['Mo','Di','Mi','Do','Fr','Sa','So'],
+    notime:'Bitte eine Zeit eingeben.',alarmSaved:'✅ Wecker gespeichert!',kbhint:'💡 Leertaste = Start/Pause · R = Reset · F = Vollbild',
+    inhale:'Einatmen',hold:'Halten',exhale:'Ausatmen',
+    stlbls:['Minuten heute','Minuten Woche','Sessions','Tage Streak'],footer:'© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit',
+    fs:'⛶ Vollbild',addwc:'+ Hinzufügen',alarm_h:'⏰ Wecker',alarm_new:'+ Neuer Wecker',alarm_time:'Uhrzeit',alarm_name:'Name',alarm_rep:'Wiederholung',alarm_snd:'Ton',
+    save:'Speichern',cancel:'Abbrechen',snooze:'😴 Snooze (5 Min)',stopbtn:'✕ Stoppen',
+    hours:'Std',mins:'Min',secs:'Sek',start:'▶ Starten',pause:'⏸ Pause',resume:'▶ Weiter',reset:'↺ Reset',
+    quicksel:'Schnellwahl',almsnd:'Alarmton',snd_std:'🔔 Standard',snd_bell:'🛎 Glocke',snd_dig:'📱 Digital',snd_soft:'✨ Sanft',snd_none:'🔇 Kein Ton',
+    lap_n:'Runde',lap_t:'Rundenzeit',lap_tot:'Gesamt',
+    focus_choose:'🎯 Fokus-Methode wählen',
+    m_pom_n:'Pomodoro-Technik',m_pom_d:'25 Min Fokus, 5 Min Pause.',
+    m_5217_n:'52/17 Methode',m_5217_d:'52 Min Arbeit, 17 Min echte Erholung.',
+    m_dw_n:'Deep Work',m_dw_d:'90 Min ablenkungsfreie Tiefarbeit.',
+    m_uld_n:'Ultradian-Rhythmus',m_uld_d:'Natürlicher 90-Min-Zyklus des Gehirns.',
+    m_ft_n:'Flowtime',m_ft_d:'Kein festes Limit – du entscheidest.',
+    m_lrn_n:'Lern-Timer',m_lrn_d:'45 Min Lernen, 10 Min Pause.',
+    m_cust_n:'Eigener Timer',m_cust_d:'Eigene Fokus- und Pausenzeiten.',
+    cust_focus:'Fokus (Min)',cust_pause:'Pause (Min)',cust_rounds:'Runden',
+    focus_phase:'🎯 Fokus-Phase',focus_break:'☕ Pause',
+    journal_h:'📝 Was möchtest du heute erreichen?',journal_ph:'Mein Ziel für diese Session...',
+    skip:'⏭ Überspringen',back:'← Zurück',next:'Weiter →',
+    sleep_h:'😴 Schlaf-Timer',sleep_start:'▶ Einschlaf-Timer starten',
+    amb_h:'Entspannungsgeräusche',amb_rain:'🌧 Regen',amb_forest:'🌲 Wald',amb_cafe:'☕ Café',amb_white:'〰 White Noise',amb_fire:'🔥 Kamin',amb_none:'🔇 Kein Ton',
+    breath_h:'🧘 Atem-Timer',breath_method_lbl:'Atem-Methode',medit_h:'🧘 Meditationstimer',
+    bm_box:'Box Breathing (4-4-4-4)',bm_478:'4-7-8 Methode',bm_coh:'Kohärente Atmung (5-5)',bm_24:'2-4 Methode (beruhigend)',
+    breath_round_lbl:'Runde',breath_total_lbl:'gesamt',
+    ass_h:'🤖 Fokus-Assistent',ass_sub:'Beantworte zwei kurze Fragen – wir empfehlen die optimale Methode.',
+    ass_q1:'Was möchtest du tun?',ass_q2:'Wie lange kannst du dich konzentrieren?',
+    f_short:'Unter 25 Minuten',f_short_s:'Ich brauche häufig kurze Impulse',
+    f_med:'25 bis 60 Minuten',f_med_s:'Ich kann gut eine Stunde durcharbeiten',
+    f_long:'60 bis 120 Minuten',f_long_s:'Ich komme in den Flow',
+    stats_h:'📊 Deine Fokus-Statistik',week_h:'📅 Diese Woche',log_h:'📋 Letzte Sessions',del:'Löschen',
+    fs_exit:'✕ Verlassen',home:'Home',
+    clrconfirm:'Alle Statistiken löschen?',clrOk:'Statistik gelöscht.',toast_sleep:'😴 Einschlaf-Timer gestartet',
+    toast_done:'Fertig!',toast_all_done:'🏆 Alle Runden abgeschlossen!',toast_pause:'☕ Pause!',
+    toast_round:'🎯 Runde ',toast_medit:'🧘 Meditation abgeschlossen',
+    medit_done:'🧘 Meditation abgeschlossen'},
+  en:{f:'🇬🇧',n:'English',
+    nav:['🕒 Clock','⏰ Alarm','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Sleep','🤖 Assistant','📊 Stats','📚 Knowledge'],
+    tabs:['🕒 Clock','⏰ Alarm','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Sleep','🤖 Assistant','📊 Stats'],
+    tasks:['📚 Study','💼 Work','💻 Code','✍️ Write','📖 Read','🎨 Creative','🧘 Meditate','🏃 Sport'],
+    days:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],wdays:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+    notime:'Please enter a time.',alarmSaved:'✅ Alarm saved!',kbhint:'💡 Space = Start/Pause · R = Reset · F = Fullscreen',
+    inhale:'Inhale',hold:'Hold',exhale:'Exhale',
+    stlbls:['Minutes today','Minutes week','Sessions','Day streak'],footer:'© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy',
+    fs:'⛶ Fullscreen',addwc:'+ Add',alarm_h:'⏰ Alarms',alarm_new:'+ New alarm',alarm_time:'Time',alarm_name:'Name',alarm_rep:'Repeat',alarm_snd:'Sound',
+    save:'Save',cancel:'Cancel',snooze:'😴 Snooze (5 min)',stopbtn:'✕ Stop',
+    hours:'Hours',mins:'Minutes',secs:'Seconds',start:'▶ Start',pause:'⏸ Pause',resume:'▶ Resume',reset:'↺ Reset',
+    quicksel:'Quick select',almsnd:'Alarm sound',snd_std:'🔔 Standard',snd_bell:'🛎 Bell',snd_dig:'📱 Digital',snd_soft:'✨ Gentle',snd_none:'🔇 No sound',
+    lap_n:'Lap',lap_t:'Lap time',lap_tot:'Total',
+    focus_choose:'🎯 Choose focus method',
+    m_pom_n:'Pomodoro Technique',m_pom_d:'25 min focus, 5 min break.',
+    m_5217_n:'52/17 Method',m_5217_d:'52 min work, 17 min real rest.',
+    m_dw_n:'Deep Work',m_dw_d:'90 min distraction-free deep work.',
+    m_uld_n:'Ultradian Rhythm',m_uld_d:'Natural 90-min brain cycle.',
+    m_ft_n:'Flowtime',m_ft_d:'No fixed limit – you decide.',
+    m_lrn_n:'Study Timer',m_lrn_d:'45 min study, 10 min break.',
+    m_cust_n:'Custom Timer',m_cust_d:'Define your own focus and break times.',
+    cust_focus:'Focus (min)',cust_pause:'Break (min)',cust_rounds:'Rounds',
+    focus_phase:'🎯 Focus phase',focus_break:'☕ Break',
+    journal_h:'📝 What do you want to achieve today?',journal_ph:'My goal for this session...',
+    skip:'⏭ Skip',back:'← Back',next:'Next →',
+    sleep_h:'😴 Sleep Timer',sleep_start:'▶ Start sleep timer',
+    amb_h:'Relaxation sounds',amb_rain:'🌧 Rain',amb_forest:'🌲 Forest',amb_cafe:'☕ Café',amb_white:'〰 White Noise',amb_fire:'🔥 Fireplace',amb_none:'🔇 No sound',
+    breath_h:'🧘 Breathing Timer',breath_method_lbl:'Breathing method',medit_h:'🧘 Meditation Timer',
+    bm_box:'Box Breathing (4-4-4-4)',bm_478:'4-7-8 Method',bm_coh:'Coherent Breathing (5-5)',bm_24:'2-4 Method (calming)',
+    breath_round_lbl:'Round',breath_total_lbl:'total',
+    ass_h:'🤖 Focus Assistant',ass_sub:'Answer two quick questions – we recommend the optimal method.',
+    ass_q1:'What do you want to do?',ass_q2:'How long can you concentrate?',
+    f_short:'Under 25 minutes',f_short_s:'I need frequent short bursts',
+    f_med:'25 to 60 minutes',f_med_s:'I can work well for an hour',
+    f_long:'60 to 120 minutes',f_long_s:'I get into flow',
+    stats_h:'📊 Your focus statistics',week_h:'📅 This week',log_h:'📋 Recent sessions',del:'Delete',
+    fs_exit:'✕ Exit',home:'Home',
+    clrconfirm:'Delete all statistics?',clrOk:'Statistics cleared.',toast_sleep:'😴 Sleep timer started',
+    toast_done:'Done!',toast_all_done:'🏆 All rounds complete!',toast_pause:'☕ Break!',
+    toast_round:'🎯 Round ',toast_medit:'🧘 Meditation complete',
+    medit_done:'🧘 Meditation complete'},
+  fr:{f:'🇫🇷',n:'Français',
+    nav:['🕒 Horloge','⏰ Réveil','⏲ Minuterie','⏱ Chrono','🍅 Focus','😴 Sommeil','🤖 Assistant','📊 Stats','📚 Savoir'],
+    tabs:['🕒 Horloge','⏰ Réveil','⏲ Minuterie','⏱ Chrono','🍅 Focus','😴 Sommeil','🤖 Assistant','📊 Stats'],
+    tasks:['📚 Étudier','💼 Travailler','💻 Coder','✍️ Écrire','📖 Lire','🎨 Créer','🧘 Méditer','🏃 Sport'],
+    days:['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],wdays:['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'],
+    notime:'Veuillez entrer une durée.',alarmSaved:'✅ Réveil enregistré!',kbhint:'💡 Espace = Démarrer/Pause · R = Réinit. · F = Plein écran',
+    inhale:'Inspirer',hold:'Retenir',exhale:'Expirer',
+    stlbls:["Minutes aujourd'hui",'Minutes semaine','Sessions','Jours'],footer:"© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude",
+    fs:'⛶ Plein écran',addwc:'+ Ajouter',alarm_h:'⏰ Réveil',alarm_new:'+ Nouveau réveil',alarm_time:'Heure',alarm_name:'Nom',alarm_rep:'Répétition',alarm_snd:'Son',
+    save:'Enregistrer',cancel:'Annuler',snooze:'😴 Snooze (5 min)',stopbtn:'✕ Arrêter',
+    hours:'Heures',mins:'Minutes',secs:'Secondes',start:'▶ Démarrer',pause:'⏸ Pause',resume:'▶ Reprendre',reset:'↺ Réinit.',
+    quicksel:'Sélection rapide',almsnd:"Son d'alarme",snd_std:'🔔 Standard',snd_bell:'🛎 Cloche',snd_dig:'📱 Numérique',snd_soft:'✨ Doux',snd_none:'🔇 Aucun son',
+    lap_n:'Tour',lap_t:'Temps du tour',lap_tot:'Total',
+    focus_choose:'🎯 Choisir méthode focus',
+    m_pom_n:'Technique Pomodoro',m_pom_d:'25 min focus, 5 min pause.',
+    m_5217_n:'Méthode 52/17',m_5217_d:'52 min travail, 17 min repos.',
+    m_dw_n:'Travail profond',m_dw_d:'90 min sans distraction.',
+    m_uld_n:'Rythme ultradien',m_uld_d:'Cycle naturel de 90 min.',
+    m_ft_n:'Flowtime',m_ft_d:'Pas de limite fixe.',
+    m_lrn_n:"Minuterie d'étude",m_lrn_d:'45 min étude, 10 min pause.',
+    m_cust_n:'Minuterie personnalisée',m_cust_d:'Définissez vos propres durées.',
+    cust_focus:'Focus (min)',cust_pause:'Pause (min)',cust_rounds:'Tours',
+    focus_phase:'🎯 Phase de focus',focus_break:'☕ Pause',
+    journal_h:"📝 Qu'est-ce que vous voulez accomplir aujourd'hui?",journal_ph:'Mon objectif pour cette session...',
+    skip:'⏭ Passer',back:'← Retour',next:'Suivant →',
+    sleep_h:'😴 Minuterie sommeil',sleep_start:'▶ Démarrer minuterie',
+    amb_h:'Sons de relaxation',amb_rain:'🌧 Pluie',amb_forest:'🌲 Forêt',amb_cafe:'☕ Café',amb_white:'〰 Bruit blanc',amb_fire:'🔥 Cheminée',amb_none:'🔇 Aucun son',
+    breath_h:'🧘 Minuterie respiration',breath_method_lbl:'Méthode respiratoire',medit_h:'🧘 Minuterie méditation',
+    bm_box:'Respiration en boîte (4-4-4-4)',bm_478:'Méthode 4-7-8',bm_coh:'Respiration cohérente (5-5)',bm_24:'Méthode 2-4',
+    breath_round_lbl:'Tour',breath_total_lbl:'total',
+    ass_h:'🤖 Assistant Focus',ass_sub:'Répondez à deux courtes questions.',
+    ass_q1:'Que voulez-vous faire?',ass_q2:'Combien de temps pouvez-vous vous concentrer?',
+    f_short:'Moins de 25 minutes',f_short_s:"J'ai besoin d'impulsions courtes",
+    f_med:'25 à 60 minutes',f_med_s:"Je peux bien travailler une heure",
+    f_long:'60 à 120 minutes',f_long_s:"J'entre dans un état de flow",
+    stats_h:'📊 Vos statistiques focus',week_h:'📅 Cette semaine',log_h:'📋 Sessions récentes',del:'Effacer',
+    fs_exit:'✕ Quitter',home:'Accueil',clrconfirm:'Supprimer toutes les statistiques?',clrOk:'Statistiques effacées.',
+    toast_sleep:'😴 Minuterie démarrée',toast_done:'Terminé!',toast_all_done:'🏆 Tous les tours terminés!',toast_pause:'☕ Pause!',toast_round:'🎯 Tour ',toast_medit:'🧘 Méditation terminée',medit_done:'🧘 Méditation terminée'},
+  es:{f:'🇪🇸',n:'Español',
+    nav:['🕒 Reloj','⏰ Alarma','⏲ Temporizador','⏱ Cronómetro','🍅 Foco','😴 Sueño','🤖 Asistente','📊 Stats','📚 Conocimiento'],
+    tabs:['🕒 Reloj','⏰ Alarma','⏲ Temporizador','⏱ Cronómetro','🍅 Foco','😴 Sueño','🤖 Asistente','📊 Stats'],
+    tasks:['📚 Estudiar','💼 Trabajar','💻 Programar','✍️ Escribir','📖 Leer','🎨 Crear','🧘 Meditar','🏃 Deporte'],
+    days:['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],wdays:['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'],
+    notime:'Por favor introduce una duración.',alarmSaved:'✅ ¡Alarma guardada!',kbhint:'💡 Espacio = Iniciar/Pausa · R = Reiniciar · F = Pantalla completa',
+    inhale:'Inhalar',hold:'Mantener',exhale:'Exhalar',
+    stlbls:['Minutos hoy','Minutos semana','Sesiones','Racha días'],footer:'© 2025 Timer-24.com · Sin garantía de exactitud',
+    fs:'⛶ Pantalla completa',addwc:'+ Añadir',alarm_h:'⏰ Alarmas',alarm_new:'+ Nueva alarma',alarm_time:'Hora',alarm_name:'Nombre',alarm_rep:'Repetir',alarm_snd:'Sonido',
+    save:'Guardar',cancel:'Cancelar',snooze:'😴 Posponer (5 min)',stopbtn:'✕ Parar',
+    hours:'Horas',mins:'Minutos',secs:'Segundos',start:'▶ Iniciar',pause:'⏸ Pausa',resume:'▶ Continuar',reset:'↺ Reiniciar',
+    quicksel:'Selección rápida',almsnd:'Sonido de alarma',snd_std:'🔔 Estándar',snd_bell:'🛎 Campana',snd_dig:'📱 Digital',snd_soft:'✨ Suave',snd_none:'🔇 Sin sonido',
+    lap_n:'Vuelta',lap_t:'Tiempo de vuelta',lap_tot:'Total',
+    focus_choose:'🎯 Elegir método de enfoque',
+    m_pom_n:'Técnica Pomodoro',m_pom_d:'25 min enfoque, 5 min pausa.',
+    m_5217_n:'Método 52/17',m_5217_d:'52 min trabajo, 17 min descanso.',
+    m_dw_n:'Trabajo profundo',m_dw_d:'90 min sin distracción.',
+    m_uld_n:'Ritmo ultradiano',m_uld_d:'Ciclo natural de 90 min.',
+    m_ft_n:'Flowtime',m_ft_d:'Sin límite fijo.',
+    m_lrn_n:'Temporizador de estudio',m_lrn_d:'45 min estudio, 10 min pausa.',
+    m_cust_n:'Temporizador personalizado',m_cust_d:'Define tus propias duraciones.',
+    cust_focus:'Enfoque (min)',cust_pause:'Pausa (min)',cust_rounds:'Rondas',
+    focus_phase:'🎯 Fase de enfoque',focus_break:'☕ Pausa',
+    journal_h:'📝 ¿Qué quieres lograr hoy?',journal_ph:'Mi objetivo para esta sesión...',
+    skip:'⏭ Saltar',back:'← Volver',next:'Siguiente →',
+    sleep_h:'😴 Temporizador de sueño',sleep_start:'▶ Iniciar temporizador',
+    amb_h:'Sonidos de relajación',amb_rain:'🌧 Lluvia',amb_forest:'🌲 Bosque',amb_cafe:'☕ Café',amb_white:'〰 Ruido blanco',amb_fire:'🔥 Chimenea',amb_none:'🔇 Sin sonido',
+    breath_h:'🧘 Temporizador de respiración',breath_method_lbl:'Método de respiración',medit_h:'🧘 Temporizador de meditación',
+    bm_box:'Respiración en caja (4-4-4-4)',bm_478:'Método 4-7-8',bm_coh:'Respiración coherente (5-5)',bm_24:'Método 2-4',
+    breath_round_lbl:'Ronda',breath_total_lbl:'total',
+    ass_h:'🤖 Asistente de Enfoque',ass_sub:'Responde dos preguntas rápidas.',
+    ass_q1:'¿Qué quieres hacer?',ass_q2:'¿Cuánto tiempo puedes concentrarte?',
+    f_short:'Menos de 25 minutos',f_short_s:'Necesito impulsos cortos frecuentes',
+    f_med:'25 a 60 minutos',f_med_s:'Puedo trabajar bien durante una hora',
+    f_long:'60 a 120 minutos',f_long_s:'Entro en flujo',
+    stats_h:'📊 Tus estadísticas de enfoque',week_h:'📅 Esta semana',log_h:'📋 Sesiones recientes',del:'Borrar',
+    fs_exit:'✕ Salir',home:'Inicio',clrconfirm:'¿Borrar todas las estadísticas?',clrOk:'Estadísticas borradas.',
+    toast_sleep:'😴 Temporizador iniciado',toast_done:'¡Hecho!',toast_all_done:'🏆 ¡Todas las rondas completadas!',toast_pause:'☕ ¡Pausa!',toast_round:'🎯 Ronda ',toast_medit:'🧘 Meditación completada',medit_done:'🧘 Meditación completada'},
+  it:{f:'🇮🇹',n:'Italiano',
+    nav:['🕒 Orologio','⏰ Sveglia','⏲ Contatore','⏱ Cronometro','🍅 Focus','😴 Sonno','🤖 Assistente','📊 Stats','📚 Conoscenza'],
+    tabs:['🕒 Orologio','⏰ Sveglia','⏲ Contatore','⏱ Cronometro','🍅 Focus','😴 Sonno','🤖 Assistente','📊 Stats'],
+    tasks:['📚 Studiare','💼 Lavorare','💻 Programmare','✍️ Scrivere','📖 Leggere','🎨 Creare','🧘 Meditare','🏃 Sport'],
+    days:['Dom','Lun','Mar','Mer','Gio','Ven','Sab'],wdays:['Lun','Mar','Mer','Gio','Ven','Sab','Dom'],
+    notime:'Inserisci una durata.',alarmSaved:'✅ Sveglia salvata!',kbhint:'💡 Spazio = Avvia/Pausa · R = Reimposta · F = Schermo intero',
+    inhale:'Inspira',hold:'Trattieni',exhale:'Espira',
+    stlbls:['Minuti oggi','Minuti settimana','Sessioni','Giorni'],footer:'© 2025 Timer-24.com · Nessuna garanzia',
+    fs:'⛶ Schermo intero',addwc:'+ Aggiungi',alarm_h:'⏰ Sveglie',alarm_new:'+ Nuova sveglia',alarm_time:'Ora',alarm_name:'Nome',alarm_rep:'Ripetizione',alarm_snd:'Suono',
+    save:'Salva',cancel:'Annulla',snooze:'😴 Snooze (5 min)',stopbtn:'✕ Ferma',
+    hours:'Ore',mins:'Minuti',secs:'Secondi',start:'▶ Avvia',pause:'⏸ Pausa',resume:'▶ Riprendi',reset:'↺ Reimposta',
+    quicksel:'Selezione rapida',almsnd:'Suono allarme',snd_std:'🔔 Standard',snd_bell:'🛎 Campana',snd_dig:'📱 Digitale',snd_soft:'✨ Delicato',snd_none:'🔇 Nessun suono',
+    lap_n:'Giro',lap_t:'Tempo giro',lap_tot:'Totale',
+    focus_choose:'🎯 Scegli metodo focus',
+    m_pom_n:'Tecnica Pomodoro',m_pom_d:'25 min focus, 5 min pausa.',
+    m_5217_n:'Metodo 52/17',m_5217_d:'52 min lavoro, 17 min riposo.',
+    m_dw_n:'Deep Work',m_dw_d:'90 min senza distrazioni.',
+    m_uld_n:'Ritmo ultradiano',m_uld_d:'Ciclo naturale di 90 min.',
+    m_ft_n:'Flowtime',m_ft_d:'Senza limite fisso.',
+    m_lrn_n:'Timer di studio',m_lrn_d:'45 min studio, 10 min pausa.',
+    m_cust_n:'Timer personalizzato',m_cust_d:'Definisci le tue durate.',
+    cust_focus:'Focus (min)',cust_pause:'Pausa (min)',cust_rounds:'Round',
+    focus_phase:'🎯 Fase focus',focus_break:'☕ Pausa',
+    journal_h:'📝 Cosa vuoi raggiungere oggi?',journal_ph:'Il mio obiettivo per questa sessione...',
+    skip:'⏭ Salta',back:'← Indietro',next:'Avanti →',
+    sleep_h:'😴 Timer sonno',sleep_start:'▶ Avvia timer',
+    amb_h:'Suoni rilassanti',amb_rain:'🌧 Pioggia',amb_forest:'🌲 Foresta',amb_cafe:'☕ Caffè',amb_white:'〰 Rumore bianco',amb_fire:'🔥 Camino',amb_none:'🔇 Nessun suono',
+    breath_h:'🧘 Timer respirazione',breath_method_lbl:'Metodo di respirazione',medit_h:'🧘 Timer meditazione',
+    bm_box:'Respirazione a scatola (4-4-4-4)',bm_478:'Metodo 4-7-8',bm_coh:'Respirazione coerente (5-5)',bm_24:'Metodo 2-4',
+    breath_round_lbl:'Round',breath_total_lbl:'totale',
+    ass_h:'🤖 Assistente Focus',ass_sub:'Rispondi a due brevi domande.',
+    ass_q1:'Cosa vuoi fare?',ass_q2:'Per quanto riesci a concentrarti?',
+    f_short:'Meno di 25 minuti',f_short_s:'Ho bisogno di brevi impulsi',
+    f_med:'25 a 60 minuti',f_med_s:"Riesco a lavorare bene per un'ora",
+    f_long:'60 a 120 minuti',f_long_s:'Entro in flow',
+    stats_h:'📊 Le tue statistiche focus',week_h:'📅 Questa settimana',log_h:'📋 Sessioni recenti',del:'Cancella',
+    fs_exit:'✕ Esci',home:'Home',clrconfirm:'Cancellare tutte le statistiche?',clrOk:'Statistiche cancellate.',
+    toast_sleep:'😴 Timer avviato',toast_done:'Fatto!',toast_all_done:'🏆 Tutti i round completati!',toast_pause:'☕ Pausa!',toast_round:'🎯 Round ',toast_medit:'🧘 Meditazione completata',medit_done:'🧘 Meditazione completata'},
+  pt:{f:'🇵🇹',n:'Português',
+    nav:['🕒 Relógio','⏰ Alarme','⏲ Contagem','⏱ Cronómetro','🍅 Foco','😴 Sono','🤖 Assistente','📊 Stats','📚 Conhecimento'],
+    tabs:['🕒 Relógio','⏰ Alarme','⏲ Contagem','⏱ Cronómetro','🍅 Foco','😴 Sono','🤖 Assistente','📊 Stats'],
+    tasks:['📚 Estudar','💼 Trabalhar','💻 Programar','✍️ Escrever','📖 Ler','🎨 Criar','🧘 Meditar','🏃 Desporto'],
+    days:['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],wdays:['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+    notime:'Introduza uma duração.',alarmSaved:'✅ Alarme guardado!',kbhint:'💡 Espaço = Iniciar/Pausa · R = Repor · F = Ecrã inteiro',
+    inhale:'Inspirar',hold:'Reter',exhale:'Expirar',
+    stlbls:['Minutos hoje','Minutos semana','Sessões','Dias'],footer:'© 2025 Timer-24.com · Sem garantia',
+    fs:'⛶ Ecrã inteiro',addwc:'+ Adicionar',alarm_h:'⏰ Alarmes',alarm_new:'+ Novo alarme',alarm_time:'Hora',alarm_name:'Nome',alarm_rep:'Repetição',alarm_snd:'Som',
+    save:'Guardar',cancel:'Cancelar',snooze:'😴 Snooze (5 min)',stopbtn:'✕ Parar',
+    hours:'Horas',mins:'Minutos',secs:'Segundos',start:'▶ Iniciar',pause:'⏸ Pausa',resume:'▶ Retomar',reset:'↺ Repor',
+    quicksel:'Seleção rápida',almsnd:'Som de alarme',snd_std:'🔔 Padrão',snd_bell:'🛎 Sino',snd_dig:'📱 Digital',snd_soft:'✨ Suave',snd_none:'🔇 Sem som',
+    lap_n:'Volta',lap_t:'Tempo de volta',lap_tot:'Total',
+    focus_choose:'🎯 Escolher método de foco',
+    m_pom_n:'Técnica Pomodoro',m_pom_d:'25 min foco, 5 min pausa.',
+    m_5217_n:'Método 52/17',m_5217_d:'52 min trabalho, 17 min descanso.',
+    m_dw_n:'Trabalho profundo',m_dw_d:'90 min sem distração.',
+    m_uld_n:'Ritmo ultradiano',m_uld_d:'Ciclo natural de 90 min.',
+    m_ft_n:'Flowtime',m_ft_d:'Sem limite fixo.',
+    m_lrn_n:'Temporizador de estudo',m_lrn_d:'45 min estudo, 10 min pausa.',
+    m_cust_n:'Temporizador personalizado',m_cust_d:'Defina as suas próprias durações.',
+    cust_focus:'Foco (min)',cust_pause:'Pausa (min)',cust_rounds:'Rondas',
+    focus_phase:'🎯 Fase de foco',focus_break:'☕ Pausa',
+    journal_h:'📝 O que quer alcançar hoje?',journal_ph:'O meu objetivo para esta sessão...',
+    skip:'⏭ Saltar',back:'← Voltar',next:'Seguinte →',
+    sleep_h:'😴 Temporizador de sono',sleep_start:'▶ Iniciar temporizador',
+    amb_h:'Sons de relaxamento',amb_rain:'🌧 Chuva',amb_forest:'🌲 Floresta',amb_cafe:'☕ Café',amb_white:'〰 Ruído branco',amb_fire:'🔥 Lareira',amb_none:'🔇 Sem som',
+    breath_h:'🧘 Temporizador de respiração',breath_method_lbl:'Método de respiração',medit_h:'🧘 Temporizador de meditação',
+    bm_box:'Respiração em caixa (4-4-4-4)',bm_478:'Método 4-7-8',bm_coh:'Respiração coerente (5-5)',bm_24:'Método 2-4',
+    breath_round_lbl:'Ronda',breath_total_lbl:'total',
+    ass_h:'🤖 Assistente de Foco',ass_sub:'Responda duas perguntas rápidas.',
+    ass_q1:'O que quer fazer?',ass_q2:'Quanto tempo consegue concentrar-se?',
+    f_short:'Menos de 25 minutos',f_short_s:'Preciso de impulsos curtos frequentes',
+    f_med:'25 a 60 minutos',f_med_s:'Consigo trabalhar bem durante uma hora',
+    f_long:'60 a 120 minutos',f_long_s:'Entro em flow',
+    stats_h:'📊 As suas estatísticas de foco',week_h:'📅 Esta semana',log_h:'📋 Sessões recentes',del:'Limpar',
+    fs_exit:'✕ Sair',home:'Início',clrconfirm:'Apagar todas as estatísticas?',clrOk:'Estatísticas apagadas.',
+    toast_sleep:'😴 Temporizador iniciado',toast_done:'Concluído!',toast_all_done:'🏆 Todas as rondas concluídas!',toast_pause:'☕ Pausa!',toast_round:'🎯 Ronda ',toast_medit:'🧘 Meditação concluída',medit_done:'🧘 Meditação concluída'},
+  nl:{f:'🇳🇱',n:'Nederlands',
+    nav:['🕒 Klok','⏰ Wekker','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Slaap','🤖 Assistent','📊 Stats','📚 Kennis'],
+    tabs:['🕒 Klok','⏰ Wekker','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Slaap','🤖 Assistent','📊 Stats'],
+    tasks:['📚 Studeren','💼 Werken','💻 Programmeren','✍️ Schrijven','📖 Lezen','🎨 Creatief','🧘 Mediteren','🏃 Sport'],
+    days:['Zo','Ma','Di','Wo','Do','Vr','Za'],wdays:['Ma','Di','Wo','Do','Vr','Za','Zo'],
+    notime:'Voer een duur in.',alarmSaved:'✅ Wekker opgeslagen!',kbhint:'💡 Spatie = Starten/Pauze · R = Reset · F = Volledig scherm',
+    inhale:'Inademen',hold:'Vasthouden',exhale:'Uitademen',
+    stlbls:['Minuten vandaag','Minuten week','Sessies','Dagen streak'],footer:'© 2025 Timer-24.com · Geen garantie',
+    fs:'⛶ Volledig scherm',addwc:'+ Toevoegen',alarm_h:'⏰ Wekkers',alarm_new:'+ Nieuwe wekker',alarm_time:'Tijd',alarm_name:'Naam',alarm_rep:'Herhaling',alarm_snd:'Geluid',
+    save:'Opslaan',cancel:'Annuleren',snooze:'😴 Sluimeren (5 min)',stopbtn:'✕ Stoppen',
+    hours:'Uren',mins:'Minuten',secs:'Seconden',start:'▶ Starten',pause:'⏸ Pauze',resume:'▶ Hervatten',reset:'↺ Reset',
+    quicksel:'Snelle keuze',almsnd:'Alarmgeluid',snd_std:'🔔 Standaard',snd_bell:'🛎 Bel',snd_dig:'📱 Digitaal',snd_soft:'✨ Zacht',snd_none:'🔇 Geen geluid',
+    lap_n:'Ronde',lap_t:'Rondetijd',lap_tot:'Totaal',
+    focus_choose:'🎯 Kies focusmethode',
+    m_pom_n:'Pomodoro-techniek',m_pom_d:'25 min focus, 5 min pauze.',
+    m_5217_n:'52/17 Methode',m_5217_d:'52 min werken, 17 min rusten.',
+    m_dw_n:'Deep Work',m_dw_d:'90 min zonder afleiding.',
+    m_uld_n:'Ultradiane ritme',m_uld_d:'Natuurlijke 90-min cyclus.',
+    m_ft_n:'Flowtime',m_ft_d:'Geen vaste limiet.',
+    m_lrn_n:'Studietimer',m_lrn_d:'45 min studie, 10 min pauze.',
+    m_cust_n:'Aangepaste timer',m_cust_d:'Definieer uw eigen tijden.',
+    cust_focus:'Focus (min)',cust_pause:'Pauze (min)',cust_rounds:'Rondes',
+    focus_phase:'🎯 Focusfase',focus_break:'☕ Pauze',
+    journal_h:'📝 Wat wil je vandaag bereiken?',journal_ph:'Mijn doel voor deze sessie...',
+    skip:'⏭ Overslaan',back:'← Terug',next:'Volgende →',
+    sleep_h:'😴 Slaaptimer',sleep_start:'▶ Slaaptimer starten',
+    amb_h:'Ontspannende geluiden',amb_rain:'🌧 Regen',amb_forest:'🌲 Bos',amb_cafe:'☕ Café',amb_white:'〰 Witte ruis',amb_fire:'🔥 Open haard',amb_none:'🔇 Geen geluid',
+    breath_h:'🧘 Ademhalingstimer',breath_method_lbl:'Ademhalingsmethode',medit_h:'🧘 Meditatietimer',
+    bm_box:'Box Breathing (4-4-4-4)',bm_478:'4-7-8 Methode',bm_coh:'Coherente ademhaling (5-5)',bm_24:'2-4 Methode',
+    breath_round_lbl:'Ronde',breath_total_lbl:'totaal',
+    ass_h:'🤖 Focus-assistent',ass_sub:'Beantwoord twee korte vragen.',
+    ass_q1:'Wat wil je doen?',ass_q2:'Hoe lang kun je je concentreren?',
+    f_short:'Minder dan 25 minuten',f_short_s:'Ik heb korte impulsen nodig',
+    f_med:'25 tot 60 minuten',f_med_s:'Ik kan een uur goed werken',
+    f_long:'60 tot 120 minuten',f_long_s:'Ik raak in flow',
+    stats_h:'📊 Jouw focusstatistieken',week_h:'📅 Deze week',log_h:'📋 Recente sessies',del:'Verwijderen',
+    fs_exit:'✕ Verlaten',home:'Home',clrconfirm:'Alle statistieken verwijderen?',clrOk:'Statistieken verwijderd.',
+    toast_sleep:'😴 Slaaptimer gestart',toast_done:'Klaar!',toast_all_done:'🏆 Alle rondes voltooid!',toast_pause:'☕ Pauze!',toast_round:'🎯 Ronde ',toast_medit:'🧘 Meditatie voltooid',medit_done:'🧘 Meditatie voltooid'},
+  pl:{f:'🇵🇱',n:'Polski',
+    nav:['🕒 Zegar','⏰ Budzik','⏲ Timer','⏱ Stoper','🍅 Fokus','😴 Sen','🤖 Asystent','📊 Stats','📚 Wiedza'],
+    tabs:['🕒 Zegar','⏰ Budzik','⏲ Timer','⏱ Stoper','🍅 Fokus','😴 Sen','🤖 Asystent','📊 Stats'],
+    tasks:['📚 Uczyć się','💼 Pracować','💻 Programować','✍️ Pisać','📖 Czytać','🎨 Tworzyć','🧘 Medytować','🏃 Sport'],
+    days:['Nd','Pn','Wt','Śr','Cz','Pt','Sb'],wdays:['Pn','Wt','Śr','Cz','Pt','Sb','Nd'],
+    notime:'Wprowadź czas.',alarmSaved:'✅ Budzik zapisany!',kbhint:'💡 Spacja = Start/Pauza · R = Reset · F = Pełny ekran',
+    inhale:'Wdech',hold:'Zatrzymaj',exhale:'Wydech',
+    stlbls:['Minuty dziś','Minuty tydzień','Sesje','Dni z rzędu'],footer:'© 2025 Timer-24.com · Bez gwarancji',
+    fs:'⛶ Pełny ekran',addwc:'+ Dodaj',alarm_h:'⏰ Budziki',alarm_new:'+ Nowy budzik',alarm_time:'Czas',alarm_name:'Nazwa',alarm_rep:'Powtarzanie',alarm_snd:'Dźwięk',
+    save:'Zapisz',cancel:'Anuluj',snooze:'😴 Drzemka (5 min)',stopbtn:'✕ Zatrzymaj',
+    hours:'Godziny',mins:'Minuty',secs:'Sekundy',start:'▶ Start',pause:'⏸ Pauza',resume:'▶ Wznów',reset:'↺ Reset',
+    quicksel:'Szybki wybór',almsnd:'Dźwięk alarmu',snd_std:'🔔 Standard',snd_bell:'🛎 Dzwonek',snd_dig:'📱 Cyfrowy',snd_soft:'✨ Łagodny',snd_none:'🔇 Bez dźwięku',
+    lap_n:'Okrążenie',lap_t:'Czas okrążenia',lap_tot:'Całkowity',
+    focus_choose:'🎯 Wybierz metodę skupienia',
+    m_pom_n:'Technika Pomodoro',m_pom_d:'25 min skupienia, 5 min przerwy.',
+    m_5217_n:'Metoda 52/17',m_5217_d:'52 min pracy, 17 min odpoczynku.',
+    m_dw_n:'Głęboka praca',m_dw_d:'90 min bez rozpraszaczy.',
+    m_uld_n:'Rytm ultradianowy',m_uld_d:'Naturalny cykl 90 min mózgu.',
+    m_ft_n:'Flowtime',m_ft_d:'Bez stałego limitu.',
+    m_lrn_n:'Timer nauki',m_lrn_d:'45 min nauki, 10 min przerwy.',
+    m_cust_n:'Własny timer',m_cust_d:'Zdefiniuj własne czasy.',
+    cust_focus:'Skupienie (min)',cust_pause:'Przerwa (min)',cust_rounds:'Rundy',
+    focus_phase:'🎯 Faza skupienia',focus_break:'☕ Przerwa',
+    journal_h:'📝 Co chcesz dziś osiągnąć?',journal_ph:'Mój cel tej sesji...',
+    skip:'⏭ Pomiń',back:'← Wstecz',next:'Dalej →',
+    sleep_h:'😴 Timer snu',sleep_start:'▶ Uruchom timer',
+    amb_h:'Dźwięki relaksacyjne',amb_rain:'🌧 Deszcz',amb_forest:'🌲 Las',amb_cafe:'☕ Kawiarnia',amb_white:'〰 Biały szum',amb_fire:'🔥 Kominek',amb_none:'🔇 Bez dźwięku',
+    breath_h:'🧘 Timer oddychania',breath_method_lbl:'Metoda oddychania',medit_h:'🧘 Timer medytacji',
+    bm_box:'Oddychanie pudełkowe (4-4-4-4)',bm_478:'Metoda 4-7-8',bm_coh:'Koherentne oddychanie (5-5)',bm_24:'Metoda 2-4',
+    breath_round_lbl:'Runda',breath_total_lbl:'łącznie',
+    ass_h:'🤖 Asystent skupienia',ass_sub:'Odpowiedz na dwa pytania.',
+    ass_q1:'Co chcesz zrobić?',ass_q2:'Jak długo możesz się koncentrować?',
+    f_short:'Poniżej 25 minut',f_short_s:'Potrzebuję krótkich impulsów',
+    f_med:'25 do 60 minut',f_med_s:'Mogę dobrze pracować przez godzinę',
+    f_long:'60 do 120 minut',f_long_s:'Wchodzę w flow',
+    stats_h:'📊 Twoje statystyki skupienia',week_h:'📅 Ten tydzień',log_h:'📋 Ostatnie sesje',del:'Usuń',
+    fs_exit:'✕ Wyjdź',home:'Strona główna',clrconfirm:'Usunąć wszystkie statystyki?',clrOk:'Statystyki usunięte.',
+    toast_sleep:'😴 Timer uruchomiony',toast_done:'Gotowe!',toast_all_done:'🏆 Wszystkie rundy ukończone!',toast_pause:'☕ Przerwa!',toast_round:'🎯 Runda ',toast_medit:'🧘 Medytacja ukończona',medit_done:'🧘 Medytacja ukończona'},
+  tr:{f:'🇹🇷',n:'Türkçe',
+    nav:['🕒 Saat','⏰ Alarm','⏲ Zamanlayıcı','⏱ Kronometre','🍅 Odak','😴 Uyku','🤖 Asistan','📊 Stats','📚 Bilgi'],
+    tabs:['🕒 Saat','⏰ Alarm','⏲ Zamanlayıcı','⏱ Kronometre','🍅 Odak','😴 Uyku','🤖 Asistan','📊 Stats'],
+    tasks:['📚 Öğrenmek','💼 Çalışmak','💻 Programlamak','✍️ Yazmak','📖 Okumak','🎨 Yaratmak','🧘 Meditasyon','🏃 Spor'],
+    days:['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'],wdays:['Pzt','Sal','Çar','Per','Cum','Cmt','Paz'],
+    notime:'Lütfen bir süre girin.',alarmSaved:'✅ Alarm kaydedildi!',kbhint:'💡 Boşluk = Başlat/Duraklat · R = Sıfırla · F = Tam ekran',
+    inhale:'Nefes al',hold:'Tut',exhale:'Nefes ver',
+    stlbls:['Bugün dakika','Bu hafta dakika','Oturumlar','Gün serisi'],footer:'© 2025 Timer-24.com · Garanti yoktur',
+    fs:'⛶ Tam ekran',addwc:'+ Ekle',alarm_h:'⏰ Alarmlar',alarm_new:'+ Yeni alarm',alarm_time:'Saat',alarm_name:'İsim',alarm_rep:'Tekrar',alarm_snd:'Ses',
+    save:'Kaydet',cancel:'İptal',snooze:'😴 Erteleme (5 dak)',stopbtn:'✕ Durdur',
+    hours:'Saat',mins:'Dakika',secs:'Saniye',start:'▶ Başlat',pause:'⏸ Duraklat',resume:'▶ Devam et',reset:'↺ Sıfırla',
+    quicksel:'Hızlı seçim',almsnd:'Alarm sesi',snd_std:'🔔 Standart',snd_bell:'🛎 Zil',snd_dig:'📱 Dijital',snd_soft:'✨ Nazik',snd_none:'🔇 Ses yok',
+    lap_n:'Tur',lap_t:'Tur süresi',lap_tot:'Toplam',
+    focus_choose:'🎯 Odak yöntemi seç',
+    m_pom_n:'Pomodoro Tekniği',m_pom_d:'25 dak odak, 5 dak mola.',
+    m_5217_n:'52/17 Yöntemi',m_5217_d:'52 dak çalışma, 17 dak dinlenme.',
+    m_dw_n:'Derin Çalışma',m_dw_d:'90 dak dikkat dağıtıcısız.',
+    m_uld_n:'Ultradian Ritim',m_uld_d:'Beynin doğal 90 dak döngüsü.',
+    m_ft_n:'Flowtime',m_ft_d:'Sabit sınır yok.',
+    m_lrn_n:'Çalışma zamanlayıcısı',m_lrn_d:'45 dak çalışma, 10 dak mola.',
+    m_cust_n:'Özel zamanlayıcı',m_cust_d:'Kendi sürelerini tanımla.',
+    cust_focus:'Odak (dak)',cust_pause:'Mola (dak)',cust_rounds:'Turlar',
+    focus_phase:'🎯 Odak aşaması',focus_break:'☕ Mola',
+    journal_h:'📝 Bugün ne başarmak istiyorsun?',journal_ph:'Bu oturum için hedefim...',
+    skip:'⏭ Atla',back:'← Geri',next:'İleri →',
+    sleep_h:'😴 Uyku zamanlayıcısı',sleep_start:'▶ Zamanlayıcıyı başlat',
+    amb_h:'Rahatlama sesleri',amb_rain:'🌧 Yağmur',amb_forest:'🌲 Orman',amb_cafe:'☕ Kafe',amb_white:'〰 Beyaz gürültü',amb_fire:'🔥 Şömine',amb_none:'🔇 Ses yok',
+    breath_h:'🧘 Nefes zamanlayıcısı',breath_method_lbl:'Nefes yöntemi',medit_h:'🧘 Meditasyon zamanlayıcısı',
+    bm_box:'Kutu nefesi (4-4-4-4)',bm_478:'4-7-8 Yöntemi',bm_coh:'Tutarlı nefes (5-5)',bm_24:'2-4 Yöntemi',
+    breath_round_lbl:'Tur',breath_total_lbl:'toplam',
+    ass_h:'🤖 Odak Asistanı',ass_sub:'İki kısa soruyu yanıtla.',
+    ass_q1:'Ne yapmak istiyorsun?',ass_q2:'Ne kadar süre konsantre olabilirsin?',
+    f_short:'25 dakikadan az',f_short_s:'Sık kısa dürtülere ihtiyacım var',
+    f_med:'25 ile 60 dakika',f_med_s:'Bir saat boyunca iyi çalışabilirim',
+    f_long:'60 ile 120 dakika',f_long_s:'Akışa giriyorum',
+    stats_h:'📊 Odak istatistiklerin',week_h:'📅 Bu hafta',log_h:'📋 Son oturumlar',del:'Sil',
+    fs_exit:'✕ Çık',home:'Ana sayfa',clrconfirm:'Tüm istatistikler silinsin mi?',clrOk:'İstatistikler silindi.',
+    toast_sleep:'😴 Zamanlayıcı başlatıldı',toast_done:'Bitti!',toast_all_done:'🏆 Tüm turlar tamamlandı!',toast_pause:'☕ Mola!',toast_round:'🎯 Tur ',toast_medit:'🧘 Meditasyon tamamlandı',medit_done:'🧘 Meditasyon tamamlandı'},
+  ar:{f:'🇸🇦',n:'العربية',dir:'rtl',
+    nav:['🕒 الساعة','⏰ المنبه','⏲ المؤقت','⏱ الكرونومتر','🍅 التركيز','😴 النوم','🤖 المساعد','📊 إحصاء','📚 معرفة'],
+    tabs:['🕒 الساعة','⏰ المنبه','⏲ المؤقت','⏱ الكرونومتر','🍅 التركيز','😴 النوم','🤖 المساعد','📊 إحصاء'],
+    tasks:['📚 الدراسة','💼 العمل','💻 البرمجة','✍️ الكتابة','📖 القراءة','🎨 الإبداع','🧘 التأمل','🏃 الرياضة'],
+    days:['أح','إث','ثل','أر','خم','جم','سب'],wdays:['إث','ثل','أر','خم','جم','سب','أح'],
+    notime:'الرجاء إدخال مدة.',alarmSaved:'✅ تم حفظ المنبه!',kbhint:'💡 مسافة = ابدأ/توقف · R = إعادة · F = ملء الشاشة',
+    inhale:'استنشق',hold:'احبس',exhale:'ازفر',
+    stlbls:['دقائق اليوم','دقائق الأسبوع','جلسات','أيام متتالية'],footer:'© 2025 Timer-24.com · لا ضمان على الدقة',
+    fs:'⛶ ملء الشاشة',addwc:'+ إضافة',alarm_h:'⏰ المنبهات',alarm_new:'+ منبه جديد',alarm_time:'الوقت',alarm_name:'الاسم',alarm_rep:'التكرار',alarm_snd:'الصوت',
+    save:'حفظ',cancel:'إلغاء',snooze:'😴 غفوة (5 دقائق)',stopbtn:'✕ إيقاف',
+    hours:'ساعات',mins:'دقائق',secs:'ثواني',start:'▶ ابدأ',pause:'⏸ توقف',resume:'▶ استمر',reset:'↺ إعادة',
+    quicksel:'اختيار سريع',almsnd:'صوت التنبيه',snd_std:'🔔 قياسي',snd_bell:'🛎 جرس',snd_dig:'📱 رقمي',snd_soft:'✨ ناعم',snd_none:'🔇 بلا صوت',
+    lap_n:'الدورة',lap_t:'وقت الدورة',lap_tot:'الإجمالي',
+    focus_choose:'🎯 اختر طريقة التركيز',
+    m_pom_n:'تقنية بومودورو',m_pom_d:'25 دقيقة تركيز، 5 دقائق استراحة.',
+    m_5217_n:'طريقة 52/17',m_5217_d:'52 دقيقة عمل، 17 دقيقة راحة.',
+    m_dw_n:'العمل العميق',m_dw_d:'90 دقيقة بدون تشتيت.',
+    m_uld_n:'الإيقاع البيني',m_uld_d:'دورة الدماغ الطبيعية 90 دقيقة.',
+    m_ft_n:'Flowtime',m_ft_d:'بدون حد زمني ثابت.',
+    m_lrn_n:'مؤقت الدراسة',m_lrn_d:'45 دقيقة دراسة، 10 دقائق استراحة.',
+    m_cust_n:'مؤقت مخصص',m_cust_d:'حدد أوقاتك الخاصة.',
+    cust_focus:'تركيز (دق)',cust_pause:'استراحة (دق)',cust_rounds:'الجولات',
+    focus_phase:'🎯 مرحلة التركيز',focus_break:'☕ استراحة',
+    journal_h:'📝 ماذا تريد أن تحقق اليوم؟',journal_ph:'هدفي لهذه الجلسة...',
+    skip:'⏭ تخطي',back:'← رجوع',next:'التالي →',
+    sleep_h:'😴 مؤقت النوم',sleep_start:'▶ ابدأ المؤقت',
+    amb_h:'أصوات الاسترخاء',amb_rain:'🌧 مطر',amb_forest:'🌲 غابة',amb_cafe:'☕ مقهى',amb_white:'〰 ضوضاء بيضاء',amb_fire:'🔥 موقد',amb_none:'🔇 بلا صوت',
+    breath_h:'🧘 مؤقت التنفس',breath_method_lbl:'طريقة التنفس',medit_h:'🧘 مؤقت التأمل',
+    bm_box:'التنفس الصندوقي (4-4-4-4)',bm_478:'طريقة 4-7-8',bm_coh:'التنفس المتناسق (5-5)',bm_24:'طريقة 2-4',
+    breath_round_lbl:'جولة',breath_total_lbl:'إجمالي',
+    ass_h:'🤖 مساعد التركيز',ass_sub:'أجب على سؤالين قصيرين.',
+    ass_q1:'ماذا تريد أن تفعل؟',ass_q2:'كم من الوقت يمكنك التركيز؟',
+    f_short:'أقل من 25 دقيقة',f_short_s:'أحتاج إلى دوافع قصيرة متكررة',
+    f_med:'25 إلى 60 دقيقة',f_med_s:'يمكنني العمل جيداً لمدة ساعة',
+    f_long:'60 إلى 120 دقيقة',f_long_s:'أدخل في حالة تدفق',
+    stats_h:'📊 إحصاءات تركيزك',week_h:'📅 هذا الأسبوع',log_h:'📋 الجلسات الأخيرة',del:'مسح',
+    fs_exit:'✕ خروج',home:'الرئيسية',clrconfirm:'هل تريد حذف جميع الإحصاءات؟',clrOk:'تم مسح الإحصاءات.',
+    toast_sleep:'😴 تم تشغيل المؤقت',toast_done:'انتهى!',toast_all_done:'🏆 اكتملت جميع الجولات!',toast_pause:'☕ استراحة!',toast_round:'🎯 جولة ',toast_medit:'🧘 اكتمل التأمل',medit_done:'🧘 اكتمل التأمل'},
+  zh:{f:'🇨🇳',n:'中文',
+    nav:['🕒 时钟','⏰ 闹钟','⏲ 倒计时','⏱ 秒表','🍅 专注','😴 睡眠','🤖 助手','📊 统计','📚 知识'],
+    tabs:['🕒 时钟','⏰ 闹钟','⏲ 倒计时','⏱ 秒表','🍅 专注','😴 睡眠','🤖 助手','📊 统计'],
+    tasks:['📚 学习','💼 工作','💻 编程','✍️ 写作','📖 阅读','🎨 创作','🧘 冥想','🏃 运动'],
+    days:['日','一','二','三','四','五','六'],wdays:['周一','周二','周三','周四','周五','周六','周日'],
+    notime:'请输入时长。',alarmSaved:'✅ 闹钟已保存！',kbhint:'💡 空格 = 开始/暂停 · R = 重置 · F = 全屏',
+    inhale:'吸气',hold:'屏息',exhale:'呼气',
+    stlbls:['今日分钟数','本周分钟数','总会话数','连续天数'],footer:'© 2025 Timer-24.com · 不保证准确性',
+    fs:'⛶ 全屏',addwc:'+ 添加',alarm_h:'⏰ 闹钟',alarm_new:'+ 新建闹钟',alarm_time:'时间',alarm_name:'名称',alarm_rep:'重复',alarm_snd:'声音',
+    save:'保存',cancel:'取消',snooze:'😴 贪睡 (5分钟)',stopbtn:'✕ 停止',
+    hours:'小时',mins:'分钟',secs:'秒',start:'▶ 开始',pause:'⏸ 暂停',resume:'▶ 继续',reset:'↺ 重置',
+    quicksel:'快速选择',almsnd:'闹钟声音',snd_std:'🔔 标准',snd_bell:'🛎 铃声',snd_dig:'📱 数字音',snd_soft:'✨ 轻柔',snd_none:'🔇 无声音',
+    lap_n:'圈数',lap_t:'圈时',lap_tot:'总时间',
+    focus_choose:'🎯 选择专注方法',
+    m_pom_n:'番茄工作法',m_pom_d:'25分钟专注，5分钟休息。',
+    m_5217_n:'52/17方法',m_5217_d:'52分钟工作，17分钟休息。',
+    m_dw_n:'深度工作',m_dw_d:'90分钟无干扰工作。',
+    m_uld_n:'超日节律',m_uld_d:'大脑自然90分钟周期。',
+    m_ft_n:'Flowtime',m_ft_d:'没有固定时间限制。',
+    m_lrn_n:'学习计时器',m_lrn_d:'45分钟学习，10分钟休息。',
+    m_cust_n:'自定义计时器',m_cust_d:'定义您自己的时间。',
+    cust_focus:'专注 (分钟)',cust_pause:'休息 (分钟)',cust_rounds:'轮次',
+    focus_phase:'🎯 专注阶段',focus_break:'☕ 休息',
+    journal_h:'📝 今天您想达到什么目标？',journal_ph:'本次会话的目标...',
+    skip:'⏭ 跳过',back:'← 返回',next:'下一步 →',
+    sleep_h:'😴 睡眠计时器',sleep_start:'▶ 开始计时器',
+    amb_h:'放松声音',amb_rain:'🌧 雨声',amb_forest:'🌲 森林',amb_cafe:'☕ 咖啡馆',amb_white:'〰 白噪音',amb_fire:'🔥 壁炉',amb_none:'🔇 无声音',
+    breath_h:'🧘 呼吸计时器',breath_method_lbl:'呼吸方法',medit_h:'🧘 冥想计时器',
+    bm_box:'方形呼吸法 (4-4-4-4)',bm_478:'4-7-8呼吸法',bm_coh:'连贯呼吸法 (5-5)',bm_24:'2-4呼吸法',
+    breath_round_lbl:'轮次',breath_total_lbl:'总计',
+    ass_h:'🤖 专注助手',ass_sub:'回答两个简短问题，我们推荐最优方法。',
+    ass_q1:'您想做什么？',ass_q2:'您能专注多长时间？',
+    f_short:'不到25分钟',f_short_s:'我需要频繁的短暂冲刺',
+    f_med:'25到60分钟',f_med_s:'我能很好地工作一个小时',
+    f_long:'60到120分钟',f_long_s:'我进入心流状态',
+    stats_h:'📊 您的专注统计',week_h:'📅 本周',log_h:'📋 最近会话',del:'清除',
+    fs_exit:'✕ 退出',home:'主页',clrconfirm:'删除所有统计数据？',clrOk:'统计数据已清除。',
+    toast_sleep:'😴 计时器已启动',toast_done:'完成！',toast_all_done:'🏆 所有轮次完成！',toast_pause:'☕ 休息！',toast_round:'🎯 第',toast_medit:'🧘 冥想完成',medit_done:'🧘 冥想完成'}
 };
 
-// ═══════════════ LANG SYSTEM ═══════════════
-let cl='de';
-function gl(){return L[cl]||L.de;}
+// ═══════════════ LANG ENGINE ═══════════════
+let cl = 'de';
+function gl() { return L[cl] || L.de; }
 
-function initLang(){
-  const u=new URLSearchParams(location.search).get('lang');
-  const s=localStorage.getItem('t24_lang');
-  const b=(navigator.language||'de').slice(0,2).toLowerCase();
-  cl=[u,s,b].find(x=>x&&L[x])||'de';
-  buildMenu();applyLang();
+function getLang() {
+  const u = new URLSearchParams(location.search).get('lang');
+  const s = localStorage.getItem('t24_lang');
+  const b = (navigator.language || 'de').slice(0, 2).toLowerCase();
+  return [u, s, b].find(x => x && L[x]) || 'de';
 }
 
-function buildMenu(){
-  document.getElementById('lm').innerHTML=Object.entries(L).map(([k,v])=>
-    `<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`
-  ).join('');
-}
-
-function setLang(code){
-  if(!L[code])return;
-  cl=code;
-  localStorage.setItem('t24_lang',code);
-  const u=new URL(location);u.searchParams.set('lang',code);
-  history.replaceState({},'',u);
-  buildMenu();applyLang();
+function setLang(lang) {
+  if (!L[lang]) return;
+  cl = lang;
+  localStorage.setItem('t24_lang', lang);
+  const u = new URL(location);
+  u.searchParams.set('lang', lang);
+  history.replaceState({}, '', u);
+  buildLM();
+  applyLang();
   closeL();
 }
 
-function applyLang(){
-  const t=gl();
-  document.documentElement.dir=t.dir||'ltr';
-  document.documentElement.lang=cl;
-  document.getElementById('lb').textContent=`${t.f} ${cl.toUpperCase()} ▼`;
-  // nav
-  const nls=document.querySelectorAll('#mnl a');
-  nls.forEach((a,i)=>{if(t.nav[i])a.textContent=t.nav[i];});
-  const mls=document.querySelectorAll('#mml a');
-  mls.forEach((a,i)=>{if(t.nav[i])a.textContent=t.nav[i];});
-  // tabs
-  document.querySelectorAll('.tb').forEach((b,i)=>{if(t.tabs[i])b.textContent=t.tabs[i];});
+function buildLM() {
+  document.getElementById('lm').innerHTML = Object.entries(L).map(([k, v]) =>
+    `<li class="${k === cl ? 'sel' : ''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`
+  ).join('');
+}
+
+function toggleL() { document.getElementById('lm').classList.toggle('open'); }
+function closeL() { document.getElementById('lm').classList.remove('open'); }
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('#lw')) closeL();
+});
+
+function applyLang() {
+  const t = gl();
+  document.documentElement.dir = t.dir || 'ltr';
+  document.documentElement.lang = cl;
+  // lang button
+  document.getElementById('lb').textContent = `${t.f} ${cl.toUpperCase()} ▼`;
+  // nav links
+  document.querySelectorAll('#mnl a').forEach((a, i) => { if (t.nav[i]) a.textContent = t.nav[i]; });
+  document.querySelectorAll('#mml a').forEach((a, i) => { if (t.nav[i]) a.textContent = t.nav[i]; });
+  // tab buttons
+  document.querySelectorAll('.tb').forEach((b, i) => { if (t.tabs[i]) b.textContent = t.tabs[i]; });
   // day chips
-  const chips=document.querySelectorAll('.dc .d');
-  const dm=[1,2,3,4,5,6,0];
-  chips.forEach((c,i)=>{c.textContent=t.days[dm[i]];});
+  const chips = document.querySelectorAll('.dc .d');
+  const dm = [1, 2, 3, 4, 5, 6, 0];
+  chips.forEach((c, i) => { c.textContent = t.days[dm[i]]; });
   // week labels
-  const wl=document.querySelectorAll('#wlbl span');
-  wl.forEach((el,i)=>{if(t.wdays[i])el.textContent=t.wdays[i];});
+  document.querySelectorAll('#wlbl span').forEach((el, i) => { if (t.wdays[i]) el.textContent = t.wdays[i]; });
   // stat labels
-  const slids=['stod-l','swk-l','sse-l','sst-l'];
-  slids.forEach((id,i)=>{const el=document.getElementById(id);if(el&&t.stlbls[i])el.textContent=t.stlbls[i];});
+  ['stod-l','swk-l','sse-l','sst-l'].forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && t.stlbls[i]) el.textContent = t.stlbls[i];
+  });
   // footer
-  const fc=document.getElementById('fcopy');if(fc)fc.textContent=t.footer;
-  // breath desc
-  selBM();
+  const fc = document.getElementById('fcopy'); if (fc) fc.textContent = t.footer;
+  // ALL data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.textContent = t[k];
+  });
+  // placeholders with data-i18n-ph
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.getAttribute('data-i18n-ph');
+    if (t[k] !== undefined) el.placeholder = t[k];
+  });
+  // breath method select options
+  const bsel = document.getElementById('bms');
+  if (bsel) {
+    const opts = ['bm_box','bm_478','bm_coh','bm_24'];
+    bsel.querySelectorAll('option').forEach((o, i) => { if (t[opts[i]]) o.textContent = t[opts[i]]; });
+  }
   // rebuild task grid
   buildTaskGrid();
 }
 
-function toggleL(){document.getElementById('lm').classList.toggle('open');}
-function closeL(){document.getElementById('lm').classList.remove('open');}
-document.addEventListener('click',e=>{if(!e.target.closest('#lw'))closeL();});
+function initLang() {
+  cl = getLang();
+  buildLM();
+  applyLang();
+}
 
-// ═══════════════ STATE ═══════════════
-const st={
-  use24h:localStorage.getItem('t24_24h')!=='false',
-  tz:localStorage.getItem('t24_tz')||'Europe/Berlin',
-  wcs:JSON.parse(localStorage.getItem('t24_wc')||'[]'),
-  alarms:JSON.parse(localStorage.getItem('t24_alarms')||'[]'),
-  stats:JSON.parse(localStorage.getItem('t24_stats')||'{"sessions":[],"streak":0,"lastDate":null}'),
-  tTotal:0,tRem:0,tInt:null,tRun:false,tSnd:'beep',
-  swSt:0,swEl:0,swInt:null,swRun:false,swLaps:[],
-  fMethod:null,fPhase:'focus',fRound:1,fTotal:4,
-  fInt:null,fRem:0,fDur:0,fPDur:0,fRun:false,
-  bRun:false,bInt:null,bPI:0,bPT:0,bRound:0,bTot:0,bTotInt:null,bM:'box',
-  slInt:null,slRem:1800,slRun:false,slMin:30,
-  mInt:null,mRem:600,mRun:false,
-  ctx:null,fsMode:null,
-  aTask:null,aFocus:null,ringingIdx:null,aRingInt:null
-};
+
 const FC={
   pomodoro:{name:'Pomodoro',icon:'🍅',focus:25,pause:5,rounds:4},
   '5217':{name:'52/17',icon:'⚡',focus:52,pause:17,rounds:3},
@@ -706,14 +1081,7 @@ const FC={
   ultradian:{name:'Ultradian',icon:'🧬',focus:90,pause:20,rounds:2},
   flowtime:{name:'Flowtime',icon:'🌊',focus:0,pause:0,rounds:1},
   lernen:{name:'Lernen',icon:'📚',focus:45,pause:10,rounds:3}
-};
-const BC={
-  box:{phases:['inhale','hold','exhale','hold'],times:[4,4,4,4]},
-  '478':{phases:['inhale','hold','exhale'],times:[4,7,8]},
-  coherent:{phases:['inhale','exhale'],times:[5,5]},
-  '24':{phases:['inhale','exhale'],times:[2,4]}
-};
-const BD={
+};const BD={
   box:{de:'4s einatmen → 4s halten → 4s ausatmen → 4s halten',en:'4s inhale → 4s hold → 4s exhale → 4s hold',default:'Box 4-4-4-4'},
   '478':{de:'4s einatmen → 7s halten → 8s ausatmen',en:'4s inhale → 7s hold → 8s exhale',default:'4-7-8'},
   coherent:{de:'5s einatmen → 5s ausatmen',en:'5s inhale → 5s exhale',default:'5-5'},
@@ -836,7 +1204,7 @@ function updTDisp(){
 function tPause(){clearInterval(st.tInt);st.tRun=false;document.getElementById('tpa').style.display='none';document.getElementById('tre').style.display='';document.getElementById('tlbl').textContent='Pausiert';}
 function tResume(){st.tRun=true;document.getElementById('tre').style.display='none';document.getElementById('tpa').style.display='';document.getElementById('tlbl').textContent='Läuft';st.tInt=setInterval(tTick,1000);}
 function tReset(){clearInterval(st.tInt);st.tRun=false;st.tRem=0;st.tTotal=0;document.getElementById('tdisp').textContent='00:00:00';document.getElementById('tdisp').className='dg';document.getElementById('tring').className='rf';document.getElementById('tring').style.strokeDashoffset=0;document.getElementById('tst').style.display='';document.getElementById('tpa').style.display='none';document.getElementById('tre').style.display='none';document.getElementById('tlbl').textContent='Bereit';}
-function tFinish(){clearInterval(st.tInt);st.tRun=false;document.getElementById('tdisp').textContent='00:00:00';document.getElementById('tlbl').textContent='Fertig!';document.getElementById('tst').style.display='';document.getElementById('tpa').style.display='none';document.getElementById('tre').style.display='none';document.getElementById('tring').style.strokeDashoffset=0;playS(st.tSnd,+document.getElementById('tvol').value);toast('⏰ Fertig!');}
+function tFinish(){clearInterval(st.tInt);st.tRun=false;document.getElementById('tdisp').textContent='00:00:00';document.getElementById('tlbl').textContent='Fertig!';document.getElementById('tst').style.display='';document.getElementById('tpa').style.display='none';document.getElementById('tre').style.display='none';document.getElementById('tring').style.strokeDashoffset=0;playS(st.tSnd,+document.getElementById('tvol').value);toast('⏰ '+(gl().toast_done||'Fertig!'));}
 function tFS(){st.fsMode='countdown';document.getElementById('fsl').textContent='Timer';document.getElementById('fso').classList.add('act');updTDisp();}
 document.getElementById('tsounds').addEventListener('click',e=>{const c=e.target.closest('.sc');if(!c)return;document.querySelectorAll('#tsounds .sc').forEach(x=>x.classList.remove('on'));c.classList.add('on');st.tSnd=c.dataset.snd;if(c.dataset.snd!=='none')playS(c.dataset.snd,50);});
 document.querySelectorAll('[data-amb]').forEach(c=>c.addEventListener('click',function(){const s=this.classList.contains('on');document.querySelectorAll('[data-amb]').forEach(x=>x.classList.remove('on'));if(!s)this.classList.add('on');toast(s?'🔇 Ton gestoppt':'♪ '+this.textContent.trim());}));
@@ -896,7 +1264,7 @@ function startCust(){
   const f=+document.getElementById('cf').value||25,b=+document.getElementById('cb2').value||5,r=+document.getElementById('cr').value||4;
   FC._cust={name:'Eigener',icon:'⚙️',focus:f,pause:b,rounds:r};startF('_cust');
 }
-function setPhL(ph){const el=document.getElementById('phl');if(ph==='focus'){el.textContent='🎯 Fokus-Phase';el.className='pl pf';}else{el.textContent='☕ Pause';el.className='pl pb';}}
+function setPhL(ph){const el=document.getElementById('phl');if(ph==='focus'){el.textContent=gl().focus_phase||'🎯 Fokus-Phase';el.className='pl pf';}else{el.textContent=gl().focus_break||'☕ Pause';el.className='pl pb';}}
 function renderRD(){document.getElementById('rinfo').textContent=`Runde ${st.fRound} von ${st.fTotal}`;document.getElementById('rdots').innerHTML=Array.from({length:st.fTotal},(_,i)=>`<div class="rdot ${i<st.fRound-1?'dn':i===st.fRound-1?'cr':''}"></div>`).join('');}
 function updFD(){const r=st.fRem,m=Math.floor(r/60),s=r%60;document.getElementById('fdisp').textContent=pad(m)+':'+pad(s);const tot=st.fPhase==='focus'?st.fDur:(st.fPDur||1);document.getElementById('fring').style.strokeDashoffset=RC-(tot>0?(tot-st.fRem)/tot:0)*RC;}
 function fStart(){if(st.fRun)return;st.fRun=true;document.getElementById('fst').style.display='none';document.getElementById('fpa').style.display='';st.fInt=setInterval(fTick,1000);}
@@ -905,55 +1273,22 @@ function fResume(){st.fRun=true;document.getElementById('fre').style.display='no
 function fTick(){if(st.fRem<=0){fPEnd();return;}st.fRem--;updFD();}
 function fPEnd(){
   clearInterval(st.fInt);st.fRun=false;playS('bell',70);
-  if(st.fPhase==='focus'){recMin(st.fDur/60);if(st.fPDur>0){st.fPhase='pause';st.fRem=st.fPDur;setPhL('pause');toast('☕ Pause!');}else fNR();}
+  if(st.fPhase==='focus'){recMin(st.fDur/60);if(st.fPDur>0){st.fPhase='pause';st.fRem=st.fPDur;setPhL('pause');toast(gl().toast_pause||'☕ Pause!');}else fNR();}
   else fNR();
   document.getElementById('fst').style.display='';document.getElementById('fpa').style.display='none';document.getElementById('fre').style.display='none';updFD();
 }
-function fNR(){if(st.fRound>=st.fTotal){toast('🏆 Alle Runden abgeschlossen!');document.getElementById('fdisp').textContent='✓';return;}st.fRound++;st.fPhase='focus';st.fRem=st.fDur;setPhL('focus');renderRD();toast('🎯 Runde '+st.fRound);}
+function fNR(){if(st.fRound>=st.fTotal){toast(gl().toast_all_done||'🏆 Alle Runden abgeschlossen!');document.getElementById('fdisp').textContent='✓';return;}st.fRound++;st.fPhase='focus';st.fRem=st.fDur;setPhL('focus');renderRD();toast((gl().toast_round||'🎯 Runde ')+st.fRound);}
 function fSkip(){clearInterval(st.fInt);st.fRun=false;fPEnd();}
 function exitF(){clearInterval(st.fInt);st.fRun=false;document.getElementById('fsp').style.display='none';document.getElementById('fms').style.display='';}
 
 // ═══════════════ SLEEP ═══════════════
 function setSl(min,btn){st.slMin=min;st.slRem=min*60;document.querySelectorAll('.sb').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on');document.getElementById('sldisp').textContent=pad(min)+':00';if(st.slRun)slStop();}
-function slStart(){st.slRun=true;st.slRem=st.slMin*60;document.getElementById('slst').style.display='none';document.getElementById('slsp').style.display='';st.slInt=setInterval(()=>{if(st.slRem<=0){slStop();return;}st.slRem--;document.getElementById('sldisp').textContent=pad(Math.floor(st.slRem/60))+':'+pad(st.slRem%60);},1000);toast('😴 Einschlaf-Timer gestartet');}
+function slStart(){st.slRun=true;st.slRem=st.slMin*60;document.getElementById('slst').style.display='none';document.getElementById('slsp').style.display='';st.slInt=setInterval(()=>{if(st.slRem<=0){slStop();return;}st.slRem--;document.getElementById('sldisp').textContent=pad(Math.floor(st.slRem/60))+':'+pad(st.slRem%60);},1000);toast(gl().toast_sleep||'😴 Einschlaf-Timer gestartet');}
 function slStop(){clearInterval(st.slInt);st.slRun=false;document.getElementById('slst').style.display='';document.getElementById('slsp').style.display='none';document.getElementById('sldisp').textContent=pad(st.slMin)+':00';}
-
-// ═══════════════ BREATH ═══════════════
-function selBM(){
-  st.bM=document.getElementById('bms').value;
-  const d=BD[st.bM];document.getElementById('bdesc').textContent=d[cl]||d.en||d.default||'';
-  if(st.bRun)bStop();rstBC();
-}
-function rstBC(){document.getElementById('bph').textContent='Bereit';document.getElementById('bcnt').textContent='–';document.getElementById('bcirc').className='bc2';}
-function bStart(){
-  st.bRun=true;st.bPI=0;st.bPT=0;st.bRound=0;st.bTot=0;
-  document.getElementById('bst').style.display='none';document.getElementById('bsp').style.display='';
-  bTick();st.bInt=setInterval(bTick,1000);
-  st.bTotInt=setInterval(()=>{st.bTot++;const m=Math.floor(st.bTot/60),s=st.bTot%60;document.getElementById('btot').textContent=m+':'+pad(s);},1000);
-}
-function bTick(){
-  const c=BC[st.bM],ph=c.phases,ti=c.times;
-  if(st.bPT<=0){
-    st.bPI=st.bPI%ph.length;
-    if(st.bPI===0&&st.bPT!==0){st.bRound++;document.getElementById('brd').textContent=st.bRound;}
-    st.bPT=ti[st.bPI];
-    const p=ph[st.bPI];document.getElementById('bph').textContent=gl()[p]||p;
-    const circ=document.getElementById('bcirc');circ.className='bc2';
-    if(p==='inhale')circ.classList.add('inh');else if(p==='hold')circ.classList.add('hld');else if(p==='exhale')circ.classList.add('exh');
-    st.bPI++;
-  }
-  document.getElementById('bcnt').textContent=st.bPT;st.bPT--;
-}
-function bStop(){clearInterval(st.bInt);clearInterval(st.bTotInt);st.bRun=false;st.bPT=0;document.getElementById('bst').style.display='';document.getElementById('bsp').style.display='none';rstBC();document.getElementById('brd').textContent='0';}
-
-// MEDIT
-function setMed(min,btn){st.mRem=min*60;document.getElementById('mdisp').textContent=pad(min)+':00';if(st.mRun)mStop();}
-function mStart(){if(st.mRun)return;st.mRun=true;document.getElementById('mst').style.display='none';document.getElementById('msp').style.display='';st.mInt=setInterval(()=>{if(st.mRem<=0){mStop();playS('gentle',60);toast('🧘 Meditation abgeschlossen');return;}st.mRem--;document.getElementById('mdisp').textContent=pad(Math.floor(st.mRem/60))+':'+pad(st.mRem%60);},1000);}
-function mStop(){clearInterval(st.mInt);st.mRun=false;document.getElementById('mst').style.display='';document.getElementById('msp').style.display='none';}
 
 // ═══════════════ ASSISTANT ═══════════════
 const ATASKS=['lernen','arbeiten','programmieren','schreiben','lesen','kreativ','meditation','sport'];
-const AREC={'lernen-short':'pomodoro','lernen-medium':'lernen','lernen-long':'ultradian','arbeiten-short':'pomodoro','arbeiten-medium':'5217','arbeiten-long':'deepwork','programmieren-short':'pomodoro','programmieren-medium':'5217','programmieren-long':'deepwork','schreiben-short':'pomodoro','schreiben-medium':'5217','schreiben-long':'deepwork','lesen-short':'pomodoro','lesen-medium':'lernen','lesen-long':'ultradian','kreativ-short':'pomodoro','kreativ-medium':'flowtime','kreativ-long':'flowtime','meditation-short':'breath','meditation-medium':'breath','meditation-long':'breath','sport-short':'pomodoro','sport-medium':'5217','sport-long':'ultradian'};
+const AREC={'lernen-short':'pomodoro','lernen-medium':'lernen','lernen-long':'ultradian','arbeiten-short':'pomodoro','arbeiten-medium':'5217','arbeiten-long':'deepwork','programmieren-short':'pomodoro','programmieren-medium':'5217','programmieren-long':'deepwork','schreiben-short':'pomodoro','schreiben-medium':'5217','schreiben-long':'deepwork','lesen-short':'pomodoro','lesen-medium':'lernen','lesen-long':'ultradian','kreativ-short':'pomodoro','kreativ-medium':'flowtime','kreativ-long':'flowtime','meditation-short':'pomodoro','meditation-medium':'pomodoro','meditation-long':'pomodoro','sport-short':'pomodoro','sport-medium':'5217','sport-long':'ultradian'};
 function buildTaskGrid(){
   const t=gl(),grid=document.getElementById('tgrid');if(!grid)return;
   grid.innerHTML=ATASKS.map((key,i)=>{
@@ -971,7 +1306,7 @@ function asRec(){
   document.getElementById('recI').textContent=c.icon||'🎯';document.getElementById('recT').textContent=c.name||'Empfehlung';document.getElementById('recD').textContent=c.desc||'';document.getElementById('recBtn').dataset.m=m;
   document.getElementById('as2').style.display='none';document.getElementById('asres').style.display='';
 }
-function startRec(){const m=document.getElementById('recBtn').dataset.m;if(m==='breath')show('breath');else{show('focus');setTimeout(()=>startF(m),80);}}
+function startRec(){const m=document.getElementById('recBtn').dataset.m;show('focus');setTimeout(()=>startF(m),80);}
 
 // ═══════════════ STATS ═══════════════
 function recMin(min){
@@ -999,7 +1334,7 @@ function renderStats(){
   if(!ss.length){log.textContent='Noch keine Sessions. Starte deinen ersten Fokus-Timer!';return;}
   log.innerHTML=[...ss].reverse().slice(0,10).map(s=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--brd)"><span>${s.date} · ${(FC[s.method]||{name:s.method||'?'}).name}</span><span style="font-family:ui-monospace,monospace;font-weight:700">${s.minutes} Min</span></div>`).join('');
 }
-function clrStats(){if(!confirm('Alle Statistiken löschen?'))return;st.stats={sessions:[],streak:0,lastDate:null};ls('t24_stats',JSON.stringify(st.stats));renderStats();toast('Statistik gelöscht.');}
+function clrStats(){if(!confirm(gl().clrconfirm||'Alle Statistiken löschen?'))return;st.stats={sessions:[],streak:0,lastDate:null};ls('t24_stats',JSON.stringify(st.stats));renderStats();toast(gl().clrOk||'Statistik gelöscht.');}
 
 // ═══════════════ FULLSCREEN ═══════════════
 function exitFS2(){document.getElementById('fso').classList.remove('act');st.fsMode=null;}
@@ -1025,7 +1360,6 @@ initLang();
 buildTaskGrid();
 const lp=localStorage.getItem('t24_lp');if(lp)show(lp);
 renderAlarms();
-selBM();
 setTimeout(()=>{if(!localStorage.getItem('t24_kbh')){toast(gl().kbhint);ls('t24_kbh','1');}},2000);
 </script>
 </body>

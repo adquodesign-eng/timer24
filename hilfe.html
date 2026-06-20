@@ -3,367 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Hilfe – So nutzt du Timer-24.com | Timer-24.com</title>
-<meta name="description" content="Schritt-für-Schritt-Anleitungen für alle Funktionen von Timer-24.com: Timer, Wecker, Stoppuhr, Fokus-Timer und mehr.">
-<link rel="canonical" href="https://timer-24.com/hilfe.html">
+<title>Hilfe – Timer-24.com</title>
 <style>
-:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;--grid-line:rgba(27,166,255,0.06);--shadow:0 1px 3px rgba(0,0,0,0.07);--radius:14px;--radius-sm:8px;--transition:0.18s ease;}
+:root{--bg:#F6F8FC;--sur:#FFFFFF;--txt:#1F2937;--mut:#6B7280;--bl:#1BA6FF;--bls:#E8F4FF;--cu:#C77A4A;--cus:#F3E3DA;--brd:#E5E7EB;--gl:rgba(27,166,255,.06);--sh:0 1px 3px rgba(0,0,0,.07);--shm:0 4px 16px rgba(0,0,0,.08);--r:12px;--rs:8px;--t:.18s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);color:var(--text);min-height:100vh;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:40px 40px;}
-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;font-size:20px;}
-.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:9px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;}
-.logo span{color:var(--blue-bright);}
-.nav-links{display:flex;gap:8px;}
-.nav-links a{padding:7px 14px;border-radius:var(--radius-sm);text-decoration:none;font-size:13.5px;font-weight:500;color:var(--muted);transition:all var(--transition);}
-.nav-links a:hover,.nav-links a.active{color:var(--blue-bright);background:var(--blue-soft);}
-.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
-.btn-nav{background:var(--blue-bright);color:white!important;font-weight:600!important;}
-main{max-width:900px;margin:0 auto;padding:40px 24px 80px;}
-.page-header{margin-bottom:48px;}
-.page-header h1{font-size:clamp(24px,5vw,40px);font-weight:800;margin-bottom:10px;}
-.page-header p{font-size:16px;color:var(--muted);line-height:1.6;}
-.help-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:56px;}
-.help-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);cursor:pointer;transition:all var(--transition);text-decoration:none;color:var(--text);display:block;}
-.help-card:hover{border-color:var(--blue-bright);transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.08);}
-.help-card-icon{font-size:32px;margin-bottom:12px;}
-.help-card-title{font-size:15px;font-weight:700;margin-bottom:6px;}
-.help-card-desc{font-size:13px;color:var(--muted);line-height:1.5;}
-.help-section{margin-bottom:48px;}
-.help-section-title{font-size:22px;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
-.help-section-sub{font-size:14px;color:var(--muted);margin-bottom:24px;}
-.steps{display:flex;flex-direction:column;gap:12px;}
-.step{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 20px;box-shadow:var(--shadow);}
-.step-num{width:28px;height:28px;border-radius:50%;background:var(--blue-bright);color:white;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
-.step-content{flex:1;}
-.step-title{font-size:14px;font-weight:700;margin-bottom:4px;}
-.step-desc{font-size:13px;color:var(--muted);line-height:1.6;}
-.step-tip{margin-top:6px;padding:6px 10px;background:var(--blue-soft);border-radius:var(--radius-sm);font-size:12px;color:var(--blue-bright);font-weight:500;}
-.kbd-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
-.kbd-table th{padding:12px 16px;text-align:left;background:var(--bg-deep);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);}
-.kbd-table td{padding:12px 16px;border-top:1px solid var(--border);font-size:14px;}
-.kbd{display:inline-block;padding:3px 8px;background:var(--bg-deep);border:1px solid var(--border);border-radius:4px;font-family:ui-monospace,monospace;font-size:12px;font-weight:700;}
-.tip-box{background:var(--blue-soft);border:1px solid rgba(27,166,255,0.2);border-radius:var(--radius-sm);padding:16px 20px;margin-top:16px;font-size:14px;color:var(--text);line-height:1.6;}
-.tip-box strong{color:var(--blue-bright);}
-footer{border-top:1px solid var(--border);background:var(--surface);padding:32px 24px;text-align:center;}
-.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
-.footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color var(--transition);}
-.footer-links a:hover{color:var(--blue-bright);}
-.footer-copy{font-size:12px;color:var(--muted);}
-@media(max-width:640px){.nav-links{display:none;}main{padding:24px 16px 60px;}.help-grid{grid-template-columns:1fr;}}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:40px 40px;padding-bottom:80px;}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--brd);}
+.hi{max-width:900px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:14px;}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);font-weight:800;font-size:18px;flex-shrink:0;}
+.logo-i{width:32px;height:32px;background:linear-gradient(135deg,var(--bl),#0088dd);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
+.logo em{color:var(--bl);font-style:normal;}
+.navl{display:flex;gap:5px;align-items:center;flex:1;}
+.navl a{padding:6px 11px;border-radius:var(--rs);text-decoration:none;font-size:13px;font-weight:500;color:var(--mut);transition:all var(--t);white-space:nowrap;}
+.navl a:hover,.navl a.act{color:var(--bl);background:var(--bls);}
+.navl .nb{background:var(--bl);color:#fff!important;font-weight:700!important;}
+.lw{position:relative;margin-left:auto;flex-shrink:0;}
+.lb{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--txt);transition:all var(--t);}
+.lb:hover{border-color:var(--bl);color:var(--bl);}
+.lm{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--brd);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.13);list-style:none;padding:6px;min-width:158px;z-index:9999;max-height:340px;overflow-y:auto;}
+[dir=rtl] .lm{right:auto;left:0;}
+.lm.open{display:block;}
+.lm li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background var(--t);}
+.lm li:hover{background:var(--bg);}
+.lm li.sel{color:var(--bl);background:var(--bls);font-weight:700;}
+main{max-width:900px;margin:0 auto;padding:32px 20px 60px;}
+.ph{margin-bottom:32px;}
+.ph h1{font-size:clamp(22px,5vw,36px);font-weight:800;margin-bottom:8px;letter-spacing:-.5px;}
+.ph p{font-size:15px;color:var(--mut);line-height:1.6;max-width:540px;}
+.card{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);box-shadow:var(--sh);}
+.card-body{padding:22px;}
+h2{font-size:16px;font-weight:700;color:var(--bl);margin:18px 0 8px;}
+p{font-size:14px;color:var(--mut);line-height:1.7;margin-bottom:9px;}
+p:last-child{margin-bottom:0;}
+p strong{color:var(--txt);}
+a{color:var(--bl);text-decoration:none;}
+a:hover{text-decoration:underline;}
+ul{padding-left:18px;margin-bottom:9px;}
+li{font-size:14px;color:var(--mut);line-height:1.7;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--txt);transition:all var(--t);}
+.btn:hover{border-color:var(--bl);color:var(--bl);}
+.btn-p{background:var(--bl);border-color:var(--bl);color:#fff!important;}
+.btn-p:hover{background:#0095ee;}
+footer{position:fixed;bottom:0;left:0;right:0;background:var(--sur);border-top:1px solid var(--brd);padding:8px 16px;text-align:center;font-size:12px;color:var(--mut);z-index:90;}
+footer a{color:var(--mut);text-decoration:none;margin:0 5px;}
+footer a:hover{color:var(--bl);}
+@media(max-width:640px){.navl{display:none;}.hi{padding:0 14px;}main{padding:20px 14px 60px;}}
 
-/* ── LANGUAGE DROPDOWN ── */
-.lang-dropdown-wrap{position:relative;flex-shrink:0;}
-.lang-btn{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;transition:all 0.18s ease;}
-.lang-btn:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
-.lang-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;padding:6px;min-width:160px;z-index:9999;max-height:320px;overflow-y:auto;}
-[dir="rtl"] .lang-menu{right:auto;left:0;}
-.lang-menu.open{display:block;}
-.lang-menu li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background 0.15s ease;user-select:none;}
-.lang-menu li:hover{background:var(--bg-deep);}
-.lang-menu li[aria-selected="true"]{color:var(--blue-bright);background:var(--blue-soft);}
+.hcard{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);padding:20px 22px;margin-bottom:16px;box-shadow:var(--sh);}
+.hct{font-size:16px;font-weight:800;margin-bottom:14px;}
+.hsteps{display:flex;flex-direction:column;gap:10px;}
+.hs{display:flex;gap:14px;align-items:flex-start;}
+.hsn{width:26px;height:26px;border-radius:50%;background:var(--bl);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.hst{font-size:13px;font-weight:700;margin-bottom:2px;}
+.hsd{font-size:13px;color:var(--mut);line-height:1.6;}
 </style>
-<script src="i18n.js"></script>
 </head>
 <body>
 <header>
-  <div class="header-inner">
-    <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<span>-24</span></a>
-    <nav class="nav-links">
-      <a href="timer.html" data-i18n="nav_timer" data-i18n="footer_timer">Timer</a>
-      <a href="wissen.html" data-i18n="nav_wissen">Wissen</a>
-      <a href="faq.html" data-i18n="nav_faq" data-i18n="footer_faq">FAQ</a>
-      <a href="hilfe.html" class="active" data-i18n="footer_hilfe">Hilfe</a>
-      <a href="timer.html" class="btn-nav" data-i18n="nav_start">▶ Jetzt starten</a>
+  <div class="hi">
+    <a href="index.html" class="logo"><div class="logo-i">⏱</div>Timer<em>-24</em></a>
+    <nav class="navl">
+      <a href="timer.html" id="nl-timer">Timer</a>
+      <a href="wissen.html" id="nl-wissen">Wissen</a>
+      <a href="faq.html" id="nl-faq">FAQ</a>
+      <a href="hilfe.html" id="nl-hilfe" class="act">Hilfe</a>
+      <a href="kontakt.html" id="nl-kontakt">Kontakt</a>
+      <a href="timer.html" class="nb" id="nl-start">▶ Jetzt starten</a>
     </nav>
-    <div class="header-right" id="langDropdownMount"></div>
+    <div class="lw" id="lw">
+      <button class="lb" id="lb" onclick="toggleL()">🇩🇪 DE ▼</button>
+      <ul class="lm" id="lm"></ul>
+    </div>
   </div>
 </header>
-
-<main>
-  <div class="page-header">
-    <h1>🛟 Hilfe & Anleitungen</h1>
-    <p>Alles was du wissen musst, um Timer-24.com optimal zu nutzen – Schritt für Schritt erklärt.</p>
-  </div>
-
-  <!-- QUICK LINKS -->
-  <div class="help-grid">
-    <a href="#countdown" class="help-card">
-      <div class="help-card-icon">⏲</div>
-      <div class="help-card-title">Countdown-Timer</div>
-      <div class="help-card-desc">Zeit einstellen, starten, pausieren und zurücksetzen.</div>
-    </a>
-    <a href="#wecker" class="help-card">
-      <div class="help-card-icon">⏰</div>
-      <div class="help-card-title">Wecker einrichten</div>
-      <div class="help-card-desc">Mehrere Wecker mit Wiederholung und eigenem Ton.</div>
-    </a>
-    <a href="#stoppuhr" class="help-card">
-      <div class="help-card-icon">⏱</div>
-      <div class="help-card-title">Stoppuhr & Rundenzeiten</div>
-      <div class="help-card-desc">Messen, Runden erfassen und Ergebnisse exportieren.</div>
-    </a>
-    <a href="#fokus" class="help-card">
-      <div class="help-card-icon">🍅</div>
-      <div class="help-card-title">Fokus-Timer starten</div>
-      <div class="help-card-desc">Pomodoro, Deep Work und andere Methoden nutzen.</div>
-    </a>
-    <a href="#assistent" class="help-card">
-      <div class="help-card-icon">🤖</div>
-      <div class="help-card-title">Fokus-Assistent</div>
-      <div class="help-card-desc">Lass dir die beste Methode für deine Aufgabe empfehlen.</div>
-    </a>
-    <a href="#shortcuts" class="help-card">
-      <div class="help-card-icon">⌨️</div>
-      <div class="help-card-title">Tastaturkürzel</div>
-      <div class="help-card-desc">Alle Shortcuts für Desktop-Nutzer auf einen Blick.</div>
-    </a>
-  </div>
-
-  <!-- COUNTDOWN -->
-  <div class="help-section" id="countdown">
-    <div class="help-section-title">⏲ Countdown-Timer</div>
-    <div class="help-section-sub">So stellst du einen Countdown ein und steuerst ihn.</div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Timer-Bereich öffnen</div>
-          <div class="step-desc">Klicke oben in der Tab-Navigation auf <strong>⏲ Timer</strong>.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Zeit eingeben oder Schnellwahl nutzen</div>
-          <div class="step-desc">Gib Stunden, Minuten und Sekunden in die Felder ein – oder klicke auf einen Schnellwahl-Button (z. B. „25 Minuten" für Pomodoro).</div>
-          <div class="step-tip">💡 Tipp: Schnellwahl-Buttons reichen von 1 Minute bis 120 Minuten.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Starten, Pausieren, Fortsetzen</div>
-          <div class="step-desc">Klicke auf <strong>▶ Starten</strong>. Während der Timer läuft, erscheint <strong>⏸ Pause</strong>. Mit <strong>▶ Weiter</strong> geht es nach der Pause weiter.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">Alarmton einstellen</div>
-          <div class="step-desc">Wähle unten den gewünschten Ton (Standard, Glocke, Digital, Sanft oder Kein Ton) und stelle die Lautstärke mit dem Regler ein.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <div class="step-title">Vollbild-Modus</div>
-          <div class="step-desc">Klicke auf <strong>⛶ Vollbild</strong> für eine große, ablenkungsfreie Zeitanzeige. Mit <strong>ESC</strong> oder dem Button verlässt du den Vollbild-Modus.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WECKER -->
-  <div class="help-section" id="wecker">
-    <div class="help-section-title">⏰ Wecker einrichten</div>
-    <div class="help-section-sub">Mehrere Wecker mit individuellen Einstellungen.</div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Wecker-Bereich öffnen</div>
-          <div class="step-desc">Klicke in der Tab-Navigation auf <strong>⏰ Wecker</strong>.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Neuen Wecker erstellen</div>
-          <div class="step-desc">Klicke auf <strong>+ Neuer Wecker</strong>. Das Formular öffnet sich darunter.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Uhrzeit und Name eintragen</div>
-          <div class="step-desc">Stelle die Uhrzeit im Zeitfeld ein und gib optional einen Namen ein (z. B. „Morgenroutine").</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">Wiederholung wählen</div>
-          <div class="step-desc">Wähle die Wochentage per Chip-Auswahl (Mo–So). Kein Tag = einmaliger Wecker. Alle Tage = täglich.</div>
-          <div class="step-tip">💡 Tipp: Für Werktags-Wecker nur Mo–Fr auswählen.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <div class="step-title">Wecker speichern</div>
-          <div class="step-desc">Klicke auf <strong>Wecker speichern</strong>. Der Wecker erscheint in der Liste und ist sofort aktiv. Mit dem Schalter kannst du ihn jederzeit deaktivieren.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">6</div>
-        <div class="step-content">
-          <div class="step-title">Wenn der Wecker klingelt</div>
-          <div class="step-desc">Eine Karte erscheint mit dem Weckername und der Uhrzeit. Klicke auf <strong>😴 Snooze</strong> für 5 Minuten mehr Schlaf, oder auf <strong>✕ Stoppen</strong> um den Wecker zu beenden.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STOPPUHR -->
-  <div class="help-section" id="stoppuhr">
-    <div class="help-section-title">⏱ Stoppuhr & Rundenzeiten</div>
-    <div class="help-section-sub">Zeit messen, Runden erfassen und Ergebnisse exportieren.</div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Stoppuhr starten</div>
-          <div class="step-desc">Klicke auf <strong>⏱ Stoppuhr</strong> in der Navigation und dann auf <strong>▶ Starten</strong>. Die Zeit läuft mit Millisekunden-Genauigkeit.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Rundenzeit erfassen</div>
-          <div class="step-desc">Klicke auf <strong>⊙ Runde</strong> um eine Zwischenzeit zu erfassen. Die schnellste Runde wird grün, die langsamste orange markiert.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Ergebnisse exportieren</div>
-          <div class="step-desc">Klicke auf <strong>⬇ Exportieren</strong> um alle Rundenzeiten als CSV-Datei herunterzuladen. Diese lässt sich in Excel oder Google Sheets öffnen.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOKUS -->
-  <div class="help-section" id="fokus">
-    <div class="help-section-title">🍅 Fokus-Timer</div>
-    <div class="help-section-sub">Wähle eine Methode und starte deine Fokus-Session.</div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Fokus-Bereich öffnen</div>
-          <div class="step-desc">Klicke auf <strong>🍅 Fokus</strong> in der Tab-Navigation. Du siehst alle verfügbaren Methoden.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Methode auswählen</div>
-          <div class="step-desc">Klicke auf eine Methode (z. B. Pomodoro, Deep Work, Flowtime). Jede Karte zeigt die Fokus- und Pausenzeiten.</div>
-          <div class="step-tip">💡 Tipp: Neu hier? Starte mit Pomodoro – 25 Minuten Fokus, 5 Minuten Pause.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Ziel eintragen (optional)</div>
-          <div class="step-desc">Schreibe ins Journal-Feld, was du in dieser Session erreichen möchtest. Das hilft dir fokussiert zu bleiben.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">Session starten</div>
-          <div class="step-desc">Klicke auf <strong>▶ Starten</strong>. Der Timer läuft, Runden-Dots zeigen deinen Fortschritt. Nach der Fokusphase folgt automatisch die Pausenphase.</div>
-        </div>
-      </div>
-    </div>
-    <div class="tip-box">
-      <strong>Wichtig:</strong> Schließe während einer Fokus-Session alle ablenkenden Tabs. Aktiviere „Nicht stören" auf deinem Smartphone. Der Timer läuft weiter, auch wenn du in andere Tabs wechselst.
-    </div>
-  </div>
-
-  <!-- ASSISTENT -->
-  <div class="help-section" id="assistent">
-    <div class="help-section-title">🤖 Fokus-Assistent</div>
-    <div class="help-section-sub">Lass dir in 30 Sekunden die optimale Methode empfehlen.</div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Assistent öffnen</div>
-          <div class="step-desc">Klicke in der Tab-Navigation auf <strong>🤖 Assistent</strong>.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Aufgabe wählen</div>
-          <div class="step-desc">Wähle aus 8 Aufgabentypen: Lernen, Arbeiten, Programmieren, Schreiben, Lesen, Kreativ, Meditation oder Sport.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Konzentrationsdauer angeben</div>
-          <div class="step-desc">Wähle wie lange du dich typischerweise konzentrieren kannst: unter 25 Minuten, 25–60 Minuten oder 60–120 Minuten.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">Empfehlung erhalten und starten</div>
-          <div class="step-desc">Der Assistent empfiehlt die optimale Methode mit Erklärung. Klicke auf <strong>▶ Timer starten</strong> um direkt loszulegen.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SHORTCUTS -->
-  <div class="help-section" id="shortcuts">
-    <div class="help-section-title">⌨️ Tastaturkürzel</div>
-    <div class="help-section-sub">Steuere alle Timer ohne Maus – für maximale Effizienz.</div>
-    <table class="kbd-table">
-      <thead>
-        <tr>
-          <th>Taste</th>
-          <th>Funktion</th>
-          <th>Bereich</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><span class="kbd">Leertaste</span></td><td>Start / Pause / Weiter</td><td>Timer, Stoppuhr, Fokus</td></tr>
-        <tr><td><span class="kbd">R</span></td><td>Zurücksetzen</td><td>Timer, Stoppuhr</td></tr>
-        <tr><td><span class="kbd">F</span></td><td>Vollbild-Modus</td><td>Timer, Stoppuhr</td></tr>
-        <tr><td><span class="kbd">L</span></td><td>Runde erfassen</td><td>Stoppuhr</td></tr>
-        <tr><td><span class="kbd">ESC</span></td><td>Vollbild verlassen</td><td>Alle</td></tr>
-      </tbody>
-    </table>
-    <div class="tip-box">
-      <strong>Hinweis:</strong> Tastaturkürzel funktionieren nicht, wenn du in einem Eingabefeld (Textfeld, Zeitfeld) tippst. Klicke zuerst auf eine freie Stelle der Seite.
-    </div>
-  </div>
-</main>
-
+<main id="pm"></main>
 <footer>
-  <div class="footer-links">
-    <a href="timer.html" data-i18n="nav_timer">Timer</a>
-    <a href="wissen.html" data-i18n="footer_wissen">Wissenswertes</a>
-    <a href="faq.html" data-i18n="nav_faq">FAQ</a>
-    <a href="hilfe.html" data-i18n="nav_hilfe">Hilfe</a>
-    <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
-    <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
-    <a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a>
-    <a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a>
+  <div>
+    <a href="timer.html" id="fl-timer">Timer</a> |
+    <a href="wissen.html" id="fl-wissen">Wissenswertes</a> |
+    <a href="faq.html" id="fl-faq">FAQ</a> |
+    <a href="hilfe.html" id="fl-hilfe">Hilfe</a> |
+    <a href="kontakt.html" id="fl-kontakt">Kontakt</a> |
+    <a href="ueber-uns.html" id="fl-ueber">Über uns</a> |
+    <a href="impressum.html" id="fl-imp">Impressum</a> |
+    <a href="datenschutz.html" id="fl-ds">Datenschutz</a>
   </div>
-  <div class="footer-copy">© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser</div>
+  <div id="fl-copy">© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit</div>
 </footer>
 <script>
-  i18n.injectStyles();
-  document.getElementById('langDropdownMount').innerHTML = i18n.buildDropdown();
-  i18n.init();
+
+const LANGS={de:{f:'🇩🇪',n:'Deutsch'},en:{f:'🇬🇧',n:'English'},fr:{f:'🇫🇷',n:'Français'},es:{f:'🇪🇸',n:'Español'},it:{f:'🇮🇹',n:'Italiano'},pt:{f:'🇵🇹',n:'Português'},nl:{f:'🇳🇱',n:'Nederlands'},pl:{f:'🇵🇱',n:'Polski'},tr:{f:'🇹🇷',n:'Türkçe'},ar:{f:'🇸🇦',n:'العربية'},zh:{f:'🇨🇳',n:'中文'}};
+
+const NAV_T={
+  de:{timer:'Timer',wissen:'Wissen',faq:'FAQ',hilfe:'Hilfe',kontakt:'Kontakt',ueber:'Über uns',start:'▶ Jetzt starten',imp:'Impressum',ds:'Datenschutz',copy:'© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit'},
+  en:{timer:'Timer',wissen:'Knowledge',faq:'FAQ',hilfe:'Help',kontakt:'Contact',ueber:'About',start:'▶ Start now',imp:'Imprint',ds:'Privacy',copy:'© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy'},
+  fr:{timer:'Minuterie',wissen:'Savoir',faq:'FAQ',hilfe:'Aide',kontakt:'Contact',ueber:'À propos',start:'▶ Démarrer',imp:'Mentions légales',ds:'Confidentialité',copy:"© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude"},
+  es:{timer:'Temporizador',wissen:'Conocimiento',faq:'FAQ',hilfe:'Ayuda',kontakt:'Contacto',ueber:'Acerca de',start:'▶ Comenzar',imp:'Aviso legal',ds:'Privacidad',copy:'© 2025 Timer-24.com · Cálculos locales · Sin garantía de exactitud'},
+  it:{timer:'Contatore',wissen:'Conoscenza',faq:'FAQ',hilfe:'Aiuto',kontakt:'Contatto',ueber:'Chi siamo',start:'▶ Inizia',imp:'Note legali',ds:'Privacy',copy:'© 2025 Timer-24.com · Calcoli locali · Nessuna garanzia'},
+  pt:{timer:'Temporizador',wissen:'Conhecimento',faq:'FAQ',hilfe:'Ajuda',kontakt:'Contacto',ueber:'Sobre nós',start:'▶ Começar',imp:'Aviso legal',ds:'Privacidade',copy:'© 2025 Timer-24.com · Cálculos locais · Sem garantia'},
+  nl:{timer:'Timer',wissen:'Kennis',faq:'FAQ',hilfe:'Hulp',kontakt:'Contact',ueber:'Over ons',start:'▶ Nu starten',imp:'Impressum',ds:'Privacy',copy:'© 2025 Timer-24.com · Berekeningen lokaal · Geen garantie'},
+  pl:{timer:'Timer',wissen:'Wiedza',faq:'FAQ',hilfe:'Pomoc',kontakt:'Kontakt',ueber:'O nas',start:'▶ Zacznij',imp:'Informacje prawne',ds:'Prywatność',copy:'© 2025 Timer-24.com · Obliczenia lokalne · Bez gwarancji'},
+  tr:{timer:'Zamanlayıcı',wissen:'Bilgi',faq:'SSS',hilfe:'Yardım',kontakt:'İletişim',ueber:'Hakkımızda',start:'▶ Başla',imp:'Künye',ds:'Gizlilik',copy:'© 2025 Timer-24.com · Hesaplamalar tarayıcıda · Garanti yoktur'},
+  ar:{timer:'المؤقت',wissen:'المعرفة',faq:'الأسئلة الشائعة',hilfe:'المساعدة',kontakt:'اتصل بنا',ueber:'من نحن',start:'▶ ابدأ',imp:'بيانات المشغّل',ds:'الخصوصية',copy:'© 2025 Timer-24.com · العمليات محلية · لا ضمان على الدقة'},
+  zh:{timer:'计时器',wissen:'知识',faq:'常见问题',hilfe:'帮助',kontakt:'联系',ueber:'关于我们',start:'▶ 开始',imp:'版权信息',ds:'隐私政策',copy:'© 2025 Timer-24.com · 本地计算 · 不保证准确性'}
+};
+
+let cl='de';
+function gL(){return NAV_T[cl]||NAV_T.de;}
+function getLang(){const u=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('t24_lang');const b=(navigator.language||'de').slice(0,2).toLowerCase();return[u,s,b].find(x=>x&&LANGS[x])||'de';}
+function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);applyAll();buildLM();}
+function buildLM(){document.getElementById('lm').innerHTML=Object.entries(LANGS).map(([k,v])=>`<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`).join('');}
+function toggleL(){document.getElementById('lm').classList.toggle('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('#lw'))document.getElementById('lm').classList.remove('open');});
+function applyNav(){
+  const t=gL();
+  document.documentElement.lang=cl;document.documentElement.dir=cl==='ar'?'rtl':'ltr';
+  document.getElementById('lb').textContent=LANGS[cl].f+' '+cl.toUpperCase()+' ▼';
+  ['timer','wissen','faq','hilfe','kontakt','ueber','start'].forEach(k=>{const el=document.getElementById('nl-'+k);if(el)el.textContent=t[k];});
+  ['timer','wissen','faq','hilfe','kontakt','ueber','imp','ds'].forEach(k=>{const el=document.getElementById('fl-'+k);if(el)el.textContent=t[k]||t[k.replace('-','')];});
+  const fc=document.getElementById('fl-copy');if(fc)fc.textContent=t.copy;
+}
+
+
+const HD={
+de:{h1:'🛟 Hilfe & Anleitungen',sub:'Alles was du wissen musst, um Timer-24.com optimal zu nutzen.',sections:[
+  {icon:'⏲',title:'Countdown-Timer',steps:[
+    {n:1,t:'Timer-Bereich öffnen',d:'Klicke oben auf den Tab „⏲ Timer".'},
+    {n:2,t:'Zeit eingeben oder Schnellwahl nutzen',d:'Gib Stunden, Minuten und Sekunden ein – oder klicke einen Schnellwahl-Button (1–120 Min).'},
+    {n:3,t:'Starten, Pausieren, Fortsetzen',d:'▶ Starten · ⏸ Pause · ▶ Weiter'},
+    {n:4,t:'Alarmton einstellen',d:'Wähle Standard, Glocke, Digital, Sanft oder Kein Ton. Lautstärke mit dem Regler anpassen.'},
+    {n:5,t:'Vollbild-Modus',d:'⛶ Vollbild für ablenkungsfreie Anzeige. ESC verlässt den Modus.'}
+  ]},
+  {icon:'⏰',title:'Wecker einrichten',steps:[
+    {n:1,t:'Wecker-Bereich öffnen',d:'Klicke auf den Tab „⏰ Wecker".'},
+    {n:2,t:'Neuen Wecker erstellen',d:'Klicke auf „+ Neuer Wecker".'},
+    {n:3,t:'Uhrzeit und Name eintragen',d:'Uhrzeit einstellen und optional einen Namen eingeben.'},
+    {n:4,t:'Wiederholung wählen',d:'Wähle die Wochentage (Mo–So). Kein Tag = einmalig. Alle Tage = täglich.'},
+    {n:5,t:'Wecker speichern',d:'Klicke auf „Speichern". Der Wecker ist sofort aktiv.'}
+  ]},
+  {icon:'⏱',title:'Stoppuhr & Rundenzeiten',steps:[
+    {n:1,t:'Stoppuhr starten',d:'Tab „⏱ Stoppuhr" → ▶ Starten.'},
+    {n:2,t:'Rundenzeit erfassen',d:'⊙ Runde drücken. Schnellste Runde = grün, langsamste = orange.'},
+    {n:3,t:'Ergebnisse exportieren',d:'⬇ Exportieren → CSV-Datei für Excel oder Google Sheets.'}
+  ]},
+  {icon:'🍅',title:'Fokus-Timer',steps:[
+    {n:1,t:'Fokus-Bereich öffnen',d:'Tab „🍅 Fokus" → Methode auswählen.'},
+    {n:2,t:'Methode auswählen',d:'Pomodoro, Deep Work, Flowtime, Ultradian, 52/17, Lern-Timer oder Eigener Timer.'},
+    {n:3,t:'Session starten',d:'▶ Starten. Nach der Fokusphase folgt automatisch die Pause.'},
+    {n:4,t:'Optional: Assistent nutzen',d:'Tab „🤖 Assistent" → 2 Fragen → passende Methode wird empfohlen.'}
+  ]},
+  {icon:'⌨️',title:'Tastaturkürzel',steps:[
+    {n:1,t:'Leertaste',d:'Start / Pause / Weiter (Timer, Stoppuhr, Fokus)'},
+    {n:2,t:'R',d:'Zurücksetzen (Timer, Stoppuhr)'},
+    {n:3,t:'F',d:'Vollbild-Modus'},
+    {n:4,t:'L',d:'Runde erfassen (Stoppuhr)'},
+    {n:5,t:'ESC',d:'Vollbild verlassen'}
+  ]}
+]},
+en:{h1:'🛟 Help & Instructions',sub:'Everything you need to know to get the most out of Timer-24.com.',sections:[
+  {icon:'⏲',title:'Countdown Timer',steps:[
+    {n:1,t:'Open Timer section',d:'Click the "⏲ Timer" tab at the top.'},
+    {n:2,t:'Enter time or use quick select',d:'Enter hours, minutes and seconds – or click a quick select button (1–120 min).'},
+    {n:3,t:'Start, Pause, Resume',d:'▶ Start · ⏸ Pause · ▶ Resume'},
+    {n:4,t:'Set alarm sound',d:'Choose Standard, Bell, Digital, Gentle or No sound. Adjust volume with the slider.'},
+    {n:5,t:'Fullscreen mode',d:'⛶ Fullscreen for distraction-free display. ESC exits fullscreen.'}
+  ]},
+  {icon:'⏰',title:'Setting up Alarm',steps:[
+    {n:1,t:'Open Alarm section',d:'Click the "⏰ Alarm" tab.'},
+    {n:2,t:'Create new alarm',d:'Click "+ New alarm".'},
+    {n:3,t:'Enter time and name',d:'Set the time and optionally enter a name.'},
+    {n:4,t:'Choose repeat days',d:'Select weekdays (Mon–Sun). No day = once. All days = daily.'},
+    {n:5,t:'Save alarm',d:'Click "Save". The alarm is immediately active.'}
+  ]},
+  {icon:'⏱',title:'Stopwatch & Laps',steps:[
+    {n:1,t:'Start stopwatch',d:'"⏱ Stopwatch" tab → ▶ Start.'},
+    {n:2,t:'Record lap time',d:'Press ⊙ Lap. Fastest lap = green, slowest = orange.'},
+    {n:3,t:'Export results',d:'⬇ Export → CSV file for Excel or Google Sheets.'}
+  ]},
+  {icon:'🍅',title:'Focus Timer',steps:[
+    {n:1,t:'Open Focus section',d:'"🍅 Focus" tab → select method.'},
+    {n:2,t:'Select method',d:'Pomodoro, Deep Work, Flowtime, Ultradian, 52/17, Study Timer or Custom.'},
+    {n:3,t:'Start session',d:'▶ Start. After the focus phase, break follows automatically.'},
+    {n:4,t:'Use the assistant',d:'"🤖 Assistant" tab → 2 questions → optimal method recommended.'}
+  ]},
+  {icon:'⌨️',title:'Keyboard Shortcuts',steps:[
+    {n:1,t:'Space',d:'Start / Pause / Resume (Timer, Stopwatch, Focus)'},
+    {n:2,t:'R',d:'Reset (Timer, Stopwatch)'},
+    {n:3,t:'F',d:'Fullscreen mode'},
+    {n:4,t:'L',d:'Record lap (Stopwatch)'},
+    {n:5,t:'ESC',d:'Exit fullscreen'}
+  ]}
+]},
+fr:{h1:'🛟 Aide & instructions',sub:'Tout ce que vous devez savoir pour utiliser Timer-24.com au mieux.',sections:[
+  {icon:'⏲',title:'Minuterie à rebours',steps:[{n:1,t:"Ouvrir l'onglet Minuterie",d:"Cliquez sur l'onglet « ⏲ Minuterie »."},{n:2,t:'Entrer la durée',d:'Entrez heures, minutes et secondes ou utilisez la sélection rapide.'},{n:3,t:'Démarrer, pause, reprendre',d:'▶ Démarrer · ⏸ Pause · ▶ Reprendre'},{n:4,t:"Régler le son d'alarme",d:'Choisissez Standard, Cloche, Numérique, Doux ou Sans son.'},{n:5,t:'Mode plein écran',d:'⛶ Plein écran · ESC pour quitter'}]},
+  {icon:'⏰',title:'Configurer le réveil',steps:[{n:1,t:'Ouvrir Réveil',d:"Cliquez sur l'onglet « ⏰ Réveil »."},{n:2,t:'Nouveau réveil',d:'Cliquez sur « + Nouveau réveil ».'},{n:3,t:'Heure et nom',d:"Réglez l'heure et entrez un nom."},{n:4,t:'Répétition',d:'Choisissez les jours de la semaine.'},{n:5,t:'Enregistrer',d:'Cliquez sur « Enregistrer ».'}]},
+  {icon:'⏱',title:'Chronomètre',steps:[{n:1,t:'Démarrer',d:"Onglet « ⏱ Chrono » → ▶ Démarrer."},{n:2,t:'Temps par tour',d:'Appuyez sur ⊙ Tour.'},{n:3,t:'Exporter',d:'⬇ Exporter → fichier CSV.'}]},
+  {icon:'⌨️',title:'Raccourcis clavier',steps:[{n:1,t:'Espace',d:'Démarrer / Pause / Reprendre'},{n:2,t:'R',d:'Réinitialiser'},{n:3,t:'F',d:'Plein écran'},{n:4,t:'ESC',d:'Quitter le plein écran'}]}
+]},
+es:{h1:'🛟 Ayuda e instrucciones',sub:'Todo lo que necesitas saber para usar Timer-24.com al máximo.',sections:[
+  {icon:'⏲',title:'Temporizador',steps:[{n:1,t:'Abrir pestaña',d:'Haz clic en la pestaña « ⏲ Temporizador ».'},{n:2,t:'Introducir tiempo',d:'Horas, minutos y segundos o usa la selección rápida.'},{n:3,t:'Iniciar, pausar, continuar',d:'▶ Iniciar · ⏸ Pausa · ▶ Continuar'},{n:5,t:'Pantalla completa',d:'⛶ · ESC para salir'}]},
+  {icon:'⏰',title:'Configurar alarma',steps:[{n:1,t:'Abrir Alarma',d:'Pestaña « ⏰ Alarma ».'},{n:2,t:'Nueva alarma',d:'Clic en « + Nueva alarma ».'},{n:4,t:'Días de repetición',d:'Selecciona los días de la semana.'},{n:5,t:'Guardar',d:'Clic en « Guardar ».'}]},
+  {icon:'⌨️',title:'Atajos de teclado',steps:[{n:1,t:'Espacio',d:'Iniciar / Pausa / Continuar'},{n:2,t:'R',d:'Reiniciar'},{n:3,t:'F',d:'Pantalla completa'},{n:4,t:'ESC',d:'Salir'}]}
+]},
+it:{h1:'🛟 Aiuto e istruzioni',sub:'Tutto quello che devi sapere per usare Timer-24.com al meglio.',sections:[
+  {icon:'⏲',title:'Contatore',steps:[{n:1,t:'Apri scheda',d:'Clicca sulla scheda « ⏲ Contatore ».'},{n:2,t:'Inserisci il tempo',d:'Ore, minuti e secondi o usa la selezione rapida.'},{n:3,t:'Avvia, pausa, riprendi',d:'▶ Avvia · ⏸ Pausa · ▶ Riprendi'}]},
+  {icon:'⌨️',title:'Scorciatoie da tastiera',steps:[{n:1,t:'Spazio',d:'Avvia / Pausa / Riprendi'},{n:2,t:'R',d:'Reimposta'},{n:3,t:'F',d:'Schermo intero'},{n:4,t:'ESC',d:'Esci dallo schermo intero'}]}
+]},
+pt:{h1:'🛟 Ajuda e instruções',sub:'Tudo o que precisa de saber para usar o Timer-24.com ao máximo.',sections:[
+  {icon:'⏲',title:'Temporizador',steps:[{n:1,t:'Abrir separador',d:'Clique no separador « ⏲ Contagem ».'},{n:2,t:'Introduzir tempo',d:'Horas, minutos e segundos ou use a seleção rápida.'},{n:3,t:'Iniciar, pausar, retomar',d:'▶ Iniciar · ⏸ Pausa · ▶ Retomar'}]},
+  {icon:'⌨️',title:'Atalhos de teclado',steps:[{n:1,t:'Espaço',d:'Iniciar / Pausa / Retomar'},{n:2,t:'R',d:'Repor'},{n:3,t:'F',d:'Ecrã inteiro'},{n:4,t:'ESC',d:'Sair do ecrã inteiro'}]}
+]},
+nl:{h1:'🛟 Hulp en instructies',sub:'Alles wat u moet weten om Timer-24.com optimaal te gebruiken.',sections:[
+  {icon:'⏲',title:'Aftimmer',steps:[{n:1,t:'Open tabblad',d:'Klik op het tabblad « ⏲ Timer ».'},{n:2,t:'Tijd invoeren',d:'Uren, minuten en seconden of gebruik snelle keuze.'},{n:3,t:'Starten, pauzeren, hervatten',d:'▶ Starten · ⏸ Pauze · ▶ Hervatten'}]},
+  {icon:'⌨️',title:'Sneltoetsen',steps:[{n:1,t:'Spatie',d:'Starten / Pauze / Hervatten'},{n:2,t:'R',d:'Herinstellen'},{n:3,t:'F',d:'Volledig scherm'},{n:4,t:'ESC',d:'Volledig scherm verlaten'}]}
+]},
+pl:{h1:'🛟 Pomoc i instrukcje',sub:'Wszystko co musisz wiedzieć, aby optymalnie korzystać z Timer-24.com.',sections:[
+  {icon:'⏲',title:'Timer odliczający',steps:[{n:1,t:'Otwórz zakładkę',d:'Kliknij zakładkę « ⏲ Timer ».'},{n:2,t:'Wpisz czas',d:'Godziny, minuty i sekundy lub użyj szybkiego wyboru.'},{n:3,t:'Start, pauza, wznów',d:'▶ Start · ⏸ Pauza · ▶ Wznów'}]},
+  {icon:'⌨️',title:'Skróty klawiszowe',steps:[{n:1,t:'Spacja',d:'Start / Pauza / Wznów'},{n:2,t:'R',d:'Resetuj'},{n:3,t:'F',d:'Pełny ekran'},{n:4,t:'ESC',d:'Wyjdź z pełnego ekranu'}]}
+]},
+tr:{h1:'🛟 Yardım ve talimatlar',sub:"Timer-24.com'u en iyi şekilde kullanmak için bilmeniz gereken her şey.",sections:[
+  {icon:'⏲',title:'Geri sayım zamanlayıcısı',steps:[{n:1,t:'Sekmeyi aç',d:'« ⏲ Zamanlayıcı » sekmesine tıklayın.'},{n:2,t:'Süreyi girin',d:'Saat, dakika ve saniye girin veya hızlı seçimi kullanın.'},{n:3,t:'Başlat, duraklat, devam et',d:'▶ Başlat · ⏸ Duraklat · ▶ Devam et'}]},
+  {icon:'⌨️',title:'Klavye kısayolları',steps:[{n:1,t:'Boşluk',d:'Başlat / Duraklat / Devam et'},{n:2,t:'R',d:'Sıfırla'},{n:3,t:'F',d:'Tam ekran'},{n:4,t:'ESC',d:'Tam ekrandan çık'}]}
+]},
+ar:{h1:'🛟 المساعدة والتعليمات',sub:'كل ما تحتاج معرفته لاستخدام Timer-24.com بشكل أمثل.',sections:[
+  {icon:'⏲',title:'المؤقت التنازلي',steps:[{n:1,t:'فتح التبويب',d:'انقر على تبويب « ⏲ المؤقت ».'},{n:2,t:'إدخال الوقت',d:'أدخل الساعات والدقائق والثواني أو استخدم الاختيار السريع.'},{n:3,t:'بدء، إيقاف مؤقت، متابعة',d:'▶ ابدأ · ⏸ توقف · ▶ استمر'}]},
+  {icon:'⌨️',title:'اختصارات لوحة المفاتيح',steps:[{n:1,t:'مسافة',d:'بدء / توقف / متابعة'},{n:2,t:'R',d:'إعادة ضبط'},{n:3,t:'F',d:'ملء الشاشة'},{n:4,t:'ESC',d:'الخروج من وضع ملء الشاشة'}]}
+]},
+zh:{h1:'🛟 帮助与说明',sub:'使用Timer-24.com所需了解的一切。',sections:[
+  {icon:'⏲',title:'倒计时器',steps:[{n:1,t:'打开标签页',d:'点击顶部的"⏲ 倒计时"标签。'},{n:2,t:'输入时间',d:'输入小时、分钟和秒，或使用快速选择按钮（1–120分钟）。'},{n:3,t:'开始、暂停、继续',d:'▶ 开始 · ⏸ 暂停 · ▶ 继续'}]},
+  {icon:'⌨️',title:'键盘快捷键',steps:[{n:1,t:'空格键',d:'开始/暂停/继续'},{n:2,t:'R',d:'重置'},{n:3,t:'F',d:'全屏模式'},{n:4,t:'ESC',d:'退出全屏'}]}
+]}
+};
+
+function renderPage(){
+  const d=HD[cl]||HD.de;
+  document.title='Hilfe – Timer-24.com';
+  const secs=d.sections.map(s=>`
+    <div class="hcard">
+      <div class="hct">${s.icon} ${s.title}</div>
+      <div class="hsteps">${s.steps.map(st=>`
+        <div class="hs">
+          <div class="hsn">${st.n}</div>
+          <div><div class="hst">${st.t}</div><div class="hsd">${st.d}</div></div>
+        </div>`).join('')}
+      </div>
+    </div>`).join('');
+  document.getElementById('pm').innerHTML=`
+    <div class="ph"><h1>${d.h1}</h1><p>${d.sub}</p></div>
+    ${secs}`;
+}
+
+
+cl=getLang();buildLM();applyNav();renderPage();
+
 </script>
 </body>
 </html>

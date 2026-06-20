@@ -3,196 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Über uns – Mission & Vision | Timer-24.com</title>
-<meta name="description" content="Timer-24.com: Die erste deutschsprachige Premium-Timer-Plattform. Unsere Mission, Vision und die Geschichte hinter dem Projekt.">
-<link rel="canonical" href="https://timer-24.com/ueber-uns.html">
+<title>Über uns – Timer-24.com</title>
 <style>
-:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;--grid-line:rgba(27,166,255,0.06);--shadow:0 1px 3px rgba(0,0,0,0.07);--radius:14px;--radius-sm:8px;--transition:0.18s ease;}
+:root{--bg:#F6F8FC;--sur:#FFFFFF;--txt:#1F2937;--mut:#6B7280;--bl:#1BA6FF;--bls:#E8F4FF;--cu:#C77A4A;--cus:#F3E3DA;--brd:#E5E7EB;--gl:rgba(27,166,255,.06);--sh:0 1px 3px rgba(0,0,0,.07);--shm:0 4px 16px rgba(0,0,0,.08);--r:12px;--rs:8px;--t:.18s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);color:var(--text);min-height:100vh;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:40px 40px;}
-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;font-size:20px;}
-.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:9px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;}
-.logo span{color:var(--blue-bright);}
-.nav-links{display:flex;gap:8px;}
-.nav-links a{padding:7px 14px;border-radius:var(--radius-sm);text-decoration:none;font-size:13.5px;font-weight:500;color:var(--muted);transition:all var(--transition);}
-.nav-links a:hover{color:var(--blue-bright);background:var(--blue-soft);}
-.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
-.btn-nav{background:var(--blue-bright);color:white!important;font-weight:600!important;}
-main{max-width:800px;margin:0 auto;padding:40px 24px 80px;}
-.hero-section{text-align:center;padding:40px 0 60px;}
-.hero-section h1{font-size:clamp(28px,6vw,48px);font-weight:800;letter-spacing:-1px;margin-bottom:16px;line-height:1.1;}
-.hero-section h1 em{color:var(--blue-bright);font-style:normal;}
-.hero-section p{font-size:18px;color:var(--muted);line-height:1.7;max-width:560px;margin:0 auto;}
-.section{margin-bottom:48px;}
-.section h2{font-size:22px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
-.section p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:12px;}
-.values-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px;}
-.value-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-.value-icon{font-size:28px;margin-bottom:10px;}
-.value-title{font-size:14px;font-weight:700;margin-bottom:6px;}
-.value-desc{font-size:13px;color:var(--muted);line-height:1.6;}
-.quote-box{background:linear-gradient(135deg,var(--blue-soft),var(--copper-soft));border:1px solid rgba(27,166,255,0.15);border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0;}
-.quote-text{font-size:20px;font-weight:700;line-height:1.4;margin-bottom:12px;}
-.quote-text em{color:var(--blue-bright);font-style:normal;}
-.quote-sub{font-size:14px;color:var(--muted);}
-.timeline{display:flex;flex-direction:column;gap:16px;}
-.timeline-item{display:flex;gap:20px;align-items:flex-start;}
-.timeline-dot{width:12px;height:12px;border-radius:50%;background:var(--blue-bright);margin-top:6px;flex-shrink:0;}
-.timeline-year{font-size:12px;font-weight:700;color:var(--blue-bright);min-width:36px;margin-top:4px;}
-.timeline-content h3{font-size:14px;font-weight:700;margin-bottom:4px;}
-.timeline-content p{font-size:13px;color:var(--muted);line-height:1.6;}
-footer{border-top:1px solid var(--border);background:var(--surface);padding:32px 24px;text-align:center;}
-.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
-.footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color var(--transition);}
-.footer-links a:hover{color:var(--blue-bright);}
-.footer-copy{font-size:12px;color:var(--muted);}
-@media(max-width:640px){.nav-links{display:none;}main{padding:24px 16px 60px;}}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:40px 40px;padding-bottom:80px;}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--brd);}
+.hi{max-width:900px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:14px;}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);font-weight:800;font-size:18px;flex-shrink:0;}
+.logo-i{width:32px;height:32px;background:linear-gradient(135deg,var(--bl),#0088dd);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
+.logo em{color:var(--bl);font-style:normal;}
+.navl{display:flex;gap:5px;align-items:center;flex:1;}
+.navl a{padding:6px 11px;border-radius:var(--rs);text-decoration:none;font-size:13px;font-weight:500;color:var(--mut);transition:all var(--t);white-space:nowrap;}
+.navl a:hover,.navl a.act{color:var(--bl);background:var(--bls);}
+.navl .nb{background:var(--bl);color:#fff!important;font-weight:700!important;}
+.lw{position:relative;margin-left:auto;flex-shrink:0;}
+.lb{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--txt);transition:all var(--t);}
+.lb:hover{border-color:var(--bl);color:var(--bl);}
+.lm{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--brd);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.13);list-style:none;padding:6px;min-width:158px;z-index:9999;max-height:340px;overflow-y:auto;}
+[dir=rtl] .lm{right:auto;left:0;}
+.lm.open{display:block;}
+.lm li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background var(--t);}
+.lm li:hover{background:var(--bg);}
+.lm li.sel{color:var(--bl);background:var(--bls);font-weight:700;}
+main{max-width:900px;margin:0 auto;padding:32px 20px 60px;}
+.ph{margin-bottom:32px;}
+.ph h1{font-size:clamp(22px,5vw,36px);font-weight:800;margin-bottom:8px;letter-spacing:-.5px;}
+.ph p{font-size:15px;color:var(--mut);line-height:1.6;max-width:540px;}
+.card{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);box-shadow:var(--sh);}
+.card-body{padding:22px;}
+h2{font-size:16px;font-weight:700;color:var(--bl);margin:18px 0 8px;}
+p{font-size:14px;color:var(--mut);line-height:1.7;margin-bottom:9px;}
+p:last-child{margin-bottom:0;}
+p strong{color:var(--txt);}
+a{color:var(--bl);text-decoration:none;}
+a:hover{text-decoration:underline;}
+ul{padding-left:18px;margin-bottom:9px;}
+li{font-size:14px;color:var(--mut);line-height:1.7;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--txt);transition:all var(--t);}
+.btn:hover{border-color:var(--bl);color:var(--bl);}
+.btn-p{background:var(--bl);border-color:var(--bl);color:#fff!important;}
+.btn-p:hover{background:#0095ee;}
+footer{position:fixed;bottom:0;left:0;right:0;background:var(--sur);border-top:1px solid var(--brd);padding:8px 16px;text-align:center;font-size:12px;color:var(--mut);z-index:90;}
+footer a{color:var(--mut);text-decoration:none;margin:0 5px;}
+footer a:hover{color:var(--bl);}
+@media(max-width:640px){.navl{display:none;}.hi{padding:0 14px;}main{padding:20px 14px 60px;}}
 
-/* ── LANGUAGE DROPDOWN ── */
-.lang-dropdown-wrap{position:relative;flex-shrink:0;}
-.lang-btn{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;transition:all 0.18s ease;}
-.lang-btn:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
-.lang-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;padding:6px;min-width:160px;z-index:9999;max-height:320px;overflow-y:auto;}
-[dir="rtl"] .lang-menu{right:auto;left:0;}
-.lang-menu.open{display:block;}
-.lang-menu li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background 0.15s ease;user-select:none;}
-.lang-menu li:hover{background:var(--bg-deep);}
-.lang-menu li[aria-selected="true"]{color:var(--blue-bright);background:var(--blue-soft);}
+.qbox{background:linear-gradient(135deg,var(--bls),var(--cus));border:1px solid rgba(27,166,255,.15);border-radius:var(--r);padding:20px 24px;text-align:center;font-size:15px;font-weight:600;line-height:1.5;margin-bottom:20px;color:var(--txt);}
+.vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:20px;}
+.vcard{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);padding:16px;box-shadow:var(--sh);}
+.vi{font-size:26px;margin-bottom:8px;}
+.vt{font-size:13px;font-weight:700;margin-bottom:4px;}
+.vd{font-size:12px;color:var(--mut);line-height:1.5;}
+.rl{display:flex;flex-direction:column;gap:14px;}
+.ri2{display:flex;gap:14px;align-items:flex-start;}
+.ry{font-size:12px;font-weight:700;color:var(--bl);min-width:34px;margin-top:2px;}
+.rdot3{width:10px;height:10px;border-radius:50%;background:var(--bl);margin-top:4px;flex-shrink:0;}
+.rt2{font-size:13px;font-weight:700;margin-bottom:2px;}
+.rd4{font-size:12px;color:var(--mut);}
 </style>
-<script src="i18n.js"></script>
 </head>
 <body>
 <header>
-  <div class="header-inner">
-    <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<span>-24</span></a>
-    <nav class="nav-links">
-      <a href="timer.html" data-i18n="nav_timer" data-i18n="footer_timer">Timer</a>
-      <a href="wissen.html" data-i18n="nav_wissen">Wissen</a>
-      <a href="faq.html" data-i18n="nav_faq" data-i18n="footer_faq">FAQ</a>
-      <a href="hilfe.html" data-i18n="nav_hilfe" data-i18n="footer_hilfe">Hilfe</a>
-      <a href="timer.html" class="btn-nav" data-i18n="nav_start">▶ Jetzt starten</a>
+  <div class="hi">
+    <a href="index.html" class="logo"><div class="logo-i">⏱</div>Timer<em>-24</em></a>
+    <nav class="navl">
+      <a href="timer.html" id="nl-timer">Timer</a>
+      <a href="wissen.html" id="nl-wissen">Wissen</a>
+      <a href="faq.html" id="nl-faq">FAQ</a>
+      <a href="hilfe.html" id="nl-hilfe">Hilfe</a>
+      <a href="kontakt.html" id="nl-kontakt">Kontakt</a>
+      <a href="timer.html" class="nb" id="nl-start">▶ Jetzt starten</a>
     </nav>
-    <div class="header-right" id="langDropdownMount"></div>
+    <div class="lw" id="lw">
+      <button class="lb" id="lb" onclick="toggleL()">🇩🇪 DE ▼</button>
+      <ul class="lm" id="lm"></ul>
+    </div>
   </div>
 </header>
-
-<main>
-  <div class="hero-section">
-    <h1>Wir helfen dir,<br><em>Zeit besser zu nutzen</em></h1>
-    <p>Timer-24.com ist mehr als eine Timer-Seite. Wir sind ein digitaler Produktivitätsassistent für alle, die fokussierter arbeiten, lernen und leben wollen.</p>
-  </div>
-
-  <div class="quote-box">
-    <div class="quote-text">„Die erste deutschsprachige Plattform, die nicht nur Zeit misst,<br>sondern dabei hilft, die <em>richtige Fokus-Methode</em> zu finden."</div>
-    <div class="quote-sub">— Das Leitbild von Timer-24.com</div>
-  </div>
-
-  <div class="section">
-    <h2>🎯 Unsere Mission</h2>
-    <p>Millionen von Menschen kämpfen täglich mit Ablenkung, Prokrastination und dem Gefühl, nie genug Zeit zu haben. Die meisten Timer-Websites bieten nur eine Uhr – wir bieten Lösungen.</p>
-    <p>Timer-24.com verbindet klassische Zeitwerkzeuge mit modernen Produktivitätsmethoden, Wissenschaft und einem Design, das Ruhe und Konzentration fördert. Unser Ziel: Jeder soll die für ihn passende Fokus-Methode finden und langfristig bessere Arbeitsgewohnheiten entwickeln.</p>
-  </div>
-
-  <div class="section">
-    <h2>💡 Unsere Vision</h2>
-    <p>Wir glauben, dass gutes Zeitmanagement keine Frage der Willenskraft ist – sondern der richtigen Werkzeuge und des richtigen Wissens. Timer-24.com soll beides bieten.</p>
-    <p>In Zukunft planen wir: Mehrsprachigkeit (Englisch, Französisch und mehr), Cloud-Synchronisierung für gemeldete Nutzer, Kalenderintegration und KI-gestützte Fokusanalysen.</p>
-  </div>
-
-  <div class="section">
-    <h2>⭐ Unsere Werte</h2>
-    <div class="values-grid">
-      <div class="value-card">
-        <div class="value-icon">⚡</div>
-        <div class="value-title">Geschwindigkeit</div>
-        <div class="value-desc">Kein Framework, kein Build-Tool. Reines HTML/CSS/JS für maximale Performance und minimale Ladezeit.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🔒</div>
-        <div class="value-title">Datenschutz</div>
-        <div class="value-desc">Alle Daten bleiben lokal. Keine Registrierung, keine Cloud, keine Weitergabe. Privacy by Design.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🎨</div>
-        <div class="value-title">Design</div>
-        <div class="value-desc">Ruhig, minimalistisch, professionell. Jedes Element ist auf Fokus und Konzentration ausgerichtet.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">📚</div>
-        <div class="value-title">Wissen</div>
-        <div class="value-desc">Fundiertes Hintergrundwissen zu jeder Methode – damit du nicht nur verwendest, sondern verstehst.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">♿</div>
-        <div class="value-title">Barrierefreiheit</div>
-        <div class="value-desc">WCAG-konform, Tastatursteuerung, Skip-Links und ARIA-Labels – für alle zugänglich.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🆓</div>
-        <div class="value-title">Kostenlos</div>
-        <div class="value-desc">Alle Funktionen kostenlos, ohne Paywall, ohne Abo. Immer.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🗺 Roadmap</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Launch von Timer-24.com</h3>
-          <p>Start mit 9 Timer-Bereichen, 7 Fokus-Methoden, Statistik und Fokus-Assistent.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2026</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Mehrsprachigkeit</h3>
-          <p>Englische Version, gefolgt von Französisch, Spanisch und weiteren Sprachen.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2026</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Hintergrundgeräusche & Audio</h3>
-          <p>Echte Entspannungsgeräusche: Regen, Wald, Café, White Noise – direkt im Browser.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2027</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Benutzerkonten & Cloud-Sync</h3>
-          <p>Optionale Accounts für geräteübergreifende Synchronisierung von Einstellungen und Statistiken.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
+<main id="pm"></main>
 <footer>
-  <div class="footer-links">
-    <a href="timer.html" data-i18n="nav_timer">Timer</a>
-    <a href="wissen.html" data-i18n="footer_wissen">Wissenswertes</a>
-    <a href="faq.html" data-i18n="nav_faq">FAQ</a>
-    <a href="hilfe.html" data-i18n="nav_hilfe">Hilfe</a>
-    <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
-    <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
-    <a href="kontakt.html" data-i18n="footer_kontakt">Kontakt</a>
-    <a href="ueber-uns.html" data-i18n="footer_ueber">Über uns</a>
+  <div>
+    <a href="timer.html" id="fl-timer">Timer</a> |
+    <a href="wissen.html" id="fl-wissen">Wissenswertes</a> |
+    <a href="faq.html" id="fl-faq">FAQ</a> |
+    <a href="hilfe.html" id="fl-hilfe">Hilfe</a> |
+    <a href="kontakt.html" id="fl-kontakt">Kontakt</a> |
+    <a href="ueber-uns.html" id="fl-ueber">Über uns</a> |
+    <a href="impressum.html" id="fl-imp">Impressum</a> |
+    <a href="datenschutz.html" id="fl-ds">Datenschutz</a>
   </div>
-  <div class="footer-copy">© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser</div>
+  <div id="fl-copy">© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit</div>
 </footer>
 <script>
-  i18n.injectStyles();
-  document.getElementById('langDropdownMount').innerHTML = i18n.buildDropdown();
-  i18n.init();
+
+const LANGS={de:{f:'🇩🇪',n:'Deutsch'},en:{f:'🇬🇧',n:'English'},fr:{f:'🇫🇷',n:'Français'},es:{f:'🇪🇸',n:'Español'},it:{f:'🇮🇹',n:'Italiano'},pt:{f:'🇵🇹',n:'Português'},nl:{f:'🇳🇱',n:'Nederlands'},pl:{f:'🇵🇱',n:'Polski'},tr:{f:'🇹🇷',n:'Türkçe'},ar:{f:'🇸🇦',n:'العربية'},zh:{f:'🇨🇳',n:'中文'}};
+
+const NAV_T={
+  de:{timer:'Timer',wissen:'Wissen',faq:'FAQ',hilfe:'Hilfe',kontakt:'Kontakt',ueber:'Über uns',start:'▶ Jetzt starten',imp:'Impressum',ds:'Datenschutz',copy:'© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit'},
+  en:{timer:'Timer',wissen:'Knowledge',faq:'FAQ',hilfe:'Help',kontakt:'Contact',ueber:'About',start:'▶ Start now',imp:'Imprint',ds:'Privacy',copy:'© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy'},
+  fr:{timer:'Minuterie',wissen:'Savoir',faq:'FAQ',hilfe:'Aide',kontakt:'Contact',ueber:'À propos',start:'▶ Démarrer',imp:'Mentions légales',ds:'Confidentialité',copy:"© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude"},
+  es:{timer:'Temporizador',wissen:'Conocimiento',faq:'FAQ',hilfe:'Ayuda',kontakt:'Contacto',ueber:'Acerca de',start:'▶ Comenzar',imp:'Aviso legal',ds:'Privacidad',copy:'© 2025 Timer-24.com · Cálculos locales · Sin garantía de exactitud'},
+  it:{timer:'Contatore',wissen:'Conoscenza',faq:'FAQ',hilfe:'Aiuto',kontakt:'Contatto',ueber:'Chi siamo',start:'▶ Inizia',imp:'Note legali',ds:'Privacy',copy:'© 2025 Timer-24.com · Calcoli locali · Nessuna garanzia'},
+  pt:{timer:'Temporizador',wissen:'Conhecimento',faq:'FAQ',hilfe:'Ajuda',kontakt:'Contacto',ueber:'Sobre nós',start:'▶ Começar',imp:'Aviso legal',ds:'Privacidade',copy:'© 2025 Timer-24.com · Cálculos locais · Sem garantia'},
+  nl:{timer:'Timer',wissen:'Kennis',faq:'FAQ',hilfe:'Hulp',kontakt:'Contact',ueber:'Over ons',start:'▶ Nu starten',imp:'Impressum',ds:'Privacy',copy:'© 2025 Timer-24.com · Berekeningen lokaal · Geen garantie'},
+  pl:{timer:'Timer',wissen:'Wiedza',faq:'FAQ',hilfe:'Pomoc',kontakt:'Kontakt',ueber:'O nas',start:'▶ Zacznij',imp:'Informacje prawne',ds:'Prywatność',copy:'© 2025 Timer-24.com · Obliczenia lokalne · Bez gwarancji'},
+  tr:{timer:'Zamanlayıcı',wissen:'Bilgi',faq:'SSS',hilfe:'Yardım',kontakt:'İletişim',ueber:'Hakkımızda',start:'▶ Başla',imp:'Künye',ds:'Gizlilik',copy:'© 2025 Timer-24.com · Hesaplamalar tarayıcıda · Garanti yoktur'},
+  ar:{timer:'المؤقت',wissen:'المعرفة',faq:'الأسئلة الشائعة',hilfe:'المساعدة',kontakt:'اتصل بنا',ueber:'من نحن',start:'▶ ابدأ',imp:'بيانات المشغّل',ds:'الخصوصية',copy:'© 2025 Timer-24.com · العمليات محلية · لا ضمان على الدقة'},
+  zh:{timer:'计时器',wissen:'知识',faq:'常见问题',hilfe:'帮助',kontakt:'联系',ueber:'关于我们',start:'▶ 开始',imp:'版权信息',ds:'隐私政策',copy:'© 2025 Timer-24.com · 本地计算 · 不保证准确性'}
+};
+
+let cl='de';
+function gL(){return NAV_T[cl]||NAV_T.de;}
+function getLang(){const u=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('t24_lang');const b=(navigator.language||'de').slice(0,2).toLowerCase();return[u,s,b].find(x=>x&&LANGS[x])||'de';}
+function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);applyAll();buildLM();}
+function buildLM(){document.getElementById('lm').innerHTML=Object.entries(LANGS).map(([k,v])=>`<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`).join('');}
+function toggleL(){document.getElementById('lm').classList.toggle('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('#lw'))document.getElementById('lm').classList.remove('open');});
+function applyNav(){
+  const t=gL();
+  document.documentElement.lang=cl;document.documentElement.dir=cl==='ar'?'rtl':'ltr';
+  document.getElementById('lb').textContent=LANGS[cl].f+' '+cl.toUpperCase()+' ▼';
+  ['timer','wissen','faq','hilfe','kontakt','ueber','start'].forEach(k=>{const el=document.getElementById('nl-'+k);if(el)el.textContent=t[k];});
+  ['timer','wissen','faq','hilfe','kontakt','ueber','imp','ds'].forEach(k=>{const el=document.getElementById('fl-'+k);if(el)el.textContent=t[k]||t[k.replace('-','')];});
+  const fc=document.getElementById('fl-copy');if(fc)fc.textContent=t.copy;
+}
+
+
+const UD={
+de:{h1:'👥 Über uns',sub:'Timer-24.com ist mehr als eine Timer-Seite. Wir sind ein digitaler Produktivitätsassistent.',quote:'„Die erste deutschsprachige Plattform, die nicht nur Zeit misst, sondern dabei hilft, die richtige Fokus-Methode zu finden."',mission_h:'🎯 Unsere Mission',mission:'Millionen von Menschen kämpfen täglich mit Ablenkung und Prokrastination. Timer-24.com verbindet klassische Zeitwerkzeuge mit modernen Produktivitätsmethoden und einem Design, das Ruhe und Konzentration fördert.',vision_h:'💡 Unsere Vision',vision:'Wir glauben, dass gutes Zeitmanagement keine Frage der Willenskraft ist – sondern der richtigen Werkzeuge. In Zukunft planen wir Cloud-Synchronisierung, Kalenderintegration und KI-gestützte Fokusanalysen.',values_h:'⭐ Unsere Werte',values:[{i:'⚡',t:'Geschwindigkeit',d:'Reines HTML/CSS/JS – lädt in unter 1 Sekunde.'},{i:'🔒',t:'Datenschutz',d:'Alle Daten bleiben lokal. Keine Cloud, kein Tracking.'},{i:'🎨',t:'Design',d:'Ruhig, minimalistisch, auf Fokus ausgerichtet.'},{i:'📚',t:'Wissen',d:'Fundiertes Hintergrundwissen zu jeder Methode.'},{i:'♿',t:'Barrierefreiheit',d:'Tastatursteuerung, ARIA-Labels, Skip-Links.'},{i:'🆓',t:'Kostenlos',d:'Alle Funktionen kostenlos, ohne Paywall, ohne Abo.'}],
+road_h:'🗺 Roadmap',road:[{y:'2025',t:'Launch von Timer-24.com',d:'9 Timer-Bereiche, 7 Fokus-Methoden, Statistik und Fokus-Assistent.'},{y:'2026',t:'Mehrsprachigkeit',d:'11 Sprachen – jetzt vollständig implementiert.'},{y:'2026',t:'Hintergrundgeräusche',d:'Echte Entspannungsgeräusche direkt im Browser.'},{y:'2027',t:'Cloud-Sync',d:'Optionale Accounts für geräteübergreifende Synchronisierung.'}]},
+en:{h1:'👥 About Us',sub:'Timer-24.com is more than a timer site. We are a digital productivity assistant.',quote:'"The first German-language platform that not only measures time, but helps find the right focus method."',mission_h:'🎯 Our Mission',mission:'Millions of people struggle daily with distraction and procrastination. Timer-24.com combines classic time tools with modern productivity methods and a design that promotes calm and concentration.',vision_h:'💡 Our Vision',vision:'We believe that good time management is not a matter of willpower – but of the right tools. In the future we plan cloud synchronization, calendar integration and AI-powered focus analytics.',values_h:'⭐ Our Values',values:[{i:'⚡',t:'Speed',d:'Pure HTML/CSS/JS – loads in under 1 second.'},{i:'🔒',t:'Privacy',d:'All data stays local. No cloud, no tracking.'},{i:'🎨',t:'Design',d:'Calm, minimalist, focused on concentration.'},{i:'📚',t:'Knowledge',d:'In-depth background on every method.'},{i:'♿',t:'Accessibility',d:'Keyboard control, ARIA labels, skip links.'},{i:'🆓',t:'Free',d:'All features free, no paywall, no subscription.'}],
+road_h:'🗺 Roadmap',road:[{y:'2025',t:'Launch of Timer-24.com',d:'9 timer areas, 7 focus methods, statistics and focus assistant.'},{y:'2026',t:'Multilingual',d:'11 languages – now fully implemented.'},{y:'2026',t:'Background sounds',d:'Real relaxation sounds directly in the browser.'},{y:'2027',t:'Cloud sync',d:'Optional accounts for cross-device synchronization.'}]},
+fr:{h1:'👥 À propos',sub:'Timer-24.com est plus qu\'un simple site de minuteries. Nous sommes un assistant de productivité numérique.',quote:'"La première plateforme germanophone qui non seulement mesure le temps, mais aide à trouver la bonne méthode de focus."',mission_h:'🎯 Notre mission',mission:'Des millions de personnes luttent quotidiennement contre la distraction et la procrastination. Timer-24.com combine des outils de temps classiques avec des méthodes de productivité modernes.',vision_h:'💡 Notre vision',vision:'Nous croyons que la bonne gestion du temps n\'est pas une question de volonté, mais des bons outils.',values_h:'⭐ Nos valeurs',values:[{i:'⚡',t:'Rapidité',d:'HTML/CSS/JS pur – chargement en moins d\'1 seconde.'},{i:'🔒',t:'Confidentialité',d:'Toutes les données restent locales. Pas de cloud, pas de tracking.'},{i:'🎨',t:'Design',d:'Calme, minimaliste, axé sur la concentration.'},{i:'🆓',t:'Gratuit',d:'Toutes les fonctionnalités gratuites, sans abonnement.'}],
+road_h:'🗺 Feuille de route',road:[{y:'2025',t:'Lancement de Timer-24.com',d:'9 zones, 7 méthodes, statistiques et assistant.'},{y:'2026',t:'Multilingue',d:'11 langues – maintenant entièrement implémentées.'},{y:'2027',t:'Synchronisation cloud',d:'Comptes optionnels pour la synchronisation multi-appareils.'}]},
+es:{h1:'👥 Acerca de',sub:'Timer-24.com es más que un sitio de temporizadores. Somos un asistente de productividad digital.',quote:'"La primera plataforma de habla alemana que no solo mide el tiempo, sino que ayuda a encontrar el método de enfoque correcto."',mission_h:'🎯 Nuestra misión',mission:'Millones de personas luchan diariamente con la distracción y la procrastinación. Timer-24.com combina herramientas de tiempo clásicas con métodos de productividad modernos.',vision_h:'💡 Nuestra visión',vision:'Creemos que la buena gestión del tiempo no es cuestión de fuerza de voluntad, sino de las herramientas adecuadas.',values_h:'⭐ Nuestros valores',values:[{i:'⚡',t:'Velocidad',d:'HTML/CSS/JS puro – carga en menos de 1 segundo.'},{i:'🔒',t:'Privacidad',d:'Todos los datos permanecen locales.'},{i:'🆓',t:'Gratuito',d:'Todas las funciones gratuitas, sin suscripción.'}],
+road_h:'🗺 Hoja de ruta',road:[{y:'2025',t:'Lanzamiento',d:'9 áreas, 7 métodos, estadísticas y asistente.'},{y:'2026',t:'Multilingüe',d:'11 idiomas implementados.'},{y:'2027',t:'Sincronización cloud',d:'Cuentas opcionales para sincronización.'}]},
+it:{h1:'👥 Chi siamo',sub:'Timer-24.com è più di un sito di timer. Siamo un assistente di produttività digitale.',quote:'"La prima piattaforma di lingua tedesca che non solo misura il tempo, ma aiuta a trovare il metodo di focus giusto."',mission_h:'🎯 La nostra missione',mission:'Milioni di persone lottano quotidianamente con le distrazioni. Timer-24.com combina strumenti di tempo classici con metodi di produttività moderni.',vision_h:'💡 La nostra visione',vision:'Crediamo che una buona gestione del tempo non sia una questione di forza di volontà, ma degli strumenti giusti.',values_h:'⭐ I nostri valori',values:[{i:'⚡',t:'Velocità',d:'HTML/CSS/JS puro – carica in meno di 1 secondo.'},{i:'🔒',t:'Privacy',d:'Tutti i dati rimangono locali.'},{i:'🆓',t:'Gratuito',d:'Tutte le funzionalità gratuite, senza abbonamento.'}],
+road_h:'🗺 Roadmap',road:[{y:'2025',t:'Lancio di Timer-24.com',d:'9 aree, 7 metodi, statistiche e assistente.'},{y:'2026',t:'Multilingue',d:'11 lingue implementate.'},{y:'2027',t:'Cloud sync',d:'Account opzionali per sincronizzazione.'}]},
+pt:{h1:'👥 Sobre nós',sub:'Timer-24.com é mais do que um site de temporizadores. Somos um assistente de produtividade digital.',quote:'"A primeira plataforma em língua alemã que não só mede o tempo, mas ajuda a encontrar o método de foco certo."',mission_h:'🎯 A nossa missão',mission:'Milhões de pessoas lutam diariamente com distração e procrastinação. Timer-24.com combina ferramentas clássicas com métodos modernos de produtividade.',vision_h:'💡 A nossa visão',vision:'Acreditamos que uma boa gestão do tempo não é uma questão de força de vontade, mas das ferramentas certas.',values_h:'⭐ Os nossos valores',values:[{i:'⚡',t:'Velocidade',d:'HTML/CSS/JS puro – carrega em menos de 1 segundo.'},{i:'🔒',t:'Privacidade',d:'Todos os dados ficam locais.'},{i:'🆓',t:'Gratuito',d:'Todas as funções gratuitas, sem subscrição.'}],
+road_h:'🗺 Roteiro',road:[{y:'2025',t:'Lançamento',d:'9 áreas, 7 métodos, estatísticas e assistente.'},{y:'2026',t:'Multilingue',d:'11 idiomas implementados.'},{y:'2027',t:'Sincronização cloud',d:'Contas opcionais para sincronização.'}]},
+nl:{h1:'👥 Over ons',sub:'Timer-24.com is meer dan een timersite. We zijn een digitale productiviteitsassistent.',quote:'"Het eerste Duitstalige platform dat niet alleen tijd meet, maar helpt de juiste focusmethode te vinden."',mission_h:'🎯 Onze missie',mission:'Miljoenen mensen worstelen dagelijks met afleiding en uitstelgedrag. Timer-24.com combineert klassieke tijdtools met moderne productiviteitsmethoden.',vision_h:'💡 Onze visie',vision:'We geloven dat goed tijdbeheer geen kwestie van wilskracht is, maar van de juiste tools.',values_h:'⭐ Onze waarden',values:[{i:'⚡',t:'Snelheid',d:'Puur HTML/CSS/JS – laadt in minder dan 1 seconde.'},{i:'🔒',t:'Privacy',d:'Alle gegevens blijven lokaal.'},{i:'🆓',t:'Gratis',d:'Alle functies gratis, geen abonnement.'}],
+road_h:'🗺 Roadmap',road:[{y:'2025',t:'Lancering',d:'9 secties, 7 methoden, statistieken en assistent.'},{y:'2026',t:'Meertalig',d:'11 talen geïmplementeerd.'},{y:'2027',t:'Cloud sync',d:'Optionele accounts voor synchronisatie.'}]},
+pl:{h1:'👥 O nas',sub:'Timer-24.com to więcej niż strona z timerami. Jesteśmy cyfrowym asystentem produktywności.',quote:'"Pierwsza platforma w języku niemieckim, która nie tylko mierzy czas, ale pomaga znaleźć właściwą metodę skupienia."',mission_h:'🎯 Nasza misja',mission:'Miliony ludzi codziennie zmagają się z rozpraszaniem i prokrastynacją. Timer-24.com łączy klasyczne narzędzia czasowe z nowoczesnymi metodami produktywności.',vision_h:'💡 Nasza wizja',vision:'Wierzymy, że dobra organizacja czasu to nie kwestia silnej woli, lecz właściwych narzędzi.',values_h:'⭐ Nasze wartości',values:[{i:'⚡',t:'Szybkość',d:'Czysty HTML/CSS/JS – ładuje się w mniej niż 1 sekundę.'},{i:'🔒',t:'Prywatność',d:'Wszystkie dane pozostają lokalne.'},{i:'🆓',t:'Bezpłatny',d:'Wszystkie funkcje bezpłatne, bez subskrypcji.'}],
+road_h:'🗺 Mapa drogowa',road:[{y:'2025',t:'Uruchomienie',d:'9 sekcji, 7 metod, statystyki i asystent.'},{y:'2026',t:'Wielojęzyczność',d:'11 języków wdrożonych.'},{y:'2027',t:'Synchronizacja cloud',d:'Opcjonalne konta do synchronizacji.'}]},
+tr:{h1:'👥 Hakkımızda',sub:"Timer-24.com bir zamanlayıcı sitesinden fazlasıdır. Dijital bir verimlilik asistanıyız.",quote:'"Yalnızca zaman ölçmekle kalmayan, doğru odak yöntemini bulmaya yardımcı olan ilk Almanca platform."',mission_h:'🎯 Misyonumuz',mission:'Milyonlarca insan her gün dikkat dağınıklığı ve ertelemeyle mücadele ediyor. Timer-24.com klasik zaman araçlarını modern verimlilik yöntemleriyle birleştirir.',vision_h:'💡 Vizyonumuz',vision:'İyi zaman yönetiminin irade meselesi değil, doğru araçlar meselesi olduğuna inanıyoruz.',values_h:'⭐ Değerlerimiz',values:[{i:'⚡',t:'Hız',d:'Saf HTML/CSS/JS – 1 saniyeden kısa sürede yüklenir.'},{i:'🔒',t:'Gizlilik',d:'Tüm veriler yerel kalır.'},{i:'🆓',t:'Ücretsiz',d:'Tüm özellikler ücretsiz, abonelik yok.'}],
+road_h:'🗺 Yol haritası',road:[{y:'2025',t:'Timer-24.com lansmanı',d:'9 bölüm, 7 yöntem, istatistikler ve asistan.'},{y:'2026',t:'Çok dilli',d:'11 dil uygulandı.'},{y:'2027',t:'Bulut senkronizasyonu',d:'Senkronizasyon için isteğe bağlı hesaplar.'}]},
+ar:{h1:'👥 من نحن',sub:'Timer-24.com أكثر من مجرد موقع للمؤقتات. نحن مساعد إنتاجية رقمي.',quote:'"أول منصة ناطقة بالألمانية لا تقيس الوقت فحسب، بل تساعد في إيجاد طريقة التركيز المناسبة."',mission_h:'🎯 مهمتنا',mission:'يكافح الملايين يومياً مع التشتت والتسويف. يجمع Timer-24.com أدوات الوقت الكلاسيكية مع أساليب الإنتاجية الحديثة.',vision_h:'💡 رؤيتنا',vision:'نؤمن أن إدارة الوقت الجيدة ليست مسألة إرادة، بل مسألة الأدوات الصحيحة.',values_h:'⭐ قيمنا',values:[{i:'⚡',t:'السرعة',d:'HTML/CSS/JS نقي – يُحمَّل في أقل من ثانية.'},{i:'🔒',t:'الخصوصية',d:'جميع البيانات تبقى محلية.'},{i:'🆓',t:'مجاني',d:'جميع الميزات مجانية، دون اشتراك.'}],
+road_h:'🗺 خارطة الطريق',road:[{y:'2025',t:'إطلاق Timer-24.com',d:'9 أقسام، 7 طرق، إحصاءات ومساعد.'},{y:'2026',t:'متعدد اللغات',d:'11 لغة مطبّقة.'},{y:'2027',t:'مزامنة السحابة',d:'حسابات اختيارية للمزامنة عبر الأجهزة.'}]},
+zh:{h1:'👥 关于我们',sub:'Timer-24.com不仅仅是一个计时器网站。我们是一个数字生产力助手。',quote:'"第一个德语平台，不仅测量时间，还帮助找到正确的专注方法。"',mission_h:'🎯 我们的使命',mission:'数百万人每天都在与注意力分散和拖延症作斗争。Timer-24.com将经典时间工具与现代生产力方法相结合。',vision_h:'💡 我们的愿景',vision:'我们相信，良好的时间管理不是意志力问题，而是拥有正确工具的问题。',values_h:'⭐ 我们的价值观',values:[{i:'⚡',t:'速度',d:'纯HTML/CSS/JS – 1秒内加载完成。'},{i:'🔒',t:'隐私',d:'所有数据保留在本地，无云端，无跟踪。'},{i:'🆓',t:'免费',d:'所有功能免费，无付费墙，无订阅。'}],
+road_h:'🗺 路线图',road:[{y:'2025',t:'Timer-24.com上线',d:'9个计时器区域、7种专注方法、统计和助手。'},{y:'2026',t:'多语言',d:'11种语言已完全实现。'},{y:'2027',t:'云同步',d:'可选账户用于跨设备同步。'}]}
+};
+
+function renderPage(){
+  const d=UD[cl]||UD.de;
+  document.title='Über uns – Timer-24.com';
+  const vals=d.values.map(v=>`<div class="vcard"><div class="vi">${v.i}</div><div class="vt">${v.t}</div><div class="vd">${v.d}</div></div>`).join('');
+  const road=d.road.map(r=>`<div class="ri2"><div class="ry">${r.y}</div><div class="rdot3"></div><div><div class="rt2">${r.t}</div><div class="rd4">${r.d}</div></div></div>`).join('');
+  document.getElementById('pm').innerHTML=`
+    <div class="ph"><h1>${d.h1}</h1><p>${d.sub}</p></div>
+    <div class="qbox">${d.quote}</div>
+    <div class="card" style="margin-bottom:14px"><div class="card-body"><h2 style="margin-top:0">${d.mission_h}</h2><p>${d.mission}</p><h2>${d.vision_h}</h2><p>${d.vision}</p></div></div>
+    <h2 style="margin-bottom:12px">${d.values_h}</h2>
+    <div class="vg">${vals}</div>
+    <h2 style="margin:20px 0 12px">${d.road_h}</h2>
+    <div class="card"><div class="card-body"><div class="rl">${road}</div></div></div>`;
+}
+
+
+cl=getLang();buildLM();applyNav();renderPage();
+
 </script>
 </body>
 </html>
