@@ -297,11 +297,12 @@ function renderPage(lang) {
     '<div class="card"><h2 style="margin-top:0">' + d.infoT + '</h2><p>' + d.infoB + '</p></div>';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// Script is at end of <body> – DOM already ready, call directly
+(function() {
   const lang = getLang();
   applyNav(lang);
   renderPage(lang);
-});
+})();
 </script>
 </body>
 </html>

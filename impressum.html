@@ -239,11 +239,12 @@ function renderPage(lang) {
     '</div>';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// Script is at end of <body> – DOM already ready, call directly
+(function() {
   const lang = getLang();
   applyNav(lang);
   renderPage(lang);
-});
+})();
 </script>
 </body>
 </html>

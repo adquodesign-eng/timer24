@@ -231,6 +231,10 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
 #ck-ok:hover{background:#0095ee;}
 #ck-no{padding:8px 16px;border-radius:7px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;background:transparent;color:#9CA3AF;border:1px solid #4B5563;}
 #ck-no:hover{color:#fff;border-color:#9CA3AF;}
+
+.lang-sel-wrap{flex-shrink:0;}
+#lang-select{padding:5px 9px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--txt);cursor:pointer;outline:none;transition:border-color var(--t);}
+#lang-select:hover,#lang-select:focus{border-color:var(--bl);}
 </style>
 </head>
 <body>
@@ -248,9 +252,20 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <li><a href="wissen.html">📚 Wissen</a></li>
     </ul></nav>
     <div class="hr">
-      <div class="lw" id="lw">
-        <button class="lb" id="lb" onclick="toggleL()">🇩🇪 DE ▼</button>
-        <ul class="lm" id="lm"></ul>
+      <div class="lang-sel-wrap">
+        <select id="lang-select" onchange="setLang(this.value)">
+          <option value="de">🇩🇪 DE</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="es">🇪🇸 ES</option>
+          <option value="it">🇮🇹 IT</option>
+          <option value="pt">🇵🇹 PT</option>
+          <option value="nl">🇳🇱 NL</option>
+          <option value="pl">🇵🇱 PL</option>
+          <option value="tr">🇹🇷 TR</option>
+          <option value="ar">🇸🇦 AR</option>
+          <option value="zh">🇨🇳 ZH</option>
+        </select>
       </div>
       <button class="bi" id="thbtn">🌙</button>
       <button class="bi" onclick="toggleFS()">⛶</button>
@@ -993,16 +1008,11 @@ function setLang(lang) {
   const u = new URL(location);
   u.searchParams.set('lang', lang);
   history.replaceState({}, '', u);
-  buildLM();
+  const _sel=document.getElementById('lang-select');if(_sel)_sel.value=lang;
   applyLang();
   closeL();
 }
 
-function buildLM() {
-  document.getElementById('lm').innerHTML = Object.entries(L).map(([k, v]) =>
-    `<li class="${k === cl ? 'sel' : ''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`
-  ).join('');
-}
 
 function toggleL() { document.getElementById('lm').classList.toggle('open'); }
 function closeL() { document.getElementById('lm').classList.remove('open'); }
@@ -1016,7 +1026,7 @@ function applyLang() {
   document.documentElement.dir = t.dir || 'ltr';
   document.documentElement.lang = cl;
   // lang button
-  document.getElementById('lb').textContent = `${t.f} ${cl.toUpperCase()} ▼`;
+  const _s2=document.getElementById('lang-select');if(_s2)_s2.value=cl;
   // nav links
   document.querySelectorAll('#mnl a').forEach((a, i) => { if (t.nav[i]) a.textContent = t.nav[i]; });
   document.querySelectorAll('#mml a').forEach((a, i) => { if (t.nav[i]) a.textContent = t.nav[i]; });
@@ -1052,8 +1062,8 @@ function applyLang() {
 
 function initLang() {
   cl = getLang();
-  buildLM();
   applyLang();
+  const _s=document.getElementById('lang-select');if(_s)_s.value=cl;
 }
 
 
@@ -1333,7 +1343,7 @@ setTimeout(()=>{if(!localStorage.getItem('t24_kbh')){toast(gl().kbhint);ls('t24_
 </script>
 
 <div id="ck">
-  <p>Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung unseres Angebots. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <p id="ck-p">Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung unseres Angebots. Mehr Infos in der <a id="ck-ds-link" href="datenschutz.html">Datenschutzerklärung</a>.</p>
   <div class="ck-btns">
     <button id="ck-ok" onclick="acceptCookies('all')">Alle akzeptieren</button>
     <button id="ck-no" onclick="acceptCookies('necessary')">Nur notwendige</button>
