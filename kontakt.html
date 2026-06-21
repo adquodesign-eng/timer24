@@ -1,344 +1,280 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kontakt – Timer-24.com</title>
-<meta name="description" content="Kontaktiere das Team von Timer-24.com. Feedback, Fehlermeldungen und Verbesserungsvorschläge willkommen.">
+<meta name="description" content="Kontakt – Timer-24.com. Feedback, Fehlermeldungen, Datenschutzanfragen.">
+<meta name="robots" content="noindex,follow">
 <style>
-:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;}
+:root{--bg:#F6F8FC;--sur:#FFFFFF;--txt:#1F2937;--mut:#6B7280;--bl:#1BA6FF;--bls:#E8F4FF;--cu:#C77A4A;--brd:#E5E7EB;--gl:rgba(27,166,255,.06);--r:12px;--rs:8px;--t:.18s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);background-image:linear-gradient(rgba(27,166,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(27,166,255,.06) 1px,transparent 1px);background-size:40px 40px;color:var(--text);min-height:100vh;padding:0 0 80px;}
-header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
-.logo{font-weight:800;font-size:1.1rem;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px;}
-.logo-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
-.logo em{color:var(--blue-bright);font-style:normal;}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:40px 40px;padding-bottom:90px;}
+header{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;}
+.hi{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:14px;}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);font-weight:800;font-size:18px;flex-shrink:0;}
+.logo-i{width:32px;height:32px;background:linear-gradient(135deg,var(--bl),#0088dd);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
+.logo em{color:var(--bl);font-style:normal;}
 .navl{display:flex;gap:5px;align-items:center;}
-.navl a{padding:6px 11px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);transition:all .18s ease;white-space:nowrap;}
-.navl a:hover{color:var(--blue-bright);background:var(--blue-soft);}
-.lang-wrap{position:relative;margin-left:auto;flex-shrink:0;}
-.lang-btn{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border:1px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--text);transition:all .18s ease;}
-.lang-btn:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
-.lang-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.13);list-style:none;padding:6px;min-width:158px;z-index:999;max-height:320px;overflow-y:auto;}
-[dir=rtl] .lang-menu{right:auto;left:0;}
-.lang-menu.open{display:block;}
-.lang-menu li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background .15s;}
-.lang-menu li:hover{background:var(--bg-deep);}
-.lang-menu li.sel{color:var(--blue-bright);background:var(--blue-soft);font-weight:700;}
+.navl a{padding:6px 11px;border-radius:var(--rs);text-decoration:none;font-size:13px;font-weight:500;color:var(--mut);white-space:nowrap;transition:all var(--t);}
+.navl a:hover{color:var(--bl);background:var(--bls);}
+.lw{position:relative;margin-left:auto;flex-shrink:0;}
+.lb{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--txt);transition:all var(--t);}
+.lb:hover{border-color:var(--bl);color:var(--bl);}
+.lm{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--brd);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.13);list-style:none;padding:6px;min-width:158px;z-index:999;max-height:340px;overflow-y:auto;}
+[dir=rtl] .lm{right:auto;left:0;}
+.lm.open{display:block;}
+.lm li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:background var(--t);}
+.lm li:hover{background:var(--bg);}
+.lm li.sel{color:var(--bl);background:var(--bls);font-weight:700;}
 main{max-width:760px;margin:32px auto;padding:0 20px;}
-.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:28px 32px;margin-bottom:20px;}
+.card{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);padding:28px 32px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
 h1{font-size:1.6rem;font-weight:800;margin-bottom:6px;}
-h2{font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--blue-bright);}
+h2{font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--bl);}
 h2:first-child{margin-top:0;}
-p{font-size:.9rem;line-height:1.8;margin-bottom:10px;color:var(--muted);}
+h3{font-size:.95rem;font-weight:700;margin:14px 0 6px;}
+p{font-size:.9rem;line-height:1.8;margin-bottom:10px;color:var(--mut);}
 p:last-child{margin-bottom:0;}
-p strong{color:var(--text);}
-a{color:var(--blue-bright);text-decoration:none;}
+p strong{color:var(--txt);}
+a{color:var(--bl);text-decoration:none;}
 a:hover{text-decoration:underline;}
-.meta{font-size:.78rem;color:var(--muted);margin-bottom:20px;}
-/* contact card grid */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px;}
-@media(max-width:520px){.contact-grid{grid-template-columns:1fr;}}
-.contact-card{display:flex;align-items:flex-start;gap:14px;background:var(--bg-deep);border:1px solid var(--border);border-radius:10px;padding:18px 20px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s;}
-.contact-card:hover{border-color:var(--blue-bright);box-shadow:0 2px 12px rgba(27,166,255,.1);}
-.contact-card.hl{border-color:rgba(27,166,255,.3);background:var(--blue-soft);}
-.cc-icon{width:40px;height:40px;border-radius:8px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.contact-card.hl .cc-icon{background:var(--blue-bright);border-color:var(--blue-bright);}
-.cc-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;}
-.cc-value{font-size:.82rem;color:var(--blue-bright);margin-bottom:4px;}
-.cc-note{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
-/* cookie banner */
-
-
-
-
-
-footer{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:8px 16px;text-align:center;font-size:.72rem;color:var(--muted);z-index:90;}
-footer a{color:var(--muted);text-decoration:none;margin:0 5px;}
-footer a:hover{color:var(--blue-bright);}
-@media(max-width:600px){.card{padding:20px 16px;}main{padding:0 14px;}.navl{display:none;}}
-
+ul{padding-left:18px;margin-bottom:10px;}
+li{font-size:.88rem;line-height:1.7;color:var(--mut);}
+.meta{font-size:.78rem;color:var(--mut);margin-bottom:20px;}
+.info-box{background:var(--bls);border-left:3px solid var(--bl);border-radius:0 6px 6px 0;padding:10px 14px;margin:12px 0;font-size:.85rem;line-height:1.6;color:var(--txt);}
 /* Cookie Banner */
 #ck{display:none;position:fixed;bottom:0;left:0;right:0;background:#1F2937;color:#fff;padding:14px 24px;z-index:1000;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 -2px 12px rgba(0,0,0,.18);}
 #ck p{font-size:.82rem;flex:1 1 260px;margin:0;color:rgba(255,255,255,.88);line-height:1.5;}
 #ck p a{color:#93C5FD;text-decoration:underline;}
 .ck-btns{display:flex;gap:8px;flex-shrink:0;}
-#ck-ok{padding:8px 18px;border-radius:7px;border:none;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:700;background:#1BA6FF;color:#fff;}
-#ck-ok:hover{background:#0095ee;}
+#ck-ok{padding:8px 18px;border-radius:7px;border:none;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:700;background:var(--bl);color:#fff;}
 #ck-no{padding:8px 16px;border-radius:7px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;background:transparent;color:#9CA3AF;border:1px solid #4B5563;}
-#ck-no:hover{color:#fff;border-color:#9CA3AF;}
+footer{position:fixed;bottom:0;left:0;right:0;background:var(--sur);border-top:1px solid var(--brd);padding:7px 16px;text-align:center;font-size:12px;color:var(--mut);z-index:90;}
+footer a{color:var(--mut);text-decoration:none;margin:0 5px;}
+footer a:hover{color:var(--bl);}
+@media(max-width:600px){.card{padding:20px 16px;}main{padding:0 14px;}.navl{display:none;}}
+
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px;}
+@media(max-width:500px){.cg{grid-template-columns:1fr;}}
+.cc{display:flex;align-items:flex-start;gap:14px;background:var(--bg);border:1px solid var(--brd);border-radius:10px;padding:18px 20px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s;}
+.cc:hover{border-color:var(--bl);box-shadow:0 2px 12px rgba(27,166,255,.1);}
+.cc.hl{border-color:rgba(27,166,255,.3);background:var(--bls);}
+.cc-i{width:40px;height:40px;border-radius:8px;background:var(--sur);border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.cc.hl .cc-i{background:var(--bl);border-color:var(--bl);}
+.cc-t{font-size:.9rem;font-weight:700;color:var(--txt);margin-bottom:3px;}
+.cc-v{font-size:.82rem;color:var(--bl);margin-bottom:4px;}
+.cc-n{font-size:.72rem;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;}
 </style>
 </head>
 <body>
-
 <header>
-  <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<em>-24</em></a>
-  <nav class="navl">
-    <a href="timer.html" id="nl-timer">Timer</a>
-    <a href="wissen.html" id="nl-wissen">Wissen</a>
-    <a href="faq.html" id="nl-faq">FAQ</a>
-    <a href="hilfe.html" id="nl-hilfe">Hilfe</a>
-  </nav>
-  <div class="lang-wrap" id="langWrap">
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">🇩🇪 DE ▼</button>
-    <ul class="lang-menu" id="langMenu"></ul>
+  <div class="hi">
+    <a href="index.html" class="logo"><div class="logo-i">⏱</div>Timer<em>-24</em></a>
+    <nav class="navl">
+      <a href="timer.html" id="nl-timer">Timer</a>
+      <a href="wissen.html" id="nl-wissen">Wissen</a>
+      <a href="faq.html" id="nl-faq">FAQ</a>
+      <a href="hilfe.html" id="nl-hilfe">Hilfe</a>
+    </nav>
+    <div class="lw" id="lw">
+      <button class="lb" id="lb" onclick="toggleL()">🇩🇪 DE ▼</button>
+      <ul class="lm" id="lm"></ul>
+    </div>
   </div>
 </header>
-
-<main id="page-main"></main>
-
+<main id="pm"></main>
+<footer>
+  <a href="timer.html" id="fl-timer">Timer</a> |
+  <a href="wissen.html" id="fl-wissen">Wissen</a> |
+  <a href="faq.html" id="fl-faq">FAQ</a> |
+  <a href="hilfe.html" id="fl-hilfe">Hilfe</a> |
+  <a href="kontakt.html" id="fl-kontakt">Kontakt</a> |
+  <a href="ueber-uns.html" id="fl-ueber">Über uns</a> |
+  <a href="impressum.html" id="fl-impressum">Impressum</a> |
+  <a href="datenschutz.html" id="fl-datenschutz">Datenschutz</a>
+  <br><span id="fl-copy">© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit</span>
+</footer>
 <div id="ck">
-  <p>Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung unseres Angebots. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <p id="ck-p">Wir nutzen Cookies für Werbung (Google AdSense). Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
   <div class="ck-btns">
     <button id="ck-ok" onclick="acceptCookies('all')">Alle akzeptieren</button>
     <button id="ck-no" onclick="acceptCookies('necessary')">Nur notwendige</button>
   </div>
 </div>
 <script>
-function acceptCookies(v){
-  localStorage.setItem('cookie-consent',v);
-  document.getElementById('ck').style.display='none';
-}
-if(!localStorage.getItem('cookie-consent'))
-  document.getElementById('ck').style.display='flex';
-</script>
 
-<footer>
-  <div>
-    <a href="timer.html" id="fl-timer">Timer</a> |
-    <a href="wissen.html" id="fl-wissen">Wissenswertes</a> |
-    <a href="faq.html" id="fl-faq">FAQ</a> |
-    <a href="hilfe.html" id="fl-hilfe">Hilfe</a> |
-    <a href="kontakt.html" id="fl-kontakt">Kontakt</a> |
-    <a href="ueber-uns.html" id="fl-ueber">Über uns</a> |
-    <a href="impressum.html" id="fl-impressum">Impressum</a> |
-    <a href="datenschutz.html" id="fl-datenschutz">Datenschutz</a>
-  </div>
-  <div id="fl-copy" style="margin-top:2px">© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit</div>
-</footer>
-
-<script>
 const LANGS={de:{f:'🇩🇪',n:'Deutsch'},en:{f:'🇬🇧',n:'English'},fr:{f:'🇫🇷',n:'Français'},es:{f:'🇪🇸',n:'Español'},it:{f:'🇮🇹',n:'Italiano'},pt:{f:'🇵🇹',n:'Português'},nl:{f:'🇳🇱',n:'Nederlands'},pl:{f:'🇵🇱',n:'Polski'},tr:{f:'🇹🇷',n:'Türkçe'},ar:{f:'🇸🇦',n:'العربية'},zh:{f:'🇨🇳',n:'中文'}};
-
 const NAV={
-  de:{timer:'Timer',wissen:'Wissen',faq:'FAQ',hilfe:'Hilfe',kontakt:'Kontakt',ueber:'Über uns',impressum:'Impressum',datenschutz:'Datenschutz',copy:'© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit',ck:['Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung des Angebots.','Alle akzeptieren','Nur notwendige']},
-  en:{timer:'Timer',wissen:'Knowledge',faq:'FAQ',hilfe:'Help',kontakt:'Contact',ueber:'About',impressum:'Imprint',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy',ck:['We use cookies for advertising (Google AdSense) and to improve our service.','Accept all','Necessary only']},
-  fr:{timer:'Minuterie',wissen:'Savoir',faq:'FAQ',hilfe:'Aide',kontakt:'Contact',ueber:'À propos',impressum:'Mentions légales',datenschutz:'Confidentialité',copy:"© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude",ck:["Nous utilisons des cookies pour la publicité et l'amélioration du service.",'Tout accepter','Nécessaires seulement']},
-  es:{timer:'Temporizador',wissen:'Conocimiento',faq:'FAQ',hilfe:'Ayuda',kontakt:'Contacto',ueber:'Acerca de',impressum:'Aviso legal',datenschutz:'Privacidad',copy:'© 2025 Timer-24.com · Cálculos locales · Sin garantía de exactitud',ck:['Utilizamos cookies para publicidad y mejorar el servicio.','Aceptar todo','Solo necesarias']},
-  it:{timer:'Contatore',wissen:'Conoscenza',faq:'FAQ',hilfe:'Aiuto',kontakt:'Contatto',ueber:'Chi siamo',impressum:'Note legali',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · Calcoli locali · Nessuna garanzia',ck:['Utilizziamo cookie per la pubblicità e migliorare il servizio.','Accetta tutto','Solo necessari']},
-  pt:{timer:'Temporizador',wissen:'Conhecimento',faq:'FAQ',hilfe:'Ajuda',kontakt:'Contacto',ueber:'Sobre nós',impressum:'Aviso legal',datenschutz:'Privacidade',copy:'© 2025 Timer-24.com · Cálculos locais · Sem garantia',ck:['Usamos cookies para publicidade e melhorar o serviço.','Aceitar tudo','Somente necessários']},
-  nl:{timer:'Timer',wissen:'Kennis',faq:'FAQ',hilfe:'Hulp',kontakt:'Contact',ueber:'Over ons',impressum:'Impressum',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · Berekeningen lokaal · Geen garantie',ck:['We gebruiken cookies voor advertenties en verbetering van de dienst.','Alles accepteren','Alleen noodzakelijk']},
-  pl:{timer:'Timer',wissen:'Wiedza',faq:'FAQ',hilfe:'Pomoc',kontakt:'Kontakt',ueber:'O nas',impressum:'Informacje prawne',datenschutz:'Prywatność',copy:'© 2025 Timer-24.com · Obliczenia lokalne · Bez gwarancji',ck:['Używamy plików cookie do reklam i ulepszania serwisu.','Akceptuj wszystkie','Tylko niezbędne']},
-  tr:{timer:'Zamanlayıcı',wissen:'Bilgi',faq:'SSS',hilfe:'Yardım',kontakt:'İletişim',ueber:'Hakkımızda',impressum:'Künye',datenschutz:'Gizlilik',copy:'© 2025 Timer-24.com · Hesaplamalar tarayıcıda · Garanti yoktur',ck:['Reklam ve hizmet iyileştirmesi için çerezler kullanıyoruz.','Tümünü kabul et','Yalnızca gerekli']},
-  ar:{timer:'المؤقت',wissen:'المعرفة',faq:'الأسئلة الشائعة',hilfe:'المساعدة',kontakt:'اتصل بنا',ueber:'من نحن',impressum:'بيانات المشغّل',datenschutz:'الخصوصية',copy:'© 2025 Timer-24.com · العمليات محلية · لا ضمان على الدقة',ck:['نستخدم ملفات تعريف الارتباط للإعلانات وتحسين الخدمة.','قبول الكل','الضرورية فقط']},
-  zh:{timer:'计时器',wissen:'知识',faq:'常见问题',hilfe:'帮助',kontakt:'联系我们',ueber:'关于我们',impressum:'版权信息',datenschutz:'隐私政策',copy:'© 2025 Timer-24.com · 本地计算 · 不保证准确性',ck:['我们使用Cookie用于广告和改善服务。','全部接受','仅必要']}
+  de:{timer:'Timer',wissen:'Wissen',faq:'FAQ',hilfe:'Hilfe',kontakt:'Kontakt',ueber:'Über uns',impressum:'Impressum',datenschutz:'Datenschutz',copy:'© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit',ck:'Wir nutzen Cookies für Werbung (Google AdSense). Mehr Infos in der [DS].'},
+  en:{timer:'Timer',wissen:'Knowledge',faq:'FAQ',hilfe:'Help',kontakt:'Contact',ueber:'About',impressum:'Imprint',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy',ck:'We use cookies for advertising (Google AdSense). See our [DS] for details.'},
+  fr:{timer:'Minuterie',wissen:'Savoir',faq:'FAQ',hilfe:'Aide',kontakt:'Contact',ueber:'À propos',impressum:'Mentions légales',datenschutz:'Confidentialité',copy:"© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude",ck:'Nous utilisons des cookies pour la publicité. Voir la [DS].'},
+  es:{timer:'Temporizador',wissen:'Conocimiento',faq:'FAQ',hilfe:'Ayuda',kontakt:'Contacto',ueber:'Acerca de',impressum:'Aviso legal',datenschutz:'Privacidad',copy:'© 2025 Timer-24.com · Cálculos locales · Sin garantía de exactitud',ck:'Usamos cookies para publicidad. Ver [DS].'},
+  it:{timer:'Contatore',wissen:'Conoscenza',faq:'FAQ',hilfe:'Aiuto',kontakt:'Contatto',ueber:'Chi siamo',impressum:'Note legali',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · Calcoli locali · Nessuna garanzia',ck:'Usiamo cookie per la pubblicità. Vedi [DS].'},
+  pt:{timer:'Temporizador',wissen:'Conhecimento',faq:'FAQ',hilfe:'Ajuda',kontakt:'Contacto',ueber:'Sobre nós',impressum:'Aviso legal',datenschutz:'Privacidade',copy:'© 2025 Timer-24.com · Cálculos locais · Sem garantia',ck:'Usamos cookies para publicidade. Ver [DS].'},
+  nl:{timer:'Timer',wissen:'Kennis',faq:'FAQ',hilfe:'Hulp',kontakt:'Contact',ueber:'Over ons',impressum:'Impressum',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · Berekeningen lokaal · Geen garantie',ck:'We gebruiken cookies voor advertenties. Zie [DS].'},
+  pl:{timer:'Timer',wissen:'Wiedza',faq:'FAQ',hilfe:'Pomoc',kontakt:'Kontakt',ueber:'O nas',impressum:'Informacje prawne',datenschutz:'Prywatność',copy:'© 2025 Timer-24.com · Obliczenia lokalne · Bez gwarancji',ck:'Używamy plików cookie do reklam. Zobacz [DS].'},
+  tr:{timer:'Zamanlayıcı',wissen:'Bilgi',faq:'SSS',hilfe:'Yardım',kontakt:'İletişim',ueber:'Hakkımızda',impressum:'Künye',datenschutz:'Gizlilik',copy:'© 2025 Timer-24.com · Hesaplamalar tarayıcıda · Garanti yoktur',ck:'Reklam için çerez kullanıyoruz. Bkz. [DS].'},
+  ar:{timer:'المؤقت',wissen:'المعرفة',faq:'الأسئلة الشائعة',hilfe:'المساعدة',kontakt:'اتصل بنا',ueber:'من نحن',impressum:'بيانات المشغّل',datenschutz:'الخصوصية',copy:'© 2025 Timer-24.com · العمليات محلية · لا ضمان على الدقة',ck:'نستخدم ملفات تعريف الارتباط للإعلانات. انظر [DS].'},
+  zh:{timer:'计时器',wissen:'知识',faq:'常见问题',hilfe:'帮助',kontakt:'联系我们',ueber:'关于我们',impressum:'版权信息',datenschutz:'隐私政策',copy:'© 2025 Timer-24.com · 本地计算 · 不保证准确性',ck:'我们使用Cookie用于广告。请参阅[DS]。'}
 };
 
-const PD={
-  de:{
-    title:'Kontakt',
-    subtitle:'Wir freuen uns über dein Feedback, Fehlermeldungen und Verbesserungsvorschläge.',
-    cards:[
-      {icon:'✉️',title:'E-Mail',value:'info@adquo-design.de',note:'Antwort meist innerhalb von 48 Std.',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Häufige Fragen',note:'Rund um die Uhr verfügbar',href:'faq.html'},
-      {icon:'🛟',title:'Hilfe',value:'Schritt-für-Schritt Anleitungen',note:'Rund um die Uhr verfügbar',href:'hilfe.html'},
-      {icon:'🛡',title:'Datenschutz',value:'Datenschutzanfragen',note:'Auskunft, Löschung & mehr',href:'datenschutz.html'}
-    ],
-    infoTitle:'Hinweis',
-    infoBody:"Timer-24.com ist ein kostenloses Angebot. Für technische Fragen schau bitte zuerst in die <a href='faq.html'>FAQ</a> und die <a href='hilfe.html'>Hilfe</a> – viele Fragen sind dort bereits beantwortet. Rechtliche Angaben findest du im <a href='impressum.html'>Impressum</a>."
-  },
-  en:{
-    title:'Contact',
-    subtitle:'We welcome your feedback, bug reports and suggestions for improvement.',
-    cards:[
-      {icon:'✉️',title:'Email',value:'info@adquo-design.de',note:'Reply usually within 48 hrs',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Frequently asked questions',note:'Available around the clock',href:'faq.html'},
-      {icon:'🛟',title:'Help',value:'Step-by-step guides',note:'Available around the clock',href:'hilfe.html'},
-      {icon:'🛡',title:'Privacy',value:'Data protection enquiries',note:'Access, deletion & more',href:'datenschutz.html'}
-    ],
-    infoTitle:'Note',
-    infoBody:"Timer-24.com is a free service. For technical questions please check the <a href='faq.html'>FAQ</a> and <a href='hilfe.html'>Help</a> pages first. Legal information can be found in the <a href='impressum.html'>Imprint</a>."
-  },
-  fr:{
-    title:'Contact',
-    subtitle:"Nous accueillons vos commentaires, rapports de bugs et suggestions d'amélioration.",
-    cards:[
-      {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Réponse généralement sous 48 h',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Questions fréquentes',note:'Disponible 24h/24',href:'faq.html'},
-      {icon:'🛟',title:'Aide',value:'Guides étape par étape',note:'Disponible 24h/24',href:'hilfe.html'},
-      {icon:'🛡',title:'Confidentialité',value:'Demandes de protection des données',note:'Accès, suppression & plus',href:'datenschutz.html'}
-    ],
-    infoTitle:'Remarque',
-    infoBody:"Timer-24.com est un service gratuit. Pour les questions techniques, consultez d'abord la <a href='faq.html'>FAQ</a> et l'<a href='hilfe.html'>aide</a>. Les mentions légales se trouvent dans les <a href='impressum.html'>mentions légales</a>."
-  },
-  es:{
-    title:'Contacto',
-    subtitle:'Agradecemos tus comentarios, informes de errores y sugerencias de mejora.',
-    cards:[
-      {icon:'✉️',title:'Correo electrónico',value:'info@adquo-design.de',note:'Respuesta generalmente en 48 h',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Preguntas frecuentes',note:'Disponible las 24 horas',href:'faq.html'},
-      {icon:'🛟',title:'Ayuda',value:'Guías paso a paso',note:'Disponible las 24 horas',href:'hilfe.html'},
-      {icon:'🛡',title:'Privacidad',value:'Consultas de protección de datos',note:'Acceso, eliminación y más',href:'datenschutz.html'}
-    ],
-    infoTitle:'Nota',
-    infoBody:"Timer-24.com es un servicio gratuito. Para preguntas técnicas consulta primero las <a href='faq.html'>FAQ</a> y la <a href='hilfe.html'>Ayuda</a>. La información legal se encuentra en el <a href='impressum.html'>aviso legal</a>."
-  },
-  it:{
-    title:'Contatto',
-    subtitle:'Siamo lieti di ricevere feedback, segnalazioni di bug e suggerimenti di miglioramento.',
-    cards:[
-      {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Risposta solitamente entro 48 ore',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Domande frequenti',note:'Disponibile 24 ore su 24',href:'faq.html'},
-      {icon:'🛟',title:'Aiuto',value:'Guide passo dopo passo',note:'Disponibile 24 ore su 24',href:'hilfe.html'},
-      {icon:'🛡',title:'Privacy',value:'Richieste di protezione dei dati',note:'Accesso, cancellazione e altro',href:'datenschutz.html'}
-    ],
-    infoTitle:'Nota',
-    infoBody:"Timer-24.com è un servizio gratuito. Per domande tecniche consulta prima le <a href='faq.html'>FAQ</a> e l'<a href='hilfe.html'>aiuto</a>. Le informazioni legali si trovano nelle <a href='impressum.html'>note legali</a>."
-  },
-  pt:{
-    title:'Contacto',
-    subtitle:'Agradecemos o seu feedback, relatórios de erros e sugestões de melhoria.',
-    cards:[
-      {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Resposta geralmente em 48 h',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Perguntas frequentes',note:'Disponível 24 horas por dia',href:'faq.html'},
-      {icon:'🛟',title:'Ajuda',value:'Guias passo a passo',note:'Disponível 24 horas por dia',href:'hilfe.html'},
-      {icon:'🛡',title:'Privacidade',value:'Pedidos de proteção de dados',note:'Acesso, eliminação e mais',href:'datenschutz.html'}
-    ],
-    infoTitle:'Nota',
-    infoBody:"Timer-24.com é um serviço gratuito. Para questões técnicas consulte primeiro as <a href='faq.html'>FAQ</a> e a <a href='hilfe.html'>ajuda</a>. As informações legais encontram-se no <a href='impressum.html'>aviso legal</a>."
-  },
-  nl:{
-    title:'Contact',
-    subtitle:'We verwelkomen uw feedback, bugrapporten en verbeteringsvoorstellen.',
-    cards:[
-      {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Antwoord meestal binnen 48 uur',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Veelgestelde vragen',note:'Altijd beschikbaar',href:'faq.html'},
-      {icon:'🛟',title:'Hulp',value:'Stap-voor-stap handleidingen',note:'Altijd beschikbaar',href:'hilfe.html'},
-      {icon:'🛡',title:'Privacy',value:'Gegevensbeschermingsverzoeken',note:'Inzage, verwijdering en meer',href:'datenschutz.html'}
-    ],
-    infoTitle:'Opmerking',
-    infoBody:"Timer-24.com is een gratis dienst. Voor technische vragen raadpleeg eerst de <a href='faq.html'>FAQ</a> en <a href='hilfe.html'>hulp</a>. Juridische informatie vindt u in het <a href='impressum.html'>impressum</a>."
-  },
-  pl:{
-    title:'Kontakt',
-    subtitle:'Chętnie przyjmujemy opinie, zgłoszenia błędów i sugestie ulepszeń.',
-    cards:[
-      {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Odpowiedź zwykle w ciągu 48 godz.',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'FAQ',value:'Często zadawane pytania',note:'Dostępne przez całą dobę',href:'faq.html'},
-      {icon:'🛟',title:'Pomoc',value:'Przewodniki krok po kroku',note:'Dostępne przez całą dobę',href:'hilfe.html'},
-      {icon:'🛡',title:'Prywatność',value:'Zapytania o ochronę danych',note:'Dostęp, usunięcie i więcej',href:'datenschutz.html'}
-    ],
-    infoTitle:'Uwaga',
-    infoBody:"Timer-24.com jest darmową usługą. W przypadku pytań technicznych sprawdź najpierw <a href='faq.html'>FAQ</a> i <a href='hilfe.html'>pomoc</a>. Informacje prawne znajdziesz w <a href='impressum.html'>informacjach prawnych</a>."
-  },
-  tr:{
-    title:'İletişim',
-    subtitle:'Geri bildiriminizi, hata raporlarınızı ve iyileştirme önerilerinizi bekliyoruz.',
-    cards:[
-      {icon:'✉️',title:'E-posta',value:'info@adquo-design.de',note:'Genellikle 48 saat içinde yanıt',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'SSS',value:'Sık sorulan sorular',note:'7/24 erişilebilir',href:'faq.html'},
-      {icon:'🛟',title:'Yardım',value:'Adım adım kılavuzlar',note:'7/24 erişilebilir',href:'hilfe.html'},
-      {icon:'🛡',title:'Gizlilik',value:'Veri koruma talepleri',note:'Erişim, silme ve daha fazlası',href:'datenschutz.html'}
-    ],
-    infoTitle:'Not',
-    infoBody:"Timer-24.com ücretsiz bir hizmettir. Teknik sorular için lütfen önce <a href='faq.html'>SSS</a> ve <a href='hilfe.html'>yardım</a> sayfalarına bakın. Yasal bilgiler <a href='impressum.html'>künye</a> sayfasında bulunabilir."
-  },
-  ar:{
-    title:'اتصل بنا',
-    subtitle:'نرحب بملاحظاتك وتقارير الأخطاء ومقترحات التحسين.',
-    cards:[
-      {icon:'✉️',title:'البريد الإلكتروني',value:'info@adquo-design.de',note:'رد في غضون 48 ساعة عادةً',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'الأسئلة الشائعة',value:'أسئلة متكررة',note:'متاح على مدار الساعة',href:'faq.html'},
-      {icon:'🛟',title:'المساعدة',value:'أدلة خطوة بخطوة',note:'متاح على مدار الساعة',href:'hilfe.html'},
-      {icon:'🛡',title:'الخصوصية',value:'طلبات حماية البيانات',note:'الاطلاع والحذف والمزيد',href:'datenschutz.html'}
-    ],
-    infoTitle:'ملاحظة',
-    infoBody:"Timer-24.com خدمة مجانية. للأسئلة التقنية يرجى مراجعة <a href='faq.html'>الأسئلة الشائعة</a> و<a href='hilfe.html'>المساعدة</a> أولاً. المعلومات القانونية في <a href='impressum.html'>بيانات المشغّل</a>."
-  },
-  zh:{
-    title:'联系我们',
-    subtitle:'欢迎您的反馈、错误报告和改进建议。',
-    cards:[
-      {icon:'✉️',title:'电子邮件',value:'info@adquo-design.de',note:'通常在 48 小时内回复',href:'mailto:info@adquo-design.de',hl:true},
-      {icon:'❓',title:'常见问题',value:'常见问题解答',note:'全天候可用',href:'faq.html'},
-      {icon:'🛟',title:'帮助',value:'分步指南',note:'全天候可用',href:'hilfe.html'},
-      {icon:'🛡',title:'隐私',value:'数据保护请求',note:'访问、删除等',href:'datenschutz.html'}
-    ],
-    infoTitle:'注意',
-    infoBody:"Timer-24.com 是免费服务。技术问题请先查看 <a href='faq.html'>常见问题</a> 和 <a href='hilfe.html'>帮助</a>。法律信息请参阅 <a href='impressum.html'>版权信息</a>。"
-  }
-};
-
-// ── Lang system ──────────────────────────────────────────────
 let cl='de';
+function getLang(){const u=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('t24_lang');const b=(navigator.language||'de').slice(0,2).toLowerCase();return[u,s,b].find(x=>x&&LANGS[x])||'de';}
+function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);applyAll();}
+function buildLM(){document.getElementById('lm').innerHTML=Object.entries(LANGS).map(([k,v])=>`<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`).join('');}
+function toggleL(){document.getElementById('lm').classList.toggle('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('#lw'))document.getElementById('lm').classList.remove('open');});
 
-function buildLangMenu(){
-  document.getElementById('langMenu').innerHTML=Object.entries(LANGS).map(([k,v])=>
-    `<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`
-  ).join('');
-}
-function toggleLang(){document.getElementById('langMenu').classList.toggle('open');}
-document.addEventListener('click',e=>{if(!e.target.closest('#langWrap'))document.getElementById('langMenu').classList.remove('open');});
-
-function getLang(){
-  const u=new URLSearchParams(location.search).get('lang');
-  const s=localStorage.getItem('t24_lang');
-  const b=(navigator.language||'de').slice(0,2).toLowerCase();
-  return[u,s,b].find(x=>x&&LANGS[x])||'de';
-}
-function setLang(lang){
-  cl=lang;localStorage.setItem('t24_lang',lang);
-  const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);
-  applyAll();document.getElementById('langMenu').classList.remove('open');
-}
-function applyAll(){
+function applyNav(){
   const t=NAV[cl]||NAV.de;
   document.documentElement.lang=cl;
   document.documentElement.dir=cl==='ar'?'rtl':'ltr';
-  document.getElementById('langBtn').textContent=`${LANGS[cl].f} ${cl.toUpperCase()} ▼`;
-  // nav
-  ['timer','wissen','faq','hilfe'].forEach(k=>{
-    const el=document.getElementById('nl-'+k);if(el)el.textContent=t[k]||k;
-  });
-  // footer
-  ['timer','wissen','faq','hilfe','kontakt','ueber','impressum','datenschutz'].forEach(k=>{
-    const el=document.getElementById('fl-'+k);if(el)el.textContent=t[k]||k;
-  });
-  document.getElementById('fl-copy').textContent=t.copy;
-  // cookie banner
-  document.getElementById('ck-text').textContent=t.ck[0];
-  document.getElementById('ck-ok').textContent=t.ck[1];
-  document.getElementById('ck-no').textContent=t.ck[2];
-  // page content
-  renderPage();
-  buildLangMenu();
+  document.getElementById('lb').textContent=LANGS[cl].f+' '+cl.toUpperCase()+' ▼';
+  ['timer','wissen','faq','hilfe'].forEach(k=>{const el=document.getElementById('nl-'+k);if(el)el.textContent=t[k];});
+  ['timer','wissen','faq','hilfe','kontakt','ueber','impressum','datenschutz'].forEach(k=>{const el=document.getElementById('fl-'+k);if(el)el.textContent=t[k];});
+  const fc=document.getElementById('fl-copy');if(fc)fc.textContent=t.copy;
+  // Cookie banner text with DS link
+  const ckp=document.getElementById('ck-p');
+  if(ckp){const ckTxt=t.ck.replace('[DS]',`<a href="datenschutz.html?lang=${cl}">Datenschutzerklärung</a>`);ckp.innerHTML=ckTxt;}
 }
+
+
+const PD_KT = {
+de:{title:'Kontakt',sub:'Wir freuen uns über dein Feedback, Fehlermeldungen und Verbesserungsvorschläge.',
+  cards:[
+    {icon:'✉️',title:'E-Mail',value:'info@adquo-design.de',note:'Antwort meist innerhalb von 48 Std.',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Häufige Fragen',note:'Rund um die Uhr verfügbar',href:'faq.html'},
+    {icon:'🛟',title:'Hilfe',value:'Schritt-für-Schritt Anleitungen',note:'Rund um die Uhr verfügbar',href:'hilfe.html'},
+    {icon:'🛡',title:'Datenschutz',value:'Datenschutzanfragen',note:'Auskunft, Löschung & mehr',href:'datenschutz.html'}
+  ],
+  infoTitle:'Hinweis',
+  infoText:"Timer-24.com ist ein kostenloses Angebot von adquo design. Für technische Fragen schau bitte zuerst in die <a href='faq.html'>FAQ</a> und <a href='hilfe.html'>Hilfe</a> – viele Fragen sind dort bereits beantwortet. Rechtliche Angaben findest du im <a href='impressum.html'>Impressum</a>."
+},
+en:{title:'Contact',sub:"We welcome your feedback, bug reports and suggestions for improvement.",
+  cards:[
+    {icon:'✉️',title:'Email',value:'info@adquo-design.de',note:'Reply usually within 48 hrs',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Frequently asked questions',note:'Available around the clock',href:'faq.html'},
+    {icon:'🛟',title:'Help',value:'Step-by-step guides',note:'Available around the clock',href:'hilfe.html'},
+    {icon:'🛡',title:'Privacy',value:'Data protection enquiries',note:'Access, deletion & more',href:'datenschutz.html'}
+  ],
+  infoTitle:'Note',
+  infoText:"Timer-24.com is a free service by adquo design. For technical questions please check the <a href='faq.html'>FAQ</a> and <a href='hilfe.html'>Help</a> pages first. Legal information can be found in the <a href='impressum.html'>Imprint</a>."
+},
+fr:{title:'Contact',sub:"Nous accueillons vos commentaires, rapports de bugs et suggestions.",
+  cards:[
+    {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Réponse sous 48 h',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Questions fréquentes',note:'Disponible 24h/24',href:'faq.html'},
+    {icon:'🛟',title:'Aide',value:'Guides étape par étape',note:'Disponible 24h/24',href:'hilfe.html'},
+    {icon:'🛡',title:'Confidentialité',value:'Demandes de protection',note:'Accès, suppression…',href:'datenschutz.html'}
+  ],
+  infoTitle:'Remarque',
+  infoText:"Consultez d'abord la <a href='faq.html'>FAQ</a> et l'<a href='hilfe.html'>aide</a>. Mentions légales : <a href='impressum.html'>mentions légales</a>."
+},
+es:{title:'Contacto',sub:"Agradecemos tus comentarios, informes de errores y sugerencias.",
+  cards:[
+    {icon:'✉️',title:'Correo electrónico',value:'info@adquo-design.de',note:'Respuesta en 48 h',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Preguntas frecuentes',note:'Disponible 24 horas',href:'faq.html'},
+    {icon:'🛟',title:'Ayuda',value:'Guías paso a paso',note:'Disponible 24 horas',href:'hilfe.html'},
+    {icon:'🛡',title:'Privacidad',value:'Consultas de datos',note:'Acceso, eliminación…',href:'datenschutz.html'}
+  ],
+  infoTitle:'Nota',
+  infoText:"Consulta primero las <a href='faq.html'>FAQ</a> y la <a href='hilfe.html'>Ayuda</a>. Info legal: <a href='impressum.html'>aviso legal</a>."
+},
+it:{title:'Contatto',sub:"Siamo lieti di ricevere feedback, segnalazioni di bug e suggerimenti.",
+  cards:[
+    {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Risposta entro 48 ore',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Domande frequenti',note:'Disponibile 24/7',href:'faq.html'},
+    {icon:'🛟',title:'Aiuto',value:'Guide passo dopo passo',note:'Disponibile 24/7',href:'hilfe.html'},
+    {icon:'🛡',title:'Privacy',value:'Richieste dati',note:'Accesso, cancellazione…',href:'datenschutz.html'}
+  ],
+  infoTitle:'Nota',
+  infoText:"Consulta prima le <a href='faq.html'>FAQ</a> e l'<a href='hilfe.html'>aiuto</a>. Info legali: <a href='impressum.html'>note legali</a>."
+},
+pt:{title:'Contacto',sub:"Agradecemos o seu feedback, relatórios de erros e sugestões.",
+  cards:[
+    {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Resposta em 48 h',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Perguntas frequentes',note:'Disponível 24 horas',href:'faq.html'},
+    {icon:'🛟',title:'Ajuda',value:'Guias passo a passo',note:'Disponível 24 horas',href:'hilfe.html'},
+    {icon:'🛡',title:'Privacidade',value:'Pedidos de dados',note:'Acesso, eliminação…',href:'datenschutz.html'}
+  ],
+  infoTitle:'Nota',
+  infoText:"Consulte primeiro as <a href='faq.html'>FAQ</a> e a <a href='hilfe.html'>ajuda</a>. Info legal: <a href='impressum.html'>aviso legal</a>."
+},
+nl:{title:'Contact',sub:"We verwelkomen uw feedback, bugrapporten en verbeteringsvoorstellen.",
+  cards:[
+    {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Antwoord binnen 48 uur',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Veelgestelde vragen',note:'Altijd beschikbaar',href:'faq.html'},
+    {icon:'🛟',title:'Hulp',value:'Stap-voor-stap handleidingen',note:'Altijd beschikbaar',href:'hilfe.html'},
+    {icon:'🛡',title:'Privacy',value:'Gegevensbescherming',note:'Inzage, verwijdering…',href:'datenschutz.html'}
+  ],
+  infoTitle:'Opmerking',
+  infoText:"Raadpleeg eerst de <a href='faq.html'>FAQ</a> en <a href='hilfe.html'>hulp</a>. Juridisch: <a href='impressum.html'>impressum</a>."
+},
+pl:{title:'Kontakt',sub:"Chętnie przyjmujemy opinie, zgłoszenia błędów i sugestie.",
+  cards:[
+    {icon:'✉️',title:'E-mail',value:'info@adquo-design.de',note:'Odpowiedź w 48 godz.',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'FAQ',value:'Często zadawane pytania',note:'Dostępne całą dobę',href:'faq.html'},
+    {icon:'🛟',title:'Pomoc',value:'Przewodniki krok po kroku',note:'Dostępne całą dobę',href:'hilfe.html'},
+    {icon:'🛡',title:'Prywatność',value:'Zapytania o dane',note:'Dostęp, usunięcie…',href:'datenschutz.html'}
+  ],
+  infoTitle:'Uwaga',
+  infoText:"Sprawdź najpierw <a href='faq.html'>FAQ</a> i <a href='hilfe.html'>pomoc</a>. Informacje prawne: <a href='impressum.html'>informacje prawne</a>."
+},
+tr:{title:'İletişim',sub:"Geri bildiriminizi, hata raporlarınızı ve önerilerinizi bekliyoruz.",
+  cards:[
+    {icon:'✉️',title:'E-posta',value:'info@adquo-design.de',note:'48 saat içinde yanıt',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'SSS',value:'Sık sorulan sorular',note:'7/24 erişilebilir',href:'faq.html'},
+    {icon:'🛟',title:'Yardım',value:'Adım adım kılavuzlar',note:'7/24 erişilebilir',href:'hilfe.html'},
+    {icon:'🛡',title:'Gizlilik',value:'Veri koruma talepleri',note:'Erişim, silme…',href:'datenschutz.html'}
+  ],
+  infoTitle:'Not',
+  infoText:"Önce <a href='faq.html'>SSS</a> ve <a href='hilfe.html'>yardım</a> sayfalarına bakın. Yasal bilgi: <a href='impressum.html'>künye</a>."
+},
+ar:{title:'اتصل بنا',sub:"نرحب بملاحظاتك وتقارير الأخطاء ومقترحاتك.",
+  cards:[
+    {icon:'✉️',title:'البريد الإلكتروني',value:'info@adquo-design.de',note:'رد خلال 48 ساعة',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'الأسئلة الشائعة',value:'أسئلة متكررة',note:'متاح على مدار الساعة',href:'faq.html'},
+    {icon:'🛟',title:'المساعدة',value:'أدلة خطوة بخطوة',note:'متاح على مدار الساعة',href:'hilfe.html'},
+    {icon:'🛡',title:'الخصوصية',value:'طلبات حماية البيانات',note:'الاطلاع والحذف…',href:'datenschutz.html'}
+  ],
+  infoTitle:'ملاحظة',
+  infoText:"راجع أولاً <a href='faq.html'>الأسئلة الشائعة</a> و<a href='hilfe.html'>المساعدة</a>. المعلومات القانونية: <a href='impressum.html'>بيانات المشغّل</a>."
+},
+zh:{title:'联系我们',sub:"欢迎您的反馈、错误报告和改进建议。",
+  cards:[
+    {icon:'✉️',title:'电子邮件',value:'info@adquo-design.de',note:'通常48小时内回复',href:'mailto:info@adquo-design.de',hl:true},
+    {icon:'❓',title:'常见问题',value:'常见问题解答',note:'全天候可用',href:'faq.html'},
+    {icon:'🛟',title:'帮助',value:'分步指南',note:'全天候可用',href:'hilfe.html'},
+    {icon:'🛡',title:'隐私',value:'数据保护请求',note:'访问、删除等',href:'datenschutz.html'}
+  ],
+  infoTitle:'注意',
+  infoText:"请先查看<a href='faq.html'>常见问题</a>和<a href='hilfe.html'>帮助</a>。法律信息：<a href='impressum.html'>版权信息</a>。"
+}
+};
 
 function renderPage(){
-  const d=PD[cl]||PD.en;
-  document.title=`${d.title} – Timer-24.com`;
-  const cards=d.cards.map(c=>`
-    <a href="${c.href}" class="contact-card${c.hl?' hl':''}">
-      <div class="cc-icon">${c.icon}</div>
-      <div>
-        <div class="cc-title">${c.title}</div>
-        <div class="cc-value">${c.value}</div>
-        <div class="cc-note">${c.note}</div>
-      </div>
-    </a>`).join('');
-  document.getElementById('page-main').innerHTML=`
-    <div class="card">
-      <h1>${d.title}</h1>
-      <p class="meta">${d.subtitle}</p>
-      <div class="contact-grid">${cards}</div>
-    </div>
-    <div class="card">
-      <h2>${d.infoTitle}</h2>
-      <p>${d.infoBody}</p>
-    </div>`;
+  const d=PD_KT[cl]||PD_KT.de;
+  document.title=d.title+' – Timer-24.com';
+  const cards=d.cards.map(c=>
+    '<a href="'+c.href+'" class="cc'+(c.hl?' hl':'')+'">'+
+    '<div class="cc-i">'+(c.hl?'<span style="filter:brightness(0) invert(1)">'+c.icon+'</span>':c.icon)+'</div>'+
+    '<div><div class="cc-t">'+c.title+'</div>'+
+    '<div class="cc-v">'+c.value+'</div>'+
+    '<div class="cc-n">'+c.note+'</div></div></a>'
+  ).join('');
+  document.getElementById('pm').innerHTML=
+    '<div class="card"><h1>'+d.title+'</h1><p class="meta">'+d.sub+'</p>'+
+    '<div class="cg">'+cards+'</div></div>'+
+    '<div class="card"><h2 style="margin-top:0">'+d.infoTitle+'</h2><p>'+d.infoText+'</p></div>';
 }
 
-cl=getLang();buildLangMenu();applyAll();
+
+function applyAll(){applyNav();renderPage();buildLM();}
+cl=getLang();applyAll();
+
+function acceptCookies(v){localStorage.setItem('cookie-consent',v);document.getElementById('ck').style.display='none';}
+if(!localStorage.getItem('cookie-consent'))document.getElementById('ck').style.display='flex';
+
 </script>
 </body>
 </html>
