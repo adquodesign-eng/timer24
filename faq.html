@@ -69,10 +69,6 @@ footer a:hover{color:var(--bl);}
 #ck-ok:hover{background:#0095ee;}
 #ck-no{padding:8px 16px;border-radius:7px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;background:transparent;color:#9CA3AF;border:1px solid #4B5563;}
 #ck-no:hover{color:#fff;border-color:#9CA3AF;}
-
-.lang-sel-wrap{margin-left:auto;flex-shrink:0;}
-#lang-select{padding:6px 10px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--txt);cursor:pointer;outline:none;transition:border-color var(--t);}
-#lang-select:hover,#lang-select:focus{border-color:var(--bl);}
 </style>
 </head>
 <body>
@@ -87,20 +83,9 @@ footer a:hover{color:var(--bl);}
       <a href="kontakt.html" id="nl-kontakt">Kontakt</a>
       <a href="timer.html" class="nb" id="nl-start">▶ Jetzt starten</a>
     </nav>
-    <div class="lang-sel-wrap">
-      <select id="lang-select" onchange="setLang(this.value)">
-        <option value="de">🇩🇪 DE</option>
-        <option value="en">🇬🇧 EN</option>
-        <option value="fr">🇫🇷 FR</option>
-        <option value="es">🇪🇸 ES</option>
-        <option value="it">🇮🇹 IT</option>
-        <option value="pt">🇵🇹 PT</option>
-        <option value="nl">🇳🇱 NL</option>
-        <option value="pl">🇵🇱 PL</option>
-        <option value="tr">🇹🇷 TR</option>
-        <option value="ar">🇸🇦 AR</option>
-        <option value="zh">🇨🇳 ZH</option>
-      </select>
+    <div class="lw" id="lw">
+      <button class="lb" id="lb" onclick="toggleL()">🇩🇪 DE ▼</button>
+      <ul class="lm" id="lm"></ul>
     </div>
   </div>
 </header>
@@ -139,8 +124,8 @@ const NAV_T={
 let cl='de';
 function gL(){return NAV_T[cl]||NAV_T.de;}
 function getLang(){const u=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('t24_lang');const b=(navigator.language||'de').slice(0,2).toLowerCase();return[u,s,b].find(x=>x&&LANGS[x])||'de';}
-function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);
-  const sel=document.getElementById('lang-select');if(sel)sel.value=lang;applyNav();renderPage();}
+function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);applyNav();buildLM();renderPage();}
+function buildLM(){document.getElementById('lm').innerHTML=Object.entries(LANGS).map(([k,v])=>`<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`).join('');}
 function toggleL(){document.getElementById('lm').classList.toggle('open');}
 document.addEventListener('click',e=>{if(!e.target.closest('#lw'))document.getElementById('lm').classList.remove('open');});
 function applyNav(){
@@ -269,12 +254,12 @@ function togF(i){
 }
 
 
-cl=getLang();applyNav();renderPage();
+cl=getLang();buildLM();applyNav();renderPage();
 
 </script>
 
 <div id="ck">
-  <p id="ck-p">Wir nutzen Cookies für Werbung (Google AdSense). Mehr Infos in der <a id="ck-ds-link" href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <p>Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung unseres Angebots. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
   <div class="ck-btns">
     <button id="ck-ok" onclick="acceptCookies('all')">Alle akzeptieren</button>
     <button id="ck-no" onclick="acceptCookies('necessary')">Nur notwendige</button>
