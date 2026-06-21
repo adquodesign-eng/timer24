@@ -3,8 +3,3 @@ compatibility_date = "2025-01-01"
 
 [assets]
 directory = "."
-binding = "ASSETS"
-
-# Serve index.html for all routes that don't match a file
-[assets.html_handling]
-not_found_handling = "none"
