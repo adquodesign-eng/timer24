@@ -91,6 +91,16 @@ footer a:hover{color:var(--bl);}
 .modal-meta{font-size:.78rem;color:var(--mut);margin-bottom:18px;}
 @media(max-width:640px){.modal-box{padding:20px 16px;}.modal-overlay{padding:10px;}}
 
+
+/* Cookie Banner */
+#ck{display:none;position:fixed;bottom:0;left:0;right:0;background:#1F2937;color:#fff;padding:14px 24px;z-index:1000;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 -2px 12px rgba(0,0,0,.18);}
+#ck p{font-size:.82rem;flex:1 1 260px;margin:0;color:rgba(255,255,255,.88);line-height:1.5;}
+#ck p a{color:#93C5FD;text-decoration:underline;}
+.ck-btns{display:flex;gap:8px;flex-shrink:0;}
+#ck-ok{padding:8px 18px;border-radius:7px;border:none;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:700;background:#1BA6FF;color:#fff;}
+#ck-ok:hover{background:#0095ee;}
+#ck-no{padding:8px 16px;border-radius:7px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;background:transparent;color:#9CA3AF;border:1px solid #4B5563;}
+#ck-no:hover{color:#fff;border-color:#9CA3AF;}
 </style>
 </head>
 <body>
@@ -343,5 +353,21 @@ cl=getLang();buildLM();applyNav();renderPage();
   </div>
 </div>
 
+
+<div id="ck">
+  <p>Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung unseres Angebots. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <div class="ck-btns">
+    <button id="ck-ok" onclick="acceptCookies('all')">Alle akzeptieren</button>
+    <button id="ck-no" onclick="acceptCookies('necessary')">Nur notwendige</button>
+  </div>
+</div>
+<script>
+function acceptCookies(v){
+  localStorage.setItem('cookie-consent',v);
+  document.getElementById('ck').style.display='none';
+}
+if(!localStorage.getItem('cookie-consent'))
+  document.getElementById('ck').style.display='flex';
+</script>
 </body>
 </html>

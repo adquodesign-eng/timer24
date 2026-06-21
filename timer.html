@@ -221,6 +221,16 @@ footer{border-top:1px solid var(--brd);background:var(--sur);padding:22px;text-a
 @media(max-width:480px){.og{grid-template-columns:1fr 1fr;}}
 body[data-theme=dark]{--bg:#111827;--sur:#1F2937;--txt:#F9FAFB;--mut:#9CA3AF;--brd:#374151;--bls:rgba(27,166,255,.12);--cus:rgba(199,122,74,.12);}
 body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,174,.1);--cu:#9E7B5C;--cus:rgba(158,123,92,.1);}
+
+/* Cookie Banner */
+#ck{display:none;position:fixed;bottom:0;left:0;right:0;background:#1F2937;color:#fff;padding:14px 24px;z-index:1000;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 -2px 12px rgba(0,0,0,.18);}
+#ck p{font-size:.82rem;flex:1 1 260px;margin:0;color:rgba(255,255,255,.88);line-height:1.5;}
+#ck p a{color:#93C5FD;text-decoration:underline;}
+.ck-btns{display:flex;gap:8px;flex-shrink:0;}
+#ck-ok{padding:8px 18px;border-radius:7px;border:none;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:700;background:#1BA6FF;color:#fff;}
+#ck-ok:hover{background:#0095ee;}
+#ck-no{padding:8px 16px;border-radius:7px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;background:transparent;color:#9CA3AF;border:1px solid #4B5563;}
+#ck-no:hover{color:#fff;border-color:#9CA3AF;}
 </style>
 </head>
 <body>
@@ -235,7 +245,6 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <li><a href="#" data-p="focus">🍅 Fokus</a></li>
       <li><a href="#" data-p="sleep">😴 Schlaf</a></li>
       <li><a href="#" data-p="assistant">🤖 Assistent</a></li>
-      <li><a href="#" data-p="stats">📊 Statistik</a></li>
       <li><a href="wissen.html">📚 Wissen</a></li>
     </ul></nav>
     <div class="hr">
@@ -260,7 +269,6 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
       <li><a href="#" data-p="focus">🍅 Fokus</a></li>
       <li><a href="#" data-p="sleep">😴 Schlaf</a></li>
       <li><a href="#" data-p="assistant">🤖 Assistent</a></li>
-      <li><a href="#" data-p="stats">📊 Statistik</a></li>
       <li><a href="wissen.html">📚 Wissen</a></li>
       <li><a href="faq.html">❓ FAQ</a></li>
       <li><a href="hilfe.html">🛟 Hilfe</a></li>
@@ -275,7 +283,6 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
   <button class="tb" data-p="focus">🍅 Fokus</button>
   <button class="tb" data-p="sleep">😴 Schlaf</button>
   <button class="tb" data-p="assistant">🤖 Assistent</button>
-  <button class="tb" data-p="stats">📊 Statistik</button>
 </nav>
 <main>
 <!-- CLOCK -->
@@ -522,25 +529,6 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
     </div>
   </div>
 </div>
-<!-- STATS -->
-<div class="panel" id="p-stats">
-  <h2 class="stit" data-i18n="stats_h">📊 Deine Fokus-Statistik</h2>
-  <div class="sg">
-    <div class="sk"><div class="sv2 b" id="stod">0</div><div class="sl" id="stod-l">Minuten heute</div></div>
-    <div class="sk"><div class="sv2" id="swk">0</div><div class="sl" id="swk-l">Minuten Woche</div></div>
-    <div class="sk"><div class="sv2 c" id="sse">0</div><div class="sl" id="sse-l">Sessions</div></div>
-    <div class="sk"><div class="sv2 g" id="sst">0</div><div class="sl" id="sst-l">Tage Streak</div></div>
-  </div>
-  <div class="card" style="margin-bottom:13px">
-    <div class="ch"><span class="ct" data-i18n="week_h">📅 Diese Woche</span></div>
-    <div class="wb" id="wbar"></div>
-    <div class="wl" id="wlbl"><span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span></div>
-  </div>
-  <div class="card">
-    <div class="ch"><span class="ct" data-i18n="log_h">📋 Letzte Sessions</span><button class="btn bsm bd" onclick="clrStats()" data-i18n="del">Löschen</button></div>
-    <div class="cb" id="slog" style="font-size:13px;color:var(--mut)">Noch keine Sessions. Starte deinen ersten Fokus-Timer!</div>
-  </div>
-</div>
 </main>
 <!-- FULLSCREEN -->
 <div class="fso" id="fso">
@@ -562,7 +550,7 @@ body[data-theme=zen]{--bg:#F5F2ED;--sur:#FAFAF8;--bl:#6B8CAE;--bls:rgba(107,140,
 // ═══════════════ TRANSLATIONS ═══════════════
 const L={
   de:{f:'🇩🇪',n:'Deutsch',
-    nav:['🕒 Uhr','⏰ Wecker','⏲ Timer','⏱ Stoppuhr','🍅 Fokus','😴 Schlaf','🤖 Assistent','📊 Statistik','📚 Wissen'],
+    nav:['🕒 Uhr','⏰ Wecker','⏲ Timer','⏱ Stoppuhr','🍅 Fokus','😴 Schlaf','🤖 Assistent','📚 Wissen'],
     tabs:['🕒 Uhr','⏰ Wecker','⏲ Timer','⏱ Stoppuhr','🍅 Fokus','😴 Schlaf','🤖 Assistent','📊 Statistik'],
     tasks:['📚 Lernen','💼 Arbeiten','💻 Programmieren','✍️ Schreiben','📖 Lesen','🎨 Kreativ','🧘 Meditation','🏃 Sport'],
     days:['So','Mo','Di','Mi','Do','Fr','Sa'],wdays:['Mo','Di','Mi','Do','Fr','Sa','So'],
@@ -603,7 +591,7 @@ const L={
     toast_round:'🎯 Runde ',toast_medit:'🧘 Meditation abgeschlossen',
     medit_done:'🧘 Meditation abgeschlossen'},
   en:{f:'🇬🇧',n:'English',
-    nav:['🕒 Clock','⏰ Alarm','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Sleep','🤖 Assistant','📊 Stats','📚 Knowledge'],
+    nav:['🕒 Clock','⏰ Alarm','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Sleep','🤖 Assistant','📚 Knowledge'],
     tabs:['🕒 Clock','⏰ Alarm','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Sleep','🤖 Assistant','📊 Stats'],
     tasks:['📚 Study','💼 Work','💻 Code','✍️ Write','📖 Read','🎨 Creative','🧘 Meditate','🏃 Sport'],
     days:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],wdays:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
@@ -644,7 +632,7 @@ const L={
     toast_round:'🎯 Round ',toast_medit:'🧘 Meditation complete',
     medit_done:'🧘 Meditation complete'},
   fr:{f:'🇫🇷',n:'Français',
-    nav:['🕒 Horloge','⏰ Réveil','⏲ Minuterie','⏱ Chrono','🍅 Focus','😴 Sommeil','🤖 Assistant','📊 Stats','📚 Savoir'],
+    nav:['🕒 Horloge','⏰ Réveil','⏲ Minuterie','⏱ Chrono','🍅 Focus','😴 Sommeil','🤖 Assistant','📚 Savoir'],
     tabs:['🕒 Horloge','⏰ Réveil','⏲ Minuterie','⏱ Chrono','🍅 Focus','😴 Sommeil','🤖 Assistant','📊 Stats'],
     tasks:['📚 Étudier','💼 Travailler','💻 Coder','✍️ Écrire','📖 Lire','🎨 Créer','🧘 Méditer','🏃 Sport'],
     days:['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],wdays:['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'],
@@ -682,7 +670,7 @@ const L={
     fs_exit:'✕ Quitter',home:'Accueil',clrconfirm:'Supprimer toutes les statistiques?',clrOk:'Statistiques effacées.',
     toast_sleep:'😴 Minuterie démarrée',toast_done:'Terminé!',toast_all_done:'🏆 Tous les tours terminés!',toast_pause:'☕ Pause!',toast_round:'🎯 Tour ',toast_medit:'🧘 Méditation terminée',medit_done:'🧘 Méditation terminée'},
   es:{f:'🇪🇸',n:'Español',
-    nav:['🕒 Reloj','⏰ Alarma','⏲ Temporizador','⏱ Cronómetro','🍅 Foco','😴 Sueño','🤖 Asistente','📊 Stats','📚 Conocimiento'],
+    nav:['🕒 Reloj','⏰ Alarma','⏲ Temporizador','⏱ Cronómetro','🍅 Foco','😴 Sueño','🤖 Asistente','📚 Conocimiento'],
     tabs:['🕒 Reloj','⏰ Alarma','⏲ Temporizador','⏱ Cronómetro','🍅 Foco','😴 Sueño','🤖 Asistente','📊 Stats'],
     tasks:['📚 Estudiar','💼 Trabajar','💻 Programar','✍️ Escribir','📖 Leer','🎨 Crear','🧘 Meditar','🏃 Deporte'],
     days:['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],wdays:['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'],
@@ -720,7 +708,7 @@ const L={
     fs_exit:'✕ Salir',home:'Inicio',clrconfirm:'¿Borrar todas las estadísticas?',clrOk:'Estadísticas borradas.',
     toast_sleep:'😴 Temporizador iniciado',toast_done:'¡Hecho!',toast_all_done:'🏆 ¡Todas las rondas completadas!',toast_pause:'☕ ¡Pausa!',toast_round:'🎯 Ronda ',toast_medit:'🧘 Meditación completada',medit_done:'🧘 Meditación completada'},
   it:{f:'🇮🇹',n:'Italiano',
-    nav:['🕒 Orologio','⏰ Sveglia','⏲ Contatore','⏱ Cronometro','🍅 Focus','😴 Sonno','🤖 Assistente','📊 Stats','📚 Conoscenza'],
+    nav:['🕒 Orologio','⏰ Sveglia','⏲ Contatore','⏱ Cronometro','🍅 Focus','😴 Sonno','🤖 Assistente','📚 Conoscenza'],
     tabs:['🕒 Orologio','⏰ Sveglia','⏲ Contatore','⏱ Cronometro','🍅 Focus','😴 Sonno','🤖 Assistente','📊 Stats'],
     tasks:['📚 Studiare','💼 Lavorare','💻 Programmare','✍️ Scrivere','📖 Leggere','🎨 Creare','🧘 Meditare','🏃 Sport'],
     days:['Dom','Lun','Mar','Mer','Gio','Ven','Sab'],wdays:['Lun','Mar','Mer','Gio','Ven','Sab','Dom'],
@@ -758,7 +746,7 @@ const L={
     fs_exit:'✕ Esci',home:'Home',clrconfirm:'Cancellare tutte le statistiche?',clrOk:'Statistiche cancellate.',
     toast_sleep:'😴 Timer avviato',toast_done:'Fatto!',toast_all_done:'🏆 Tutti i round completati!',toast_pause:'☕ Pausa!',toast_round:'🎯 Round ',toast_medit:'🧘 Meditazione completata',medit_done:'🧘 Meditazione completata'},
   pt:{f:'🇵🇹',n:'Português',
-    nav:['🕒 Relógio','⏰ Alarme','⏲ Contagem','⏱ Cronómetro','🍅 Foco','😴 Sono','🤖 Assistente','📊 Stats','📚 Conhecimento'],
+    nav:['🕒 Relógio','⏰ Alarme','⏲ Contagem','⏱ Cronómetro','🍅 Foco','😴 Sono','🤖 Assistente','📚 Conhecimento'],
     tabs:['🕒 Relógio','⏰ Alarme','⏲ Contagem','⏱ Cronómetro','🍅 Foco','😴 Sono','🤖 Assistente','📊 Stats'],
     tasks:['📚 Estudar','💼 Trabalhar','💻 Programar','✍️ Escrever','📖 Ler','🎨 Criar','🧘 Meditar','🏃 Desporto'],
     days:['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],wdays:['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
@@ -796,7 +784,7 @@ const L={
     fs_exit:'✕ Sair',home:'Início',clrconfirm:'Apagar todas as estatísticas?',clrOk:'Estatísticas apagadas.',
     toast_sleep:'😴 Temporizador iniciado',toast_done:'Concluído!',toast_all_done:'🏆 Todas as rondas concluídas!',toast_pause:'☕ Pausa!',toast_round:'🎯 Ronda ',toast_medit:'🧘 Meditação concluída',medit_done:'🧘 Meditação concluída'},
   nl:{f:'🇳🇱',n:'Nederlands',
-    nav:['🕒 Klok','⏰ Wekker','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Slaap','🤖 Assistent','📊 Stats','📚 Kennis'],
+    nav:['🕒 Klok','⏰ Wekker','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Slaap','🤖 Assistent','📚 Kennis'],
     tabs:['🕒 Klok','⏰ Wekker','⏲ Timer','⏱ Stopwatch','🍅 Focus','😴 Slaap','🤖 Assistent','📊 Stats'],
     tasks:['📚 Studeren','💼 Werken','💻 Programmeren','✍️ Schrijven','📖 Lezen','🎨 Creatief','🧘 Mediteren','🏃 Sport'],
     days:['Zo','Ma','Di','Wo','Do','Vr','Za'],wdays:['Ma','Di','Wo','Do','Vr','Za','Zo'],
@@ -834,7 +822,7 @@ const L={
     fs_exit:'✕ Verlaten',home:'Home',clrconfirm:'Alle statistieken verwijderen?',clrOk:'Statistieken verwijderd.',
     toast_sleep:'😴 Slaaptimer gestart',toast_done:'Klaar!',toast_all_done:'🏆 Alle rondes voltooid!',toast_pause:'☕ Pauze!',toast_round:'🎯 Ronde ',toast_medit:'🧘 Meditatie voltooid',medit_done:'🧘 Meditatie voltooid'},
   pl:{f:'🇵🇱',n:'Polski',
-    nav:['🕒 Zegar','⏰ Budzik','⏲ Timer','⏱ Stoper','🍅 Fokus','😴 Sen','🤖 Asystent','📊 Stats','📚 Wiedza'],
+    nav:['🕒 Zegar','⏰ Budzik','⏲ Timer','⏱ Stoper','🍅 Fokus','😴 Sen','🤖 Asystent','📚 Wiedza'],
     tabs:['🕒 Zegar','⏰ Budzik','⏲ Timer','⏱ Stoper','🍅 Fokus','😴 Sen','🤖 Asystent','📊 Stats'],
     tasks:['📚 Uczyć się','💼 Pracować','💻 Programować','✍️ Pisać','📖 Czytać','🎨 Tworzyć','🧘 Medytować','🏃 Sport'],
     days:['Nd','Pn','Wt','Śr','Cz','Pt','Sb'],wdays:['Pn','Wt','Śr','Cz','Pt','Sb','Nd'],
@@ -872,7 +860,7 @@ const L={
     fs_exit:'✕ Wyjdź',home:'Strona główna',clrconfirm:'Usunąć wszystkie statystyki?',clrOk:'Statystyki usunięte.',
     toast_sleep:'😴 Timer uruchomiony',toast_done:'Gotowe!',toast_all_done:'🏆 Wszystkie rundy ukończone!',toast_pause:'☕ Przerwa!',toast_round:'🎯 Runda ',toast_medit:'🧘 Medytacja ukończona',medit_done:'🧘 Medytacja ukończona'},
   tr:{f:'🇹🇷',n:'Türkçe',
-    nav:['🕒 Saat','⏰ Alarm','⏲ Zamanlayıcı','⏱ Kronometre','🍅 Odak','😴 Uyku','🤖 Asistan','📊 Stats','📚 Bilgi'],
+    nav:['🕒 Saat','⏰ Alarm','⏲ Zamanlayıcı','⏱ Kronometre','🍅 Odak','😴 Uyku','🤖 Asistan','📚 Bilgi'],
     tabs:['🕒 Saat','⏰ Alarm','⏲ Zamanlayıcı','⏱ Kronometre','🍅 Odak','😴 Uyku','🤖 Asistan','📊 Stats'],
     tasks:['📚 Öğrenmek','💼 Çalışmak','💻 Programlamak','✍️ Yazmak','📖 Okumak','🎨 Yaratmak','🧘 Meditasyon','🏃 Spor'],
     days:['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'],wdays:['Pzt','Sal','Çar','Per','Cum','Cmt','Paz'],
@@ -910,7 +898,7 @@ const L={
     fs_exit:'✕ Çık',home:'Ana sayfa',clrconfirm:'Tüm istatistikler silinsin mi?',clrOk:'İstatistikler silindi.',
     toast_sleep:'😴 Zamanlayıcı başlatıldı',toast_done:'Bitti!',toast_all_done:'🏆 Tüm turlar tamamlandı!',toast_pause:'☕ Mola!',toast_round:'🎯 Tur ',toast_medit:'🧘 Meditasyon tamamlandı',medit_done:'🧘 Meditasyon tamamlandı'},
   ar:{f:'🇸🇦',n:'العربية',dir:'rtl',
-    nav:['🕒 الساعة','⏰ المنبه','⏲ المؤقت','⏱ الكرونومتر','🍅 التركيز','😴 النوم','🤖 المساعد','📊 إحصاء','📚 معرفة'],
+    nav:['🕒 الساعة','⏰ المنبه','⏲ المؤقت','⏱ الكرونومتر','🍅 التركيز','😴 النوم','🤖 المساعد','📚 معرفة'],
     tabs:['🕒 الساعة','⏰ المنبه','⏲ المؤقت','⏱ الكرونومتر','🍅 التركيز','😴 النوم','🤖 المساعد','📊 إحصاء'],
     tasks:['📚 الدراسة','💼 العمل','💻 البرمجة','✍️ الكتابة','📖 القراءة','🎨 الإبداع','🧘 التأمل','🏃 الرياضة'],
     days:['أح','إث','ثل','أر','خم','جم','سب'],wdays:['إث','ثل','أر','خم','جم','سب','أح'],
@@ -948,7 +936,7 @@ const L={
     fs_exit:'✕ خروج',home:'الرئيسية',clrconfirm:'هل تريد حذف جميع الإحصاءات؟',clrOk:'تم مسح الإحصاءات.',
     toast_sleep:'😴 تم تشغيل المؤقت',toast_done:'انتهى!',toast_all_done:'🏆 اكتملت جميع الجولات!',toast_pause:'☕ استراحة!',toast_round:'🎯 جولة ',toast_medit:'🧘 اكتمل التأمل',medit_done:'🧘 اكتمل التأمل'},
   zh:{f:'🇨🇳',n:'中文',
-    nav:['🕒 时钟','⏰ 闹钟','⏲ 倒计时','⏱ 秒表','🍅 专注','😴 睡眠','🤖 助手','📊 统计','📚 知识'],
+    nav:['🕒 时钟','⏰ 闹钟','⏲ 倒计时','⏱ 秒表','🍅 专注','😴 睡眠','🤖 助手','📚 知识'],
     tabs:['🕒 时钟','⏰ 闹钟','⏲ 倒计时','⏱ 秒表','🍅 专注','😴 睡眠','🤖 助手','📊 统计'],
     tasks:['📚 学习','💼 工作','💻 编程','✍️ 写作','📖 阅读','🎨 创作','🧘 冥想','🏃 运动'],
     days:['日','一','二','三','四','五','六'],wdays:['周一','周二','周三','周四','周五','周六','周日'],
@@ -1040,11 +1028,6 @@ function applyLang() {
   chips.forEach((c, i) => { c.textContent = t.days[dm[i]]; });
   // week labels
   document.querySelectorAll('#wlbl span').forEach((el, i) => { if (t.wdays[i]) el.textContent = t.wdays[i]; });
-  // stat labels
-  ['stod-l','swk-l','sse-l','sst-l'].forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (el && t.stlbls[i]) el.textContent = t.stlbls[i];
-  });
   // footer
   const fc = document.getElementById('fcopy'); if (fc) fc.textContent = t.footer;
   // ALL data-i18n elements
@@ -1094,7 +1077,6 @@ const st={
   tz:localStorage.getItem('t24_tz')||'Europe/Berlin',
   wcs:JSON.parse(localStorage.getItem('t24_wc')||'[]'),
   alarms:JSON.parse(localStorage.getItem('t24_alarms')||'[]'),
-  stats:JSON.parse(localStorage.getItem('t24_stats')||'{"sessions":[],"streak":0,"lastDate":null}'),
   tTotal:0,tRem:0,tInt:null,tRun:false,tSnd:'beep',
   swSt:0,swEl:0,swInt:null,swRun:false,swLaps:[],
   fMethod:null,fPhase:'focus',fRound:1,fTotal:4,
@@ -1142,7 +1124,6 @@ function show(name){
   document.querySelectorAll(`[data-p="${name}"]`).forEach(el=>el.classList.add('act'));
   document.getElementById('mo').style.display='none';
   ls('t24_lp',name);
-  if(name==='stats')renderStats();
   if(name==='alarm')renderAlarms();
 }
 document.querySelectorAll('.tb').forEach(b=>b.addEventListener('click',()=>show(b.dataset.p)));
@@ -1324,34 +1305,6 @@ function asRec(){
 }
 function startRec(){const m=document.getElementById('recBtn').dataset.m;show('focus');setTimeout(()=>startF(m),80);}
 
-// ═══════════════ STATS ═══════════════
-function recMin(min){
-  const today=new Date().toISOString().slice(0,10);
-  if(!st.stats.sessions)st.stats.sessions=[];
-  st.stats.sessions.push({date:today,minutes:Math.round(min),method:st.fMethod});
-  const yest=new Date(Date.now()-86400000).toISOString().slice(0,10);
-  if(st.stats.lastDate===yest)st.stats.streak=(st.stats.streak||0)+1;
-  else if(st.stats.lastDate!==today)st.stats.streak=1;
-  st.stats.lastDate=today;
-  ls('t24_stats',JSON.stringify(st.stats));
-}
-function renderStats(){
-  const ss=st.stats.sessions||[],today=new Date().toISOString().slice(0,10);
-  const ws=new Date();ws.setDate(ws.getDate()-ws.getDay()+1);
-  document.getElementById('stod').textContent=ss.filter(s=>s.date===today).reduce((a,s)=>a+s.minutes,0);
-  document.getElementById('swk').textContent=ss.filter(s=>new Date(s.date)>=ws).reduce((a,s)=>a+s.minutes,0);
-  document.getElementById('sse').textContent=ss.length;
-  document.getElementById('sst').textContent=st.stats.streak||0;
-  const t=gl(),days=Array.from({length:7},(_,i)=>{const d=new Date(ws);d.setDate(d.getDate()+i);const ds=d.toISOString().slice(0,10);return{ds,min:ss.filter(s=>s.date===ds).reduce((a,s)=>a+s.minutes,0),today:ds===today};});
-  const mx=Math.max(...days.map(d=>d.min),60);
-  document.getElementById('wbar').innerHTML=days.map(d=>`<div class="wd${d.today?' td2':''}" title="${d.min} Min"><div class="wdf" style="height:${Math.max(4,d.min/mx*100)}%"></div></div>`).join('');
-  const wlbl=document.querySelectorAll('#wlbl span');wlbl.forEach((el,i)=>{if(t.wdays[i])el.textContent=t.wdays[i];});
-  const log=document.getElementById('slog');
-  if(!ss.length){log.textContent='Noch keine Sessions. Starte deinen ersten Fokus-Timer!';return;}
-  log.innerHTML=[...ss].reverse().slice(0,10).map(s=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--brd)"><span>${s.date} · ${(FC[s.method]||{name:s.method||'?'}).name}</span><span style="font-family:ui-monospace,monospace;font-weight:700">${s.minutes} Min</span></div>`).join('');
-}
-function clrStats(){if(!confirm(gl().clrconfirm||'Alle Statistiken löschen?'))return;st.stats={sessions:[],streak:0,lastDate:null};ls('t24_stats',JSON.stringify(st.stats));renderStats();toast(gl().clrOk||'Statistik gelöscht.');}
-
 // ═══════════════ FULLSCREEN ═══════════════
 function exitFS2(){document.getElementById('fso').classList.remove('act');st.fsMode=null;}
 function toggleFS(){if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();}
@@ -1374,9 +1327,25 @@ document.addEventListener('keydown',e=>{
 // ═══════════════ INIT ═══════════════
 initLang();
 buildTaskGrid();
-const lp=localStorage.getItem('t24_lp');if(lp)show(lp);
+const lp=localStorage.getItem('t24_lp');if(lp&&lp!=='stats')show(lp);
 renderAlarms();
 setTimeout(()=>{if(!localStorage.getItem('t24_kbh')){toast(gl().kbhint);ls('t24_kbh','1');}},2000);
+</script>
+
+<div id="ck">
+  <p>Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung unseres Angebots. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <div class="ck-btns">
+    <button id="ck-ok" onclick="acceptCookies('all')">Alle akzeptieren</button>
+    <button id="ck-no" onclick="acceptCookies('necessary')">Nur notwendige</button>
+  </div>
+</div>
+<script>
+function acceptCookies(v){
+  localStorage.setItem('cookie-consent',v);
+  document.getElementById('ck').style.display='none';
+}
+if(!localStorage.getItem('cookie-consent'))
+  document.getElementById('ck').style.display='flex';
 </script>
 </body>
 </html>
