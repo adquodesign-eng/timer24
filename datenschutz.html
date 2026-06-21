@@ -1,268 +1,289 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Datenschutzerklärung – Timer-24.com</title>
+<meta name="description" content="Datenschutzerklärung von Timer-24.com – DSGVO-konform.">
 <meta name="robots" content="noindex,follow">
 <style>
-:root{--bg-deep:#F6F8FC;--surface:#FFFFFF;--text:#1F2937;--muted:#6B7280;--blue-bright:#1BA6FF;--blue-soft:#E8F4FF;--copper:#C77A4A;--copper-soft:#F3E3DA;--border:#E5E7EB;}
+:root{--bg:#F6F8FC;--sur:#FFFFFF;--txt:#1F2937;--mut:#6B7280;--bl:#1BA6FF;--bls:#E8F4FF;--brd:#E5E7EB;--r:12px;--rs:8px;--t:.18s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg-deep);background-image:linear-gradient(rgba(27,166,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(27,166,255,.06) 1px,transparent 1px);background-size:40px 40px;color:var(--text);min-height:100vh;padding:0 0 80px;}
-header{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
-.logo{font-weight:800;font-size:1.1rem;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px;}
-.logo-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--blue-bright),#0088dd);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
-.logo em{color:var(--blue-bright);font-style:normal;}
-.lang-wrap{position:relative;margin-left:auto;}
-.lang-btn{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border:1px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--text);}
-.lang-btn:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
-.lang-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.13);list-style:none;padding:6px;min-width:155px;z-index:999;max-height:320px;overflow-y:auto;}
-.lang-menu.open{display:block;}
-.lang-menu li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;}
-.lang-menu li:hover{background:var(--bg-deep);}
-.lang-menu li.sel{color:var(--blue-bright);background:var(--blue-soft);font-weight:700;}
-main{max-width:760px;margin:32px auto;padding:0 20px;}
-.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:28px 32px;margin-bottom:20px;}
-h1{font-size:1.6rem;font-weight:800;margin-bottom:6px;}
-h2{font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--blue-bright);}
-p{font-size:.9rem;line-height:1.8;margin-bottom:10px;color:var(--muted);}
-p strong{color:var(--text);}
-a{color:var(--blue-bright);text-decoration:none;}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;background-image:linear-gradient(rgba(27,166,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(27,166,255,.06) 1px,transparent 1px);background-size:40px 40px;padding-bottom:88px;}
+header{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;}
+.hi{max-width:900px;margin:0 auto;padding:0 18px;height:60px;display:flex;align-items:center;gap:12px;}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);font-weight:800;font-size:18px;flex-shrink:0;}
+.logo-i{width:32px;height:32px;background:linear-gradient(135deg,var(--bl),#0088dd);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
+.logo em{color:var(--bl);font-style:normal;}
+.navl{display:flex;gap:4px;align-items:center;}
+.navl a{padding:6px 10px;border-radius:var(--rs);text-decoration:none;font-size:13px;font-weight:500;color:var(--mut);white-space:nowrap;transition:all var(--t);}
+.navl a:hover,.navl a.act{color:var(--bl);background:var(--bls);}
+/* Language select */
+.lang-sel-wrap{margin-left:auto;flex-shrink:0;}
+#lang-select{padding:6px 10px;border:1px solid var(--brd);border-radius:var(--rs);background:var(--sur);font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--txt);cursor:pointer;outline:none;transition:border-color var(--t);}
+#lang-select:hover,#lang-select:focus{border-color:var(--bl);}
+main{max-width:900px;margin:0 auto;padding:28px 18px 60px;}
+.card{background:var(--sur);border:1px solid var(--brd);border-radius:var(--r);padding:26px 30px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+h1{font-size:1.55rem;font-weight:800;margin-bottom:6px;}
+h2{font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--bl);}
+h2:first-child{margin-top:0;}
+h3{font-size:.95rem;font-weight:700;margin:14px 0 6px;}
+p{font-size:.9rem;line-height:1.8;margin-bottom:10px;color:var(--mut);}
+p:last-child{margin-bottom:0;}
+p strong{color:var(--txt);}
+a{color:var(--bl);text-decoration:none;}
 a:hover{text-decoration:underline;}
-.meta{font-size:.78rem;color:var(--muted);margin-bottom:20px;}
-ul{padding-left:18px;margin-bottom:10px;}
-li{font-size:.88rem;line-height:1.7;color:var(--muted);}
-.info-box{background:var(--blue-soft);border-left:3px solid var(--blue-bright);border-radius:0 6px 6px 0;padding:10px 14px;margin:12px 0;font-size:.85rem;line-height:1.6;color:var(--text);}
-footer{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:8px 16px;text-align:center;font-size:.72rem;color:var(--muted);z-index:90;}
-footer a{color:var(--muted);text-decoration:none;margin:0 5px;}
-footer a:hover{color:var(--blue-bright);}
-
-
-
-
-
-@media(max-width:600px){.card{padding:20px 16px;}main{padding:0 14px;}}
-
-/* Cookie Banner */
-#ck{display:none;position:fixed;bottom:0;left:0;right:0;background:#1F2937;color:#fff;padding:14px 24px;z-index:1000;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 -2px 12px rgba(0,0,0,.18);}
-#ck p{font-size:.82rem;flex:1 1 260px;margin:0;color:rgba(255,255,255,.88);line-height:1.5;}
+ul,ol{padding-left:18px;margin-bottom:10px;}
+li{font-size:.88rem;line-height:1.7;color:var(--mut);}
+.meta{font-size:.78rem;color:var(--mut);margin-bottom:18px;}
+.info-box{background:var(--bls);border-left:3px solid var(--bl);border-radius:0 6px 6px 0;padding:10px 14px;margin:12px 0;font-size:.85rem;line-height:1.6;color:var(--txt);}
+/* Cookie */
+#ck{display:none;position:fixed;bottom:0;left:0;right:0;background:#1F2937;padding:14px 22px;z-index:1000;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;box-shadow:0 -2px 12px rgba(0,0,0,.2);}
+#ck p{font-size:.82rem;flex:1 1 240px;margin:0;color:rgba(255,255,255,.88);line-height:1.5;}
 #ck p a{color:#93C5FD;text-decoration:underline;}
-.ck-btns{display:flex;gap:8px;flex-shrink:0;}
-#ck-ok{padding:8px 18px;border-radius:7px;border:none;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:700;background:#1BA6FF;color:#fff;}
-#ck-ok:hover{background:#0095ee;}
-#ck-no{padding:8px 16px;border-radius:7px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;background:transparent;color:#9CA3AF;border:1px solid #4B5563;}
-#ck-no:hover{color:#fff;border-color:#9CA3AF;}
+.ck-b{display:flex;gap:8px;flex-shrink:0;}
+#ck-ok{padding:8px 16px;border-radius:6px;border:none;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:700;background:var(--bl);color:#fff;}
+#ck-no{padding:8px 14px;border-radius:6px;cursor:pointer;font-family:system-ui,sans-serif;font-size:.82rem;font-weight:600;background:transparent;color:#9CA3AF;border:1px solid #4B5563;}
+footer{position:fixed;bottom:0;left:0;right:0;background:var(--sur);border-top:1px solid var(--brd);padding:7px 16px;text-align:center;font-size:11.5px;color:var(--mut);z-index:90;}
+footer a{color:var(--mut);text-decoration:none;margin:0 4px;}
+footer a:hover{color:var(--bl);}
+@media(max-width:620px){.navl{display:none;}.hi{padding:0 12px;}main{padding:18px 12px 60px;}}
 </style>
 </head>
 <body>
-
 <header>
-  <a href="index.html" class="logo"><div class="logo-icon">⏱</div>Timer<em>-24</em></a>
-  <nav style="display:flex;gap:6px;align-items:center;">
-    <a href="timer.html" style="padding:6px 11px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);" id="nav-timer">Timer</a>
-    <a href="wissen.html" style="padding:6px 11px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);" id="nav-wissen">Wissen</a>
-    <a href="faq.html" style="padding:6px 11px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);" id="nav-faq">FAQ</a>
-  </nav>
-  <div class="lang-wrap" id="langWrap">
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">🇩🇪 DE ▼</button>
-    <ul class="lang-menu" id="langMenu"></ul>
+  <div class="hi">
+    <a href="index.html" class="logo"><div class="logo-i">⏱</div>Timer<em>-24</em></a>
+    <nav class="navl">
+      <a href="timer.html" data-i18n="timer">Timer</a>
+      <a href="wissen.html" data-i18n="wissen">Wissen</a>
+      <a href="faq.html" data-i18n="faq">FAQ</a>
+      <a href="hilfe.html" data-i18n="hilfe">Hilfe</a>
+      <a href="kontakt.html" data-i18n="kontakt">Kontakt</a>
+    </nav>
+    <div class="lang-sel-wrap">
+      <select id="lang-select" onchange="setLang(this.value)">
+        <option value="de">🇩🇪 DE</option>
+        <option value="en">🇬🇧 EN</option>
+        <option value="fr">🇫🇷 FR</option>
+        <option value="es">🇪🇸 ES</option>
+        <option value="it">🇮🇹 IT</option>
+        <option value="pt">🇵🇹 PT</option>
+        <option value="nl">🇳🇱 NL</option>
+        <option value="pl">🇵🇱 PL</option>
+        <option value="tr">🇹🇷 TR</option>
+        <option value="ar">🇸🇦 AR</option>
+        <option value="zh">🇨🇳 ZH</option>
+      </select>
+    </div>
   </div>
 </header>
-
-<main id="page-main"></main>
-
+<main id="pm"></main>
+<footer>
+  <a href="timer.html" data-i18n="timer">Timer</a> |
+  <a href="wissen.html" data-i18n="wissen">Wissen</a> |
+  <a href="faq.html" data-i18n="faq">FAQ</a> |
+  <a href="hilfe.html" data-i18n="hilfe">Hilfe</a> |
+  <a href="kontakt.html" data-i18n="kontakt">Kontakt</a> |
+  <a href="ueber-uns.html" data-i18n="ueber">Über uns</a> |
+  <a href="impressum.html" data-i18n="impressum">Impressum</a> |
+  <a href="datenschutz.html" data-i18n="datenschutz">Datenschutz</a>
+  <br><span data-i18n="copy">© 2025 Timer-24.com</span>
+</footer>
 <div id="ck">
-  <p>Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung unseres Angebots. Mehr Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-  <div class="ck-btns">
+  <p id="ck-p">Wir nutzen Cookies für Werbung (Google AdSense). Mehr Infos in der <a href="datenschutz.html" id="ck-ds-link">Datenschutzerklärung</a>.</p>
+  <div class="ck-b">
     <button id="ck-ok" onclick="acceptCookies('all')">Alle akzeptieren</button>
     <button id="ck-no" onclick="acceptCookies('necessary')">Nur notwendige</button>
   </div>
 </div>
 <script>
-function acceptCookies(v){
-  localStorage.setItem('cookie-consent',v);
-  document.getElementById('ck').style.display='none';
+
+const NAV_I18N = {"de": {"timer": "Timer", "wissen": "Wissen", "faq": "FAQ", "hilfe": "Hilfe", "kontakt": "Kontakt", "ueber": "Über uns", "impressum": "Impressum", "datenschutz": "Datenschutz", "start": "▶ Starten", "copy": "© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit", "ck_ok": "Alle akzeptieren", "ck_no": "Nur notwendige", "ck_txt": "Wir nutzen Cookies für Werbung (Google AdSense). Mehr Infos in der"}, "en": {"timer": "Timer", "wissen": "Knowledge", "faq": "FAQ", "hilfe": "Help", "kontakt": "Contact", "ueber": "About", "impressum": "Imprint", "datenschutz": "Privacy", "start": "▶ Start", "copy": "© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy", "ck_ok": "Accept all", "ck_no": "Necessary only", "ck_txt": "We use cookies for advertising (Google AdSense). More info in our"}, "fr": {"timer": "Minuterie", "wissen": "Savoir", "faq": "FAQ", "hilfe": "Aide", "kontakt": "Contact", "ueber": "À propos", "impressum": "Mentions légales", "datenschutz": "Confidentialité", "start": "▶ Démarrer", "copy": "© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude", "ck_ok": "Tout accepter", "ck_no": "Nécessaires seulement", "ck_txt": "Nous utilisons des cookies publicitaires (Google AdSense). Voir notre"}, "es": {"timer": "Temporizador", "wissen": "Conocimiento", "faq": "FAQ", "hilfe": "Ayuda", "kontakt": "Contacto", "ueber": "Acerca de", "impressum": "Aviso legal", "datenschutz": "Privacidad", "start": "▶ Iniciar", "copy": "© 2025 Timer-24.com · Cálculos locales · Sin garantía de exactitud", "ck_ok": "Aceptar todo", "ck_no": "Solo necesarias", "ck_txt": "Usamos cookies publicitarias (Google AdSense). Más info en nuestra"}, "it": {"timer": "Contatore", "wissen": "Conoscenza", "faq": "FAQ", "hilfe": "Aiuto", "kontakt": "Contatto", "ueber": "Chi siamo", "impressum": "Note legali", "datenschutz": "Privacy", "start": "▶ Avvia", "copy": "© 2025 Timer-24.com · Calcoli locali · Nessuna garanzia", "ck_ok": "Accetta tutto", "ck_no": "Solo necessari", "ck_txt": "Utilizziamo cookie pubblicitari (Google AdSense). Più info nella nostra"}, "pt": {"timer": "Temporizador", "wissen": "Conhecimento", "faq": "FAQ", "hilfe": "Ajuda", "kontakt": "Contacto", "ueber": "Sobre nós", "impressum": "Aviso legal", "datenschutz": "Privacidade", "start": "▶ Iniciar", "copy": "© 2025 Timer-24.com · Cálculos locais · Sem garantia", "ck_ok": "Aceitar tudo", "ck_no": "Somente necessários", "ck_txt": "Usamos cookies publicitários (Google AdSense). Mais informações na nossa"}, "nl": {"timer": "Timer", "wissen": "Kennis", "faq": "FAQ", "hilfe": "Hulp", "kontakt": "Contact", "ueber": "Over ons", "impressum": "Impressum", "datenschutz": "Privacy", "start": "▶ Starten", "copy": "© 2025 Timer-24.com · Berekeningen lokaal · Geen garantie", "ck_ok": "Alles accepteren", "ck_no": "Alleen noodzakelijk", "ck_txt": "We gebruiken cookies voor advertenties (Google AdSense). Meer info in ons"}, "pl": {"timer": "Timer", "wissen": "Wiedza", "faq": "FAQ", "hilfe": "Pomoc", "kontakt": "Kontakt", "ueber": "O nas", "impressum": "Informacje prawne", "datenschutz": "Prywatność", "start": "▶ Start", "copy": "© 2025 Timer-24.com · Obliczenia lokalne · Bez gwarancji", "ck_ok": "Akceptuj wszystkie", "ck_no": "Tylko niezbędne", "ck_txt": "Używamy plików cookie reklamowych (Google AdSense). Więcej w naszej"}, "tr": {"timer": "Zamanlayıcı", "wissen": "Bilgi", "faq": "SSS", "hilfe": "Yardım", "kontakt": "İletişim", "ueber": "Hakkımızda", "impressum": "Künye", "datenschutz": "Gizlilik", "start": "▶ Başlat", "copy": "© 2025 Timer-24.com · Hesaplamalar tarayıcıda · Garanti yoktur", "ck_ok": "Tümünü kabul et", "ck_no": "Yalnızca gerekli", "ck_txt": "Reklam için çerez kullanıyoruz (Google AdSense). Ayrıntılar için"}, "ar": {"timer": "المؤقت", "wissen": "المعرفة", "faq": "الأسئلة الشائعة", "hilfe": "المساعدة", "kontakt": "اتصل بنا", "ueber": "من نحن", "impressum": "بيانات المشغّل", "datenschutz": "الخصوصية", "start": "▶ ابدأ", "copy": "© 2025 Timer-24.com · العمليات محلية · لا ضمان على الدقة", "ck_ok": "قبول الكل", "ck_no": "الضرورية فقط", "ck_txt": "نستخدم ملفات تعريف الارتباط للإعلانات (Google AdSense). مزيد من المعلومات في"}, "zh": {"timer": "计时器", "wissen": "知识", "faq": "常见问题", "hilfe": "帮助", "kontakt": "联系我们", "ueber": "关于我们", "impressum": "版权信息", "datenschutz": "隐私政策", "start": "▶ 开始", "copy": "© 2025 Timer-24.com · 本地计算 · 不保证准确性", "ck_ok": "全部接受", "ck_no": "仅必要", "ck_txt": "我们使用Cookie用于广告（Google AdSense）。更多信息请参阅我们的"}};
+
+function getLang() {
+  try {
+    const p = new URLSearchParams(window.location.search);
+    const q = p.get('lang');
+    if (q && NAV_I18N[q]) return q;
+  } catch(e) {}
+  const s = localStorage.getItem('t24_lang');
+  if (s && NAV_I18N[s]) return s;
+  const b = (navigator.language || 'de').slice(0, 2).toLowerCase();
+  return NAV_I18N[b] ? b : 'de';
 }
-if(!localStorage.getItem('cookie-consent'))
-  document.getElementById('ck').style.display='flex';
-</script>
 
-<footer>
-  <div>
-    <a href="timer.html" id="fl-timer">Timer</a> |
-    <a href="wissen.html" id="fl-wissen">Wissenswertes</a> |
-    <a href="faq.html" id="fl-faq">FAQ</a> |
-    <a href="hilfe.html" id="fl-hilfe">Hilfe</a> |
-    <a href="impressum.html" id="fl-impressum">Impressum</a> |
-    <a href="datenschutz.html" id="fl-datenschutz">Datenschutz</a>
-  </div>
-  <div id="fl-copy" style="margin-top:2px">© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser · Keine Garantie auf Richtigkeit</div>
-</footer>
+function setLang(l) {
+  if (!NAV_I18N[l]) return;
+  localStorage.setItem('t24_lang', l);
+  try {
+    const u = new URL(window.location.href);
+    u.searchParams.set('lang', l);
+    history.replaceState(null, '', u.toString());
+  } catch(e) {}
+  applyNav(l);
+  if (typeof renderPage === 'function') renderPage(l);
+}
 
-<script>
-const LANGS={de:{f:'🇩🇪',n:'Deutsch'},en:{f:'🇬🇧',n:'English'},fr:{f:'🇫🇷',n:'Français'},es:{f:'🇪🇸',n:'Español'},it:{f:'🇮🇹',n:'Italiano'},pt:{f:'🇵🇹',n:'Português'},nl:{f:'🇳🇱',n:'Nederlands'},pl:{f:'🇵🇱',n:'Polski'},tr:{f:'🇹🇷',n:'Türkçe'},ar:{f:'🇸🇦',n:'العربية'},zh:{f:'🇨🇳',n:'中文'}};
+function applyNav(lang) {
+  const t = NAV_I18N[lang] || NAV_I18N['de'];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  const sel = document.getElementById('lang-select');
+  if (sel) sel.value = lang;
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  // Cookie banner
+  const ckP = document.getElementById('ck-p');
+  const dsLink = document.getElementById('ck-ds-link');
+  if (ckP && dsLink) {
+    ckP.firstChild.textContent = (t.ck_txt || '') + ' ';
+    dsLink.textContent = t.datenschutz || 'Datenschutz';
+    dsLink.href = 'datenschutz.html?lang=' + lang;
+  }
+  const okBtn = document.getElementById('ck-ok');
+  const noBtn = document.getElementById('ck-no');
+  if (okBtn) okBtn.textContent = t.ck_ok || 'Alle akzeptieren';
+  if (noBtn) noBtn.textContent = t.ck_no || 'Nur notwendige';
+}
 
-const NAV={
-  de:{timer:'Timer',wissen:'Wissen',faq:'FAQ',hilfe:'Hilfe',impressum:'Impressum',datenschutz:'Datenschutz',copy:'© 2025 Timer-24.com · Alle Berechnungen erfolgen lokal im Browser · Keine Garantie auf Richtigkeit',ck:['Wir nutzen Cookies für Werbung (Google AdSense) und zur Verbesserung des Angebots.','Alle akzeptieren','Nur notwendige']},
-  en:{timer:'Timer',wissen:'Knowledge',faq:'FAQ',hilfe:'Help',impressum:'Imprint',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · All calculations run locally in your browser · No guarantee of accuracy',ck:['We use cookies for advertising (Google AdSense) and to improve our service.','Accept all','Necessary only']},
-  fr:{timer:'Minuterie',wissen:'Savoir',faq:'FAQ',hilfe:'Aide',impressum:'Mentions légales',datenschutz:'Confidentialité',copy:"© 2025 Timer-24.com · Tous les calculs s'effectuent localement · Aucune garantie d'exactitude",ck:["Nous utilisons des cookies pour la publicité (Google AdSense) et l'amélioration du service.",'Tout accepter','Nécessaires seulement']},
-  es:{timer:'Temporizador',wissen:'Conocimiento',faq:'FAQ',hilfe:'Ayuda',impressum:'Aviso legal',datenschutz:'Privacidad',copy:'© 2025 Timer-24.com · Todos los cálculos se realizan localmente · Sin garantía de exactitud',ck:['Utilizamos cookies para publicidad (Google AdSense) y para mejorar el servicio.','Aceptar todo','Solo necesarias']},
-  it:{timer:'Contatore',wissen:'Conoscenza',faq:'FAQ',hilfe:'Aiuto',impressum:'Note legali',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · Tutti i calcoli vengono eseguiti localmente · Nessuna garanzia',ck:['Utilizziamo cookie per la pubblicità (Google AdSense) e per migliorare il servizio.','Accetta tutto','Solo necessari']},
-  pt:{timer:'Temporizador',wissen:'Conhecimento',faq:'FAQ',hilfe:'Ajuda',impressum:'Aviso legal',datenschutz:'Privacidade',copy:'© 2025 Timer-24.com · Todos os cálculos são executados localmente · Sem garantia',ck:['Usamos cookies para publicidade (Google AdSense) e para melhorar o serviço.','Aceitar tudo','Somente necessários']},
-  nl:{timer:'Timer',wissen:'Kennis',faq:'FAQ',hilfe:'Hulp',impressum:'Impressum',datenschutz:'Privacy',copy:'© 2025 Timer-24.com · Alle berekeningen vinden lokaal plaats · Geen garantie',ck:['We gebruiken cookies voor advertenties (Google AdSense) en verbetering van de dienst.','Alles accepteren','Alleen noodzakelijk']},
-  pl:{timer:'Timer',wissen:'Wiedza',faq:'FAQ',hilfe:'Pomoc',impressum:'Informacje prawne',datenschutz:'Prywatność',copy:'© 2025 Timer-24.com · Wszystkie obliczenia wykonywane lokalnie · Bez gwarancji',ck:['Używamy plików cookie do reklam (Google AdSense) i ulepszania serwisu.','Akceptuj wszystkie','Tylko niezbędne']},
-  tr:{timer:'Zamanlayıcı',wissen:'Bilgi',faq:'SSS',hilfe:'Yardım',impressum:'Künye',datenschutz:'Gizlilik',copy:'© 2025 Timer-24.com · Tüm hesaplamalar tarayıcınızda yapılır · Garanti yoktur',ck:['Reklam (Google AdSense) ve hizmet iyileştirmesi için çerezler kullanıyoruz.','Tümünü kabul et','Yalnızca gerekli']},
-  ar:{timer:'المؤقت',wissen:'المعرفة',faq:'الأسئلة الشائعة',hilfe:'المساعدة',impressum:'بيانات المشغّل',datenschutz:'الخصوصية',copy:'© 2025 Timer-24.com · تتم العمليات الحسابية محلياً · لا ضمان على الدقة',ck:['نستخدم ملفات تعريف الارتباط للإعلانات (Google AdSense) وتحسين الخدمة.','قبول الكل','الضرورية فقط']},
-  zh:{timer:'计时器',wissen:'知识',faq:'常见问题',hilfe:'帮助',impressum:'版权信息',datenschutz:'隐私政策',copy:'© 2025 Timer-24.com · 所有计算在浏览器本地进行 · 不保证准确性',ck:['我们使用Cookie用于广告（Google AdSense）和改善服务。','全部接受','仅必要']}
+function acceptCookies(v) {
+  localStorage.setItem('cookie-consent', v);
+  document.getElementById('ck').style.display = 'none';
+}
+if (!localStorage.getItem('cookie-consent'))
+  document.getElementById('ck').style.display = 'flex';
+
+
+const PD = {
+de:{t:'Datenschutzerklärung',s:'Zuletzt aktualisiert: Juni 2025',sec:[
+  {h:'1. Verantwortliche Stelle',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf<br>E-Mail: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Timer & lokale Verarbeitung',b:'<div class="info-box">✅ Alle Timer auf Timer-24.com laufen ausschließlich lokal in Ihrem Browser. Ihre Zeiten und Einstellungen werden <strong>niemals</strong> an unsere Server übertragen.</div><p>Wecker-Konfigurationen und Sprachpräferenzen werden im <strong>localStorage</strong> Ihres Browsers gespeichert und verlassen Ihr Gerät nicht.</p>'},
+  {h:'3. Cookies & localStorage',b:'<p>Wir verwenden <strong>localStorage</strong> ausschließlich für:</p><ul><li>Ihre Spracheinstellung</li><li>Timer-Einstellungen (Töne, letzte Ansicht)</li><li>Wecker-Konfigurationen</li><li>Cookie-Zustimmung</li></ul><p>Es werden ohne Ihre Zustimmung keine Tracking-Cookies oder Drittanbieter-Cookies gesetzt.</p>'},
+  {h:'4. Google AdSense',b:'<p>Diese Seite nutzt <strong>Google AdSense</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) zur Anzeige von Werbung. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p><p>Widerspruch: <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> · Datenschutz Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>'},
+  {h:'5. Cloudflare (Hosting & CDN)',b:'<p><strong>Cloudflare, Inc.</strong> (101 Townsend St., San Francisco, CA 94107, USA) verarbeitet technische Daten (IP-Adresse, Anfrage-Metadaten) zur Bereitstellung des Dienstes. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert.<br><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></p>'},
+  {h:'6. Keine Analyse-Tools',b:'<p>Timer-24.com verwendet <strong>keine</strong> Analyse-Tools wie Google Analytics oder ähnliche Dienste. Es findet kein Tracking Ihres Nutzungsverhaltens statt.</p>'},
+  {h:'7. Ihre Rechte (DSGVO)',b:'<p>Auskunft (Art. 15) · Berichtigung (Art. 16) · Löschung (Art. 17) · Einschränkung (Art. 18) · Datenübertragbarkeit (Art. 20) · Widerspruch (Art. 21)</p><p>Beschwerdestelle: Datenschutzbehörde Hessen – <a href="https://datenschutz.hessen.de" target="_blank" rel="noopener">datenschutz.hessen.de</a></p>'},
+  {h:'8. Kontakt Datenschutz',b:'<p>Für Datenschutzanfragen: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+en:{t:'Privacy Policy',s:'Last updated: June 2025',sec:[
+  {h:'1. Data Controller',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Germany<br>Email: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Timers & Local Processing',b:'<div class="info-box">✅ All timers on Timer-24.com run exclusively locally in your browser. Your settings are <strong>never</strong> transmitted to our servers.</div>'},
+  {h:'3. Cookies & localStorage',b:'<p>We use <strong>localStorage</strong> only for: language preference, timer settings, alarm configurations and cookie consent. No tracking cookies without your consent.</p>'},
+  {h:'4. Google AdSense',b:'<p>We use <strong>Google AdSense</strong> (Google Ireland Limited) for advertising. Legal basis: your consent (Art. 6 para. 1 lit. a GDPR).<br>Opt-out: <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a></p>'},
+  {h:'5. Cloudflare',b:'<p><strong>Cloudflare, Inc.</strong> processes technical data (IP, metadata) to provide the service. Certified under EU-US Data Privacy Framework.<br><a href="https://www.cloudflare.com/privacypolicy/" target="_blank">cloudflare.com/privacypolicy</a></p>'},
+  {h:'6. No Analytics',b:'<p>Timer-24.com does <strong>not</strong> use any analytics tools. No tracking of your behaviour.</p>'},
+  {h:'7. Your Rights (GDPR)',b:'<p>Access (Art. 15) · Rectification (Art. 16) · Erasure (Art. 17) · Restriction (Art. 18) · Portability (Art. 20) · Objection (Art. 21)</p>'},
+  {h:'8. Privacy Contact',b:'<p>Privacy enquiries: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+fr:{t:'Politique de confidentialité',s:'Dernière mise à jour : juin 2025',sec:[
+  {h:'1. Responsable du traitement',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Allemagne<br>E-mail : <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Traitement local',b:"<div class=\"info-box\">✅ Toutes les minuteries fonctionnent exclusivement dans votre navigateur. Vos données ne quittent jamais votre appareil.</div>"},
+  {h:'3. Cookies',b:'<p>Nous utilisons <strong>localStorage</strong> uniquement pour la langue, les réglages, la configuration des alarmes et le consentement. Aucun cookie tiers sans consentement.</p>'},
+  {h:'4. Google AdSense',b:"<p>Nous utilisons <strong>Google AdSense</strong> pour la publicité. Base légale : votre consentement. <a href=\"https://adssettings.google.com\" target=\"_blank\">Gérer les préférences</a></p>"},
+  {h:'5. Cloudflare',b:'<p>Hébergement via <strong>Cloudflare, Inc.</strong> Certifié EU-US DPF. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Politique de confidentialité</a></p>'},
+  {h:'6. Pas d\'analyse',b:"<p>Aucun outil d'analyse n'est utilisé.</p>"},
+  {h:'7. Vos droits',b:'<p>Accès · Rectification · Suppression · Limitation · Portabilité · Opposition (RGPD)</p>'},
+  {h:'8. Contact',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+es:{t:'Política de privacidad',s:'Última actualización: junio de 2025',sec:[
+  {h:'1. Responsable',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Alemania<br>Correo: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Procesamiento local',b:'<div class="info-box">✅ Todos los temporizadores funcionan localmente en su navegador. Sus datos nunca salen de su dispositivo.</div>'},
+  {h:'3. Cookies',b:'<p>Usamos <strong>localStorage</strong> únicamente para idioma, ajustes, alarmas y consentimiento. Sin cookies de terceros sin consentimiento.</p>'},
+  {h:'4. Google AdSense',b:'<p>Publicidad mediante <strong>Google AdSense</strong>. Base: su consentimiento. <a href="https://adssettings.google.com" target="_blank">Gestionar</a></p>'},
+  {h:'5. Cloudflare',b:'<p>Alojamiento via <strong>Cloudflare, Inc.</strong> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Política de privacidad</a></p>'},
+  {h:'6. Sin análisis',b:'<p>No se utilizan herramientas de análisis.</p>'},
+  {h:'7. Sus derechos',b:'<p>Acceso · Rectificación · Supresión · Limitación · Portabilidad · Oposición (RGPD)</p>'},
+  {h:'8. Contacto',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+it:{t:'Informativa sulla privacy',s:'Ultimo aggiornamento: giugno 2025',sec:[
+  {h:'1. Titolare',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Germania<br>Email: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Elaborazione locale',b:'<div class="info-box">✅ Tutti i timer funzionano esclusivamente in locale nel browser. Nessun dato lascia il dispositivo.</div>'},
+  {h:'3. Cookie',b:'<p>Usiamo <strong>localStorage</strong> solo per lingua, impostazioni, sveglie e consenso.</p>'},
+  {h:'4. Google AdSense',b:'<p>Pubblicità tramite <strong>Google AdSense</strong>. Base: consenso. <a href="https://adssettings.google.com" target="_blank">Gestisci</a></p>'},
+  {h:'5. Cloudflare',b:'<p>Hosting tramite <strong>Cloudflare, Inc.</strong> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Privacy policy</a></p>'},
+  {h:'6. Nessuna analisi',b:'<p>Nessun strumento di analisi utilizzato.</p>'},
+  {h:'7. I tuoi diritti',b:'<p>Accesso · Rettifica · Cancellazione · Limitazione · Portabilità · Opposizione (GDPR)</p>'},
+  {h:'8. Contatto',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+pt:{t:'Política de privacidade',s:'Última atualização: junho de 2025',sec:[
+  {h:'1. Responsável',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Alemanha<br>E-mail: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Processamento local',b:'<div class="info-box">✅ Todos os temporizadores funcionam localmente no seu navegador. Os seus dados nunca saem do dispositivo.</div>'},
+  {h:'3. Cookies',b:'<p>Usamos <strong>localStorage</strong> apenas para idioma, definições, alarmes e consentimento.</p>'},
+  {h:'4. Google AdSense',b:'<p>Publicidade via <strong>Google AdSense</strong>. Base: consentimento. <a href="https://adssettings.google.com" target="_blank">Gerir</a></p>'},
+  {h:'5. Cloudflare',b:'<p>Alojamento via <strong>Cloudflare, Inc.</strong> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Política de privacidade</a></p>'},
+  {h:'6. Sem análises',b:'<p>Nenhuma ferramenta de análise utilizada.</p>'},
+  {h:'7. Os seus direitos',b:'<p>Acesso · Retificação · Apagamento · Limitação · Portabilidade · Oposição (RGPD)</p>'},
+  {h:'8. Contacto',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+nl:{t:'Privacybeleid',s:'Laatste update: juni 2025',sec:[
+  {h:'1. Verwerkingsverantwoordelijke',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Duitsland<br>E-mail: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Lokale verwerking',b:'<div class="info-box">✅ Alle timers draaien uitsluitend lokaal in uw browser. Geen gegevens verlaten uw apparaat.</div>'},
+  {h:'3. Cookies',b:'<p>Wij gebruiken <strong>localStorage</strong> alleen voor taal, instellingen, wekkers en toestemming.</p>'},
+  {h:'4. Google AdSense',b:'<p>Advertenties via <strong>Google AdSense</strong>. Basis: uw toestemming. <a href="https://adssettings.google.com" target="_blank">Beheren</a></p>'},
+  {h:'5. Cloudflare',b:'<p>Hosting via <strong>Cloudflare, Inc.</strong> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Privacybeleid</a></p>'},
+  {h:'6. Geen analytics',b:'<p>Geen analysetools gebruikt.</p>'},
+  {h:'7. Uw rechten',b:'<p>Inzage · Rectificatie · Verwijdering · Beperking · Overdraagbaarheid · Bezwaar (AVG)</p>'},
+  {h:'8. Contact',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+pl:{t:'Polityka prywatności',s:'Ostatnia aktualizacja: czerwiec 2025',sec:[
+  {h:'1. Administrator',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Niemcy<br>E-mail: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Lokalne przetwarzanie',b:'<div class="info-box">✅ Wszystkie timery działają lokalnie w przeglądarce. Dane nie opuszczają urządzenia.</div>'},
+  {h:'3. Pliki cookie',b:'<p>Używamy <strong>localStorage</strong> tylko dla języka, ustawień, budzika i zgody.</p>'},
+  {h:'4. Google AdSense',b:'<p>Reklamy via <strong>Google AdSense</strong>. Podstawa: zgoda. <a href="https://adssettings.google.com" target="_blank">Zarządzaj</a></p>'},
+  {h:'5. Cloudflare',b:'<p>Hosting via <strong>Cloudflare, Inc.</strong> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Polityka prywatności</a></p>'},
+  {h:'6. Brak analityki',b:'<p>Żadnych narzędzi analitycznych.</p>'},
+  {h:'7. Twoje prawa',b:'<p>Dostęp · Sprostowanie · Usunięcie · Ograniczenie · Przenoszenie · Sprzeciw (RODO)</p>'},
+  {h:'8. Kontakt',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+tr:{t:'Gizlilik Politikası',s:'Son güncelleme: Haziran 2025',sec:[
+  {h:'1. Veri Sorumlusu',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf, Almanya<br>E-posta: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. Yerel İşleme',b:'<div class="info-box">✅ Tüm zamanlayıcılar yalnızca tarayıcınızda çalışır. Verileriniz cihazınızı terk etmez.</div>'},
+  {h:'3. Çerezler',b:'<p><strong>localStorage</strong> yalnızca dil, ayarlar, alarm ve onay için kullanılır.</p>'},
+  {h:'4. Google AdSense',b:'<p><strong>Google AdSense</strong> ile reklamlar. Hukuki dayanak: onayınız. <a href="https://adssettings.google.com" target="_blank">Yönet</a></p>'},
+  {h:'5. Cloudflare',b:'<p><strong>Cloudflare, Inc.</strong> aracılığıyla barındırma. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Gizlilik politikası</a></p>'},
+  {h:'6. Analitik Yok',b:'<p>Analitik araç kullanılmamaktadır.</p>'},
+  {h:'7. Haklarınız',b:'<p>Erişim · Düzeltme · Silme · Kısıtlama · Taşınabilirlik · İtiraz (GDPR)</p>'},
+  {h:'8. İletişim',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+ar:{t:'سياسة الخصوصية',s:'آخر تحديث: يونيو 2025',sec:[
+  {h:'1. الجهة المسؤولة',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf، ألمانيا<br>البريد الإلكتروني: <a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. المعالجة المحلية',b:'<div class="info-box">✅ تعمل جميع المؤقتات محلياً في متصفحك. لا تغادر بياناتك جهازك أبداً.</div>'},
+  {h:'3. ملفات تعريف الارتباط',b:'<p>نستخدم <strong>localStorage</strong> فقط للغة والإعدادات والمنبه والموافقة.</p>'},
+  {h:'4. Google AdSense',b:'<p>إعلانات عبر <strong>Google AdSense</strong>. الأساس القانوني: موافقتك. <a href="https://adssettings.google.com" target="_blank">إدارة</a></p>'},
+  {h:'5. Cloudflare',b:'<p>استضافة عبر <strong>Cloudflare, Inc.</strong> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">سياسة الخصوصية</a></p>'},
+  {h:'6. لا أدوات تحليلية',b:'<p>لا تُستخدم أي أدوات تحليلية.</p>'},
+  {h:'7. حقوقك',b:'<p>الاطلاع · التصحيح · الحذف · التقييد · النقل · الاعتراض (GDPR)</p>'},
+  {h:'8. التواصل',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]},
+zh:{t:'隐私政策',s:'最后更新：2025年6月',sec:[
+  {h:'1. 数据控制者',b:'<p>Christina Baus · adquo design · Kelsterbacherstraße 72–76 · 64546 Mörfelden-Walldorf，德国<br>电子邮件：<a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'},
+  {h:'2. 本地处理',b:'<div class="info-box">✅ 所有计时器完全在您的浏览器本地运行。您的数据从不传输到我们的服务器。</div>'},
+  {h:'3. Cookie',b:'<p>我们仅使用 <strong>localStorage</strong> 存储语言、设置、闹钟配置和Cookie同意。</p>'},
+  {h:'4. Google AdSense',b:'<p>通过 <strong>Google AdSense</strong> 展示广告。法律依据：您的同意。<a href="https://adssettings.google.com" target="_blank">管理偏好</a></p>'},
+  {h:'5. Cloudflare',b:'<p>通过 <strong>Cloudflare, Inc.</strong> 托管。<a href="https://www.cloudflare.com/privacypolicy/" target="_blank">隐私政策</a></p>'},
+  {h:'6. 无分析工具',b:'<p>不使用任何分析工具。</p>'},
+  {h:'7. 您的权利',b:'<p>访问 · 更正 · 删除 · 限制 · 可携带性 · 反对（GDPR）</p>'},
+  {h:'8. 联系',b:'<p><a href="mailto:info@adquo-design.de">info@adquo-design.de</a></p>'}
+]}
 };
 
-const PAGE_DATA={
-  de:{title:'Datenschutzerklärung',subtitle:'Zuletzt aktualisiert: Juni 2025',sections:[
-    {h:'1. Verantwortliche Stelle',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf · E-Mail: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Timer & lokale Verarbeitung',body:"<div class='info-box'>✅ Alle Timer auf Timer-24.com laufen ausschließlich lokal in Ihrem Browser. Ihre eingegebenen Zeiten und Einstellungen werden niemals an unsere Server übertragen.</div><p>Fokus-Statistiken, Wecker-Einstellungen und Sprachpräferenzen werden im <strong>localStorage</strong> Ihres Browsers gespeichert. Diese Daten verlassen Ihr Gerät nicht und werden nicht mit uns oder Dritten geteilt.</p>"},
-    {h:'3. Cookies & localStorage',body:"<p>Wir verwenden <strong>localStorage</strong> ausschließlich für:</p><ul><li>Ihre Spracheinstellung</li><li>Timer-Einstellungen (Töne, Theme, letzte Ansicht)</li><li>Fokus-Statistiken und Streaks</li><li>Wecker-Konfigurationen</li><li>Cookie-Zustimmung</li></ul><p>Es werden keine Tracking-Cookies oder Cookies von Drittanbietern ohne Ihre Zustimmung gesetzt.</p>"},
-    {h:'4. Google AdSense',body:"<p>Diese Seite nutzt <strong>Google AdSense</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) zur Anzeige von Werbung. Google AdSense verwendet Cookies und ähnliche Technologien, um personalisierte Werbung zu schalten. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p><p>Sie können der personalisierten Werbung unter <a href='https://adssettings.google.com' target='_blank'>adssettings.google.com</a> widersprechen. Datenschutzerklärung: <a href='https://policies.google.com/privacy' target='_blank'>policies.google.com/privacy</a></p>"},
-    {h:'5. Cloudflare (Hosting & CDN)',body:"<p>Unsere Website nutzt <strong>Cloudflare</strong> (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA) als Hosting-Anbieter und CDN. Cloudflare verarbeitet dabei technische Daten (IP-Adresse, Anfrage-Metadaten) zur Bereitstellung des Dienstes und zum DDoS-Schutz.</p><p>Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert. Datenschutzerklärung: <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>cloudflare.com/privacypolicy</a></p>"},
-    {h:'6. Keine Analyse-Tools',body:"<p>Timer-24.com verwendet <strong>keine</strong> Analyse-Tools wie Google Analytics, Matomo oder ähnliche Dienste. Es findet kein Tracking Ihres Nutzungsverhaltens statt.</p>"},
-    {h:'7. Ihre Rechte',body:"<p>Sie haben folgende Rechte gemäß DSGVO:</p><ul><li>Auskunft (Art. 15)</li><li>Berichtigung (Art. 16)</li><li>Löschung (Art. 17)</li><li>Einschränkung der Verarbeitung (Art. 18)</li><li>Datenübertragbarkeit (Art. 20)</li><li>Widerspruch (Art. 21)</li></ul><p>Beschwerden richten Sie an die zuständige Datenschutzaufsichtsbehörde in Hessen: <a href='https://datenschutz.hessen.de' target='_blank'>datenschutz.hessen.de</a></p>"},
-    {h:'8. Kontakt Datenschutz',body:"<p>Für Datenschutzanfragen wenden Sie sich an: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  en:{title:'Privacy Policy',subtitle:'Last updated: June 2025',sections:[
-    {h:'1. Data Controller',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Germany · Email: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Timers & Local Processing',body:"<div class='info-box'>✅ All timers on Timer-24.com run exclusively locally in your browser. Your times and settings are never transmitted to our servers.</div><p>Focus statistics, alarm settings and language preferences are stored in your browser's <strong>localStorage</strong>. This data never leaves your device.</p>"},
-    {h:'3. Cookies & localStorage',body:"<p>We use <strong>localStorage</strong> exclusively for:</p><ul><li>Your language preference</li><li>Timer settings (sounds, theme, last view)</li><li>Focus statistics and streaks</li><li>Alarm configurations</li><li>Cookie consent</li></ul><p>No tracking cookies or third-party cookies are set without your consent.</p>"},
-    {h:'4. Google AdSense',body:"<p>This site uses <strong>Google AdSense</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland) to display advertising. Google AdSense uses cookies to serve personalised ads. Legal basis: your consent (Art. 6 para. 1 lit. a GDPR).</p><p>You can opt out of personalised advertising at <a href='https://adssettings.google.com' target='_blank'>adssettings.google.com</a>. Privacy policy: <a href='https://policies.google.com/privacy' target='_blank'>policies.google.com/privacy</a></p>"},
-    {h:'5. Cloudflare (Hosting & CDN)',body:"<p>Our website uses <strong>Cloudflare</strong> (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA) as hosting provider and CDN. Cloudflare processes technical data (IP address, request metadata) to provide the service and DDoS protection. Cloudflare is certified under the EU-US Data Privacy Framework. Privacy policy: <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>cloudflare.com/privacypolicy</a></p>"},
-    {h:'6. No Analytics',body:"<p>Timer-24.com does <strong>not</strong> use any analytics tools such as Google Analytics or similar services. No tracking of your usage behaviour takes place.</p>"},
-    {h:'7. Your Rights',body:"<p>You have the following rights under GDPR:</p><ul><li>Access (Art. 15)</li><li>Rectification (Art. 16)</li><li>Erasure (Art. 17)</li><li>Restriction of processing (Art. 18)</li><li>Data portability (Art. 20)</li><li>Objection (Art. 21)</li></ul><p>You may lodge a complaint with the competent supervisory authority.</p>"},
-    {h:'8. Privacy Contact',body:"<p>For privacy enquiries please contact: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  fr:{title:'Politique de confidentialité',subtitle:'Dernière mise à jour : juin 2025',sections:[
-    {h:'1. Responsable du traitement',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Allemagne · E-mail : <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Minuteries & traitement local',body:"<div class='info-box'>✅ Toutes les minuteries sur Timer-24.com fonctionnent exclusivement en local dans votre navigateur. Vos réglages ne sont jamais transmis à nos serveurs.</div><p>Les statistiques de focus, réglages de réveil et préférences de langue sont stockés dans le <strong>localStorage</strong> de votre navigateur et ne quittent jamais votre appareil.</p>"},
-    {h:'3. Cookies & localStorage',body:"<p>Nous utilisons le <strong>localStorage</strong> uniquement pour votre langue, vos réglages de minuterie, vos statistiques de focus et votre consentement aux cookies. Aucun cookie tiers n'est utilisé sans votre consentement.</p>"},
-    {h:'4. Google AdSense',body:"<p>Ce site utilise <strong>Google AdSense</strong> pour afficher de la publicité. Google AdSense utilise des cookies pour diffuser des annonces personnalisées. Base juridique : votre consentement (Art. 6 par. 1 lit. a RGPD). <a href='https://adssettings.google.com' target='_blank'>Gérer les préférences</a> · <a href='https://policies.google.com/privacy' target='_blank'>Politique de confidentialité Google</a></p>"},
-    {h:'5. Cloudflare',body:"<p>Notre site est hébergé par <strong>Cloudflare</strong> (Cloudflare, Inc., USA). Cloudflare traite des données techniques (adresse IP, métadonnées) pour fournir le service. Politique de confidentialité : <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>cloudflare.com/privacypolicy</a></p>"},
-    {h:'6. Pas d\'analyse',body:"<p>Timer-24.com n'utilise <strong>aucun</strong> outil d'analyse. Aucun suivi de votre comportement n'est effectué.</p>"},
-    {h:'7. Vos droits',body:"<p>Vous disposez des droits suivants : accès, rectification, suppression, limitation, portabilité et opposition. Plaintes auprès de la CNIL ou de l'autorité de protection des données compétente.</p>"},
-    {h:'8. Contact protection des données',body:"<p>Pour toute question : <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  es:{title:'Política de privacidad',subtitle:'Última actualización: junio de 2025',sections:[
-    {h:'1. Responsable del tratamiento',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Alemania · Correo: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Temporizadores & procesamiento local',body:"<div class='info-box'>✅ Todos los temporizadores en Timer-24.com se ejecutan exclusivamente de forma local en su navegador. Sus ajustes nunca se transmiten a nuestros servidores.</div><p>Las estadísticas de enfoque, configuraciones de alarma y preferencias de idioma se almacenan en el <strong>localStorage</strong> de su navegador y nunca abandonan su dispositivo.</p>"},
-    {h:'3. Cookies & localStorage',body:"<p>Usamos <strong>localStorage</strong> exclusivamente para su idioma, ajustes del temporizador, estadísticas de enfoque y consentimiento de cookies. No se utilizan cookies de terceros sin su consentimiento.</p>"},
-    {h:'4. Google AdSense',body:"<p>Este sitio usa <strong>Google AdSense</strong> para mostrar publicidad personalizada. Base jurídica: su consentimiento (Art. 6 apdo. 1 lit. a RGPD). <a href='https://adssettings.google.com' target='_blank'>Gestionar preferencias</a> · <a href='https://policies.google.com/privacy' target='_blank'>Política de privacidad de Google</a></p>"},
-    {h:'5. Cloudflare',body:"<p>Nuestro sitio usa <strong>Cloudflare</strong> (Cloudflare, Inc., EE. UU.) como proveedor de alojamiento. Cloudflare procesa datos técnicos para prestar el servicio. <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>Política de privacidad</a></p>"},
-    {h:'6. Sin análisis',body:"<p>Timer-24.com <strong>no</strong> utiliza herramientas de análisis. No se realiza ningún seguimiento de su comportamiento.</p>"},
-    {h:'7. Sus derechos',body:"<p>Tiene derecho de acceso, rectificación, supresión, limitación, portabilidad y oposición. Puede presentar una reclamación ante la autoridad de control competente.</p>"},
-    {h:'8. Contacto privacidad',body:"<p>Para consultas de privacidad: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  it:{title:'Informativa sulla privacy',subtitle:'Ultimo aggiornamento: giugno 2025',sections:[
-    {h:'1. Titolare del trattamento',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Germania · Email: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Timer & elaborazione locale',body:"<div class='info-box'>✅ Tutti i timer su Timer-24.com vengono eseguiti esclusivamente in locale nel browser. Le impostazioni non vengono mai trasmesse ai nostri server.</div><p>Le statistiche focus, le impostazioni della sveglia e le preferenze lingua sono salvate nel <strong>localStorage</strong> del browser e non lasciano mai il dispositivo.</p>"},
-    {h:'3. Cookie & localStorage',body:"<p>Utilizziamo il <strong>localStorage</strong> esclusivamente per lingua, impostazioni timer, statistiche focus e consenso ai cookie. Nessun cookie di terze parti viene utilizzato senza il tuo consenso.</p>"},
-    {h:'4. Google AdSense',body:"<p>Questo sito utilizza <strong>Google AdSense</strong> per visualizzare pubblicità personalizzata. Base giuridica: il tuo consenso (Art. 6 par. 1 lett. a GDPR). <a href='https://adssettings.google.com' target='_blank'>Gestisci preferenze</a> · <a href='https://policies.google.com/privacy' target='_blank'>Privacy policy Google</a></p>"},
-    {h:'5. Cloudflare',body:"<p>Il sito è ospitato da <strong>Cloudflare</strong> (Cloudflare, Inc., USA) che elabora dati tecnici per erogare il servizio. <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>Privacy policy</a></p>"},
-    {h:'6. Nessuna analisi',body:"<p>Timer-24.com <strong>non</strong> utilizza strumenti di analisi. Nessun tracciamento del comportamento utente.</p>"},
-    {h:'7. I tuoi diritti',body:"<p>Hai diritto di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione ai sensi del GDPR. Puoi presentare reclamo all'autorità di controllo competente.</p>"},
-    {h:'8. Contatto privacy',body:"<p>Per domande sulla privacy: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  pt:{title:'Política de privacidade',subtitle:'Última atualização: junho de 2025',sections:[
-    {h:'1. Responsável pelo tratamento',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Alemanha · E-mail: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Temporizadores & processamento local',body:"<div class='info-box'>✅ Todos os temporizadores no Timer-24.com funcionam exclusivamente de forma local no seu navegador. As suas definições nunca são transmitidas para os nossos servidores.</div>"},
-    {h:'3. Cookies & localStorage',body:"<p>Usamos o <strong>localStorage</strong> exclusivamente para idioma, definições de temporizador, estatísticas de foco e consentimento de cookies. Sem cookies de terceiros sem o seu consentimento.</p>"},
-    {h:'4. Google AdSense',body:"<p>Este site usa <strong>Google AdSense</strong> para publicidade personalizada. Base jurídica: o seu consentimento (Art. 6.º n.º 1 al. a RGPD). <a href='https://adssettings.google.com' target='_blank'>Gerir preferências</a> · <a href='https://policies.google.com/privacy' target='_blank'>Política de privacidade Google</a></p>"},
-    {h:'5. Cloudflare',body:"<p>O site é alojado pela <strong>Cloudflare</strong> (Cloudflare, Inc., EUA). <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>Política de privacidade</a></p>"},
-    {h:'6. Sem análises',body:"<p>Timer-24.com <strong>não</strong> utiliza ferramentas de análise. Não é efetuado qualquer rastreamento.</p>"},
-    {h:'7. Os seus direitos',body:"<p>Tem direito de acesso, retificação, apagamento, limitação, portabilidade e oposição ao abrigo do RGPD.</p>"},
-    {h:'8. Contacto privacidade',body:"<p>Para questões de privacidade: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  nl:{title:'Privacybeleid',subtitle:'Laatst bijgewerkt: juni 2025',sections:[
-    {h:'1. Verwerkingsverantwoordelijke',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Duitsland · E-mail: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Timers & lokale verwerking',body:"<div class='info-box'>✅ Alle timers op Timer-24.com draaien uitsluitend lokaal in uw browser. Uw instellingen worden nooit naar onze servers verzonden.</div>"},
-    {h:'3. Cookies & localStorage',body:"<p>We gebruiken <strong>localStorage</strong> uitsluitend voor taalinstelling, timer-instellingen, focusstatistieken en cookietoestemming. Geen cookies van derden zonder uw toestemming.</p>"},
-    {h:'4. Google AdSense',body:"<p>Deze site gebruikt <strong>Google AdSense</strong> voor gepersonaliseerde advertenties. Rechtsgrondslag: uw toestemming (Art. 6 lid 1 sub a AVG). <a href='https://adssettings.google.com' target='_blank'>Voorkeuren beheren</a> · <a href='https://policies.google.com/privacy' target='_blank'>Privacybeleid Google</a></p>"},
-    {h:'5. Cloudflare',body:"<p>De site wordt gehost door <strong>Cloudflare</strong> (Cloudflare, Inc., VS). <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>Privacybeleid</a></p>"},
-    {h:'6. Geen analytics',body:"<p>Timer-24.com gebruikt <strong>geen</strong> analysetools. Er vindt geen tracking van uw gedrag plaats.</p>"},
-    {h:'7. Uw rechten',body:"<p>U heeft recht op inzage, rectificatie, verwijdering, beperking, overdraagbaarheid en bezwaar conform de AVG.</p>"},
-    {h:'8. Contact privacy',body:"<p>Voor privacyvragen: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  pl:{title:'Polityka prywatności',subtitle:'Ostatnia aktualizacja: czerwiec 2025',sections:[
-    {h:'1. Administrator danych',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Niemcy · E-mail: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Timery & przetwarzanie lokalne',body:"<div class='info-box'>✅ Wszystkie timery na Timer-24.com działają wyłącznie lokalnie w Twojej przeglądarce. Ustawienia nigdy nie są przesyłane na nasze serwery.</div>"},
-    {h:'3. Pliki cookie & localStorage',body:"<p>Używamy <strong>localStorage</strong> wyłącznie do przechowywania języka, ustawień timera, statystyk skupienia i zgody na pliki cookie. Żadne pliki cookie stron trzecich bez Twojej zgody.</p>"},
-    {h:'4. Google AdSense',body:"<p>Strona używa <strong>Google AdSense</strong> do wyświetlania spersonalizowanych reklam. Podstawa prawna: Twoja zgoda (Art. 6 ust. 1 lit. a RODO). <a href='https://adssettings.google.com' target='_blank'>Zarządzaj preferencjami</a> · <a href='https://policies.google.com/privacy' target='_blank'>Polityka prywatności Google</a></p>"},
-    {h:'5. Cloudflare',body:"<p>Strona jest hostowana przez <strong>Cloudflare</strong> (Cloudflare, Inc., USA). <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>Polityka prywatności</a></p>"},
-    {h:'6. Brak analityki',body:"<p>Timer-24.com <strong>nie</strong> używa narzędzi analitycznych. Nie jest prowadzone żadne śledzenie.</p>"},
-    {h:'7. Twoje prawa',body:"<p>Przysługują Ci prawa dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia i sprzeciwu zgodnie z RODO.</p>"},
-    {h:'8. Kontakt w sprawie prywatności',body:"<p>W sprawach prywatności: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  tr:{title:'Gizlilik Politikası',subtitle:'Son güncelleme: Haziran 2025',sections:[
-    {h:'1. Veri Sorumlusu',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, Almanya · E-posta: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. Zamanlayıcılar & Yerel İşleme',body:"<div class='info-box'>✅ Timer-24.com'daki tüm zamanlayıcılar yalnızca tarayıcınızda yerel olarak çalışır. Ayarlarınız hiçbir zaman sunucularımıza iletilmez.</div>"},
-    {h:'3. Çerezler & localStorage',body:"<p>Dil, zamanlayıcı ayarları, odak istatistikleri ve çerez onayı için yalnızca <strong>localStorage</strong> kullanıyoruz. Onayınız olmadan üçüncü taraf çerez kullanılmaz.</p>"},
-    {h:'4. Google AdSense',body:"<p>Bu site kişiselleştirilmiş reklamlar için <strong>Google AdSense</strong> kullanır. Hukuki dayanak: onayınız (Madde 6 par. 1 lit. a GDPR). <a href='https://adssettings.google.com' target='_blank'>Tercihleri yönetin</a> · <a href='https://policies.google.com/privacy' target='_blank'>Google Gizlilik Politikası</a></p>"},
-    {h:'5. Cloudflare',body:"<p>Site <strong>Cloudflare</strong> (Cloudflare, Inc., ABD) tarafından barındırılmaktadır. <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>Gizlilik politikası</a></p>"},
-    {h:'6. Analitik Yok',body:"<p>Timer-24.com <strong>hiçbir</strong> analitik araç kullanmaz. Kullanıcı davranışı takibi yapılmaz.</p>"},
-    {h:'7. Haklarınız',body:"<p>GDPR kapsamında erişim, düzeltme, silme, kısıtlama, taşınabilirlik ve itiraz haklarına sahipsiniz.</p>"},
-    {h:'8. Gizlilik İletişim',body:"<p>Gizlilik sorguları için: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  ar:{title:'سياسة الخصوصية',subtitle:'آخر تحديث: يونيو 2025',sections:[
-    {h:'1. الجهة المسؤولة',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, ألمانيا · البريد الإلكتروني: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. المؤقتات والمعالجة المحلية',body:"<div class='info-box'>✅ تعمل جميع المؤقتات على Timer-24.com محلياً في متصفحك فقط. لا يتم إرسال إعداداتك إلى خوادمنا.</div>"},
-    {h:'3. ملفات تعريف الارتباط وlocal Storage',body:"<p>نستخدم <strong>localStorage</strong> فقط للغة وإعدادات المؤقت وإحصاءات التركيز والموافقة على ملفات تعريف الارتباط. لا تُستخدم ملفات طرف ثالث بدون موافقتك.</p>"},
-    {h:'4. Google AdSense',body:"<p>يستخدم هذا الموقع <strong>Google AdSense</strong> لعرض إعلانات مخصصة. الأساس القانوني: موافقتك (المادة 6 الفقرة 1 أ من GDPR). <a href='https://adssettings.google.com' target='_blank'>إدارة التفضيلات</a> · <a href='https://policies.google.com/privacy' target='_blank'>سياسة خصوصية Google</a></p>"},
-    {h:'5. Cloudflare',body:"<p>يتم استضافة الموقع بواسطة <strong>Cloudflare</strong> (Cloudflare, Inc., الولايات المتحدة). <a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>سياسة الخصوصية</a></p>"},
-    {h:'6. لا أدوات تحليلية',body:"<p>لا يستخدم Timer-24.com <strong>أي</strong> أدوات تحليلية. لا يتم تتبع سلوكك.</p>"},
-    {h:'7. حقوقك',body:"<p>لديك حق الوصول والتصحيح والحذف والتقييد والنقل والاعتراض وفقاً للائحة GDPR.</p>"},
-    {h:'8. التواصل بشأن الخصوصية',body:"<p>للاستفسارات: <a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]},
-  zh:{title:'隐私政策',subtitle:'最后更新：2025年6月',sections:[
-    {h:'1. 数据控制者',body:"<p>Christina Baus, adquo design, Kelsterbacherstraße 72–76, 64546 Mörfelden-Walldorf, 德国 · 电子邮件：<a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"},
-    {h:'2. 计时器与本地处理',body:"<div class='info-box'>✅ Timer-24.com上的所有计时器完全在您的浏览器本地运行。您的设置从不传输到我们的服务器。</div>"},
-    {h:'3. Cookie与localStorage',body:"<p>我们仅使用 <strong>localStorage</strong> 存储语言设置、计时器配置、专注统计和Cookie同意。未经您同意不使用第三方Cookie。</p>"},
-    {h:'4. Google AdSense',body:"<p>本网站使用 <strong>Google AdSense</strong> 展示个性化广告。法律依据：您的同意（GDPR第6条第1款a项）。<a href='https://adssettings.google.com' target='_blank'>管理偏好</a> · <a href='https://policies.google.com/privacy' target='_blank'>Google隐私政策</a></p>"},
-    {h:'5. Cloudflare',body:"<p>本网站由 <strong>Cloudflare</strong>（Cloudflare, Inc.，美国）托管。<a href='https://www.cloudflare.com/privacypolicy/' target='_blank'>隐私政策</a></p>"},
-    {h:'6. 无分析工具',body:"<p>Timer-24.com <strong>不</strong>使用任何分析工具，不跟踪您的使用行为。</p>"},
-    {h:'7. 您的权利',body:"<p>您依据GDPR享有访问、更正、删除、限制、可携带性和反对等权利。</p>"},
-    {h:'8. 隐私联系',body:"<p>隐私相关咨询：<a href='mailto:info@adquo-design.de'>info@adquo-design.de</a></p>"}
-  ]}
-};
-
-// ── Lang ──
-function buildLangMenu(){document.getElementById('langMenu').innerHTML=Object.entries(LANGS).map(([k,v])=>`<li class="${k===cl?'sel':''}" onclick="setLang('${k}')">${v.f} ${v.n}</li>`).join('');}
-function toggleLang(){document.getElementById('langMenu').classList.toggle('open');}
-document.addEventListener('click',e=>{if(!e.target.closest('#langWrap'))document.getElementById('langMenu').classList.remove('open');});
-
-let cl='de';
-function getLang(){const u=new URLSearchParams(location.search).get('lang');const s=localStorage.getItem('t24_lang');const b=(navigator.language||'de').slice(0,2).toLowerCase();return[u,s,b].find(x=>x&&LANGS[x])||'de';}
-function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new URL(location);u.searchParams.set('lang',lang);history.replaceState({},'',u);applyAll();document.getElementById('langMenu').classList.remove('open');}
-function applyAll(){
-  const t=NAV[cl]||NAV.de;
-  document.documentElement.lang=cl;document.documentElement.dir=cl==='ar'?'rtl':'ltr';
-  document.getElementById('langBtn').textContent=`${LANGS[cl].f} ${cl.toUpperCase()} ▼`;
-  document.getElementById('nav-timer').textContent=t.timer;
-  document.getElementById('nav-wissen').textContent=t.wissen;
-  document.getElementById('nav-faq').textContent=t.faq;
-  document.getElementById('fl-timer').textContent=t.timer;
-  document.getElementById('fl-wissen').textContent=t.wissen;
-  document.getElementById('fl-faq').textContent=t.faq;
-  document.getElementById('fl-hilfe').textContent=t.hilfe;
-  document.getElementById('fl-impressum').textContent=t.impressum;
-  document.getElementById('fl-datenschutz').textContent=t.datenschutz;
-  document.getElementById('fl-copy').textContent=t.copy;
-  document.getElementById('ck-text').textContent=t.ck[0];
-  document.getElementById('ck-ok').textContent=t.ck[1];
-  document.getElementById('ck-no').textContent=t.ck[2];
-  renderPage();buildLangMenu();
-}
-function renderPage(){
-  const d=PAGE_DATA[cl]||PAGE_DATA.en;
-  document.title=`${d.title} – Timer-24.com`;
-  document.getElementById('page-main').innerHTML=`<div class="card"><h1>${d.title}</h1><p class="meta">${d.subtitle}</p>${d.sections.map(s=>`<h2>${s.h}</h2>${s.body}`).join('')}</div>`;
+function renderPage(lang) {
+  const d = PD[lang] || PD['de'];
+  document.title = d.t + ' – Timer-24.com';
+  document.getElementById('pm').innerHTML =
+    '<div class="card"><h1>' + d.t + '</h1><p class="meta">' + d.s + '</p>' +
+    d.sec.map(function(s){ return '<h2>' + s.h + '</h2>' + s.b; }).join('') +
+    '</div>';
 }
 
-cl=getLang();buildLangMenu();applyAll();
+document.addEventListener('DOMContentLoaded', function() {
+  const lang = getLang();
+  applyNav(lang);
+  renderPage(lang);
+});
 </script>
 </body>
 </html>
