@@ -101,6 +101,10 @@ footer a:hover{color:var(--bl);}
 
 const NAV_I18N = {"de": {"timer": "Timer", "wissen": "Wissen", "faq": "FAQ", "hilfe": "Hilfe", "kontakt": "Kontakt", "ueber": "Über uns", "impressum": "Impressum", "datenschutz": "Datenschutz", "start": "▶ Starten", "copy": "© 2025 Timer-24.com · Alle Berechnungen lokal im Browser · Keine Garantie auf Richtigkeit", "ck_ok": "Alle akzeptieren", "ck_no": "Nur notwendige", "ck_txt": "Wir nutzen Cookies für Werbung (Google AdSense). Mehr Infos in der"}, "en": {"timer": "Timer", "wissen": "Knowledge", "faq": "FAQ", "hilfe": "Help", "kontakt": "Contact", "ueber": "About", "impressum": "Imprint", "datenschutz": "Privacy", "start": "▶ Start", "copy": "© 2025 Timer-24.com · All calculations run locally · No guarantee of accuracy", "ck_ok": "Accept all", "ck_no": "Necessary only", "ck_txt": "We use cookies for advertising (Google AdSense). More info in our"}, "fr": {"timer": "Minuterie", "wissen": "Savoir", "faq": "FAQ", "hilfe": "Aide", "kontakt": "Contact", "ueber": "À propos", "impressum": "Mentions légales", "datenschutz": "Confidentialité", "start": "▶ Démarrer", "copy": "© 2025 Timer-24.com · Calculs locaux · Sans garantie d'exactitude", "ck_ok": "Tout accepter", "ck_no": "Nécessaires seulement", "ck_txt": "Nous utilisons des cookies publicitaires (Google AdSense). Voir notre"}, "es": {"timer": "Temporizador", "wissen": "Conocimiento", "faq": "FAQ", "hilfe": "Ayuda", "kontakt": "Contacto", "ueber": "Acerca de", "impressum": "Aviso legal", "datenschutz": "Privacidad", "start": "▶ Iniciar", "copy": "© 2025 Timer-24.com · Cálculos locales · Sin garantía de exactitud", "ck_ok": "Aceptar todo", "ck_no": "Solo necesarias", "ck_txt": "Usamos cookies publicitarias (Google AdSense). Más info en nuestra"}, "it": {"timer": "Contatore", "wissen": "Conoscenza", "faq": "FAQ", "hilfe": "Aiuto", "kontakt": "Contatto", "ueber": "Chi siamo", "impressum": "Note legali", "datenschutz": "Privacy", "start": "▶ Avvia", "copy": "© 2025 Timer-24.com · Calcoli locali · Nessuna garanzia", "ck_ok": "Accetta tutto", "ck_no": "Solo necessari", "ck_txt": "Utilizziamo cookie pubblicitari (Google AdSense). Più info nella nostra"}, "pt": {"timer": "Temporizador", "wissen": "Conhecimento", "faq": "FAQ", "hilfe": "Ajuda", "kontakt": "Contacto", "ueber": "Sobre nós", "impressum": "Aviso legal", "datenschutz": "Privacidade", "start": "▶ Iniciar", "copy": "© 2025 Timer-24.com · Cálculos locais · Sem garantia", "ck_ok": "Aceitar tudo", "ck_no": "Somente necessários", "ck_txt": "Usamos cookies publicitários (Google AdSense). Mais informações na nossa"}, "nl": {"timer": "Timer", "wissen": "Kennis", "faq": "FAQ", "hilfe": "Hulp", "kontakt": "Contact", "ueber": "Over ons", "impressum": "Impressum", "datenschutz": "Privacy", "start": "▶ Starten", "copy": "© 2025 Timer-24.com · Berekeningen lokaal · Geen garantie", "ck_ok": "Alles accepteren", "ck_no": "Alleen noodzakelijk", "ck_txt": "We gebruiken cookies voor advertenties (Google AdSense). Meer info in ons"}, "pl": {"timer": "Timer", "wissen": "Wiedza", "faq": "FAQ", "hilfe": "Pomoc", "kontakt": "Kontakt", "ueber": "O nas", "impressum": "Informacje prawne", "datenschutz": "Prywatność", "start": "▶ Start", "copy": "© 2025 Timer-24.com · Obliczenia lokalne · Bez gwarancji", "ck_ok": "Akceptuj wszystkie", "ck_no": "Tylko niezbędne", "ck_txt": "Używamy plików cookie reklamowych (Google AdSense). Więcej w naszej"}, "tr": {"timer": "Zamanlayıcı", "wissen": "Bilgi", "faq": "SSS", "hilfe": "Yardım", "kontakt": "İletişim", "ueber": "Hakkımızda", "impressum": "Künye", "datenschutz": "Gizlilik", "start": "▶ Başlat", "copy": "© 2025 Timer-24.com · Hesaplamalar tarayıcıda · Garanti yoktur", "ck_ok": "Tümünü kabul et", "ck_no": "Yalnızca gerekli", "ck_txt": "Reklam için çerez kullanıyoruz (Google AdSense). Ayrıntılar için"}, "ar": {"timer": "المؤقت", "wissen": "المعرفة", "faq": "الأسئلة الشائعة", "hilfe": "المساعدة", "kontakt": "اتصل بنا", "ueber": "من نحن", "impressum": "بيانات المشغّل", "datenschutz": "الخصوصية", "start": "▶ ابدأ", "copy": "© 2025 Timer-24.com · العمليات محلية · لا ضمان على الدقة", "ck_ok": "قبول الكل", "ck_no": "الضرورية فقط", "ck_txt": "نستخدم ملفات تعريف الارتباط للإعلانات (Google AdSense). مزيد من المعلومات في"}, "zh": {"timer": "计时器", "wissen": "知识", "faq": "常见问题", "hilfe": "帮助", "kontakt": "联系我们", "ueber": "关于我们", "impressum": "版权信息", "datenschutz": "隐私政策", "start": "▶ 开始", "copy": "© 2025 Timer-24.com · 本地计算 · 不保证准确性", "ck_ok": "全部接受", "ck_no": "仅必要", "ck_txt": "我们使用Cookie用于广告（Google AdSense）。更多信息请参阅我们的"}};
 
+
+// ── Language init ──
+let cl = 'de';
+
 function getLang() {
   try {
     const p = new URLSearchParams(window.location.search);
@@ -115,15 +119,17 @@ function getLang() {
 
 function setLang(l) {
   if (!NAV_I18N[l]) return;
+  cl = l;
   localStorage.setItem('t24_lang', l);
   try {
     const u = new URL(window.location.href);
     u.searchParams.set('lang', l);
     history.replaceState(null, '', u.toString());
   } catch(e) {}
-  applyNav(l);
-  if (typeof renderPage === 'function') renderPage(l);
+  applyNav();
+  if (typeof renderPage === 'function') renderPage();
 }
+
 
 function applyNav(lang) {
   const t = NAV_I18N[lang] || NAV_I18N['de'];
@@ -135,19 +141,28 @@ function applyNav(lang) {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.textContent = t[key];
   });
-  // Cookie banner
+  // Nav links by id
+  ['timer','wissen','faq','hilfe','kontakt','ueber','start'].forEach(function(k){
+    const el=document.getElementById('nl-'+k);if(el&&t[k])el.textContent=t[k];
+  });
+  ['timer','wissen','faq','hilfe','kontakt','ueber','impressum','datenschutz'].forEach(function(k){
+    const el=document.getElementById('fl-'+k);if(el&&t[k])el.textContent=t[k];
+  });
+  const fc=document.getElementById('fl-copy');if(fc&&t.copy)fc.textContent=t.copy;
+  // Cookie banner — use innerHTML to avoid firstChild null crash
   const ckP = document.getElementById('ck-p');
-  const dsLink = document.getElementById('ck-ds-link');
-  if (ckP && dsLink) {
-    ckP.firstChild.textContent = (t.ck_txt || '') + ' ';
-    dsLink.textContent = t.datenschutz || 'Datenschutz';
-    dsLink.href = 'datenschutz.html?lang=' + lang;
+  if (ckP) {
+    const dsLabel = t.datenschutz || 'Datenschutz';
+    const dsHref = 'datenschutz.html?lang=' + lang;
+    ckP.innerHTML = (t.ck_txt || 'Wir nutzen Cookies.') +
+      ' <a id="ck-ds-link" href="' + dsHref + '">' + dsLabel + '</a>.';
   }
   const okBtn = document.getElementById('ck-ok');
   const noBtn = document.getElementById('ck-no');
   if (okBtn) okBtn.textContent = t.ck_ok || 'Alle akzeptieren';
   if (noBtn) noBtn.textContent = t.ck_no || 'Nur notwendige';
 }
+
 
 function acceptCookies(v) {
   localStorage.setItem('cookie-consent', v);
@@ -270,8 +285,8 @@ zh:{t:'隐私政策',s:'最后更新：2025年6月',sec:[
 ]}
 };
 
-function renderPage(lang) {
-  const d = PD[lang] || PD['de'];
+function renderPage() {
+  const d = PD[cl] || PD['de'];
   document.title = d.t + ' – Timer-24.com';
   document.getElementById('pm').innerHTML =
     '<div class="card"><h1>' + d.t + '</h1><p class="meta">' + d.s + '</p>' +
@@ -279,12 +294,10 @@ function renderPage(lang) {
     '</div>';
 }
 
-// Script is at end of <body> – DOM already ready, call directly
-(function() {
-  const lang = getLang();
-  applyNav(lang);
-  renderPage(lang);
-})();
+// Init – script at end of <body>, DOM already ready
+cl = getLang();
+applyNav();
+renderPage();
 </script>
 </body>
 </html>

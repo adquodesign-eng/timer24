@@ -179,36 +179,38 @@ function setLang(lang){cl=lang;localStorage.setItem('t24_lang',lang);const u=new
   const sel=document.getElementById('lang-select');if(sel)sel.value=lang;applyNav();renderPage();}
 function toggleL(){document.getElementById('lm').classList.toggle('open');}
 document.addEventListener('click',e=>{if(!e.target.closest('#lw'))document.getElementById('lm').classList.remove('open');});
-function applyNav(){
-  const t=NAV_I18N[cl]||NAV_I18N['de'];
-  document.documentElement.lang=cl;
-  document.documentElement.dir=cl==='ar'?'rtl':'ltr';
-  // sync select
-  const sel=document.getElementById('lang-select');if(sel)sel.value=cl;
-  // nav links by data-i18n
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    const k=el.getAttribute('data-i18n');if(t[k]!==undefined)el.textContent=t[k];
+function applyNav(lang) {
+  const t = NAV_I18N[lang] || NAV_I18N['de'];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  const sel = document.getElementById('lang-select');
+  if (sel) sel.value = lang;
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
   });
-  // nav links by id (nl-XXX)
+  // Nav links by id
   ['timer','wissen','faq','hilfe','kontakt','ueber','start'].forEach(function(k){
     const el=document.getElementById('nl-'+k);if(el&&t[k])el.textContent=t[k];
   });
-  // footer links by id (fl-XXX)
   ['timer','wissen','faq','hilfe','kontakt','ueber','impressum','datenschutz'].forEach(function(k){
     const el=document.getElementById('fl-'+k);if(el&&t[k])el.textContent=t[k];
   });
   const fc=document.getElementById('fl-copy');if(fc&&t.copy)fc.textContent=t.copy;
-  // cookie banner
-  const ckP=document.getElementById('ck-p');
-  const dsLink=document.getElementById('ck-ds-link');
-  if(ckP&&dsLink){
-    if(ckP.childNodes[0])ckP.childNodes[0].textContent=(t.ck_txt||'')+' ';
-    dsLink.textContent=t.datenschutz||'Datenschutz';
-    dsLink.href='datenschutz.html?lang='+cl;
+  // Cookie banner — use innerHTML to avoid firstChild null crash
+  const ckP = document.getElementById('ck-p');
+  if (ckP) {
+    const dsLabel = t.datenschutz || 'Datenschutz';
+    const dsHref = 'datenschutz.html?lang=' + lang;
+    ckP.innerHTML = (t.ck_txt || 'Wir nutzen Cookies.') +
+      ' <a id="ck-ds-link" href="' + dsHref + '">' + dsLabel + '</a>.';
   }
-  const okB=document.getElementById('ck-ok');if(okB)okB.textContent=t.ck_ok||'Alle akzeptieren';
-  const noB=document.getElementById('ck-no');if(noB)noB.textContent=t.ck_no||'Nur notwendige';
+  const okBtn = document.getElementById('ck-ok');
+  const noBtn = document.getElementById('ck-no');
+  if (okBtn) okBtn.textContent = t.ck_ok || 'Alle akzeptieren';
+  if (noBtn) noBtn.textContent = t.ck_no || 'Nur notwendige';
 }
+
 
 
 const ID={
